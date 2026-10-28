@@ -1,7 +1,7 @@
 """Minimal regression tests (plain assert, no pytest) for the core behaviour.
 
-Last edited: 2026-10-28 — added check that institution rosters never top a photographer's
-recommendations. 2026-10-27: tests grouped into functions; added checks for
+Last edited: 2026-10-28 — added checks that institution rosters never top a photographer's
+recommendations and that a photographer's own works are reachable (inbound edges). 2026-10-27: tests grouped into functions; added checks for
 display_label naming rule, approved-as-in-graph labelling and the faster resolver.
 Usage: python test_core.py
 """
@@ -84,6 +84,8 @@ def test_recommend_and_query() -> None:
     check("推薦帶 status 欄", all("status" in item for item in items))
     top_for_photographer = recommend.recommend(graph, ["friedlander"], top_n=1)[0]["target"]
     check("得獎名單(institution)不會成為攝影家的第一推薦", "Award" not in top_for_photographer)
+    koudelka_top2 = " ".join(i["target"] for i in recommend.recommend(graph, ["koudelka"], top_n=2))
+    check("攝影家的自身著作能被推薦(走入邊)", "Gypsies" in koudelka_top2 or "Exiles" in koudelka_top2)
     intent, ids, result = query.answer("班雅明 馬格南 有關係嗎 出處在哪")
     check("provenance 意圖判對", intent == "provenance")
     check("對不存在關係回 not found(不編造)", result.get("found") is False)

@@ -16,13 +16,13 @@
 
 | 指標 | 數 | 說明 |
 |---|---|---|
-| 節點 | 618 | 人物 · 著作 · 概念 · 事件 · 館所 |
-| 關係(全) | 920 | 每條皆附 claim / evidence / source / confidence |
-| **正式入圖** | **768** | 自動通過 99 + 上網查證確認 669(其中 100 條為第 1–2 輪依標準攝影史升級、尚未附單一網址,見 `docs/verification-sources.md` B 節) |
-| 待查證 | 150 | 低信心或自我審核降級,隔離在佇列,需回原典補頁碼後才採用 |
+| 節點 | 849 | 人物 · 著作 · 概念 · 事件 · 館所 |
+| 關係(全) | 1421 | 每條皆附 claim / evidence / source / confidence |
+| **正式入圖** | **1261** | 自動通過 99 + 上網查證確認 1162(其中 100 條為第 1–2 輪依標準攝影史升級、尚未附單一網址,見 `docs/verification-sources.md` B 節) |
+| 待查證 | 158 | 低信心或自我審核降級,隔離在佇列,需回原典補頁碼後才採用 |
 | 已剔除 | 2 | 查證不成立(如 1977 Pictures 展未含辛蒂·雪曼) |
 
-150 條待查證的明細見 `docs/原典查核清單.xlsx`(附書名、待補頁碼欄、決定欄)。
+158 條待查證的明細見 `docs/原典查核清單.xlsx`(附書名、待補頁碼欄、決定欄)。
 查證來源網址見 `docs/verification-sources.md`。
 
 ---
@@ -43,7 +43,7 @@
 ├── extract.py         抽取管線(訂閱制、不亂猜)
 ├── captures.py        原始擷取紀錄
 ├── review_queue.py    把 status=review 的關係輸出成待審清單
-├── test_core.py       最小回歸測試(純 assert,21 項)
+├── test_core.py       最小回歸測試(純 assert,22 項)
 │
 ├── data/              正典資料(唯一事實來源)
 │   ├── seed_entities.csv      節點(id, type, name_zh, name_en, label_pref)
@@ -70,10 +70,10 @@
 ```bash
 pip install -r requirements.txt       # pydantic, networkx
 
-python graph_build.py                 # 建正式圖(768 條)→ build/graph.json
-python graph_build.py --with-review   # 連 150 條待查證一起畫(供檢視,非定論)
+python graph_build.py                 # 建正式圖(1261 條)→ build/graph.json
+python graph_build.py --with-review   # 連 158 條待查證一起畫(供檢視,非定論)
 python build_viewer.py                # 產生 build/viewer.html,瀏覽器開即可
-python test_core.py                   # 跑 21 項回歸測試
+python test_core.py                   # 跑 22 項回歸測試
 python agent.py                       # Agent demo
 ```
 
@@ -105,12 +105,12 @@ npm install docx && node tools/build_reflection.js        # 重建反思 docx
 - **顯示名稱(`label_pref`)**:西方來源以英文為主、括號中譯(`en`,預設);華人圈耳熟能詳者以中文為主、括號英譯(`zh_en`,如 班雅明 (Walter Benjamin));華人圈人物與著作只用中文(`zh`),除非原題即為英文。規則集中在 `data_io.display_label`,所有輸出(圖、查詢、推薦、清單)共用。
 - **資料方向慣例**(見 `schema.py` 註解):著作 →`belongs_to`→ 作者;人物 →`belongs_to`→ 機構/事件/概念/選集;展覽 →`exhibit`→ 人物/著作;譯本 →`translate`→ 原著。
 - **程式結構**:一個 function 一件事,`main()` 只負責呼叫與組裝;共用載入器集中在 `data_io.py`;只用常見套件(pydantic、networkx、openpyxl)。一次性的擴充腳本不進 repo。
-- **推薦的脈絡權重**:「X 屬於某獎項/雜誌」(institution)是脈絡不是下一本書,推薦時乘 0.5,避免 40 位得主的獎項節點壓過真正的閱讀路徑。
+- **推薦的脈絡權重**:`belongs_to` 依目標類型加權(institution 0.5、選集/著作 0.7、展覽 0.8),避免 40 位得主的獎項或 44 篇的選集壓過真正的閱讀路徑;推薦同時走「入邊」:攝影家自身的著作、展出過他的展覽、討論他的文本都是候選(讀 Koudelka 會得到《Gypsies》,而不只是獎項)。
 
 ---
 
 ## 誠實聲明
 
 這份圖目前最大的價值不是「大」,而是「每條都查得到出處、且把查過與沒查過分得很清楚」。
-150 條待查證是一條**正在前進的查驗路徑**,不是被藏起來的缺口——
+158 條待查證是一條**正在前進的查驗路徑**,不是被藏起來的缺口——
 它們被明確標記、隔離於正式圖之外,任何一條要當成論文證據前,都得回原典補到頁碼級引用。

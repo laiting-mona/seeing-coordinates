@@ -67,3 +67,12 @@
 - **判斷：獎項是脈絡不是路徑。** 得獎名單 hub 加入後，攝影家的第一推薦變成「Hasselblad Award」:關係準確但對讀者沒幫助（正是給老師信中提出的問題）。處理：資料不動（關係是對的），在 `recommend.py` 對「屬於 institution」的邊乘 `CONTEXT_EDGE_WEIGHT = 0.5`，並新增測試「institution 名單不會成為攝影家第一推薦」。這是「準確 ≠ 有幫助」的第一個可操作的例子，可作為日後排序指標的起點。
 - **誠實邊界：** 新增 83 個節點中約 50 個目前只有一條「得獎」邊（葉節點）；它們的價值在於為日後補充作品與影響關係提供已查證的錨點，不是現在就能推薦。
 - **viewer v11（使用者回饋）：** 固定黑底白字、拿掉面板提示文字；UX：搜尋框（鍵盤可選）、類型篩選 chips、點節點只亮鄰居並放大標籤、視角自動框住鄰居、查證來源可點、佈局穩定後凍結物理；61 個尚無入圖關係的節點預設隱藏（chip「未連結」可開）。查核清單把「關係(來源→目標)」拆成「來源」「目標」兩欄。
+
+## 2026-10-28（二次）第 6 輪擴充：西方（618→849 節點）+ 推薦走入邊
+
+- **新增叢集：** Cruel and Tender（Tate 2003）、The Last Picture Show（Walker 2003）、The Photographer's Eye（MoMA 1964）與五項特質概念、MoMA 攝影部歷任主管與里程碑展、Eggleston's Guide（1976）、六本理論選集/論文集（Photography Reader、Classic Essays、Contest of Meaning、Art After Modernism、Illuminations、Meaning of Photography）與四本理論專著篇目（Solomon-Godeau、Tagg、Sekula、Kemp 之外）、十位攝影家的著作與師承（Koudelka、Penn、Avedon、Sherman、Wall、Weems、Friedlander、Gursky、Dijkstra、Muholi）。
+- **數字：** 關係 920→1421；正式入圖 768→1261（自動 99 + 查證確認 1162）；待查證 150→158；剔除維持 2。節點 849（人物 519、著作 190、概念 59、機構 54、事件 27）；未連結節點 61→46。
+- **查核方法的收穫：** 圖書館目錄（CCA、UNSAM）與出版社目錄頁是查證選集作者最可靠的 hub，一頁可確認 20–44 條；百科與新聞稿適合著作年份與師承；e-flux 公告適合參展名單。Britannica 直接網址會被拒，需經搜尋結果進入。
+- **判斷：推薦應該走入邊。** 原推薦只走出邊，攝影家的著作（著作→屬於→作者）永遠不會被推到。改為同時走入邊（自身著作、展出他的展覽、討論/研究/評論他的文本），並把 belongs_to 依目標類型加權（機構 0.5、選集 0.7、展覽 0.8）。新增回歸測試「Koudelka 的前兩名含《Gypsies》或《Exiles》」。
+- **誠實邊界：** 《Contest of Meaning》作者名單只查到 LibraryThing 書介（other 層）；《Art After Modernism》目錄來源有拼寫錯誤，照實註記；Newhall 策 1937 展、Burgin 篇收於 Thinking Photography 等教科書常識仍留 review。
+- **程式面：** recommend.py 新增 edge_score / inbound_candidate / MEMBERSHIP_WEIGHT / INBOUND_KINDS；22 項測試通過；pyflakes 乾淨。

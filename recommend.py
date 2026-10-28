@@ -1,11 +1,15 @@
 """Personalised recommendation along the knowledge frontier (no model training).
 
-Last edited: 2026-10-28 — membership edges into institutions (award rosters,
-magazines) are context, not readings: they now carry CONTEXT_EDGE_WEIGHT so a
-high-degree award hub cannot outrank a book or an exhibition.
+Last edited: 2026-10-28 — (1) membership edges are context, not readings: a
+belongs_to edge is weighted by its target type (institution 0.5, anthology/work
+0.7, event 0.8) so award rosters and anthologies cannot crowd out intellectual
+links; (2) the frontier now also walks INBOUND edges: a photographer's own works
+(work --belongs_to--> person), exhibitions that showed them and texts that discuss
+them are candidates too, so "read Koudelka" can lead to Gypsies, not only to awards.
 
-Frontier = unread nodes one hop out from what the reader has read.
-Score = confidence × tier weight × (0.5 + target centrality) × context weight.
+Frontier = unread nodes one hop out from (or into) what the reader has read.
+Score = confidence × tier weight × (0.5 + target centrality) × context weight
+        (× INBOUND_WEIGHT for an inbound edge).
 Every item carries its reason, source and status, so pending (review) edges are
 never presented as fact.
 Usage: python recommend.py [read_id ...]
@@ -23,8 +27,11 @@ ROOT = Path(__file__).resolve().parent
 CENTRALITY_FLOOR = 0.5   # keeps low-centrality targets from scoring zero
 # "X belongs_to <institution>" (an award, a magazine) is accurate but is not a next
 # reading; an award with 40 winners would otherwise top every photographer's list.
-CONTEXT_EDGE_WEIGHT = 0.5
-CONTEXT_TARGET_TYPES = ("institution",)
+# Membership in an anthology or an exhibition is a weaker but real reading path.
+MEMBERSHIP_WEIGHT = {"institution": 0.5, "work": 0.7, "event": 0.8}   # by target type; others 1.0
+# Inbound edges that point AT the seed and lead somewhere worth reading.
+INBOUND_KINDS = ("belongs_to", "discusses", "study", "review", "interpret", "critique", "exhibit")
+INBOUND_WEIGHT = 0.9
 
 
 def load_graph(root: Path = ROOT) -> nx.MultiDiGraph:
@@ -33,9 +40,28 @@ def load_graph(root: Path = ROOT) -> nx.MultiDiGraph:
 
 
 def edge_context_weight(graph: nx.MultiDiGraph, target: str, edge: dict) -> float:
-    """1.0 for a reading-path edge; CONTEXT_EDGE_WEIGHT for membership in an institution."""
-    is_membership = edge.get("kind") == "belongs_to" and graph.nodes[target].get("type") in CONTEXT_TARGET_TYPES
-    return CONTEXT_EDGE_WEIGHT if is_membership else 1.0
+    """1.0 for an intellectual edge; MEMBERSHIP_WEIGHT[target type] for a belongs_to edge."""
+    if edge.get("kind") != "belongs_to":
+        return 1.0
+    return MEMBERSHIP_WEIGHT.get(graph.nodes[target].get("type"), 1.0)
+
+
+def edge_score(graph: nx.MultiDiGraph, candidate: str, edge: dict, context_weight: float = 1.0) -> float:
+    """confidence × tier weight × (floor + centrality of the candidate) × context weight."""
+    tier_weight = TIER_BASE.get(edge.get("source_tier", "other"), TIER_BASE["other"])
+    return (edge.get("confidence", 0) * tier_weight
+            * (CENTRALITY_FLOOR + graph.nodes[candidate].get("centrality", 0)) * context_weight)
+
+
+def inbound_candidate(graph: nx.MultiDiGraph, source: str, edge: dict) -> bool:
+    """An inbound edge is a reading path when it is a text/exhibition about the seed,
+    or the seed's own work (work --belongs_to--> person)."""
+    kind = edge.get("kind")
+    if kind not in INBOUND_KINDS:
+        return False
+    if kind == "belongs_to":
+        return graph.nodes[source].get("type") == "work"
+    return True
 
 
 def authors_of_read_works(graph: nx.MultiDiGraph, read_ids: set[str]) -> set[str]:
@@ -50,32 +76,42 @@ def authors_of_read_works(graph: nx.MultiDiGraph, read_ids: set[str]) -> set[str
 
 
 def score_candidates(graph: nx.MultiDiGraph, seeds: set[str], exclude: set[str]) -> dict[str, tuple]:
-    """Score every unread out-neighbour of the seeds. Returns {target: (score, seed, edge_data)}
-    keeping, per target, the best supporting edge."""
+    """Score every unread neighbour of the seeds, outbound and (selected) inbound.
+
+    Returns {candidate: (score, seed, edge_data, direction)} keeping, per candidate,
+    the best supporting edge; direction is "out" (seed → candidate) or "in" (candidate → seed).
+    """
     candidates = {}
+
+    def offer(candidate, score, seed, data, direction):
+        if candidate not in exclude and (candidate not in candidates or score > candidates[candidate][0]):
+            candidates[candidate] = (score, seed, data, direction)
+
     for seed in seeds:
         if seed not in graph:
             continue
         for _, target, data in graph.out_edges(seed, data=True):
-            if target in exclude:
-                continue
-            tier_weight = TIER_BASE.get(data.get("source_tier", "other"), TIER_BASE["other"])
-            score = (data.get("confidence", 0) * tier_weight
-                     * (CENTRALITY_FLOOR + graph.nodes[target].get("centrality", 0))
-                     * edge_context_weight(graph, target, data))
-            if target not in candidates or score > candidates[target][0]:
-                candidates[target] = (score, seed, data)
+            offer(target, edge_score(graph, target, data, edge_context_weight(graph, target, data)), seed, data, "out")
+        for source, _, data in graph.in_edges(seed, data=True):   # the seed's own works, shows and critics
+            if inbound_candidate(graph, source, data):
+                offer(source, edge_score(graph, source, data, INBOUND_WEIGHT), seed, data, "in")
     return candidates
 
 
-def format_recommendation(graph: nx.MultiDiGraph, target: str, score: float, seed: str, edge: dict) -> dict:
+def format_recommendation(graph: nx.MultiDiGraph, target: str, score: float, seed: str, edge: dict,
+                          direction: str = "out") -> dict:
     """Turn one scored candidate into a reader-facing item with reason, source and status."""
     name = lambda node_id: graph.nodes[node_id].get("label") or graph.nodes[node_id].get("name_zh", node_id)
     verb = KIND_VERB_ZH.get(edge.get("kind"), "連結到")
     pending_note = "(待查證,尚未確認)" if edge.get("status") == "review" else ""
+    if direction == "in":
+        verb = "是其作品" if edge.get("kind") == "belongs_to" else verb + "它"
+        reason = f"你已讀「{name(seed)}」;「{name(target)}」{verb}:{edge.get('claim', '')}{pending_note}"
+    else:
+        reason = f"你已讀「{name(seed)}」,它{verb}「{name(target)}」:{edge.get('claim', '')}{pending_note}"
     return {
         "target": name(target),
-        "reason": f"你已讀「{name(seed)}」,它{verb}「{name(target)}」:{edge.get('claim', '')}{pending_note}",
+        "reason": reason,
         "source": edge.get("source_ref", ""),
         "status": edge.get("status", ""),
         "score": round(score, 3),

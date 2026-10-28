@@ -136,3 +136,27 @@ loc_fsa_s,美國國會圖書館:FSA/OWI 收藏背景,Library of Congress,2020,in
 britannica_f64_s,Britannica:Group f.64,Encyclopaedia Britannica,2024,critic,encyclopedia,https://www.britannica.com/art/Group-f64,1932 成立;11 位原始成員;1935 解散
 perlentaucher_kemp_s,Perlentaucher:Theorie der Fotografie I–IV 書評,Perlentaucher,2006,critic,review,https://www.perlentaucher.de/buch/hubertus-von-amelunxen-wolfgang-kemp/theorie-der-fotografie-band-i-iv.html,Schirmer/Mosel 2006;175 篇;作者名單
 art2art_vietnam_s,art2art 巡迴展:The Camera Goes to War: Vietnam,art2art Circulating Exhibitions,2015,other,web,https://www.art2art.org/all-shows/vietnam,22 位越戰攝影師;Pulitzer 資訊
+tate_cruel_s,Tate 新聞稿:Cruel and Tender,Tate,2003,institution,press,https://www.tate.org.uk/press/press-releases/cruel-and-tender-real-twentieth-century-photograph,23 位參展者;策展人;Kirstein 語源
+eflux_lps_s,e-flux 公告:The Last Picture Show(Miami Art Central 巡迴),Miami Art Central / e-flux,2005,institution,announcement,https://www.e-flux.com/announcements/42206/the-last-picture-show/,Walker 策劃;Fogle;57 位藝術家
+moma_pe1964_s,MoMA 新聞稿:The Photographer's Eye(1964),MoMA,1964,institution,press,https://www.moma.org/docs/press_archives/3231/releases/MOMA_1964_0018_1964-05-27_20.pdf,五個分類;列名攝影家
+moma_bajac_s,MoMA 課程講義:Photography at MoMA(Bajac),MoMA / Quentin Bajac,2016,institution,pdf,https://www.moma.org/momaorg/shared/pdfs/docs/learn/courses/Bajac_Photo_at_MoMA_Intro.pdf,攝影部歷任主管與年份;重要展覽
+moma_egg1976_s,MoMA 新聞稿 1976 No.41:William Eggleston,MoMA,1976,institution,press,https://www.moma.org/docs/press_archives/5392/releases/MOMA_1976_0052_41.pdf,Guide 48 幅;Szarkowski 撰文
+routledge_reader_s,Routledge:The Photography Reader 第二版目錄,Routledge,2019,institution,toc,https://www.routledge.com/The-Photography-Reader-History-and-Theory/Wells/p/book/9780415749183,44 篇作者
+cca_classic_s,CCA 圖書館目錄:Classic Essays on Photography,Canadian Centre for Architecture,1980,institution,catalogue,https://www.cca.qc.ca/en/search/details/library/publication/07149461,28 篇作者
+lt_contest_s,LibraryThing:The Contest of Meaning,LibraryThing,1989,other,web,https://www.librarything.fr/work/387875,14 位作者
+unsam_aam_s,UNSAM 圖書館目錄:Art After Modernism,Universidad Nacional de San Martín,1984,institution,catalogue,https://buscador.unsam.edu.ar/Record/15261/TOC,七部作者名單
+cca_dock_s,CCA 圖書館目錄:Photography at the Dock,Canadian Centre for Architecture,1991,institution,catalogue,https://www.cca.qc.ca/en/search/details/library/publication/21593850,篇目
+cca_burden_s,CCA 圖書館目錄:The Burden of Representation,Canadian Centre for Architecture,1988,institution,catalogue,https://www.cca.qc.ca/en/search/details/library/publication/17258373,章目
+cca_grain_s,CCA 圖書館目錄:Photography Against the Grain(2nd ed.),Canadian Centre for Architecture,2016,institution,catalogue,https://www.cca.qc.ca/en/search/details/library/publication/965798682,論文與攝影作品篇目
+duke_illum_s,Duke UP:Illuminations,Duke University Press,1996,institution,web,https://www.dukeupress.edu/illuminations,作者名單
+cca_meaning_s,CCA 圖書館目錄:The Meaning of Photography,Canadian Centre for Architecture,2008,institution,catalogue,https://www.cca.qc.ca/en/search/details/library/publication/226292084,篇目與作者
+brit_koudelka_s,Britannica:Josef Koudelka,Encyclopaedia Britannica,2024,critic,encyclopedia,https://www.britannica.com/print/article/1482758,著作年份;1968;獎項
+brit_penn_s,Britannica:Irving Penn,Encyclopaedia Britannica,2024,critic,encyclopedia,https://www.britannica.com/print/article/449988,系列與著作年份
+ebsco_avedon_s,EBSCO Research Starters:Richard Avedon,EBSCO,2023,critic,encyclopedia,https://www.ebsco.com/research-starters/biography/richard-avedon/,Brodovitch;雜誌;著作
+moma_sherman_s,MoMA 展覽頁:The Complete Untitled Film Stills,MoMA,1997,institution,web,https://www.moma.org/calendar/exhibitions/253,69 張;1977–80;1995 購藏
+cdnenc_wall_s,加拿大百科:Jeff Wall,The Canadian Encyclopedia,2019,critic,encyclopedia,https://www.thecanadianencyclopedia.ca/article/jeffrey-david-wall,作品;溫哥華學派;影響
+moma_weems_s,MoMA 藝術家頁:Carrie Mae Weems,MoMA,2024,institution,web,https://www.moma.org/artists/7177,Kitchen Table;From Here;挪用
+moma_fried2005_s,MoMA 新聞稿:Friedlander(2005),MoMA,2005,institution,press,https://www.moma.org/documents/moma_press-release_387091.pdf,著作年份;Evans/Frank/Atget
+moma_gursky2001_s,MoMA 新聞稿:Andreas Gursky(2001),MoMA,2001,institution,press,https://www.moma.org/documents/moma_press-release_387045.pdf,Folkwang/Becher;作品;影響
+bg_dijkstra_s,Berlinische Galerie 新聞稿:Rineke Dijkstra,Berlinische Galerie,2024,institution,press,https://berlinischegalerie.de/assets/downloads/presse/Pressetexte/Ausstellungen_2024/Rineke-Dijkstra/Press-release_Rineke-Dijkstra_Berlinische-Galerie.pdf,系列年份;Rietveld;Hasselblad
+tate_muholi_s,Tate 新聞稿:Zanele Muholi,Tate,2020,institution,press,https://www.tate.org.uk/press/press-releases/zanele-muholi,系列;Market Photo Workshop;visual activist

@@ -134,3 +134,36 @@ B 類是依標準攝影史參考升級、本輪未抓取單一網頁者，仍建
 本輪新增 166 條，159 條依上表 approved；7 條（紐約學派→街頭攝影、Brodovitch→紐約學派、Stryker→紀實、Weston 父子、Adams 收錄、Ut 普立茲年份、McCullin 戰地）留 review，見 `docs/原典查核清單.md`（現 150 條）。
 
 > **判斷檢查**：獎項名單是最省查證成本的 hub（一頁 30–46 條），但它們是「脈絡」不是「閱讀路徑」。加入後中心性 Top3 全是獎項與選集節點，攝影家的第一推薦變成「Hasselblad Award」。已在 `recommend.py` 對「屬於 institution」的邊乘 0.5（CONTEXT_EDGE_WEIGHT），並以回歸測試固定；資料本身不動，因為這些關係是對的。
+
+## F. 第 6 輪（2026-10-28）西方擴充：展覽名單、理論選集、MoMA 攝影部史、攝影家著作
+
+| 叢集 | 查證來源（URL） | 確認內容 |
+|---|---|---|
+| Cruel and Tender 2003 | https://www.tate.org.uk/press/press-releases/cruel-and-tender-real-twentieth-century-photograph | Tate Modern 2003.6–9、Museum Ludwig 2003.11–2004.2；Dexter/Weski 策展；23 位參展者；展名出自 Kirstein 1933 評 Evans；Evans→Shore 影響 |
+| The Last Picture Show 2003 | https://www.e-flux.com/announcements/42206/the-last-picture-show/ | Walker Art Center 策劃、Fogle 策展；57 位藝術家（收 43 位）；「追溯攝影的觀念性使用」 |
+| The Photographer's Eye 1964 | https://www.moma.org/docs/press_archives/3231/releases/MOMA_1964_0018_1964-05-27_20.pdf | 1964.5.27–8.23；Szarkowski 選件；五個分類；列名 26 位（收 23 位） |
+| MoMA 攝影部史 | https://www.moma.org/momaorg/shared/pdfs/docs/learn/courses/Bajac_Photo_at_MoMA_Intro.pdf | Newhall 1940–47、Steichen 1947–62、Szarkowski 1962 起、Bunnell 1966–72、Galassi；1937/1955/1963/1967/1970/1978/1985/1992 重要展 |
+| Eggleston's Guide | https://www.moma.org/docs/press_archives/5392/releases/MOMA_1976_0052_41.pdf | 48 幅選自 375 張；Szarkowski 撰文；1976 個展 |
+| 《The Photography Reader》 | https://www.routledge.com/The-Photography-Reader-History-and-Theory/Wells/p/book/9780415749183 | Wells 主編第二版（2019）44 篇作者；9 篇關鍵論文建為著作節點 |
+| 《Classic Essays on Photography》 | https://www.cca.qc.ca/en/search/details/library/publication/07149461 | Trachtenberg 1980；28 篇作者；Holmes〈立體鏡〉升級 approved |
+| 《The Contest of Meaning》 | https://www.librarything.fr/work/387875 | Bolton 1989；14 位作者（來源層 other，書介列名） |
+| 《Art After Modernism》 | https://buscador.unsam.edu.ar/Record/15261/TOC | Wallis 1984，New Museum；七部作者（原紀錄拼寫 Roster、Michael Foucault 為筆誤，已照實註記） |
+| 《Photography at the Dock》 | https://www.cca.qc.ca/en/search/details/library/publication/21593850 | Solomon-Godeau 1991；Nochlin 序；篇目（Calotypomania、Canon Fodder、Who Is Speaking Thus 等） |
+| 《The Burden of Representation》 | https://www.cca.qc.ca/en/search/details/library/publication/17258373 | Tagg 1988；章目 |
+| 《Photography Against the Grain》 | https://www.cca.qc.ca/en/search/details/library/publication/965798682 | Sekula；MACK 2016 第二版；論文與攝影作品篇目 |
+| 《Illuminations》 | https://www.dukeupress.edu/illuminations | Heron & Williams 1996；作者名單（收 36 位） |
+| 《The Meaning of Photography》 | https://www.cca.qc.ca/en/search/details/library/publication/226292084 | Kelsey & Stimson 2008；2005 Clark Symposium；篇目與作者 |
+| Koudelka | https://www.britannica.com/print/article/1482758 | 1968 布拉格、「P.P.」匿名、Capa 金獎 1969；《Black Triangle》1994、《Chaos》1999 |
+| Penn | https://www.britannica.com/print/article/449988 | Small Trades 1950–51、Moments Preserved 1960、Worlds in a Small Room 1974、Passage 1991；Vogue；AIC 1996 |
+| Avedon | https://www.ebsco.com/research-starters/biography/richard-avedon/ | Brodovitch 師承與聘用；Bazaar/Vogue 1966/New Yorker 1992；《Nothing Personal》1964 與 Baldwin |
+| Sherman | https://www.moma.org/calendar/exhibitions/253 | 《Untitled Film Stills》69 張、1977–80；MoMA 1995 購藏、1997 全系列展 |
+| Jeff Wall | https://www.thecanadianencyclopedia.ca/article/jeffrey-david-wall | 作品年份；溫哥華學派；Manet→《Picture for Women》；Pollock；1977 燈箱；UBC/Courtauld |
+| Weems | https://www.moma.org/artists/7177 | 《Kitchen Table Series》1990；《From Here I Saw…》1995 Getty 委託；挪用 Evans/Frank/Winogrand |
+| Friedlander | https://www.moma.org/documents/moma_press-release_387091.pdf | 2005 回顧展（Galassi）；六本著作年份；Evans/Frank/Atget 影響；Szarkowski 引言 |
+| Gursky | https://www.moma.org/documents/moma_press-release_387045.pdf | 2001 回顧展；Folkwang/Steinert；Becher 班 1987 Meisterschüler；Ruff/Struth 同門；作品年份；Shore/Sternfeld/Friedrich/Richter/Pollock 影響；數位合成 |
+| Dijkstra | https://berlinischegalerie.de/assets/downloads/presse/Pressetexte/Ausstellungen_2024/Rineke-Dijkstra/Press-release_Rineke-Dijkstra_Berlinische-Galerie.pdf | 系列年份；Rietveld 1981–86；2024–25 回顧展 |
+| Muholi | https://www.tate.org.uk/press/press-releases/zanele-muholi | Tate Modern 2020–21；四個系列；Market Photo Workshop；documenta 13、威尼斯 2013/2019；「visual activist」 |
+
+本輪新增 501 條，489 條依上表 approved，另 4 條既有 review 升級（Evans→Shore、Holmes〈立體鏡〉作者、Penn/Avedon∈肖像）；12 條（Cruel and Tender→紀實、《攝影家之眼》書與展、Newhall 策 1937 展、Eggleston Guide∈新彩色、Metz 論巴特、Burgin 篇收於 Thinking Photography、Tagg→Foucault、Koudelka∈戰地、Untitled Film Stills 歸類、Weems∈挪用、Bey→Weems）留 review，見 `docs/原典查核清單.md`（現 158 條）。
+
+> **判斷檢查**：理論選集（Photography Reader 44 篇、Classic Essays 28 篇）成為新的中心性 Top，與第 5 輪獎項同理。本輪把「屬於」邊依目標類型加權（機構 0.5、選集 0.7、展覽 0.8），並讓推薦走入邊（攝影家的著作、展出他的展覽、討論他的文本）；結果 Koudelka 的推薦從「Hasselblad Award」變成《Gypsies》《Exiles》，Arbus 從獎項變成 Aperture 專論與 New Documents。

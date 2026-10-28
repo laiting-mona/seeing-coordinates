@@ -1,6 +1,6 @@
 # 待人工判斷佇列（review queue）
 
-共 150 條。程式自動彙整,判斷與決定由你填。
+共 158 條。程式自動彙整,判斷與決定由你填。
 
 > 每條的「你的決定」欄預設空白。你確認後填 approved / rejected / 重構,我再據此更新圖。
 
@@ -18,14 +18,6 @@
 - 調查紀錄:攝影史常見的傳承(庶民美國公路題材),但未取得蕭爾或評論明說的出處。
 - 參考來源:(無)
 - 我的建議:查到蕭爾訪談或評論明說再升為 approved。
-- **你的決定:** ________
-
-## Walker Evans (沃克·伊凡斯) → Stephen Shore (蕭爾)（influence）
-- 可信度:0.65　來源層:primary　出處:american_photographs
-- 主張:沃克·伊凡斯的正面冷靜紀實為蕭爾形式前驅
-- 調查紀錄:伊凡斯對蕭爾的影響在攝影史上相當紮實,蕭爾多次提及;但本批尚未附上確切出處。
-- 參考來源:(無)
-- 我的建議:查證容易,驗證後建議 approved 並升可信度 >0.7。
 - **你的決定:** ________
 
 ## Michael Fried (弗雷德) → Stephen Shore (蕭爾)（extend）
@@ -391,14 +383,6 @@
 ## 波特萊爾 (Charles Baudelaire) → 班雅明 (Walter Benjamin)（influence）
 - 可信度:0.3　來源層:critic　出處:baudelaire_1859_s
 - 主張:班雅明〈攝影小史〉引用波特萊爾
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## The Stereoscope and the Stereograph (1859) (立體鏡與立體照片) → Oliver Wendell Holmes (奧利弗·溫德爾·霍姆斯)（belongs_to）
-- 可信度:0.42　來源層:critic　出處:baudelaire_1859_s
-- 主張:霍姆斯 1859〈立體鏡與立體照片〉(Atlantic)
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -1068,22 +1052,6 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## Richard Avedon (阿維頓) → 肖像攝影 (portraiture)（belongs_to）
-- 可信度:0.3　來源層:critic　出處:pw_douglass_s
-- 主張:肖像攝影代表
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Irving Penn (佩恩) → 肖像攝影 (portraiture)（belongs_to）
-- 可信度:0.3　來源層:critic　出處:pw_douglass_s
-- 主張:肖像攝影代表
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## Diane Arbus (黛安·阿巴斯) → 肖像攝影 (portraiture)（belongs_to）
 - 可信度:0.3　來源層:critic　出處:pw_douglass_s
 - 主張:肖像攝影代表
@@ -1199,6 +1167,102 @@
 ## Nick Ut (黃功吾) → 普立茲獎 (Pulitzer Prize)（belongs_to）
 - 可信度:0.28　來源層:other　出處:art2art_vietnam_s
 - 主張:1973 年普立茲獎(頁面未載年份)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Cruel and Tender: The Real in the Twentieth-Century Photograph (2003) (殘酷與溫柔:二十世紀攝影中的真實(2003)) → 紀實攝影 (documentary photography)（extend）
+- 可信度:0.38　來源層:institution　出處:tate_cruel_s
+- 主張:從 Sander 到 diCorcia 的紀實譜系(詮釋)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## The Photographer's Eye (攝影師之眼) → The Photographer's Eye 1964（extend）
+- 可信度:0.52　來源層:institution　出處:moma_pe1964_s
+- 主張:1966 年同名書以展覽為基礎(新聞稿未提書)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Beaumont Newhall (紐霍爾) → Photography: 1839–1937 (1937)（belongs_to）
+- 可信度:0.52　來源層:institution　出處:moma_bajac_s
+- 主張:策展(講義未明寫策展人;依攝影史常識)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## William Eggleston's Guide (艾格斯頓指南) → New Color (新彩色)（belongs_to）
+- 可信度:0.52　來源層:institution　出處:moma_egg1976_s
+- 主張:Szarkowski:「不把色彩當成孤立要解決的問題」
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Photography and Fetish (1985) (攝影與戀物) → 巴特 (Roland Barthes)（discusses）
+- 可信度:0.38　來源層:institution　出處:routledge_reader_s
+- 主張:以戀物論回應巴特的「此曾在」(詮釋)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Looking at Photographs (1977) (觀看照片) → Thinking Photography (1982) (思考攝影)（belongs_to）
+- 可信度:0.52　來源層:institution　出處:routledge_reader_s
+- 主張:同篇亦收於 Burgin 主編《Thinking Photography》(1982)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## John Tagg (塔格) → 米歇爾·傅柯 (Michel Foucault)（extend）
+- 可信度:0.38　來源層:institution　出處:cca_burden_s
+- 主張:以傅柯的權力/知識分析攝影的證據功能(教科書共識)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Josef Koudelka (約瑟夫·寇德卡) → 戰地攝影 (war photography)（belongs_to）
+- 可信度:0.3　來源層:critic　出處:brit_koudelka_s
+- 主張:1968 布拉格入侵紀錄(歸類為詮釋)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Untitled Film Stills (1977–80) (無題電影劇照) → 圖景世代 (Pictures Generation)（belongs_to）
+- 可信度:0.52　來源層:institution　出處:moma_sherman_s
+- 主張:圖景世代代表作(詮釋)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Untitled Film Stills (1977–80) (無題電影劇照) → tableau (圖景 / 舞台式)（belongs_to）
+- 可信度:0.38　來源層:institution　出處:moma_sherman_s
+- 主張:擺拍/舞台式自拍(詮釋)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Carrie Mae Weems (凱莉·梅·威姆斯) → 挪用 (appropriation)（belongs_to）
+- 可信度:0.52　來源層:institution　出處:moma_weems_s
+- 主張:挪用既有影像(詮釋)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Dawoud Bey (達伍德·貝伊) → Carrie Mae Weems (凱莉·梅·威姆斯)（influence）
+- 可信度:0.38　來源層:institution　出處:moma_weems_s
+- 主張:友人與訪談者(BOMB)
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
