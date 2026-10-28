@@ -16,13 +16,13 @@
 
 | 指標 | 數 | 說明 |
 |---|---|---|
-| 節點 | 849 | 人物 · 著作 · 概念 · 事件 · 館所 |
-| 關係(全) | 1421 | 每條皆附 claim / evidence / source / confidence |
-| **正式入圖** | **1261** | 自動通過 99 + 上網查證確認 1162(其中 100 條為第 1–2 輪依標準攝影史升級、尚未附單一網址,見 `docs/verification-sources.md` B 節) |
-| 待查證 | 158 | 低信心或自我審核降級,隔離在佇列,需回原典補頁碼後才採用 |
+| 節點 | 914 | 人物 · 著作 · 概念 · 事件 · 館所 |
+| 關係(全) | 1592 | 每條皆附 claim / evidence / source / confidence |
+| **正式入圖** | **1420** | 自動通過 99 + 上網查證確認 1321(其中 100 條為第 1–2 輪依標準攝影史升級、尚未附單一網址,見 `docs/verification-sources.md` B 節) |
+| 待查證 | 170 | 低信心或自我審核降級,隔離在佇列,需回原典補頁碼後才採用 |
 | 已剔除 | 2 | 查證不成立(如 1977 Pictures 展未含辛蒂·雪曼) |
 
-158 條待查證的明細見 `docs/原典查核清單.xlsx`(附書名、待補頁碼欄、決定欄)。
+170 條待查證的明細見 `docs/原典查核清單.xlsx`(附書名、待補頁碼欄、決定欄)。
 查證來源網址見 `docs/verification-sources.md`。
 
 ---
@@ -70,8 +70,8 @@
 ```bash
 pip install -r requirements.txt       # pydantic, networkx
 
-python graph_build.py                 # 建正式圖(1261 條)→ build/graph.json
-python graph_build.py --with-review   # 連 158 條待查證一起畫(供檢視,非定論)
+python graph_build.py                 # 建正式圖(1420 條)→ build/graph.json
+python graph_build.py --with-review   # 連 170 條待查證一起畫(供檢視,非定論)
 python build_viewer.py                # 產生 build/viewer.html,瀏覽器開即可
 python test_core.py                   # 跑 22 項回歸測試
 python agent.py                       # Agent demo
@@ -112,5 +112,5 @@ npm install docx && node tools/build_reflection.js        # 重建反思 docx
 ## 誠實聲明
 
 這份圖目前最大的價值不是「大」,而是「每條都查得到出處、且把查過與沒查過分得很清楚」。
-158 條待查證是一條**正在前進的查驗路徑**,不是被藏起來的缺口——
+170 條待查證是一條**正在前進的查驗路徑**,不是被藏起來的缺口——
 它們被明確標記、隔離於正式圖之外,任何一條要當成論文證據前,都得回原典補到頁碼級引用。

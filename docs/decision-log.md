@@ -76,3 +76,11 @@
 - **判斷：推薦應該走入邊。** 原推薦只走出邊，攝影家的著作（著作→屬於→作者）永遠不會被推到。改為同時走入邊（自身著作、展出他的展覽、討論/研究/評論他的文本），並把 belongs_to 依目標類型加權（機構 0.5、選集 0.7、展覽 0.8）。新增回歸測試「Koudelka 的前兩名含《Gypsies》或《Exiles》」。
 - **誠實邊界：** 《Contest of Meaning》作者名單只查到 LibraryThing 書介（other 層）；《Art After Modernism》目錄來源有拼寫錯誤，照實註記；Newhall 策 1937 展、Burgin 篇收於 Thinking Photography 等教科書常識仍留 review。
 - **程式面：** recommend.py 新增 edge_score / inbound_candidate / MEMBERSHIP_WEIGHT / INBOUND_KINDS；22 項測試通過；pyflakes 乾淨。
+
+## 2026-10-28（三次）第 7 輪擴充：西方（849→914 節點）；西方 hub 層級接近飽和，下一輪轉東方
+
+- **新增叢集：** Tate 四個主題展（Performing for the Camera、Conflict Time Photography、The Radical Eye、Shape of Light）、SFMOMA/Tate《Exposed》、MoMA《Pictures by Women》、Shore 2017 回顧展、Evans 1938 首個攝影個展、Met 的 Daguerre 與 Talbot 發明史論文。新概念：表演與攝影、現代主義攝影、抽象攝影、偷窺與監控、達蓋爾法、卡羅法。
+- **數字：** 關係 1421→1592；正式入圖 1261→1420（自動 99 + 查證確認 1321）；待查證 158→170；剔除維持 2。
+- **判斷：西方差不多了。** 七輪後，19 世紀發明與論爭、分離派與直接攝影、新視覺與新客觀、超現實、FSA 與紀實、馬格南與戰地、紐約學派、New Documents／New Topographics／新彩色、杜塞道夫、圖景世代與觀念攝影、後現代理論、主要獎項與選集、MoMA/Tate 的主題展，都已有 hub 級查證的錨點。剩下的西方空白多是「葉節點補著作」這類精修，邊際效益低於開一條新脈絡。下一輪轉東方：日本（木村伊兵衛獎、土門拳獎、東京都寫真美術館、Provoke 之外的戰後系譜）、台灣（國家攝影文化中心、攝影家叢書）、中國（三影堂、四月影會）、韓國。
+- **流程修正：** upgrade 改為附加 evidence 而非覆蓋。
+- **GitHub：** 容器端 token 無效、電腦端未裝 gh；改以內建瀏覽器由使用者親自登入 GitHub 建 repo，push 由電腦端 git 完成（Git Credential Manager 彈窗登入）。

@@ -1,3 +1,4 @@
+
 # Python
 __pycache__/
 *.py[cod]
@@ -25,3 +26,5 @@ docs/原典查核清單.xlsx
 # 投稿文件(計畫書、反思心得)不上傳公開 repo
 docs/*.pdf
 docs/*.docx
+# 反思心得的產生腳本內含全文與個人資料,同樣不上傳
+tools/build_reflection.js

@@ -160,3 +160,13 @@ moma_fried2005_s,MoMA 新聞稿:Friedlander(2005),MoMA,2005,institution,press,ht
 moma_gursky2001_s,MoMA 新聞稿:Andreas Gursky(2001),MoMA,2001,institution,press,https://www.moma.org/documents/moma_press-release_387045.pdf,Folkwang/Becher;作品;影響
 bg_dijkstra_s,Berlinische Galerie 新聞稿:Rineke Dijkstra,Berlinische Galerie,2024,institution,press,https://berlinischegalerie.de/assets/downloads/presse/Pressetexte/Ausstellungen_2024/Rineke-Dijkstra/Press-release_Rineke-Dijkstra_Berlinische-Galerie.pdf,系列年份;Rietveld;Hasselblad
 tate_muholi_s,Tate 新聞稿:Zanele Muholi,Tate,2020,institution,press,https://www.tate.org.uk/press/press-releases/zanele-muholi,系列;Market Photo Workshop;visual activist
+tate_perf_s,Tate 新聞稿:Performing for the Camera,Tate,2016,institution,press,https://www.tate.org.uk/press/press-releases/performing-camera,參展者;作品年份;策展人
+tate_ctp_s,"Tate 新聞稿:Conflict, Time, Photography",Tate,2014,institution,press,https://www.tate.org.uk/press/press-releases/conflict-time-photography,依事件後時距排列;參展者
+tate_radical_s,Tate 新聞稿:The Radical Eye,Tate,2016,institution,press,https://www.tate.org.uk/press/press-releases/tate-modern-opens-first-uk-exhibition-modernist-photography-sir-elton-john,現代主義攝影 1920–50;參展者
+tate_sol_s,Tate 新聞稿:Shape of Light,Tate,2018,institution,press,https://www.tate.org.uk/press/press-releases/shape-light-100-years-photography-and-abstract-art,抽象攝影百年;參展者;MoMA 1960
+moma_pbw_s,MoMA 展覽頁:Pictures by Women,MoMA,2010,institution,web,https://www.moma.org/calendar/exhibitions/1038,策展人;參展者
+loeil_shore_s,L'Oeil de la Photographie 轉載 MoMA 公告:Stephen Shore,L'Oeil de la Photographie / MoMA,2017,critic,press,https://loeildelaphotographie.com/en/moma-announces-the-first-u-s-exhibition-to-encompass-photographer-stephen-shores-entire-career,Bajac 策展;Steichen;Factory;Met 個展
+moma_evans1938_s,MoMA 新聞稿 1938:American Photographs by Walker Evans,MoMA,1938,institution,press,https://www.moma.org/documents/moma_press-release_325121.pdf,首個攝影個展;Kirstein 撰文;87 幅
+met_daguerre_s,大都會 Heilbrunn:Daguerre 與攝影的發明,Met Museum / Malcolm Daniel,2004,institution,essay,https://www.metmuseum.org/it/essays/daguerre-1787-1851-and-the-invention-of-photography,Niépce 合夥 1829;Arago;1839
+met_talbot_s,大都會 Heilbrunn:Talbot 與攝影的發明,Met Museum,2004,institution,essay,https://www.metmuseum.org/it/essays/william-henry-fox-talbot-1800-1877-and-the-invention-of-photography,光繪 1834–35;卡羅法 1841;自然的鉛筆;Herschel
+sfmoma_exposed_s,SFMOMA 新聞稿:Exposed,SFMOMA,2010,institution,press,https://www.sfmoma.org/press/release/sfmoma-presents-us-premiere-of-exposed-voyeurism/,五主題;參展者;Tate/SFMOMA/Walker 巡迴

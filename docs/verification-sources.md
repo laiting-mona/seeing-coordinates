@@ -167,3 +167,22 @@ B 類是依標準攝影史參考升級、本輪未抓取單一網頁者，仍建
 本輪新增 501 條，489 條依上表 approved，另 4 條既有 review 升級（Evans→Shore、Holmes〈立體鏡〉作者、Penn/Avedon∈肖像）；12 條（Cruel and Tender→紀實、《攝影家之眼》書與展、Newhall 策 1937 展、Eggleston Guide∈新彩色、Metz 論巴特、Burgin 篇收於 Thinking Photography、Tagg→Foucault、Koudelka∈戰地、Untitled Film Stills 歸類、Weems∈挪用、Bey→Weems）留 review，見 `docs/原典查核清單.md`（現 158 條）。
 
 > **判斷檢查**：理論選集（Photography Reader 44 篇、Classic Essays 28 篇）成為新的中心性 Top，與第 5 輪獎項同理。本輪把「屬於」邊依目標類型加權（機構 0.5、選集 0.7、展覽 0.8），並讓推薦走入邊（攝影家的著作、展出他的展覽、討論他的文本）；結果 Koudelka 的推薦從「Hasselblad Award」變成《Gypsies》《Exiles》，Arbus 從獎項變成 Aperture 專論與 New Documents。
+
+## G. 第 7 輪（2026-10-28）西方擴充：主題展名單、攝影發明史、Evans 1938、Shore
+
+| 叢集 | 查證來源（URL） | 確認內容 |
+|---|---|---|
+| Performing for the Camera（Tate 2016） | https://www.tate.org.uk/press/press-releases/performing-camera | 2016.2–6；Baker 策展；22 位參展者；Klein《躍入虛空》1960、Hosoe《鎌鼬》1969、Mandel 棒球卡 1974、Fosso《African Spirits》2008 |
+| Conflict, Time, Photography（Tate 2014） | https://www.tate.org.uk/press/press-releases/conflict-time-photography | 依事件後時距排列；10 位參展者；McCullin 1968、Antony-Thouret 1927、Norfolk 2001–02、Kawada《地圖》 |
+| The Radical Eye（Tate 2016） | https://www.tate.org.uk/press/press-releases/tate-modern-opens-first-uk-exhibition-modernist-photography-sir-elton-john | 1920–50 年代現代主義；Man Ray 25 件；Kertész《水下泳者》1917 |
+| Shape of Light（Tate 2018） | https://www.tate.org.uk/press/press-releases/shape-light-100-years-photography-and-abstract-art | 抽象攝影百年；16 位列名；Coburn vortographs 1917；向 MoMA 1960《The Sense of Abstraction》致意 |
+| Pictures by Women（MoMA 2010） | https://www.moma.org/calendar/exhibitions/1038 | Marcoci/Meister/Respini 策展；16 位列名 |
+| Stephen Shore（MoMA 2017） | https://loeildelaphotographie.com/en/moma-announces-the-first-u-s-exhibition-to-encompass-photographer-stephen-shores-entire-career | Bajac 策展；14 歲作品被 Steichen 購藏、Factory、24 歲 Met 個展；Groover 列彩色攝影家。Steichen/Warhol→Shore 的「影響」留 review |
+| Walker Evans: American Photographs（MoMA 1938） | https://www.moma.org/documents/moma_press-release_325121.pdf | 館方首個攝影個展 1938.9.28；書 87 幅、Kirstein 撰文（既有 review 升級） |
+| Daguerre 與攝影的發明 | https://www.metmuseum.org/it/essays/daguerre-1787-1851-and-the-invention-of-photography | Niépce 1829 合夥；Arago 推動；1839.1.7 / 8.19 |
+| Talbot 與攝影的發明 | https://www.metmuseum.org/it/essays/william-henry-fox-talbot-1800-1877-and-the-invention-of-photography | 光繪 1834–35；卡羅法 1841；《自然的鉛筆》1844–46；Herschel hypo |
+| Exposed（SFMOMA/Tate 2010） | https://www.sfmoma.org/press/release/sfmoma-presents-us-premiere-of-exposed-voyeurism/ | 五主題；Phillips/Baker 策展；20 位列名；diCorcia《Heads》訴訟 |
+
+本輪新增 171 條，158 條 approved，1 條升級（Kirstein 論《American Photographs》）；12 條（展覽歸類為表演/現代主義攝影、Conflict→遲到的攝影、Steichen/Warhol→Shore）留 review，見 `docs/原典查核清單.md`（現 170 條）。
+
+> **流程修正**：既有 review 升級時，第 6 輪的腳本會覆蓋原 evidence；自本輪起改為「附加」，保留原始證據文字與升級軌跡。

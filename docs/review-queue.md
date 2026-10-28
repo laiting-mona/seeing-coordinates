@@ -1,6 +1,6 @@
 # 待人工判斷佇列（review queue）
 
-共 158 條。程式自動彙整,判斷與決定由你填。
+共 170 條。程式自動彙整,判斷與決定由你填。
 
 > 每條的「你的決定」欄預設空白。你確認後填 approved / rejected / 重構,我再據此更新圖。
 
@@ -519,14 +519,6 @@
 ## 攝影蒙太奇 (photomontage) → 直接攝影 (straight photography)（contrast）
 - 可信度:0.3　來源層:critic　出處:dada_montage_s
 - 主張:蒙太奇挑戰攝影的真實性宣稱
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Lincoln Kirstein (林肯·柯爾斯坦) → American Photographs（discusses）
-- 可信度:0.52　來源層:institution　出處:eoa_evans_s
-- 主張:柯爾斯坦為《美國照片》撰寫書末論文
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -1263,6 +1255,110 @@
 ## Dawoud Bey (達伍德·貝伊) → Carrie Mae Weems (凱莉·梅·威姆斯)（influence）
 - 可信度:0.38　來源層:institution　出處:moma_weems_s
 - 主張:友人與訪談者(BOMB)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Claude Cahun (克勞德·卡恩) → performance and photography (表演與攝影)（belongs_to）
+- 可信度:0.52　來源層:institution　出處:tate_perf_s
+- 主張:以身體/扮裝為鏡頭表演(依展覽歸類)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Cindy Sherman (辛蒂·雪曼) → performance and photography (表演與攝影)（belongs_to）
+- 可信度:0.52　來源層:institution　出處:tate_perf_s
+- 主張:以身體/扮裝為鏡頭表演(依展覽歸類)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Samuel Fosso (薩穆埃爾·福索) → performance and photography (表演與攝影)（belongs_to）
+- 可信度:0.52　來源層:institution　出處:tate_perf_s
+- 主張:以身體/扮裝為鏡頭表演(依展覽歸類)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Hannah Wilke (漢娜·威爾克) → performance and photography (表演與攝影)（belongs_to）
+- 可信度:0.52　來源層:institution　出處:tate_perf_s
+- 主張:以身體/扮裝為鏡頭表演(依展覽歸類)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Yves Klein (伊夫·克萊因) → performance and photography (表演與攝影)（belongs_to）
+- 可信度:0.52　來源層:institution　出處:tate_perf_s
+- 主張:以身體/扮裝為鏡頭表演(依展覽歸類)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Conflict, Time, Photography (2014–15) (衝突、時間、攝影(Tate Modern,2014–15)) → late photography (遲到的攝影)（extend）
+- 可信度:0.52　來源層:institution　出處:tate_ctp_s
+- 主張:餘波取徑的展覽化(Campany「遲到的攝影」為詮釋連結)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Man Ray (曼·雷) → modernist photography (現代主義攝影(1920–50 年代))（belongs_to）
+- 可信度:0.52　來源層:institution　出處:tate_radical_s
+- 主張:展覽歸類(1920–50 年代現代主義)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Imogen Cunningham (康寧漢) → modernist photography (現代主義攝影(1920–50 年代))（belongs_to）
+- 可信度:0.52　來源層:institution　出處:tate_radical_s
+- 主張:展覽歸類(1920–50 年代現代主義)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## André Kertész (柯特茲) → modernist photography (現代主義攝影(1920–50 年代))（belongs_to）
+- 可信度:0.52　來源層:institution　出處:tate_radical_s
+- 主張:展覽歸類(1920–50 年代現代主義)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Tina Modotti (莫多蒂) → modernist photography (現代主義攝影(1920–50 年代))（belongs_to）
+- 可信度:0.52　來源層:institution　出處:tate_radical_s
+- 主張:展覽歸類(1920–50 年代現代主義)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Walker Evans (沃克·伊凡斯) → modernist photography (現代主義攝影(1920–50 年代))（belongs_to）
+- 可信度:0.52　來源層:institution　出處:tate_radical_s
+- 主張:展覽歸類(1920–50 年代現代主義)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Edward Steichen (史泰欽) → Stephen Shore (蕭爾)（influence）
+- 可信度:0.42　來源層:critic　出處:loeil_shore_s
+- 主張:14 歲作品即被 Steichen(時任 MoMA 攝影部主任)購藏
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Andy Warhol (安迪·沃荷) → Stephen Shore (蕭爾)（influence）
+- 可信度:0.42　來源層:critic　出處:loeil_shore_s
+- 主張:曾在 Warhol 的 Factory 工作
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
