@@ -1,0 +1,619 @@
+id,type,name_zh,name_en,label_pref
+benjamin,person,班雅明,Walter Benjamin,zh_en
+berger,person,伯格,John Berger,zh_en
+sontag,person,桑塔格,Susan Sontag,zh_en
+barthes,person,巴特,Roland Barthes,zh_en
+shore,person,蕭爾,Stephen Shore,en
+szarkowski,person,薩考斯基,John Szarkowski,en
+frank,person,法蘭克,Robert Frank,en
+evans,person,沃克·伊凡斯,Walker Evans,en
+eggleston,person,艾格斯頓,William Eggleston,en
+krauss,person,克勞絲,Rosalind Krauss,en
+sekula,person,塞庫拉,Allan Sekula,en
+burgin,person,柏金,Victor Burgin,en
+tagg,person,塔格,John Tagg,en
+batchen,person,巴欽,Geoffrey Batchen,en
+fried,person,弗雷德,Michael Fried,en
+kuo,person,郭力昕,Kuo Li-hsin,zh
+work_of_art,work,機械複製時代的藝術作品,The Work of Art in the Age of Mechanical Reproduction,zh_en
+short_history,work,攝影小史,A Short History of Photography,zh_en
+ways_of_seeing,work,觀看的方式,Ways of Seeing,zh_en
+on_photography,work,論攝影,On Photography,zh_en
+regarding_pain,work,旁觀他人之痛苦,Regarding the Pain of Others,zh_en
+camera_lucida,work,明室,Camera Lucida,zh_en
+rhetoric_image,work,影像的修辭,Rhetoric of the Image,en
+nature_of_photographs,work,照片的本質,The Nature of Photographs,en
+photographers_eye,work,攝影師之眼,The Photographer's Eye,en
+the_americans,work,美國人,The Americans,en
+american_photographs,work,American Photographs,American Photographs,en
+eggleston_guide,work,艾格斯頓指南,William Eggleston's Guide,en
+aura,concept,靈光,aura,zh_en
+mech_reproduction,concept,機械複製,mechanical reproduction,zh_en
+gaze,concept,凝視,gaze,zh_en
+ideology,concept,意識形態,ideology,zh_en
+punctum,concept,刺點,punctum,zh_en
+studium,concept,知面,studium,zh_en
+that_has_been,concept,此曾在,that-has-been,zh_en
+deadpan,concept,冷面美學,deadpan,en
+vernacular,concept,日常庶民,vernacular,zh_en
+new_documents_1967,event,New Documents 展 1967,New Documents 1967,zh_en
+new_topographics_1975,event,New Topographics 展 1975,New Topographics 1975,zh_en
+klein,person,威廉·克萊因,William Klein,en
+mapplethorpe,person,梅普索普,Robert Mapplethorpe,en
+nadar,person,納達爾,Nadar,en
+arbus,person,黛安·阿巴斯,Diane Arbus,en
+atget,person,阿傑,Eugène Atget,en
+sander,person,桑德,August Sander,en
+blossfeldt,person,布洛斯菲爾德,Karl Blossfeldt,en
+friedlander,person,弗里德蘭德,Lee Friedlander,en
+winogrand,person,威諾格蘭德,Garry Winogrand,en
+weston,person,愛德華·威斯頓,Edward Weston,en
+stieglitz,person,史蒂格利茲,Alfred Stieglitz,en
+strand,person,保羅·史川德,Paul Strand,en
+avedon,person,阿維頓,Richard Avedon,en
+kertesz,person,柯特茲,André Kertész,en
+cartier_bresson,person,卡提耶-布列松,Henri Cartier-Bresson,zh_en
+hine,person,路易斯·海因,Lewis Hine,en
+flusser,person,傅拉瑟,Vilém Flusser,en
+bourdieu,person,布迪厄,Pierre Bourdieu,zh_en
+azoulay,person,阿祖萊,Ariella Azoulay,en
+solomon_godeau,person,索羅門-戈多,Abigail Solomon-Godeau,en
+rosler,person,蘿絲勒,Martha Rosler,en
+october,work,October 期刊,October (journal),en
+artforum,work,Artforum 期刊,Artforum,en
+aperture_mag,work,Aperture 雜誌,Aperture (magazine),en
+moma,institution,紐約現代美術館,Museum of Modern Art,zh_en
+eastman,institution,喬治伊士曼博物館,George Eastman Museum,en
+tate,institution,泰特美術館,Tate,zh_en
+met,institution,大都會藝術博物館,The Metropolitan Museum of Art,zh_en
+magnum,institution,馬格南攝影通訊社,Magnum Photos,zh_en
+arles,institution,阿爾勒攝影節,Rencontres d'Arles,en
+history_of_photography,work,History of Photography 期刊,History of Photography,en
+afterimage,work,Afterimage 期刊,Afterimage,en
+asx,work,American Suburb X,American Suburb X,en
+cphmag,work,Conscientious,Conscientious Photography Magazine,en
+bjp,work,英國攝影雜誌,British Journal of Photography,en
+a_small_voice,work,A Small Voice podcast,A Small Voice,en
+kracauer,person,克拉考爾,Siegfried Kracauer,zh_en
+bazin,person,巴贊,André Bazin,zh_en
+crary,person,克拉里,Jonathan Crary,en
+edwards_e,person,伊莉莎白·愛德華茲,Elizabeth Edwards,en
+campany,person,坎帕尼,David Campany,en
+cotton,person,夏洛特·柯頓,Charlotte Cotton,en
+wells,person,莉茲·威爾斯,Liz Wells,en
+elkins,person,艾爾金斯,James Elkins,en
+marien,person,瑪莉·沃納·馬里恩,Mary Warner Marien,en
+newhall,person,紐霍爾,Beaumont Newhall,en
+clarke,person,格雷姆·克拉克,Graham Clarke,en
+mitchell_wjt,person,米契爾,W. J. T. Mitchell,en
+ranciere,person,洪席耶,Jacques Rancière,en
+didi_huberman,person,迪迪-于貝爾曼,Georges Didi-Huberman,en
+debord,person,德波,Guy Debord,en
+baudrillard,person,布希亞,Jean Baudrillard,en
+dyer,person,傑夫·戴爾,Geoff Dyer,en
+phillips_c,person,克里斯多福·菲利普斯,Christopher Phillips,en
+trachtenberg,person,特拉亨伯格,Alan Trachtenberg,en
+daguerre,person,達蓋爾,Louis Daguerre,en
+niepce,person,尼埃普斯,Nicéphore Niépce,en
+talbot,person,塔爾博特,William Henry Fox Talbot,en
+bayard,person,巴耶爾,Hippolyte Bayard,en
+cameron_jm,person,茱莉亞·瑪格麗特·卡麥隆,Julia Margaret Cameron,en
+muybridge,person,麥布里奇,Eadweard Muybridge,en
+marey,person,馬雷,Étienne-Jules Marey,en
+osullivan,person,歐蘇利文,Timothy O'Sullivan,en
+watkins,person,沃特金斯,Carleton Watkins,en
+jackson_whj,person,傑克森,William Henry Jackson,en
+riis,person,里斯,Jacob Riis,en
+lartigue,person,拉蒂格,Jacques Henri Lartigue,en
+steichen,person,史泰欽,Edward Steichen,en
+kasebier,person,凱斯比爾,Gertrude Käsebier,en
+white_clarence,person,克拉倫斯·懷特,Clarence H. White,en
+coburn,person,科本,Alvin Langdon Coburn,en
+adams_ansel,person,安瑟·亞當斯,Ansel Adams,en
+cunningham,person,康寧漢,Imogen Cunningham,en
+modotti,person,莫多蒂,Tina Modotti,en
+sheeler,person,席勒,Charles Sheeler,en
+moholy_nagy,person,莫侯利-納吉,László Moholy-Nagy,en
+man_ray,person,曼·雷,Man Ray,en
+rodchenko,person,羅欽可,Alexander Rodchenko,en
+renger_patzsch,person,倫格-帕奇,Albert Renger-Patzsch,en
+umbo,person,溫波,Umbo,en
+lange,person,蘭格,Dorothea Lange,en
+parks,person,戈登·帕克斯,Gordon Parks,en
+rothstein,person,羅斯坦,Arthur Rothstein,en
+shahn,person,夏恩,Ben Shahn,en
+wolcott,person,伍爾科特,Marion Post Wolcott,en
+lee_russell,person,羅素·李,Russell Lee,en
+brassai,person,布拉塞,Brassaï,en
+doisneau,person,杜瓦諾,Robert Doisneau,en
+ronis,person,羅尼斯,Willy Ronis,en
+levitt,person,海倫·萊維特,Helen Levitt,en
+model_lisette,person,麗賽特·莫德爾,Lisette Model,en
+capa,person,卡帕,Robert Capa,en
+seymour,person,西摩,David Seymour,en
+rodger,person,羅傑,George Rodger,en
+bischof,person,比紹夫,Werner Bischof,en
+erwitt,person,厄威特,Elliott Erwitt,en
+davidson_bruce,person,布魯斯·戴維森,Bruce Davidson,en
+gilden,person,吉爾登,Bruce Gilden,en
+salgado,person,薩爾加多,Sebastião Salgado,en
+nachtwey,person,納赫特韋,James Nachtwey,en
+mccullin,person,麥卡林,Don McCullin,en
+smith_weugene,person,尤金·史密斯,W. Eugene Smith,en
+ut_nick,person,黃功吾,Nick Ut,en
+penn,person,佩恩,Irving Penn,en
+newton_helmut,person,赫爾穆特·牛頓,Helmut Newton,en
+bourdin,person,布爾丹,Guy Bourdin,en
+beaton,person,畢頓,Cecil Beaton,en
+meyerowitz,person,梅耶羅維茨,Joel Meyerowitz,en
+sternfeld,person,斯坦菲爾德,Joel Sternfeld,en
+adams_robert,person,羅伯特·亞當斯,Robert Adams,en
+baltz,person,巴爾茨,Lewis Baltz,en
+nixon_n,person,尼克森,Nicholas Nixon,en
+becher,person,貝歇夫婦,Bernd and Hilla Becher,en
+gursky,person,古斯基,Andreas Gursky,en
+struth,person,史特魯斯,Thomas Struth,en
+hofer,person,霍弗,Candida Höfer,en
+ruff,person,魯夫,Thomas Ruff,en
+hutte,person,許特,Axel Hütte,en
+ruscha,person,魯沙,Ed Ruscha,en
+sherman,person,辛蒂·雪曼,Cindy Sherman,en
+levine,person,雪莉·萊文,Sherrie Levine,en
+prince_r,person,理查·普林斯,Richard Prince,en
+kruger,person,芭芭拉·克魯格,Barbara Kruger,en
+wall_jeff,person,傑夫·沃爾,Jeff Wall,en
+demand,person,德曼,Thomas Demand,en
+crewdson,person,克魯森,Gregory Crewdson,en
+dijkstra,person,黛克斯特拉,Rineke Dijkstra,en
+dicorcia,person,迪科西亞,Philip-Lorca diCorcia,en
+goldin,person,南·戈丁,Nan Goldin,en
+clark_larry,person,賴瑞·克拉克,Larry Clark,en
+mann_sally,person,莎莉·曼,Sally Mann,en
+billingham,person,比林漢,Richard Billingham,en
+tillmans,person,提爾曼斯,Wolfgang Tillmans,en
+soth,person,亞歷克·索斯,Alec Soth,en
+hido,person,托德·希多,Todd Hido,en
+epstein_m,person,米奇·艾普斯坦,Mitch Epstein,en
+misrach,person,米斯拉奇,Richard Misrach,en
+gowin,person,高溫,Emmet Gowin,en
+maier,person,薇薇安·邁爾,Vivian Maier,en
+leiter,person,索爾·萊特,Saul Leiter,en
+callahan,person,卡拉漢,Harry Callahan,en
+siskind,person,西斯金,Aaron Siskind,en
+white_minor,person,麥諾·懷特,Minor White,en
+parr,person,馬丁·帕爾,Martin Parr,en
+webb_alex,person,亞歷士·韋伯,Alex Webb,en
+domon,person,土門拳,Ken Domon,zh
+kimura_ihei,person,木村伊兵衛,Ihei Kimura,zh
+ueda_shoji,person,植田正治,Shoji Ueda,zh
+hamaya,person,濱谷浩,Hiroshi Hamaya,zh
+tomatsu,person,東松照明,Shomei Tomatsu,zh
+hosoe,person,細江英公,Eikoh Hosoe,zh
+kawada,person,川田喜久治,Kikuji Kawada,zh
+narahara,person,奈良原一高,Ikko Narahara,zh
+nakahira,person,中平卓馬,Takuma Nakahira,zh
+moriyama,person,森山大道,Daido Moriyama,zh
+taki_koji,person,多木浩二,Koji Taki,zh
+takanashi,person,高梨豐,Yutaka Takanashi,zh
+araki,person,荒木經惟,Nobuyoshi Araki,zh
+fukase,person,深瀨昌久,Masahisa Fukase,zh
+sugimoto,person,杉本博司,Hiroshi Sugimoto,zh
+kawauchi,person,川內倫子,Rinko Kawauchi,zh
+ishiuchi,person,石內都,Ishiuchi Miyako,zh
+homma,person,本間貴史,Takashi Homma,zh
+ninagawa,person,蜷川實花,Mika Ninagawa,zh
+lang_jingshan,person,郎靜山,Long Chin-san,zh
+zhang_cai,person,張才,Zhang Cai,zh
+deng_nanguang,person,鄧南光,Deng Nan-guang,zh
+li_mingdiao,person,李鳴鵰,Li Ming-diao,zh
+zhang_zhaotang,person,張照堂,Chang Chao-tang,zh
+ke_xijie,person,柯錫杰,Ko Si-chi,zh
+juan_ijong,person,阮義忠,Juan I-Jong,zh
+guan_xiaorong,person,關曉榮,Guan Xiao-rong,zh
+lin_boliang,person,林柏樑,Lin Bo-liang,zh
+hou_shuzi,person,侯淑姿,Lulu Shur-tzy Hou,zh
+ho_fan,person,何藩,Fan Ho,zh
+koo_bohnchang,person,具本昌,Koo Bohnchang,zh
+wu_yinxian,person,吳印咸,Wu Yinxian,zh
+pictorialism,concept,畫意攝影,pictorialism,zh_en
+straight_photography,concept,直接攝影,straight photography,zh_en
+new_vision,concept,新視覺,New Vision,en
+new_objectivity,concept,新客觀,New Objectivity,en
+decisive_moment,concept,決定性瞬間,the decisive moment,zh_en
+snapshot_aesthetic,concept,快照美學,snapshot aesthetic,en
+tableau,concept,圖景 / 舞台式,tableau,en
+indexicality,concept,索引性,indexicality,zh_en
+spectacle,concept,奇觀,spectacle,zh_en
+simulacrum,concept,擬像,simulacrum,zh_en
+social_landscape,concept,社會地景,social landscape,en
+new_color,concept,新彩色,New Color,en
+typology,concept,類型學,typology,zh_en
+appropriation,concept,挪用,appropriation,zh_en
+concerned_photography,concept,關懷攝影,concerned photography,en
+are_bure_boke,concept,粗粒子、晃動、失焦,are-bure-boke,zh
+composite_photography,concept,集錦攝影,composite photography,zh
+documentary,concept,紀實攝影,documentary photography,zh_en
+street_photography,concept,街頭攝影,street photography,zh_en
+war_photography,concept,戰地攝影,war photography,zh_en
+equivalents,concept,等價物,Equivalents,en
+family_of_man_1955,event,人類一家 展 1955,The Family of Man 1955,zh_en
+pictures_1977,event,Pictures 展 1977,Pictures 1977,en
+mirrors_windows_1978,event,鏡與窗 展 1978,Mirrors and Windows 1978,en
+f64,institution,f/64 群,Group f/64,en
+photo_league,institution,攝影聯盟,The Photo League,en
+photo_secession,institution,攝影分離派（291）,Photo-Secession / 291,en
+fsa,institution,農業安全管理局攝影部,Farm Security Administration,zh_en
+bauhaus,institution,包浩斯,Bauhaus,zh_en
+dusseldorf_academy,institution,杜塞道夫藝術學院,Kunstakademie Düsseldorf,en
+icp,institution,國際攝影中心,International Center of Photography,en
+getty,institution,蓋蒂博物館,J. Paul Getty Museum,en
+va_museum,institution,維多利亞與亞伯特博物館,Victoria and Albert Museum,en
+fotomuseum,institution,溫特圖爾攝影博物館,Fotomuseum Winterthur,en
+paris_photo,institution,巴黎攝影博覽會,Paris Photo,en
+ncpi_tw,institution,國家攝影文化中心,National Center of Photography and Images,zh
+tfam,institution,臺北市立美術館,Taipei Fine Arts Museum,zh
+vivo_japan,institution,VIVO,VIVO,zh
+provoke_collective,institution,Provoke 同人,Provoke collective,zh
+vu_agency,institution,VU 圖片社,Agence VU,en
+ontology_bazin,work,攝影影像的本體論,The Ontology of the Photographic Image,en
+techniques_observer,work,觀察者的技術,Techniques of the Observer,en
+society_spectacle,work,景觀社會,The Society of the Spectacle,en
+simulacra_sim,work,擬仿物與擬像,Simulacra and Simulation,en
+civil_contract,work,攝影的公民契約,The Civil Contract of Photography,en
+ongoing_moment,work,持續進行的瞬間,The Ongoing Moment,en
+newhall_history_w,work,攝影史,The History of Photography,en
+marien_history_w,work,攝影：一部文化史,Photography: A Cultural History,en
+cotton_art_w,work,作為當代藝術的攝影,The Photograph as Contemporary Art,en
+wells_intro_w,work,攝影批判導論,Photography: A Critical Introduction,en
+photobook_history,work,攝影書：一部歷史,The Photobook: A History,en
+decisive_book,work,決定性瞬間（攝影集）,The Decisive Moment,zh_en
+family_of_man_cat,work,人類一家（圖錄）,The Family of Man,en
+mirrors_windows_cat,work,鏡與窗（圖錄）,Mirrors and Windows,en
+arbus_mono,work,黛安·阿巴斯（光圈專論）,Diane Arbus: An Aperture Monograph,en
+ballad_goldin,work,性依存的敘事曲,The Ballad of Sexual Dependency,en
+immediate_family,work,親密家庭,Immediate Family,en
+tulsa_clark,work,塔爾薩,Tulsa,en
+sleeping_mississippi,work,眠於密西西比河畔,Sleeping by the Mississippi,en
+provoke_journal,work,Provoke,Provoke,zh
+nakahira_plants,work,為何是植物圖鑑,Why an Illustrated Botanical Dictionary?,zh
+moriyama_bye,work,再見攝影,Bye Bye Photography,zh
+ravens_fukase,work,鴉,Ravens,zh
+becher_typologies,work,工業建築類型學,Typologies of Industrial Buildings,en
+juan_masters,work,當代攝影大師,Contemporary Masters of Photography,zh
+juan_seven,work,攝影美學七問,Seven Questions on the Aesthetics of Photography,zh
+uncommon_places_w,work,Uncommon Places,Uncommon Places,en
+wu_lijun,person,吳莉君,Wu Li-chun,zh
+huang_handi,person,黃翰荻,Huang Han-ti,zh
+xu_qiling,person,許綺玲,Hsu Chi-lin,zh
+howard_r,person,理查·霍華,Richard Howard,en
+zohn,person,哈利·佐恩,Harry Zohn,en
+kerouac,person,凱魯亞克,Jack Kerouac,en
+ways_of_seeing_zh,work,觀看的方式（中譯本）,Ways of Seeing (Chinese ed.),zh
+on_photography_zh,work,論攝影（中譯本）,On Photography (Chinese ed.),zh
+camera_lucida_zh,work,明室（中譯本）,Camera Lucida (Chinese ed.),zh
+lightaura_zh,work,迎向靈光消逝的年代,Benjamin: Essays on Photography (Chinese),zh
+illuminations_en,work,啟迪（Illuminations）,Illuminations,en
+degree_zero_w,work,攝影的零度：巴特《明室》反思,Photography Degree Zero,en
+burning_desire_w,work,慾望的燃燒：攝影的起源,Burning with Desire,en
+wos_bbc,event,觀看的方式 BBC 影集 1972,"Ways of Seeing (BBC, 1972)",en
+arbus_retro_1972,event,黛安·阿巴斯回顧展 1972,Diane Arbus Retrospective 1972,en
+walton_k,person,肯德爾·沃爾頓,Kendall Walton,en
+scruton,person,羅傑·斯克魯頓,Roger Scruton,en
+cavell,person,史丹利·卡維爾,Stanley Cavell,en
+currie_g,person,格雷戈里·柯里,Gregory Currie,en
+peirce,person,查爾斯·桑德斯·皮爾斯,Charles Sanders Peirce,en
+dubois_p,person,菲利普·杜布瓦,Philippe Dubois,en
+foucault,person,米歇爾·傅柯,Michel Foucault,zh_en
+lacan,person,雅各·拉岡,Jacques Lacan,zh_en
+mulvey,person,蘿拉·莫薇,Laura Mulvey,en
+eco_umberto,person,安伯托·艾可,Umberto Eco,en
+watney_simon,person,賽門·瓦特尼,Simon Watney,en
+galassi,person,彼得·加拉西,Peter Galassi,en
+ritchin,person,弗雷德·里奇,Fred Ritchin,en
+steyerl,person,希托·史戴爾,Hito Steyerl,en
+wajcman,person,傑哈·瓦吉曼,Gérard Wajcman,en
+chevrier,person,尚-法蘭索瓦·薛弗里耶,Jean-François Chevrier,en
+benn_michaels,person,華特·班·麥可斯,Walter Benn Michaels,en
+bertillon,person,阿方斯·貝蒂榮,Alphonse Bertillon,en
+galton,person,法蘭西斯·高爾頓,Francis Galton,en
+doblin,person,阿爾弗雷德·德布林,Alfred Döblin,en
+baudelaire,person,波特萊爾,Charles Baudelaire,zh_en
+holmes_ow,person,奧利弗·溫德爾·霍姆斯,Oliver Wendell Holmes,en
+emerson_ph,person,彼得·亨利·愛默生,Peter Henry Emerson,en
+robinson_hp,person,亨利·皮奇·羅賓遜,Henry Peach Robinson,en
+rejlander,person,奧斯卡·雷蘭德,Oscar Gustave Rejlander,en
+gardner_alexander,person,亞歷山大·加德納,Alexander Gardner,en
+evans_frederick,person,弗雷德里克·H·埃文斯,Frederick H. Evans,en
+deal_joe,person,喬·迪爾,Joe Deal,en
+gohlke,person,法蘭克·戈爾克,Frank Gohlke,en
+schott_john,person,約翰·肖特,John Schott,en
+wessel_henry,person,亨利·韋塞爾,Henry Wessel Jr.,en
+jenkins_william,person,威廉·詹金斯,William Jenkins,en
+crimp,person,道格拉斯·克林普,Douglas Crimp,en
+longo,person,羅伯特·隆哥,Robert Longo,en
+goldstein_jack,person,傑克·戈德斯坦,Jack Goldstein,en
+brauntuch,person,特洛伊·布朗塔克,Troy Brauntuch,en
+smith_philip,person,菲利普·史密斯,Philip Smith,en
+lawler,person,露易絲·勞勒,Louise Lawler,en
+simmons_laurie,person,蘿莉·西蒙斯,Laurie Simmons,en
+welling,person,詹姆斯·韋林,James Welling,en
+charlesworth,person,莎拉·查爾斯沃斯,Sarah Charlesworth,en
+casebere,person,詹姆斯·凱斯比爾,James Casebere,en
+eklund,person,道格拉斯·艾克倫,Douglas Eklund,en
+lissitzky,person,艾爾·利西茨基,El Lissitzky,en
+krull,person,潔曼·克魯爾,Germaine Krull,en
+henri_florence,person,佛羅倫斯·亨利,Florence Henri,en
+heartfield,person,約翰·哈特菲爾德,John Heartfield,en
+hoch_hannah,person,漢娜·霍赫,Hannah Höch,en
+hausmann,person,拉烏爾·豪斯曼,Raoul Hausmann,en
+richter_hans,person,漢斯·李希特,Hans Richter,en
+agee,person,詹姆斯·艾吉,James Agee,en
+kirstein,person,林肯·柯爾斯坦,Lincoln Kirstein,en
+abbott,person,貝倫妮絲·阿博特,Berenice Abbott,en
+levy_julien,person,朱利安·列維,Julien Levy,en
+christenberry,person,威廉·克里斯滕貝里,William Christenberry,en
+weegee,person,維吉,Weegee,en
+decarava,person,羅伊·德卡拉瓦,Roy DeCarava,en
+hughes_langston,person,朗斯頓·休斯,Langston Hughes,en
+brandt_bill,person,比爾·布蘭特,Bill Brandt,en
+killip,person,克里斯·基利普,Chris Killip,en
+graham_paul,person,保羅·葛拉漢,Paul Graham,en
+koudelka,person,約瑟夫·寇德卡,Josef Koudelka,en
+delpire,person,羅伯特·德爾皮爾,Robert Delpire,en
+sultan_larry,person,賴瑞·蘇丹,Larry Sultan,en
+mandel_mike,person,麥克·曼德爾,Mike Mandel,en
+baldessari,person,約翰·巴爾代薩里,John Baldessari,en
+graham_dan,person,丹·葛拉漢,Dan Graham,en
+smithson_r,person,羅伯特·史密森,Robert Smithson,en
+huebler,person,道格拉斯·休伯勒,Douglas Huebler,en
+long_richard,person,理查·朗,Richard Long,en
+nauman,person,布魯斯·瑙曼,Bruce Nauman,en
+warhol,person,安迪·沃荷,Andy Warhol,en
+bustamante,person,尚-馬克·布斯塔曼,Jean-Marc Bustamante,en
+delahaye,person,呂克·德拉艾,Luc Delahaye,en
+streuli,person,畢特·史特勒利,Beat Streuli,en
+van_der_zee,person,詹姆斯·范德澤,James Van Der Zee,en
+wessing_koen,person,柯恩·韋辛,Koen Wessing,en
+transparent_pictures_w,work,透明的圖像,Transparent Pictures (1984),en
+photo_representation_w,work,攝影與再現,Photography and Representation (1981),en
+world_viewed_w,work,被觀看的世界,The World Viewed (1971),en
+acte_photo_w,work,攝影行為,L'acte photographique (1983),en
+salon_1859_w,work,一八五九年沙龍,Salon of 1859,en
+stereoscope_w,work,立體鏡與立體照片,The Stereoscope and the Stereograph (1859),en
+naturalistic_photo_w,work,自然主義攝影,Naturalistic Photography (1889),en
+pictorial_effect_w,work,攝影中的繪畫效果,Pictorial Effect in Photography (1869),en
+two_ways_w,work,人生的兩條路,The Two Ways of Life (1857),en
+camera_work,work,Camera Work(期刊),Camera Work (journal),en
+pictures_essay_w,work,〈圖景〉,"Pictures (essay, 1979)",en
+world_beautiful_w,work,世界是美的,Die Welt ist schön (1928),en
+antlitz_w,work,時代的面容,Antlitz der Zeit (1929),en
+lunpfm_w,work,讓我們現在讚美名人,Let Us Now Praise Famous Men (1941),en
+changing_ny_w,work,變遷中的紐約,Changing New York (1939),en
+naked_city_w,work,裸城,Naked City (1945),en
+sweet_flypaper_w,work,生活的甜蜜捕蠅紙,The Sweet Flypaper of Life (1955),en
+gypsies_w,work,吉普賽人,Gypsies (1975),en
+exiles_w,work,流亡,Exiles (1988),en
+in_flagrante_w,work,現行犯,In Flagrante (1988),en
+evidence_w,work,證據,Evidence (1977),en
+marks_indifference_w,work,無差別的標記,Marks of Indifference (1995),en
+twentysix_w,work,二十六個加油站,Twentysix Gasoline Stations (1963),en
+homes_america_w,work,美國的家,Homes for America (1966),en
+visual_pleasure_w,work,視覺快感與敘事電影,Visual Pleasure and Narrative Cinema (1975),en
+thinking_photography_w,work,思考攝影,Thinking Photography (1982),en
+author_producer_w,work,作者作為生產者,The Author as Producer (1934),en
+invention_meaning_w,work,論攝影意義的發明,On the Invention of Photographic Meaning (1975),en
+body_archive_w,work,身體與檔案,The Body and the Archive (1986),en
+bowery_w,work,鮑爾里街:兩個不充分的描述系統,The Bowery in two inadequate descriptive systems (1974–75),en
+in_around_w,work,在紀實攝影之內、周圍與之後,"In, Around, and Afterthoughts (1981)",en
+middlebrow_w,work,中等品味的藝術,Photography: A Middle-brow Art (1965),en
+kracauer_photo_w,work,〈攝影〉(1927),"Photography (essay, 1927)",en
+flusser_philosophy_w,work,攝影的哲學思考,Towards a Philosophy of Photography (1983),en
+notes_index_w,work,論索引,Notes on the Index (1977),en
+before_photography_w,work,攝影之前,Before Photography (1981),en
+after_photography_w,work,攝影之後,After Photography (2008),en
+poor_image_w,work,為劣質影像辯護,In Defense of the Poor Image (2009),en
+images_spite_w,work,"影像,不顧一切",Images in Spite of All (2003),en
+emancipated_spectator_w,work,被解放的觀眾,The Emancipated Spectator (2008),en
+why_matters_w,work,攝影為何前所未有地重要,Why Photography Matters as Art as Never Before (2008),en
+transparency_thesis,concept,透明性論題,transparency thesis,en
+photomontage,concept,攝影蒙太奇,photomontage,zh_en
+apparatus_flusser,concept,裝置(傅拉瑟),apparatus (Flusser),en
+technical_image,concept,技術影像,technical image,en
+absorption_theatricality,concept,專注/劇場性,absorption / theatricality,en
+conceptual_photography,concept,概念攝影,conceptual photography,en
+poor_image,concept,劣質影像,poor image,en
+pensive_image,concept,沉思的影像,pensive image,en
+male_gaze,concept,男性凝視,male gaze,en
+archive,concept,檔案,archive,zh_en
+post_photography,concept,後攝影,post-photography,en
+pictures_generation,concept,圖景世代,Pictures Generation,zh_en
+fifo_1929,event,電影與攝影展 1929,Film und Foto 1929,en
+pictures_gen_met_2009,event,"圖景世代 1974–1984(大都會,2009)","The Pictures Generation, 1974–1984 (Met, 2009)",en
+artists_space,institution,藝術家空間,Artists Space,en
+moca_la,institution,洛杉磯當代美術館,MOCA Los Angeles,en
+whitney,institution,惠特尼美術館,Whitney Museum of American Art,en
+baldus,person,愛德華·巴爾杜斯,Édouard Baldus,en
+le_gray,person,古斯塔夫·勒格雷,Gustave Le Gray,en
+le_secq,person,亨利·勒塞克,Henri Le Secq,en
+mestral,person,奧古斯特·梅斯特拉爾,Auguste Mestral,en
+brady,person,馬修·布雷迪,Mathew Brady,en
+barnard_george,person,喬治·巴納德,George N. Barnard,en
+fenton_roger,person,羅傑·芬頓,Roger Fenton,en
+bellmer,person,漢斯·貝爾默,Hans Bellmer,en
+boiffard,person,賈克-安德烈·布瓦法,Jacques-André Boiffard,en
+ubac,person,拉烏爾·尤巴克,Raoul Ubac,en
+breton,person,安德烈·布勒東,André Breton,en
+livingston_jane,person,珍·李文斯頓,Jane Livingston,en
+ades_dawn,person,道恩·艾德斯,Dawn Ades,en
+michelson_annette,person,安奈特·米雪森,Annette Michelson,en
+de_duve,person,蒂埃里·德·迪夫,Thierry de Duve,en
+damisch,person,于貝爾·達米施,Hubert Damisch,en
+snyder_joel,person,喬爾·史奈德,Joel Snyder,en
+iversen_margaret,person,瑪格麗特·艾弗森,Margaret Iversen,en
+squiers_carol,person,卡蘿·斯奎爾斯,Carol Squiers,en
+draper_louis,person,路易斯·德雷珀,Louis Draper,en
+barboza,person,安東尼·巴博薩,Anthony Barboza,en
+smith_ming,person,明·史密斯,Ming Smith,en
+walker_shawn,person,尚恩·沃克,Shawn Walker,en
+cowans_adger,person,阿杰·考恩斯,Adger Cowans,en
+smith_beuford,person,布福德·史密斯,Beuford Smith,en
+enwezor,person,奧奎·恩維佐,Okwui Enwezor,en
+boltanski,person,克里斯蒂安·波坦斯基,Christian Boltanski,en
+dean_tacita,person,塔西塔·迪恩,Tacita Dean,en
+douglas_stan,person,史坦·道格拉斯,Stan Douglas,en
+feldmann,person,漢斯-彼得·費德曼,Hans-Peter Feldmann,en
+raad_walid,person,瓦利德·拉德,Walid Raad,en
+leonard_zoe,person,柔伊·李奧納德,Zoe Leonard,en
+simpson_lorna,person,蘿娜·辛普森,Lorna Simpson,en
+sheikh_fazal,person,法札爾·謝赫,Fazal Sheikh,en
+klett,person,馬克·克萊特,Mark Klett,en
+manchester_ellen,person,艾倫·曼徹斯特,Ellen Manchester,en
+verburg_joann,person,喬安·韋伯格,JoAnn Verburg,en
+ristelhueber,person,蘇菲·里斯泰勒于貝,Sophie Ristelhueber,en
+seawright,person,保羅·西萊特,Paul Seawright,en
+doherty_willie,person,威利·多赫蒂,Willie Doherty,en
+morgan_barbara,person,芭芭拉·摩根,Barbara Morgan,en
+newhall_nancy,person,南西·紐霍爾,Nancy Newhall,en
+hoffman_michael,person,麥可·霍夫曼,Michael E. Hoffman,en
+bourke_white,person,瑪格麗特·伯克-懷特,Margaret Bourke-White,en
+burrows_larry,person,賴瑞·布羅斯,Larry Burrows,en
+luce_henry,person,亨利·魯斯,Henry R. Luce,en
+brodovitch,person,阿列克謝·布羅多維奇,Alexey Brodovitch,en
+bassman,person,莉莉安·巴斯曼,Lillian Bassman,en
+arnold_eve,person,伊芙·阿諾,Eve Arnold,en
+namuth,person,漢斯·納慕斯,Hans Namuth,en
+helms_jesse,person,傑西·赫姆斯,Jesse Helms,en
+serrano,person,安德烈斯·塞拉諾,Andres Serrano,en
+barrie_dennis,person,丹尼斯·巴里,Dennis Barrie,en
+douglass,person,弗雷德里克·道格拉斯,Frederick Douglass,en
+stauffer_john,person,約翰·史陶佛,John Stauffer,en
+ghirri,person,路易吉·吉里,Luigi Ghirri,en
+caponigro,person,保羅·卡波尼格羅,Paul Caponigro,en
+cohen_mark,person,馬克·柯恩,Mark Cohen,en
+dater_judy,person,茱蒂·戴特,Judy Dater,en
+haas_ernst,person,恩斯特·哈斯,Ernst Haas,en
+heinecken,person,羅伯特·海尼肯,Robert Heinecken,en
+krims,person,萊斯·克林姆斯,Les Krims,en
+metzker,person,雷·梅茲克,Ray K. Metzker,en
+papageorge,person,托德·帕帕喬治,Tod Papageorge,en
+uelsmann,person,傑利·尤斯曼,Jerry Uelsmann,en
+tice_george,person,喬治·泰斯,George Tice,en
+rauschenberg,person,羅伯特·羅森伯格,Robert Rauschenberg,en
+ray_jones,person,托尼·雷-瓊斯,Tony Ray-Jones,en
+gardner_sketchbook_w,work,加德納戰爭攝影素描集,Gardner's Photographic Sketch Book of the War (1865–66),en
+sherman_campaign_w,work,薛曼戰役攝影集,Photographic Views of Sherman's Campaign (1866),en
+october5_w,work,October 第 5 期:攝影專號,"October 5: Photography, A Special Issue (1978)",en
+tracing_nadar_w,work,追蹤納達爾,Tracing Nadar (1978),en
+time_exposure_w,work,長曝與快照:作為悖論的照片,Time Exposure and Snapshot (1978),en
+photo_activity_pm_w,work,後現代主義的攝影活動,The Photographic Activity of Postmodernism (1980),en
+photo_theory_w,work,攝影理論(藝術研討會),"Photography Theory (Art Seminar, 2007)",en
+notes_obtuse_w,work,論鈍義,Notes on the Obtuse (2007),en
+second_view_w,work,第二視角:再攝影調查計畫,Second View: The Rephotographic Survey Project (1984),en
+safety_numbness_w,work,麻木中的安全:論「遲到的攝影」,Safety in Numbness (2003),en
+aftermath_w,work,餘波:世貿中心檔案,Aftermath: World Trade Center Archive (2006),en
+picturing_douglass_w,work,描繪道格拉斯,Picturing Frederick Douglass (2015),en
+kodachrome_w,work,Kodachrome,Kodachrome (1978),en
+ballet_w,work,芭蕾,Ballet (1945),en
+day_off_w,work,休假日:英格蘭日誌,A Day Off: An English Journal (1974),en
+nonconformists_w,work,非國教徒,The Non-Conformists,en
+surrealism,concept,超現實主義攝影,surrealist photography,zh_en
+late_photography,concept,遲到的攝影,late photography,en
+fashion_photography,concept,時尚攝影,fashion photography,zh_en
+portraiture,concept,肖像攝影,portraiture,zh_en
+culture_wars,concept,文化戰爭與審查,culture wars / censorship,en
+rephotography,concept,再攝影,rephotography,en
+mission_helio_1851,event,太陽攝影任務 1851,Mission Héliographique 1851,en
+amour_fou_1985,event,瘋狂的愛:攝影與超現實主義(1985),L'Amour fou: Photography and Surrealism (1985),en
+archive_fever_2008,event,"檔案熱(ICP,2008)","Archive Fever (ICP, 2008)",en
+perfect_moment_1989,event,完美時刻(1988–90 巡展),The Perfect Moment (1988–90),en
+rephoto_survey_1977,event,再攝影調查計畫 1977–79,Rephotographic Survey Project 1977–79,en
+societe_helio,institution,太陽攝影學會,Société Héliographique,en
+corcoran,institution,柯克倫美術館,Corcoran Gallery of Art,en
+life_magazine,institution,LIFE 雜誌,LIFE magazine,zh_en
+harpers_bazaar,institution,Harper's Bazaar,Harper's Bazaar,en
+ica_philadelphia,institution,費城當代藝術館,ICA Philadelphia,en
+cincinnati_cac,institution,辛辛那提當代藝術中心,"Contemporary Arts Center, Cincinnati",en
+kamoinge,institution,卡莫因格工作坊,Kamoinge Workshop,en
+nilsson_lennart,person,倫納特·尼爾森,Lennart Nilsson,en
+alvarez_bravo,person,曼努埃爾·阿爾瓦雷斯·布拉沃,Manuel Álvarez Bravo,en
+boubat,person,愛德華·布巴,Édouard Boubat,en
+jonsson_sune,person,蘇內·永松,Sune Jonsson,en
+meiselas,person,蘇珊·梅塞拉斯,Susan Meiselas,en
+hausser_robert,person,羅伯特·豪瑟,Robert Häusser,en
+stromholm,person,克里斯特·斯特倫霍姆,Christer Strömholm,en
+mikhailov,person,鮑里斯·米哈伊洛夫,Boris Mikhailov,en
+sidibe,person,馬利克·西迪貝,Malick Sidibé,en
+goldblatt,person,大衛·戈德布拉特,David Goldblatt,en
+iturbide,person,葛拉謝拉·伊圖爾比德,Graciela Iturbide,en
+calle_sophie,person,蘇菲·卡爾,Sophie Calle,en
+fontcuberta,person,瓊·方庫貝塔,Joan Fontcuberta,en
+munoz_oscar,person,奧斯卡·穆尼奧斯,Oscar Muñoz,en
+jaar,person,阿爾弗雷多·哈爾,Alfredo Jaar,en
+singh_dayanita,person,達雅妮塔·辛格,Dayanita Singh,en
+weems,person,凱莉·梅·威姆斯,Carrie Mae Weems,en
+pollard,person,英格麗·波拉德,Ingrid Pollard,en
+muholi,person,扎內萊·穆霍利,Zanele Muholi,en
+gaskell_anna,person,安娜·加斯凱爾,Anna Gaskell,en
+shahbazi,person,希拉娜·沙巴齊,Shirana Shahbazi,en
+teller_juergen,person,尤爾根·泰勒,Juergen Teller,en
+mannikko,person,艾斯科·曼尼科,Esko Männikkö,en
+goldberg_jim,person,吉姆·戈德堡,Jim Goldberg,en
+stezaker_john,person,約翰·斯特薩克,John Stezaker,en
+broomberg_chanarin,person,布魯姆伯格與查納林,Adam Broomberg & Oliver Chanarin,en
+mosse_richard,person,理查·摩斯,Richard Mosse,en
+subotzky_waterhouse,person,蘇博茨基與沃特豪斯,Mikhael Subotzky & Patrick Waterhouse,en
+paglen_trevor,person,崔佛·帕格倫,Trevor Paglen,en
+lixenberg_dana,person,達娜·利克森伯格,Dana Lixenberg,en
+thompson_lw,person,盧克·威利斯·湯普森,Luke Willis Thompson,en
+bourouissa,person,穆罕默德·布魯伊薩,Mohamed Bourouissa,en
+cao_fei,person,曹斐,Cao Fei,zh
+lawson_deana,person,迪安娜·勞森,Deana Lawson,en
+fosso_samuel,person,薩穆埃爾·福索,Samuel Fosso,en
+kganye,person,萊博漢·卡尼耶,Lebohang Kganye,en
+sobekwa,person,林多庫勒·索貝克瓦,Lindokuhle Sobekwa,en
+croner_ted,person,泰德·克羅納,Ted Croner,en
+donaghy_don,person,唐·多納吉,Don Donaghy,en
+faurer,person,路易斯·福勒,Louis Faurer,en
+grossman_sid,person,席德·格羅斯曼,Sid Grossman,en
+levinstein,person,里昂·列文斯坦,Leon Levinstein,en
+vestal_david,person,大衛·維斯塔,David Vestal,en
+stryker_roy,person,羅伊·史崔克,Roy E. Stryker,en
+delano_jack,person,傑克·德拉諾,Jack Delano,en
+vachon_john,person,約翰·瓦雄,John Vachon,en
+mydans_carl,person,卡爾·邁登斯,Carl Mydans,en
+van_dyke_willard,person,威拉德·范戴克,Willard Van Dyke,en
+swift_henry,person,亨利·斯威夫特,Henry Swift,en
+edwards_john_paul,person,約翰·保羅·愛德華茲,John Paul Edwards,en
+weston_brett,person,布雷特·威斯頓,Brett Weston,en
+kanaga,person,康蘇艾洛·卡納加,Consuelo Kanaga,en
+lavenson,person,阿爾瑪·拉文森,Alma Lavenson,en
+noskowiak,person,索妮亞·諾斯科維亞克,Sonya Noskowiak,en
+holder_preston,person,普雷斯頓·霍爾德,Preston Holder,en
+kemp_wolfgang,person,沃夫岡·坎普,Wolfgang Kemp,en
+amelunxen,person,胡貝圖斯·馮·阿梅倫克森,Hubertus von Amelunxen,en
+teige,person,卡雷爾·泰格,Karel Teige,en
+sternberger,person,多爾夫·施騰貝格,Dolf Sternberger,en
+derrida,person,德希達,Jacques Derrida,zh_en
+virilio,person,保羅·維希留,Paul Virilio,en
+metz_christian,person,克里斯蒂安·梅茲,Christian Metz,en
+schmid_joachim,person,約阿希姆·施密德,Joachim Schmid,en
+gerz_jochen,person,約亨·格茨,Jochen Gerz,en
+adams_eddie,person,艾迪·亞當斯,Eddie Adams,en
+faas_horst,person,霍斯特·法斯,Horst Faas,en
+huet_henri,person,亨利·休特,Henri Huet,en
+sawada_kyoichi,person,澤田教一,Kyoichi Sawada,en
+griffiths_pjg,person,菲利普·瓊斯·格里菲斯,Philip Jones Griffiths,en
+duncan_dd,person,大衛·道格拉斯·鄧肯,David Douglas Duncan,en
+browne_malcolm,person,馬爾科姆·布朗,Malcolm Browne,en
+ny_school_w,work,紐約學派:攝影 1936–1963,The New York School: Photographs 1936–1963,en
+theorie_fotografie_w,work,"攝影理論選集 I–IV, 1839–1995","Theorie der Fotografie I–IV, 1839–1995 (2006)",en
+saigon_execution_w,work,西貢處決,Saigon Execution (Execution of a Viet Cong Prisoner),en
+napalm_girl_w,work,戰火中的女孩(燒夷彈女孩),The Terror of War (Napalm Girl),en
+new_york_school,concept,紐約學派(攝影),New York School (photography),en
+hasselblad_award,institution,哈蘇國際攝影獎,Hasselblad Award,en
+photographers_gallery,institution,攝影師畫廊(倫敦),The Photographers' Gallery,en
+deutsche_borse_prize,institution,德意志交易所攝影基金會獎,Deutsche Börse Photography Foundation Prize,en
+de_young,institution,笛洋美術館,M. H. de Young Memorial Museum,en
+pulitzer_prize,institution,普立茲獎,Pulitzer Prize,zh_en
+world_press_photo,institution,世界新聞攝影獎,World Press Photo,en
+camera_goes_to_war,event,相機上戰場:越南(巡迴展),The Camera Goes to War: Vietnam,en

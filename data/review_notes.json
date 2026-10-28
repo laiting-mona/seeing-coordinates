@@ -1,0 +1,69 @@
+{
+  "barthes->benjamin:extend": {
+    "investigation": "巴特《明室》本身未引用班雅明(維基 Camera Lucida 證實)。但《明室》中譯者許綺玲(中央大學法文系教授)同時也譯班雅明《迎向靈光消逝的年代》,華語圈多篇評論明確討論班雅明與巴特在攝影上的關係(靈光 vs 刺點、攝影的『危險』)。故此關係屬『評論者/譯者主張』的二手連結,非直接影響。",
+    "sources": ["https://french.ncu.edu.tw/?page_id=541", "https://www.thenewslens.com/article/138472"],
+    "recommendation": "改標為 critic 層的二手主張,引許綺玲為來源;不要當直接 influence。",
+    "decision": null
+  },
+  "frank->shore:influence": {
+    "investigation": "攝影史常見的傳承(庶民美國公路題材),但未取得蕭爾或評論明說的出處。",
+    "sources": [], "recommendation": "查到蕭爾訪談或評論明說再升為 approved。", "decision": null
+  },
+  "evans->shore:influence": {
+    "investigation": "伊凡斯對蕭爾的影響在攝影史上相當紮實,蕭爾多次提及;但本批尚未附上確切出處。",
+    "sources": [], "recommendation": "查證容易,驗證後建議 approved 並升可信度 >0.7。", "decision": null
+  },
+  "krauss->barthes:critique": {
+    "investigation": "時序問題:Krauss〈Notes on the Index〉1977 早於《明室》1980,無法批判尚未出版的書。索引 vs 此曾在的對話是真的,但『批判』框架與方向有誤。",
+    "sources": [], "recommendation": "重構為『概念對話/對照』而非 krauss 批判 barthes。", "decision": null
+  },
+  "sekula->berger:extend": {
+    "investigation": "同屬唯物/意識形態路線;但塞庫拉主要箭靶是薩考斯基的形式主義與檔案,與伯格的具體連結待查。",
+    "sources": [], "recommendation": "查證具體的伯格連結再定。", "decision": null
+  },
+  "burgin->ideology:extend": {
+    "investigation": "紮實:《Thinking Photography》就是符號學加意識形態批判。",
+    "sources": [], "recommendation": "輕度查證後建議 approved。", "decision": null
+  },
+  "batchen->sontag:critique": {
+    "investigation": "《Burning with Desire》確實把起源敘事(含桑塔格、巴特)當箭靶之一;具體主張待確認。",
+    "sources": [], "recommendation": "查證具體段落後定。", "decision": null
+  },
+  "fried->shore:extend": {
+    "investigation": "弗雷德《Why Photography Matters》主要處理 Struth、Gursky、Wall、diCorcia;蕭爾是否為其核心對象未確認。",
+    "sources": [], "recommendation": "需查證弗雷德是否實質討論蕭爾;若非核心應降權或不放。", "decision": null
+  },
+  "kuo->sontag:extend": {
+    "investigation": "華語圈對紀實倫理的評論,真實;依指示,華人圈確有與這些理論對話者可收為次要層、低權重。",
+    "sources": [], "recommendation": "列次要層、低權重,主軸維持西方正典不偏;待你確認。", "decision": null
+  },
+  "benjamin->atget:discusses": {
+    "investigation": "班雅明〈攝影小史〉討論阿傑為學界公認,但本批未取得頁碼級引用。許綺玲譯《迎向靈光消逝的年代》可作核對來源。",
+    "sources": ["https://www.books.com.tw/products/0010107242"], "recommendation": "回原典補頁碼後可升 approved。", "decision": null
+  },
+  "benjamin->sander:discusses": {
+    "investigation": "班雅明〈攝影小史〉論桑德類型學肖像為學界公認,待頁碼查證。",
+    "sources": ["https://www.books.com.tw/products/0010107242"], "recommendation": "回原典補頁碼後可升 approved。", "decision": null
+  },
+  "benjamin->blossfeldt:discusses": {
+    "investigation": "班雅明〈攝影小史〉論布洛斯菲爾德植物微距為學界公認,待頁碼查證。",
+    "sources": ["https://www.books.com.tw/products/0010107242"], "recommendation": "回原典補頁碼後可升 approved。", "decision": null
+  },
+  "sontag->evans:discusses": {"investigation": "《論攝影》常被引為討論伊凡斯與 FSA 紀實;待原典查證具體段落。", "sources": [], "recommendation": "查證後多半可 approved。", "decision": null},
+  "sontag->weston:discusses": {"investigation": "《論攝影》討論威斯頓的純粹主義;待原典查證。", "sources": [], "recommendation": "查證後可 approved。", "decision": null},
+  "sontag->stieglitz:discusses": {"investigation": "《論攝影》提及史蒂格利茲;待原典查證。", "sources": [], "recommendation": "查證後可 approved。", "decision": null},
+  "sontag->strand:discusses": {"investigation": "《論攝影》提及史川德;待原典查證。", "sources": [], "recommendation": "查證後可 approved。", "decision": null},
+  "sontag->cartier_bresson:discusses": {"investigation": "《論攝影》討論布列松的決定性瞬間;待原典查證。", "sources": [], "recommendation": "查證後可 approved。", "decision": null},
+  "sontag->avedon:discusses": {"investigation": "《論攝影》提及阿維頓;待原典查證。", "sources": [], "recommendation": "查證後可 approved。", "decision": null},
+  "sontag->hine:discusses": {"investigation": "《論攝影》提及海因的社會紀實;待原典查證。", "sources": [], "recommendation": "查證後可 approved。", "decision": null},
+  "barthes->kertesz:discusses": {"investigation": "《明室》以柯特茲照片為例(維基只列出 Klein/Mapplethorpe/Nadar,柯特茲待補證);待原典查證。", "sources": [], "recommendation": "查證後可 approved。", "decision": null},
+  "barthes->avedon:discusses": {"investigation": "《明室》討論阿維頓肖像;待原典查證。", "sources": [], "recommendation": "查證後可 approved。", "decision": null},
+  "cartier_bresson->shore:contrast": {"investigation": "詮釋性:決定性瞬間 vs 蕭爾冷面靜態,是常見的世代對照,非文本明說。", "sources": [], "recommendation": "當詮釋性對照,保留低權重或由你定。", "decision": null},
+  "flusser->mech_reproduction:extend": {"investigation": "傅拉瑟《攝影的哲學思考》以裝置/程式理論延伸;與班雅明複製論的連結為詮釋性。", "sources": [], "recommendation": "當代擴充,待查證具體對話。", "decision": null},
+  "bourdieu->ideology:extend": {"investigation": "布迪厄《中產品味的藝術》社會學地分析攝影實踐;與伯格意識形態線的連結待確認。", "sources": [], "recommendation": "當代擴充,待查證。", "decision": null},
+  "azoulay->sontag:critique": {"investigation": "阿祖萊《攝影的公民契約》重構觀看倫理,常被視為對桑塔格旁觀者立場的回應;待查證具體對話。", "sources": [], "recommendation": "當代擴充,待查證。", "decision": null},
+  "stieglitz->met:belongs_to": {"investigation": "史蒂格利茲與大都會的關係(贈藏)為史實方向,確切範圍待查。", "sources": [], "recommendation": "查證入藏範圍後可 approved。", "decision": null},
+  "solomon_godeau->october:belongs_to": {"investigation": "後現代攝影批判多見於 October;索羅門-戈多具體發表待查。", "sources": [], "recommendation": "查證後可 approved。", "decision": null},
+  "shore->vernacular:discusses": {"investigation": "popular 層示意邊:評論平台對蕭爾庶民美學的討論真實,但未綁定具體文章。", "sources": [], "recommendation": "綁定具體 ASX/平台文章後再定;或維持 popular 低權重。", "decision": null},
+  "shore->deadpan:discusses": {"investigation": "popular 層示意邊:平台常以冷面描述蕭爾,待綁定具體文章。", "sources": [], "recommendation": "綁定具體文章後再定;或維持 popular 低權重。", "decision": null}
+}

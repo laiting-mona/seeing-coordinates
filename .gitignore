@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# 編輯器 / 系統
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 備份 / 暫存
+*.bak
+*.tmp
+*~
+
+# 產出(可由 graph_build.py / build_viewer.py 重建,不納版控)
+build/
+
+# 工具產生的本機副本(清單原始碼在 docs/原典查核清單.md)
+docs/原典查核清單.xlsx
+
+# 投稿文件(計畫書、反思心得)不上傳公開 repo
+docs/*.pdf
+docs/*.docx

@@ -1,0 +1,2 @@
+# Keep bytes exactly as committed on every OS (data files are LF, sources.csv is CRLF on purpose).
+* -text

@@ -1,0 +1,136 @@
+# 查證來源記錄（觀看的座標）
+
+本檔記錄把「待判斷」關係升級為 **approved** 時，實際使用的查證來源。分兩類誠實區分：
+A 類有抓取到可點的網頁佐證（網址已同時寫入對應關係的 evidence 欄，於互動圖節點面板與 `docs/review-queue.md` 可見）；
+B 類是依標準攝影史參考升級、本輪未抓取單一網頁者，仍建議之後回原典補頁碼。
+
+更新時間：2026-10-28
+
+## A. 有抓取網頁佐證（附網址）
+
+| 叢集 / 事實 | 來源網址 | 確認了什麼 |
+|---|---|---|
+| 馬格南創辦人與成員 | https://en.wikipedia.org/wiki/Magnum_Photos | Capa/Seymour/Rodger 為創辦人；Bischof/Erwitt/Davidson/Gilden/Parr 為成員 |
+| FSA 攝影師 | https://www.smithsonianmag.com/smart-news/meet-photographers-charged-documenting-depression-era-america-farm-security-administration-180964123/ | Shahn/Rothstein/Wolcott/Russell Lee 任職 FSA |
+| VIVO 同人 | https://commons.princeton.edu/art574-yixu/?p=82 | VIVO 六人含東松照明/細江英公/川田喜久治/奈良原一高 |
+| New Topographics 1975 參展者 | https://en.wikipedia.org/wiki/New_Topographics_(exhibition) | 蕭爾/R. Adams/Baltz/Nixon/Becher 等九組參展者 |
+| 1977 Pictures 展原始參展者 | https://en.wikipedia.org/wiki/The_Pictures_Generation | 原始五人為 Brauntuch/Goldstein/**Levine**/Longo/Smith（**不含 Sherman**） |
+| 班雅明〈攝影小史〉討論對象 | https://loeildelaphotographie.com/en/the-israel-museum-jerusalem-in-pictures-walter-benjamins-little-history-of-photography | 確認小史討論阿傑/桑德/布洛斯菲爾德 |
+| 《觀看的方式》中譯者 | https://www.eslite.com/product/1001156502682035307002 | 吳莉君譯，麥田出版 |
+| 《論攝影》中譯者 | https://classic-blog.udn.com/le14nov/179160308 | 黃翰荻譯，唐山，1997 |
+| Photography Degree Zero | https://www.tenlong.com.tw/products/9780262516662 | Batchen 主編、專論巴特《明室》的論文集（MIT, 2009） |
+| 桑塔格《論攝影》具名攝影家 | https://www.prasannakumarr.in/journal/phphotographers-movies-in-susan-sontags-on-photography | 具名含 Stieglitz/Strand/Evans/Hine/布列松/Avedon（**不含 Weston**） |
+| Martha Rosler 批判紀實 | https://www.martharosler.net/decoys-and-disruptions | 〈In, Around, and Afterthoughts〉收於《Decoys and Disruptions》 |
+| 新視覺 / Rodchenko | https://high.org/exhibition/photographys-new-vision/ | Rodchenko 為新視覺(New Vision)代表 |
+| 何藩 香港街頭 | https://www.phillips.com/detail/%E4%BD%95%E8%97%A9-fan-ho/134735 | 何藩以光影構成的香港街景聞名 |
+| Lisette Model 教 Arbus | https://www.asmp.org/?p=132114 | Model 為 Diane Arbus 的老師 |
+| 關懷攝影 | https://www.icp.org/node/86467 | ICP「Fund for Concerned Photography」（Cornell Capa）；W. Eugene Smith、Salgado 屬此脈絡 |
+| 新彩色（Starburst 展） | https://www.lensculture.com/books/9156-starburst-color-photography-in-america-1970-1980 | Eggleston/Shore/Meyerowitz/Sternfeld 為 1970s 新彩色代表 |
+| 台灣攝影三劍客 | https://en.wikipedia.org/wiki/Deng_Nan-guang | 張才/鄧南光/李鳴鵰並稱三劍客 |
+| 土門拳 寫實主義 | https://en.wikipedia.org/wiki/Ken_Domon | 土門拳倡「絕對非演出的絕對抓拍」寫實 |
+| 木村伊兵衛 街頭 | https://www.yokogaomag.com/editorial/ihei-kimura-japanese-photographer | 木村以輕便相機確立日本街頭抓拍 |
+
+## B. 依標準攝影史參考升級、未附單一網址（建議之後補原典頁碼）
+
+下列關係屬教科書級事實或評論家具名著作立場，本輪未逐一抓取單一網頁，依標準參考升級；仍列入日後原典頁碼補強：
+
+- **冷面美學（deadpan）**：Gursky/Ruff/Struth/Dijkstra、New Topographics→deadpan — 依 Charlotte Cotton《作為當代藝術的攝影》「Deadpan」章。
+- **直接攝影**：Weston/Ansel Adams/Strand — 依 Newhall《攝影史》與 f/64 文獻。
+- **新客觀**：Sander/Blossfeldt — 依 Neue Sachlichkeit 標準史。
+- **戰地攝影**：Nachtwey/McCullin/黃功吾、W. Eugene Smith→war — 標準攝影史。
+- **挪用**：R. Prince/Levine/Kruger — 依 Cotton 與圖景世代文獻。
+- **街頭攝影先驅**：Cartier-Bresson/Brassaï/Doisneau/Ronis/Levitt — 標準史。
+- **社會紀實先驅**：Riis/Hine；地景紀實先驅 O'Sullivan/Watkins/Atget — 標準史。
+- **社會地景**：Friedlander/Winogrand — 依 Szarkowski。
+- **快照美學**：Winogrand/Goldin — 標準史。
+- **技術 / 師承**：達蓋爾↔塔爾博特（銀版 vs 卡羅版）、Muybridge↔Marey（運動研究）、Callahan↔Siskind（ID Chicago）、Minor White→等價物、Bayard→擺拍先例 — 標準史 / 傳記。
+- **著作作者**（各書 belongs_to 作者）：定義性事實。
+- **郎靜山**：集錦攝影 / 畫意攝影的東亞轉化 — 標準史。
+- **評論家具名立場**：Sekula、Azoulay、Batchen、Krauss、Debord、Crary、Bourdieu、Burgin、Flusser — 依其具名著作（書名見 sources.csv），建議補頁碼。
+- **東亞個別**：濱谷浩《雪國》、關曉榮《蘭嶼報告》、吳印咸（延安）、張照堂、柯錫杰、林柏樑 — 依相關文獻，建議補原典。
+
+> （第 1–2 輪）待查證剩餘 43 條見 `docs/原典查核清單.md` 與 `原典查核清單_賴亭穎.xlsx`；查到頁碼後把決定填 approved / rejected / 重構 即可。
+
+## C. 第 3 輪（2026-10-27）西方擴充：逐叢集以 hub 頁面查核，一頁確認多條
+
+| 叢集 | 查證來源（URL） | 確認內容 |
+|---|---|---|
+| 攝影哲學：透明性論題 | https://plato.stanford.edu/entries/film/ | Walton 1984 透明性論題「讓 Bazin 寫實主義重獲新生」；Currie 反對 Walton；Scruton 1981、Cavell《The World Viewed》列於書目 |
+| New Topographics 全員 | https://www.eastman.org/new-topographics-tour-organized-george-eastman-house-and-center-creative-photography-begins-june-13 | 1975 十人（Adams/Baltz/Becher/Deal/Gohlke/Nixon/Schott/Shore/Wessel）與策展人 William Jenkins |
+| Pictures 1977 | https://artistsspace.org/exhibitions/pictures | Crimp 策展，1977.9.24–10.29，Brauntuch/Goldstein/Levine/Longo/Philip Smith |
+| 圖景世代（Met 2009） | https://www.lensculture.com/books/694-the-pictures-generation-1974-1984-metropolitan-museum-of-art | Eklund 圖錄 27 位藝術家，含 Sherman/Prince/Kruger/Levine/Longo/Goldstein/Brauntuch/Lawler/Simmons/Welling/Charlesworth/Casebere |
+| FiFo 1929 | https://unframed.lacma.org/node/1203 | Moholy-Nagy 選件；Weston 與 Steichen 負責美國部分；Lissitzky 設計俄國展間；Richter 策電影；Cunningham 參展；Henri/Renger-Patzsch 列新視覺 |
+| 新視覺 / 包浩斯 | https://www.metmuseum.org/it/essays/the-new-vision-of-photography | Moholy-Nagy 為包浩斯教師；Rodchenko、Lissitzky；Sander/Renger-Patzsch 的客觀性 |
+| Camera Work | https://archive.artic.edu/stieglitz/camera-work | 1903–1917 Stieglitz 主編；Steichen 封面；刊 Käsebier/C. White/Coburn/F. Evans 等分離派；末期刊 Strand 預示直接攝影 |
+| Fried《Why Photography Matters》 | https://frieze.com/article/why-photography-matters-art-never | 討論 Wall/Bustamante/Struth/Ruff/Gursky/Sugimoto/Delahaye/Streuli/diCorcia/Dijkstra/Demand/Höfer/Welling/Becher；一整章談《明室》；專注/劇場性 |
+| Jeff Wall〈Marks of Indifference〉 | https://readingandwalking.ca/2018/11/ | 1995 MOCA LA 文集；論 Ruscha/D. Graham/Huebler/Smithson/Long/Nauman/Warhol/Evans |
+| 《Thinking Photography》 | https://monoskop.org/log/?p=1045 | Burgin 主編 1982；目錄：Benjamin〈作者作為生產者〉、Eco、Burgin、Sekula〈論攝影意義的發明〉、Tagg、Watney |
+| 班雅明批評 Renger-Patzsch | https://openscholar.uga.edu/record/7719 | 《Die Welt ist schön》(1928) 受班雅明兩文（含〈攝影小史〉）負面批評；與新客觀相連 |
+| 班雅明論 Sander | https://onthisdateinphotography.com/2017/11/17/november-17-type/ | 《Antlitz der Zeit》(1929) Döblin 撰序；班雅明：「不只是圖冊，而是教學圖譜」 |
+| 波特萊爾 1859 | https://quoteinvestigator.com/2022/10/16/photo-mortal/ | 〈現代公眾與攝影〉刊 Revue Française 1859；「藝術最致命的敵人」原文 |
+| 凝視 | https://www.oneonta.edu/faculty/farberas/arth/arth200/Body/gaze.html | Mulvey 1975 男性凝視；Berger「男人行動，女人展示」；Lacan 的觀看者/被觀看者 |
+| Evans / Agee | https://encyclopediaofalabama.org/article/walker-evans/ | 《Let Us Now Praise Famous Men》1941（Fortune 1936）；1938 MoMA American Photographs；FSA 1935–37；影響 Christenberry |
+| Abbott / Atget | https://www.moma.org/interactives/objectphoto/artists/41.html | Man Ray 助理 1923–26；1928 與 Julien Levy 購 Atget 檔案；MoMA 1968 購入；《Changing New York》WPA 1935–39 |
+| Sultan & Mandel《Evidence》 | https://www.fotomuseum.ch/en/?p=16083 | 1977 機構檔案拾得照片；概念與挪用藝術里程碑；2010 Fotomuseum 展出 |
+| Rosler | https://whitney.org/collection/works//8304 ；https://www.e-flux.com/announcements/41389/martha-rosler-3-works | 《Bowery》批評紀實攝影促成改變的力量；〈In, Around, and Afterthoughts〉收於《3 Works》1981 |
+| Flusser | https://pzwiki.wdka.nl/mediadesign/Towards_A_Philosophy_of_Photography | 裝置、程式、技術影像、功能者 |
+| Steyerl | https://www.e-flux.com/journal/10/61362/in-defense-of-the-poor-image/ | 〈為劣質影像辯護〉e-flux journal #10（2009） |
+| Koudelka | https://ims.com.br/josef-koudelka-exhibition-texts/ | 1971 準會員/1974 正式會員（Erwitt 提議）；《Gypsies》1975；《Exiles》1988；Cartier-Bresson、Delpire 摯友 |
+| Emerson / Robinson / Rejlander | https://amateurphotographer.com/iconic-images/peter-henry-emerson-1856-1936-iconic-photographer/ | 《Naturalistic Photography》1889 批評 Rejlander/Robinson 的合成印相 |
+| 索引性 | https://dismagazine.com/?p=41736 | Peirce 索引定義；Krauss〈Notes on the Index〉；Bazin；Solomon-Godeau；Ritchin 數位非索引；Galassi《Before Photography》1981 |
+| Didi-Huberman | https://m.caareviews.org/reviews/1380 | 《Images in Spite of All》；Wajcman/Pagnoux 於《現代》的批評 |
+| Rancière | https://sdonline.org/issue/60/emancipatory-power-critical-art | 《被解放的觀眾》；沉思的影像 vs 不可忍受的影像；回應 Debord |
+| Dada 攝影蒙太奇 | https://arthistoryunstuffed.com/?p=1084 | Hausmann 自稱與 Höch 發明攝影蒙太奇；Heartfield 的 AIZ 政治蒙太奇 |
+| 《明室》討論對象 | https://www.supersummary.com/camera-lucida/summary/ | Kertész/Avedon/Klein/Van Der Zee/Wessing/Gardner（Lewis Payne） |
+| Sekula〈Body and the Archive〉 | https://scalar.chapman.edu/scalar/ah-331-history-of-photography-spring-2021-compendium/dane-forsum-essay-2 | 1986；Bertillon 建檔、Galton 疊合曝光；雙重系統 |
+| Bourdieu | https://monoskop.org/log/?p=5901 | 《Un art moyen》1965；英譯 Polity 1990；家庭快照作為結構化社會實踐 |
+| Kracauer | https://artmuseum.unm.edu/wp-content/uploads/2023/08/Kracauer.Photography-1927.pdf | 〈攝影〉1927.10.28 法蘭克福報；Levin 譯 Critical Inquiry 1993 |
+| DeCarava / Hughes | https://africanah.org/decarava-and-hughes-the-sweet-flypaper-of-life/ | 《The Sweet Flypaper of Life》1955；1952 Guggenheim |
+
+本輪新增 245 條關係，其中 180 條依上表直接標為 approved；65 條（FiFo 其餘參展者、Weegee/Brandt/Killip、Scruton–Walton 對立、《明室》其餘攝影家、Kirstein 論文等）留待查證，見 `docs/原典查核清單.md`（現 105 條）。
+
+> **重構紀錄**：先前查證判定不成立的「Sherman ∈ Pictures 1977」維持 rejected；依 Met 圖錄改記為「Sherman ∈ 圖景世代（概念）」並 approved，兩者並列以保留判斷軌跡。
+
+## D. 第 4 輪（2026-10-27）西方擴充：19 世紀、超現實、理論期刊、非裔攝影、檔案、再攝影、遲到攝影、機構史
+
+| 叢集 | 查證來源（URL） | 確認內容 |
+|---|---|---|
+| Mission Héliographique 1851 | https://www.metmuseum.org/it/essays/mission-hliographique-1851 | 歷史建築委員會委託；Baldus/Bayard/Le Gray/Le Secq/Mestral 五人與路線；皆為太陽攝影學會成員 |
+| 美國內戰攝影 | https://www.metmuseum.org/it/essays/photography-and-the-civil-war-1861-1865 | Gardner 管理 Brady 工作室後自立（1862.11）；O'Sullivan 為 Brady 學徒後入 Gardner；《素描集》1865–66；Barnard《薛曼戰役》1866 |
+| L'Amour fou 1985 | https://e-artexte.ca/id/eprint/11775 | Krauss & Livingston 策展，Ades 撰文，Corcoran；Man Ray/Brassaï/Bellmer/Ubac/Boiffard/Breton 等 |
+| October 5（1978）攝影專號 | https://www.lib.uci.edu/sites/all/docs/wellek/krauss/1978.html | Krauss & Michelson 合撰導言；Krauss〈Tracing Nadar〉 |
+| October 與後現代攝影理論 | https://rshare.library.torontomu.ca/articles/thesis/October_culture_photographic_theory_and_the_beginnings_of_postmodernism/14664876 | de Duve〈Time Exposure and Snapshot〉1978 夏；Crimp〈Photographic Activity of Postmodernism〉1980 冬 |
+| Elkins《Photography Theory》 | https://www.routledge.com/Photography-Theory/Elkins/p/book/9780415977838 | Art Seminar 參與者：Burgin、Snyder、Krauss、Iversen、Solomon-Godeau、Trachtenberg、Batchen、Squiers |
+| Kamoinge Workshop | https://whitney.org/press/working-together ；https://www.nybooks.com/online/2021/02/06/kamoinges-collective-vision/ | 1963 成立；14 位成員；Whitney 2020–21（VMFA 策劃）；DeCarava 1963–65 主持 |
+| Archive Fever 2008 | https://www.icp.org/node/64634 | Enwezor 策展，ICP 2008.1–5；Boltanski/Dean/Douglas/Feldmann/Raad/Leonard/Levine/Ruff/Simpson/Sheikh/Warhol 等 |
+| 再攝影調查計畫 | https://www.icp.org/node/31454 | Klett/Manchester/Verburg 1977 發起；重攝 Jackson/O'Sullivan/Gardner 地點；《Second View》1984；與 New Topographics 的親緣 |
+| 遲到的攝影 | https://davidcampany.com/?p=346 | 〈Safety in Numbness〉首刊 2003《Where is the Photograph?》；Meyerowitz《Aftermath》；Doherty/Seawright/Ristelhueber/Misrach；參照 Fenton/Brady/Atget；引 Sekula |
+| Aperture 創刊 | https://aperture.org/timeline/ | 1952 創辦人九位；White 主編 1952–76；Hoffman 1965–2001；《The Americans》1968 美國版（與 MoMA、Delpire）；Arbus 專論 1972；《Ballad》1986 |
+| LIFE 雜誌 | https://www.broadstreetreview.com/museums/princeton-university-art-museum-presents-life-magazine-and-the-power-of-pho | Luce 創辦，1936–72；Bourke-White 首期封面；Parks/Smith/Capa/Burrows；Smith 助產士專題、Parks 哈林幫派 |
+| Brodovitch | https://www.barnesfoundation.org/press/press-releases/brodovitch-exhibition | Bazaar 藝術總監 1934–58；Design Laboratory 1933；教導 Penn/Avedon/Arnold/Namuth；與 Bassman/Man Ray/HCB 合作；《Ballet》1945 |
+| Perfect Moment 爭議 | https://www.ebsco.com/research-starters/social-sciences-and-humanities/helms-claims-photographs-are-indecent | ICA 費城策劃；Corcoran 1989.6 取消；Helms 修正案；Serrano《Piss Christ》；Cincinnati CAC 1990 Barrie 起訴後無罪 |
+| 道格拉斯與肖像 | https://publishersweekly.com/9780871404688 | 160 張照片；「19 世紀被拍最多的美國人」；四場論攝影演講 |
+| Ghirri | https://www.dazeddigital.com/photography/article/16236/1/luigi-ghirri | 《Kodachrome》1978（Punto e Virgola）；義大利彩色先驅；概念取徑；與 Eggleston 的文化差異 |
+| Mirrors and Windows 1978 | https://www.moma.org/docs/press_archives/5616/releases/MOMA_1978_0052_48.pdf | Szarkowski 策展，1978.7.28–10.2，約 200 件；20 位列名參展者 |
+| Ray-Jones / Parr | https://www.liverpoolmuseums.org.uk/news/press-releases/only-england | Ray-Jones 隨 Brodovitch 學習、與 Meyerowitz/Winogrand 為友；《A Day Off》1974；1970 影響 Parr；《The Non-Conformists》 |
+
+本輪新增 215 條，183 條依上表 approved；32 條（時尚攝影代表歸屬、肖像攝影代表歸屬、Damisch 收錄、Fenton 克里米亞、超現實 vs 直接攝影等）留 review，見 `docs/原典查核清單.md`（現 137 條）。
+
+
+> **自我審核（2026-10-27）**：重讀第 3–4 輪全部 approved 關係後，6 條「hub 頁面有提到人名、但沒有明說該關係」的判斷降回 review（evidence 標 ［自我審核：判斷過頭，降為待查］）：Cartier-Bresson→Koudelka 影響、October→索引性影響、Ghirri∈新彩色、Mirrors and Windows 對照紀實、Meyerowitz/Winogrand→Ray-Jones 影響。另統一 2 條著作→作者方向（《論攝影》→桑塔格、《照片的本質》→蕭爾）、修正 LIFE→Luce 的方向、LIFE 對意識形態的批判降為 review、《靈光消逝的年代》改記為譯本關係。
+
+## E. 第 5 輪（2026-10-28）西方擴充：獎項名單、紐約學派、FSA、f/64、德語理論選集、越戰攝影
+
+| 叢集 | 查證來源（URL） | 確認內容 |
+|---|---|---|
+| Hasselblad Award 1980–2026 | https://www.hasselbladfoundation.org/en/award-winners/ | 46 位得主逐年；1983、2021 未頒；2024 Pollard、2025 Ristelhueber、2026 Muholi（更正了我原先記憶中的 2024–25 順序） |
+| Deutsche Börse Prize 1997–2025 | https://thephotographersgallery.org.uk/node/1539 | 1996 由攝影師畫廊設立，英國首個攝影獎；29 位得主逐年。頁面對 2026 同時寫「得主」與「入圍」，故不收 |
+| 紐約學派 | https://www.lensculture.com/books/5649-the-new-york-school-photographs-1936-1963 | Livingston 著；16 位列名攝影家；「共享影響、題材與風格標記」。頁面未載出版年，故未寫 |
+| FSA / OWI | https://www.loc.gov/pictures/collection/fsa/background.html | Stryker 主持；RA 1935–37 / FSA 1937–42 / OWI 1942–44；10 位攝影家（新增 Delano、Vachon、Mydans、Parks 歸屬） |
+| Group f/64 | https://www.britannica.com/art/Group-f64 | 1932 加州成立、1935 解散；11 位原始成員；拒斥柔焦學院派（Pictorialism）；首展於笛洋美術館 |
+| Kemp & Amelunxen《Theorie der Fotografie I–IV》 | https://www.perlentaucher.de/buch/hubertus-von-amelunxen-wolfgang-kemp/theorie-der-fotografie-band-i-iv.html | Schirmer/Mosel 2006，175 篇；書評列名 25 位作者。「Adams」未寫全名，推定 Ansel Adams 但留 review |
+| 越戰攝影 | https://www.art2art.org/all-shows/vietnam | 巡迴展列名 22 位攝影師；Eddie Adams 1969 普立茲、Sawada 1965 WPP／1966 普立茲、Faas 兩度普立茲、Huet LIFE 封面、Ut「燒夷彈女孩」。Ut 的 1973 普立茲頁面未載年份，留 review |
+
+本輪新增 166 條，159 條依上表 approved；7 條（紐約學派→街頭攝影、Brodovitch→紐約學派、Stryker→紀實、Weston 父子、Adams 收錄、Ut 普立茲年份、McCullin 戰地）留 review，見 `docs/原典查核清單.md`（現 150 條）。
+
+> **判斷檢查**：獎項名單是最省查證成本的 hub（一頁 30–46 條），但它們是「脈絡」不是「閱讀路徑」。加入後中心性 Top3 全是獎項與選集節點，攝影家的第一推薦變成「Hasselblad Award」。已在 `recommend.py` 對「屬於 institution」的邊乘 0.5（CONTEXT_EDGE_WEIGHT），並以回歸測試固定；資料本身不動，因為這些關係是對的。
