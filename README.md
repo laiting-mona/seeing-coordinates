@@ -16,15 +16,15 @@
 
 | 指標 | 數 | 說明 |
 |---|---|---|
-| 節點 | 1479 | 人物 · 著作 · 概念 · 事件 · 館所 |
-| 關係(全) | 2637 | 每條皆附 claim / evidence / source / confidence |
-| **正式入圖** | **2391** | 自動通過 99 + 上網查證確認 2292(其中 100 條為第 1–2 輪依標準攝影史升級、尚未附單一網址,見 `docs/verification-sources.md` B 節) |
-| 待查證 | 244 | 低信心或自我審核降級,隔離在佇列,需回原典補頁碼後才採用 |
+| 節點 | 1646 | 人物 · 著作 · 概念 · 事件 · 館所 |
+| 關係(全) | 2893 | 每條皆附 claim / evidence / source / confidence |
+| **正式入圖** | **2636** | 自動通過 99 + 上網查證確認 2537(其中 100 條為第 1–2 輪依標準攝影史升級、尚未附單一網址,見 `docs/verification-sources.md` B 節) |
+| 待查證 | 255 | 低信心或自我審核降級,隔離在佇列,需回原典補頁碼後才採用 |
 | 已剔除 | 2 | 查證不成立(如 1977 Pictures 展未含辛蒂·雪曼) |
 
-244 條待查證的明細見 `docs/原典查核清單.xlsx`(附書名、待補頁碼欄、決定欄)。
+255 條待查證的明細見 `docs/原典查核清單.xlsx`(附書名、待補頁碼欄、決定欄)。
 查證來源網址見 `docs/verification-sources.md`。
-涵蓋範圍:第 1–7 輪建立西方攝影史與理論的主幹(發明史、分離派到新地誌、後現代理論、主要獎項、選集與 MoMA/Tate 主題展);第 8 輪起轉向東亞:日本(木村伊兵衛賞、土門拳賞、写真新世紀、MoMA 1974《New Japanese Photography》、Provoke 巡迴展)、臺灣(《臺灣攝影家》系列叢書 35 冊、國家攝影文化中心與國美館四個展覽)、中國(《Between Past and Future》、三影堂)與韓國(《Chaotic Harmony》)的首批 hub;第 9 輪回頭補西方「葉節點」:108 位只靠一條收錄/得獎邊掛在圖上的人物,各以其機構頁補上代表作與師承/流派;第 10 輪續補其餘 198 人(西方人物葉節點 299→22)。
+涵蓋範圍:第 1–7 輪建立西方攝影史與理論的主幹(發明史、分離派到新地誌、後現代理論、主要獎項、選集與 MoMA/Tate 主題展);第 8 輪起轉向東亞:日本(木村伊兵衛賞、土門拳賞、写真新世紀、MoMA 1974《New Japanese Photography》、Provoke 巡迴展)、臺灣(《臺灣攝影家》系列叢書 35 冊、國家攝影文化中心與國美館四個展覽)、中國(《Between Past and Future》、三影堂)與韓國(《Chaotic Harmony》)的首批 hub;第 9 輪回頭補西方「葉節點」:108 位只靠一條收錄/得獎邊掛在圖上的人物,各以其機構頁補上代表作與師承/流派;第 10 輪續補其餘 198 人(西方人物葉節點 299→22);第 11 輪回到東方做縱深:日本 VIVO 與「10人之眼」、Camera Mainichi/山岸章二、Provoke 同人的攝影集、WORKSHOP 寫真學校,臺灣 V-10 視覺藝術群、《人間》雜誌與報導攝影、三劍客與中國攝影學會,中國四月影會與《新攝影》,韓國林應植的生活主義寫實與新線會、具本昌與裴炳雨。
 
 ---
 
@@ -71,8 +71,8 @@
 ```bash
 pip install -r requirements.txt       # pydantic, networkx
 
-python graph_build.py                 # 建正式圖(2391 條)→ build/graph.json
-python graph_build.py --with-review   # 連 244 條待查證一起畫(供檢視,非定論)
+python graph_build.py                 # 建正式圖(2636 條)→ build/graph.json
+python graph_build.py --with-review   # 連 255 條待查證一起畫(供檢視,非定論)
 python build_viewer.py                # 產生 build/viewer.html,瀏覽器開即可
 python test_core.py                   # 跑 24 項回歸測試
 python agent.py                       # Agent demo
@@ -114,5 +114,5 @@ npm install docx && node tools/build_reflection.js        # 重建反思 docx
 ## 誠實聲明
 
 這份圖目前最大的價值不是「大」,而是「每條都查得到出處、且把查過與沒查過分得很清楚」。
-244 條待查證是一條**正在前進的查驗路徑**,不是被藏起來的缺口——
+255 條待查證是一條**正在前進的查驗路徑**,不是被藏起來的缺口——
 它們被明確標記、隔離於正式圖之外,任何一條要當成論文證據前,都得回原典補到頁碼級引用。
