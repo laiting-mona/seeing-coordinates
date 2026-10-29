@@ -18,9 +18,9 @@
 |---|---|---|
 | 節點 | 1642 | 人物 · 著作 · 概念 · 事件 · 館所 |
 | 關係(全) | 2892 | 每條皆附 claim / evidence / source / confidence |
-| **正式入圖** | **2607** | 自動通過 67 + 上網查證確認 2540(其中 100 條為第 1–2 輪依標準攝影史升級、尚未附單一網址,見 `docs/verification-sources.md` B 節) |
+| **正式入圖** | **2606** | 自動通過 67 + 上網查證確認 2539(其中 100 條為第 1–2 輪依標準攝影史升級、尚未附單一網址,見 `docs/verification-sources.md` B 節) |
 | 待查證 | 283 | 低信心或自我審核降級,隔離在佇列,需回原典補頁碼後才採用 |
-| 已剔除 | 2 | 查證不成立(如 1977 Pictures 展未含辛蒂·雪曼) |
+| 已剔除 | 3 | 查證不成立(如 1977 Pictures 展未含辛蒂·雪曼) |
 
 283 條待查證的明細見 `docs/原典查核清單.xlsx`(附書名、待補頁碼欄、決定欄)。
 查證來源網址見 `docs/verification-sources.md`。
@@ -72,7 +72,7 @@
 ```bash
 pip install -r requirements.txt       # pydantic, networkx
 
-python graph_build.py                 # 建正式圖(2607 條)→ build/graph.json
+python graph_build.py                 # 建正式圖(2606 條)→ build/graph.json
 python graph_build.py --with-review   # 連 283 條待查證一起畫(供檢視,非定論)
 python build_viewer.py                # 產生 build/viewer.html,瀏覽器開即可
 python test_core.py                   # 跑 25 項回歸測試
