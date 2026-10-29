@@ -1,6 +1,6 @@
 # 待人工判斷佇列（review queue）
 
-共 181 條。程式自動彙整,判斷與決定由你填。
+共 227 條。程式自動彙整,判斷與決定由你填。
 
 > 每條的「你的決定」欄預設空白。你確認後填 approved / rejected / 重構,我再據此更新圖。
 
@@ -1447,6 +1447,374 @@
 ## 巴特 (Roland Barthes) → James Elkins (艾爾金斯)（influence）
 - 可信度:0.3　來源層:critic　出處:leaf_judgement
 - 主張:Routledge 頁:以《明室》為討論起點
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 泰特美術館 (Tate) → Tacita Dean (塔西塔·迪恩)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_dean_tacita_s
+- 主張:泰特現代美術館渦輪大廳展出迪恩的35mm影片投影
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Donald B. Kuspit (唐納·庫斯皮特) → Artforum（belongs_to）
+- 可信度:0.3　來源層:critic　出處:leaf2_kuspit_s
+- 主張:庫斯皮特曾任《Artforum》特約編輯
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Donald B. Kuspit (唐納·庫斯皮特) → Albert Renger-Patzsch (倫格-帕奇)（discusses）
+- 可信度:0.3　來源層:critic　出處:leaf2_kuspit_s
+- 主張:庫斯皮特著有關於倫格－帕奇的著作
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Thomas Lawson (湯瑪斯·勞森) → 圖景世代 (Pictures Generation)（belongs_to）
+- 可信度:0.38　來源層:institution　出處:leaf2_lawson_thomas_s
+- 主張:勞森文集被出版社定位為說明圖像世代興起的關鍵文本
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Thomas Lawson (湯瑪斯·勞森) → Artforum（belongs_to）
+- 可信度:0.38　來源層:institution　出處:leaf2_lawson_thomas_s
+- 主張:勞森的評論文章刊於《Artforum》等刊物
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Julien Levy (朱利安·列維) → 卡提耶-布列松 (Henri Cartier-Bresson)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_levy_julien_s
+- 主張:列維畫廊展出並販售卡蒂埃－布列松作品
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Julien Levy (朱利安·列維) → Nadar (納達爾)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_levy_julien_s
+- 主張:列維畫廊展出並販售納達爾作品
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Julien Levy (朱利安·列維) → Alfred Stieglitz (史蒂格利茲)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_levy_julien_s
+- 主張:列維畫廊展出並販售史蒂格利茲作品
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Eugène Atget (阿傑) → Julien Levy (朱利安·列維)（influence）
+- 可信度:0.38　來源層:institution　出處:leaf2_levy_julien_s
+- 主張:阿特傑的照片促使列維成為藝術經紀人
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Fotomuseum Winterthur (溫特圖爾攝影博物館) → Axel Hütte (許特)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_hutte_s
+- 主張:溫特圖爾攝影博物館1997年展出許特
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Melissa Chiu (招穎思) → Asia Society, New York (亞洲協會(紐約))（belongs_to）
+- 可信度:0.38　來源層:institution　出處:leaf2_chiu_melissa_s
+- 主張:招穎思2004年起任亞洲協會美術館館長
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Lisa Corrin (麗莎·柯林) → Andreas Gursky (古斯基)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_corrin_lisa_s
+- 主張:柯林任蛇形藝廊首席策展人期間（1997-2001）展出古斯基
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Lisa Corrin (麗莎·柯林) → Hans Haacke (漢斯·哈克)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_corrin_lisa_s
+- 主張:柯林任蛇形藝廊首席策展人期間展出漢斯·哈克
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Lisa Corrin (麗莎·柯林) → Stan Douglas (史坦·道格拉斯)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_corrin_lisa_s
+- 主張:柯林任蛇形藝廊首席策展人期間展出史丹·道格拉斯
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Lisa Corrin (麗莎·柯林) → 草間彌生（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_corrin_lisa_s
+- 主張:柯林任蛇形藝廊首席策展人期間展出草間彌生
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Richard Howard (理查·霍華) → 巴特 (Roland Barthes)（discusses）
+- 可信度:0.38　來源層:institution　出處:leaf2_howard_r_s
+- 主張:霍華是羅蘭·巴特著作的英譯者
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Koen Wessing (柯恩·韋辛) → 刺點 (punctum)（discusses）
+- 可信度:0.38　來源層:institution　出處:leaf2_wessing_koen_s
+- 主張:韋辛的尼加拉瓜照片成為巴特刺點概念的例證
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## San Francisco Museum of Modern Art (舊金山現代藝術博物館) → Jim Goldberg (吉姆·戈德堡)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_goldberg_jim_s
+- 主張:舊金山現代藝術博物館典藏並介紹戈德堡作品
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## John Stezaker (約翰·斯特薩克) → 挪用 (appropriation)（belongs_to）
+- 可信度:0.38　來源層:institution　出處:leaf2_stezaker_john_s
+- 主張:斯特薩克以現成電影劇照與明信片拼貼創作
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## William Christenberry (威廉·克里斯滕貝里) → New Color (新彩色)（belongs_to）
+- 可信度:0.38　來源層:institution　出處:leaf2_christenberry_s
+- 主張:克里斯滕貝里被視為彩色攝影成為藝術的先驅
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## documenta (文件展(卡塞爾)) → Alfredo Jaar (阿爾弗雷多·哈爾)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_jaar_s
+- 主張:參展卡塞爾文件展
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## New Museum of Contemporary Art (新美術館(紐約)) → Alfredo Jaar (阿爾弗雷多·哈爾)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_jaar_s
+- 主張:1992 年於紐約新美術館展出
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Berlinische Galerie (柏林畫廊(Berlinische Galerie)) → Alfredo Jaar (阿爾弗雷多·哈爾)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_jaar_s
+- 主張:2012 年柏林回顧展含柏林畫廊
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 泰特美術館 (Tate) → Ingrid Pollard (英格麗·波拉德)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_pollard_s
+- 主張:2022 年入圍透納獎，於泰特利物浦展出
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 泰特美術館 (Tate) → Karen Knorr (凱倫·諾爾)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_knorr_karen_s
+- 主張:泰特典藏其《Belgravia》《Gentlemen》等作品
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Louise Dahl-Wolfe (露易絲·達爾-沃爾夫) → Harper's Bazaar（belongs_to）
+- 可信度:0.38　來源層:institution　出處:leaf2_dahl_wolfe_s
+- 主張:1936 至 1958 年任《Harper's Bazaar》首席攝影師
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Whitney Museum of American Art (惠特尼美術館) → Coco Fusco (可可·福斯科)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_fusco_coco_s
+- 主張:三度參展惠特尼雙年展（1993、2008、2022）
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Jan Dibbets (揚·迪貝茨) → François Arago (弗朗索瓦·阿拉戈)（discusses）
+- 可信度:0.38　來源層:institution　出處:leaf2_dibbets_jan_s
+- 主張:迪貝茨以135枚銅質圓章沿巴黎子午線布置，作為向阿拉戈致敬之作
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Silvia Kolbowski (西爾維亞·科博斯基) → October (journal)（belongs_to）
+- 可信度:0.38　來源層:institution　出處:leaf2_kolbowski_s
+- 主張:科博斯基於1993至2000年擔任《十月》期刊共同編輯
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Silvia Kolbowski (西爾維亞·科博斯基) → male gaze (男性凝視)（discusses）
+- 可信度:0.38　來源層:institution　出處:leaf2_kolbowski_s
+- 主張:科博斯基早期作品批判大眾媒體為男性凝視建構女性形象
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Gordon Matta-Clark (戈登·馬塔-克拉克) → 超現實主義攝影 (surrealist photography)（belongs_to）
+- 可信度:0.38　來源層:institution　出處:leaf2_matta_clark_s
+- 主張:馬塔-克拉克的語彙結合極簡主義、超現實主義與城市建築
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Bernd Stiegler (貝恩德·史蒂格勒) → 索引性 (indexicality)（discusses）
+- 可信度:0.38　來源層:institution　出處:leaf2_stiegler_bernd_s
+- 主張:史蒂格勒的系列文章試圖超越攝影索引性與社會紀實等既有理論路徑
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Venice Biennale (威尼斯雙年展) → Fiona Tan (陳翠鳳)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_tan_fiona_s
+- 主張:陳翠鳳代表荷蘭館參加2009年第53屆威尼斯雙年展
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## documenta (文件展(卡塞爾)) → Fiona Tan (陳翠鳳)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_tan_fiona_s
+- 主張:陳翠鳳作品曾於第11屆文件展展出
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 泰特美術館 (Tate) → Shireen Seno (希林·施諾)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_shireen_seno_s
+- 主張:泰特現代美術館於2018年放映施諾的《緊張的翻譯》英國首映
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Jan Groover (珍·葛魯佛) → tableau (圖景 / 舞台式)（belongs_to）
+- 可信度:0.3　來源層:critic　出處:leaf2_groover_jan_s
+- 主張:葛魯佛以大型相機拍攝靜物場景，實驗空間與錯覺
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Whitney Museum of American Art (惠特尼美術館) → Connie Hatch (康妮·哈奇)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_hatch_connie_s
+- 主張:哈奇作品曾於惠特尼美術館展出
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## New Museum of Contemporary Art (新美術館(紐約)) → Connie Hatch (康妮·哈奇)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_hatch_connie_s
+- 主張:哈奇作品曾於新美術館展出
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## San Francisco Museum of Modern Art (舊金山現代藝術博物館) → Connie Hatch (康妮·哈奇)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_hatch_connie_s
+- 主張:哈奇曾參與舊金山現代美術館聯展
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Lucy Soutter (露西·蘇特) → Aperture (magazine)（belongs_to）
+- 可信度:0.38　來源層:institution　出處:leaf2_soutter_lucy_s
+- 主張:蘇特曾為《Aperture》等刊物撰寫藝評
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Lucy Soutter (露西·蘇特) → Afterimage（belongs_to）
+- 可信度:0.38　來源層:institution　出處:leaf2_soutter_lucy_s
+- 主張:蘇特曾為《Afterimage》撰寫藝評
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Steven Skopik (史蒂文·斯科皮克) → Afterimage（belongs_to）
+- 可信度:0.38　來源層:institution　出處:leaf2_skopik_steven_s
+- 主張:斯科皮克的文章與評論刊於《Afterimage》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Steven Skopik (史蒂文·斯科皮克) → History of Photography（belongs_to）
+- 可信度:0.38　來源層:institution　出處:leaf2_skopik_steven_s
+- 主張:斯科皮克的文章刊於《History of Photography》期刊
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Walker Evans (沃克·伊凡斯) → Alec Soth (亞歷克·索斯)（influence）
+- 可信度:0.38　來源層:institution　出處:leaf2_soth_s
+- 主張:索斯的作品植根於沃克．艾文斯開創的美國公路攝影傳統
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Robert Frank (法蘭克) → Alec Soth (亞歷克·索斯)（influence）
+- 可信度:0.38　來源層:institution　出處:leaf2_soth_s
+- 主張:索斯的作品植根於羅伯．法蘭克發展的美國公路攝影傳統
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Stephen Shore (蕭爾) → Alec Soth (亞歷克·索斯)（influence）
+- 可信度:0.38　來源層:institution　出處:leaf2_soth_s
+- 主張:索斯的作品植根於史蒂芬．蕭爾發展的美國公路攝影傳統
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)

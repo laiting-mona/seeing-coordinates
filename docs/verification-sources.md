@@ -218,3 +218,13 @@ B 類是依標準攝影史參考升級、本輪未抓取單一網頁者，仍建
 結果：新增 122 個節點（約 100 件作品／展覽與 23 個概念、機構、期刊，如 達達、構成主義、人文主義攝影、女性主義藝術、體制批判、後現代主義、連續攝影、Institute of Design、LOOK、TIME、Dephot、AIZ、LEF、Critical Inquiry、Screen）、230 條關係，227 條 approved；3 條屬本專案詮釋（《規訓與懲罰》→ 監控、Ruscha → Jenkins、Barthes → Elkins）留 review。西方人物葉節點 299 → 200。
 
 查核限制：Maier（Encyclopaedia Universalis）、Hido（ROSEGALLERY）、Grossman（Howard Greenberg Gallery）、Robert Hughes（Melbourne Press Club）的來源不是美術館或學術機構，tier 標 critic；Jussim 只有圖書館書目紀錄可證其著作，生平未查到；William Jenkins 只有 CCA 書目紀錄證明其策展與導言。頁面內部矛盾照實保留（Doisneau 1912／1922、Freund 卒日 3/30 與 3/31、Jameson《Postmodernism》1991 與 1990.11）。
+
+## J. 第 10 輪（2026-10-29）其餘西方葉節點：165 人
+
+對象：第 9 輪後剩下的 200 個西方人物葉節點。六組並行研究，研究者除生平與代表作外，另依頁面明文提出連到既有節點的邊（附原文引句）；由 `compile_leaves_v11.py`（scratchpad，一次性）自動轉檔：摘要式引句一律 review，id 不存在或關係類型不合者丟棄，代表作每人最多 3 件並做書名去重（與既有作品撞名者略過，例如 Tulsa、Sleeping by the Mississippi）。
+
+人工審核後否決的項目（寫在轉檔程式的 DROP／REVIEW 清單）：把「館藏」當成「展出」的邊（Tate/MoMA→Muñoz、Fotomuseum→Dibbets、Met→Matta-Clark、V&A→Mark Cohen、MoMA→Schott）、獎項入圍當成展出（Deutsche Börse→Fiona Tan、→Broomberg & Chanarin）、「學者認為」型的推論（Jenkins→Shore）、「屬於某圈子」不等於影響（Weston→Holder）、Soth 與 Evans／Frank／Shore 的「傳統」說法降為 review、檔案全宗與書中章節不算作品。Croner、Donaghy 的來源為商業畫廊，tier 降為 critic；Lynn Berger 的身分無法確認是否即選集作者，整筆不收。
+
+結果：165 個來源（`leaf2_*_s`）、220 件作品、436 條關係（390 approved、46 review）。西方人物葉節點 → 50。
+
+未完成：35 人因搜尋額度用盡未查（Kamoinge 五位成員、Sally Mann、Taryn Simon、Charlotte Cotton、Valéry 等），另以追加研究補上。
