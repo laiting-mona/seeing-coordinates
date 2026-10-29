@@ -1,6 +1,6 @@
 """Render build/graph.json into a single-file interactive viewer (build/viewer.html).
 
-Last edited: 2026-10-28 — fixed black/white theme; removed hint text; UX pass: search box,
+Last edited: 2026-10-29 — viewer.html written with LF on every OS. 2026-10-28: fixed black/white theme; removed hint text; UX pass: search box,
 type filter chips, neighbour focus on click, clickable verification links, layout frozen after
 stabilisation. 2026-10-27: functions + main(); kind labels from schema.KIND_VERB_ZH.
 
@@ -283,7 +283,7 @@ def build_viewer(root: Path = ROOT) -> tuple[int, int]:
     """Read graph.json, render the viewer, write it. Returns (node_count, edge_count)."""
     graph_json = data_io.load_graph_json(root)
     nodes, edges = to_viewer_nodes(graph_json), to_viewer_edges(graph_json)
-    (root / "build/viewer.html").write_text(render_html(nodes, edges), encoding="utf-8")
+    data_io.write_text_lf(root / "build/viewer.html", render_html(nodes, edges))
     return len(nodes), len(edges)
 
 

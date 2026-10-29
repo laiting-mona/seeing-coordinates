@@ -1,6 +1,6 @@
 # 待人工判斷佇列（review queue）
 
-共 170 條。程式自動彙整,判斷與決定由你填。
+共 178 條。程式自動彙整,判斷與決定由你填。
 
 > 每條的「你的決定」欄預設空白。你確認後填 approved / rejected / 重構,我再據此更新圖。
 
@@ -1359,6 +1359,70 @@
 ## Andy Warhol (安迪·沃荷) → Stephen Shore (蕭爾)（influence）
 - 可信度:0.42　來源層:critic　出處:loeil_shore_s
 - 主張:曾在 Warhol 的 Factory 工作
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 長島有里枝 → HIROMIX（contrast）
+- 可信度:0.42　來源層:critic　出處:ima_kimura_s
+- 主張:2000 年度三位女性攝影家同時獲獎,常被評論連結為同一世代現象(評論歸納,非名單所載)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Tokyo Suburbia (1998) → New Topographics 展 1975（extend）
+- 可信度:0.3　來源層:critic　出處:ima_kimura_s
+- 主張:郊外住宅地景的無表情取徑,評論常溯及新地誌(判斷)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 《每日相機》(Camera Mainichi) → 每日新聞社（belongs_to）
+- 可信度:0.52　來源層:institution　出處:moma_njp1974_s
+- 主張:每日新聞社發行之攝影雜誌(新聞稿稱 Camera Mainichi)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## New Japanese Photography (MoMA, 1974) (新日本攝影 展(MoMA,1974)) → snapshot aesthetic (快照美學)（extend）
+- 可信度:0.52　來源層:institution　出處:moma_njp1974_s
+- 主張:Szarkowski:「近期日本攝影最核心的特質是對直接經驗之描述的關注」(詮釋連結)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Provoke 同人 → 戰地攝影 (war photography)（extend）
+- 可信度:0.38　來源層:institution　出處:artic_provoke_s
+- 主張:展覽頁:政治抗議運動是該時期攝影與攝影書的主要來源(詮釋連結至抗議/衝突攝影)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 集美·阿爾勒國際攝影季 → 三影堂攝影藝術中心（belongs_to）
+- 可信度:0.52　來源層:institution　出處:top_duet_s
+- 主張:新聞稿將集美·阿爾勒與三影堂廈門館並列為推廣中國攝影文化的據點(機構關係依新聞稿)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 回望:臺灣攝影家的島嶼凝視 1970s–1990s(國美館,2018) → 紀實攝影 (documentary photography)（extend）
+- 可信度:0.52　來源層:institution　出處:ntmofa_lookback_s
+- 主張:展覽主旨:1970–90 年代攝影家深入閩南、客家、外省與原住民族群,以影像紀錄時代困頓與個人探問
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Between Past and Future: New Photography and Video from China (2004–07) (過去與未來之間:中國新攝影與錄像(ICP/亞洲協會/Smart/MCA,2004–07 巡迴)) → performance and photography (表演與攝影)（extend）
+- 可信度:0.52　來源層:institution　出處:smart_bpf_s
+- 主張:四主題之一「Performing the Self」(展覽歸類)
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)

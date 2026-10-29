@@ -1,6 +1,7 @@
 """Build the source-verification checklist for every status=review relation.
 
-Last edited: 2026-10-28 — 關係 column split into separate 來源 / 目標 columns; decision
+Last edited: 2026-10-29 — markdown written with LF on every OS (data_io.write_text_lf).
+2026-10-28: 關係 column split into separate 來源 / 目標 columns; decision
 dropdown column derived from HEADERS. 2026-10-27: functions + main(); loaders from data_io;
 entity names follow data_io.display_label; openpyxl styling isolated in one function.
 
@@ -77,7 +78,7 @@ def write_markdown(rows: list[list], path: Path = OUTPUT_MD) -> None:
              "確認後,把對應關係在 `data/raw_relations.jsonl` 的 `status` 改為 approved / rejected,並於 evidence 補上頁碼與來源,再執行 `python graph_build.py` 重建圖。", "",
              "| " + " | ".join(HEADERS) + " |", "|" + "---|" * len(HEADERS)]
     lines += ["| " + " | ".join(str(c) for c in row) + " |" for row in rows]
-    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    data_io.write_text_lf(path, "\n".join(lines) + "\n")
 
 
 def write_excel(rows: list[list], path: Path = OUTPUT_XLSX) -> None:

@@ -1,8 +1,11 @@
 """Shared file I/O for the curated dataset (entities, sources, relations).
 
-Last edited: 2026-10-27 — new module; consolidates loaders that were duplicated
-across graph_build, agent, review_queue, extract and tools/make_checklist; adds
-display_label()/short_label() implementing the EN-first / ZH-first naming rule.
+Last edited: 2026-10-29 — added write_text_lf(): generated text files (review queue,
+checklist, graph.json, viewer.html) are written with LF on every OS, so the same data
+gives byte-identical output on Windows and Linux. 2026-10-27: new module; consolidates
+loaders that were duplicated across graph_build, agent, review_queue, extract and
+tools/make_checklist; adds display_label()/short_label() implementing the EN-first /
+ZH-first naming rule.
 
 All functions take an explicit `root` (project directory) so callers in tools/
 and experiments/ can pass their own path; defaults to this file's directory.
@@ -54,6 +57,13 @@ def write_relation_dicts(relations: list[dict], root: Path = DEFAULT_ROOT) -> No
 def load_graph_json(root: Path = DEFAULT_ROOT) -> dict:
     """Read build/graph.json (networkx node-link format with 'nodes' and 'links')."""
     return json.loads((root / GRAPH_JSON).read_text(encoding="utf-8"))
+
+
+def write_text_lf(path: Path, text: str) -> None:
+    """Write UTF-8 text with LF line endings regardless of OS (Path.write_text would use CRLF on Windows)."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w", encoding="utf-8", newline="\n") as f:
+        f.write(text)
 
 
 def _primary_and_secondary(entity: dict) -> tuple[str, str]:

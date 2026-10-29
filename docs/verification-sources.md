@@ -186,3 +186,25 @@ B 類是依標準攝影史參考升級、本輪未抓取單一網頁者，仍建
 本輪新增 171 條，158 條 approved，1 條升級（Kirstein 論《American Photographs》）；12 條（展覽歸類為表演/現代主義攝影、Conflict→遲到的攝影、Steichen/Warhol→Shore）留 review，見 `docs/原典查核清單.md`（現 170 條）。
 
 > **流程修正**：既有 review 升級時，第 6 輪的腳本會覆蓋原 evidence；自本輪起改為「附加」，保留原始證據文字與升級軌跡。
+
+## H. 第 8 輪（2026-10-28/29）東方擴充：日本獎項與展覽、臺灣叢書與展覽、中國與韓國首批 hub
+
+| 叢集 | 查證來源（URL） | 確認內容 |
+|---|---|---|
+| 木村伊兵衛寫真賞 | https://imaonline.jp/imapedia/kimuraihei/ ｜交叉核對：https://www.library.city.nagoya.jp/img/kensaku/osusume/adult2011/tomita_201104_1.pdf | 1975 朝日新聞社創設；第 1–45 回得主與受賞作（IMA），第 1–36 回與名古屋市圖書館名單相符；40 位得主、15 件受賞作入圖 |
+| 土門拳賞 | https://prizesworld.com/prizes/etc/domn.htm ｜交叉核對：https://en.wikipedia.org/wiki/Domon_Ken_Award | 每日新聞社 1981 創設；第 1–31 回兩份獨立名單相符；僅收 13 位具論述分量的得主。土門拳記念館網站拒絕爬取、每日新聞官方名單頁搜尋不到，故 tier 標 other、confidence 0.4，status approved 但 evidence 註明「兩份獨立名單相符」 |
+| New Japanese Photography（MoMA 1974） | https://www.moma.org/docs/press_archives/5101/releases/MOMA_1974_0032_29.pdf | Szarkowski 與山岸章二（Camera Mainichi 主編）共同策展；15 位攝影家、187 幅；巡迴三站；圖錄 112 頁；Szarkowski 論東松引文 |
+| Provoke 巡迴展（Albertina/Winterthur/Le Bal/AIC 2016–17） | https://www.artic.edu/exhibitions/2056/provoke-photography-in-japan-between-protest-and-performance-1960-1975 | Provoke 五位同人含岡田隆彥；三期 1968.11–1969.8；四館日期；12 位參展者含 Hi-Red Center、寺山修司 |
+| 写真新世紀（Canon） | https://global.canon/ja/newcosmos/gallery/grandprix/ | 1992–2021 年度大獎；入圖 HIROMIX 1995、野口里佳 1996、高木こずえ 2006、金サジ 2016 |
+| Duet: Asian Contemporary（東京都寫真美術館 2026–27） | https://topmuseum.jp/wp-content/uploads/2026/08/Duet_Asian_Contemporary_PressRelease-1.pdf | 六位藝術家；伊藤貴弘／滕青雲策展；三影堂 2007 北京、2015 廈門；集美·阿爾勒 |
+| 《臺灣攝影家》系列叢書 | https://ncpi.ntmofa.gov.tw/News_Publish.aspx?n=7874&sms=15587 （page=2–4 同） | 第 1–9 輯 35 冊（2017.12–2026.5）攝影家、研究主編／作者、出版年；五位研究者之 study 關係 |
+| 舉起鏡子迎上他的凝視（NCPI 2021） | https://ncpi.ntmofa.gov.tw/News_Content_OnlineExhibitionPic.aspx?n=8007&s=210013 | 林宏璋策展；600 餘件 1869–1949；17 位攝影者（含湯姆生、愛德華茲、賴阿芳、彭瑞麟、鄧南光、張才、李鳴鵰）；九組當代藝術研究；殖民現代性框架 |
+| 凝光：2022 臺灣攝影家百歲紀念展 | https://ncpi.ntmofa.gov.tw/News_Content_OnlineExhibitionPic.aspx?n=8007&s=210018 | 李鳴鵰、秦凱、林權助皆 1922 年生；熊芃、蔡旻螢策展 |
+| 回望：臺灣攝影家的島嶼凝視 1970s–1990s（國美館 2018） | https://ncpi.ntmofa.gov.tw/News_Content_OnlineExhibitionPic.aspx?n=8007&s=210009 | 張照堂、沈昭良策展；11 位攝影家 |
+| 時代映像（國美館 2020–21） | https://ncpi.ntmofa.gov.tw/News_Content_OnlineExhibitionPic.aspx?n=8007&s=210004 | 郎靜山、鄧南光、李鳴鵰、張才、鄭桑溪；出生地 |
+| Between Past and Future（ICP/亞洲協會/Smart/MCA 2004–07） | https://smartmuseum.uchicago.edu/exhibitions/between-past-and-future-new-photography-and-video-from-china ｜ https://mcachicago.org/whats-on/exhibitions/between-past-and-future-new-photography-and-video-from-china/ ｜ https://press.uchicago.edu/ucp/books/book/distributed/B/bo3615111.html | 巫鴻、Christopher Phillips 策展；四主題；六站巡迴；圖錄撰稿人；頁面未列 60 位藝術家名單，僅邱志傑《Tattoo 1》有圖說 |
+| Chaotic Harmony（MFAH 2009–10 / SBMA 2010） | https://aaa.org.hk/collections/search/library/chaotic-harmony-contemporary-korean-photography ｜ https://www.powells.com/book/chaotic-harmony-9780300157536 | Tucker、Sinsheimer 論文；具本昌撰年表；40 位攝影家；Atta Kim、Bae Bien-U 僅見於出版社簡介（popular） |
+
+本輪新增 198 個節點、18 個來源、300 條關係；292 條 approved，8 條判斷（長島／HIROMIX 世代對照、《東京郊外》與新地誌、Camera Mainichi 隸屬、MoMA 1974 與快照美學、Provoke 與抗議攝影、集美·阿爾勒與三影堂、回望與紀實、Between Past and Future 與表演攝影）留 review，見 `docs/原典查核清單.md`（現 178 條）。
+
+> **查核限制**：（1）土門拳賞與 Chaotic Harmony 的部分名單只有非機構來源，已以 tier 與 evidence 文字標明，日後找到官方頁再升級；（2）NCPI 的 ncpiexhibition 子網域拒絕爬取，改用 ncpi.ntmofa.gov.tw 展覽頁；（3）IMA 的木村伊兵衛賞名單以「年度」標年（第 N 回＝該年度作品，頒獎在次年），claim 一律寫「第 N 回（YYYY 年度）」以免與頒獎年混淆。

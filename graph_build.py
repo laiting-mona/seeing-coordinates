@@ -1,6 +1,6 @@
 """Build the knowledge graph from data/ and write build/graph.json.
 
-Last edited: 2026-10-27 — split build() into single-purpose functions; loaders
+Last edited: 2026-10-29 — graph.json written with LF on every OS. 2026-10-27: split build() into single-purpose functions; loaders
 moved to data_io; main() only orchestrates; nodes now carry `label`/`short_label`
 (EN-first for Western, ZH for Chinese-world; see data_io.display_label).
 
@@ -75,7 +75,7 @@ def write_graph_json(graph: nx.MultiDiGraph, root: Path = ROOT) -> Path:
     output_path = root / data_io.GRAPH_JSON
     output_path.parent.mkdir(exist_ok=True)
     payload = nx.node_link_data(graph, edges="links")
-    output_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    data_io.write_text_lf(output_path, json.dumps(payload, ensure_ascii=False, indent=2))
     return output_path
 
 

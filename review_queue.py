@@ -1,6 +1,7 @@
 """Export status=review relations, with investigation notes, to docs/review-queue.md.
 
-Last edited: 2026-10-27 — module-level script turned into functions + main();
+Last edited: 2026-10-29 — output written with LF on every OS (data_io.write_text_lf).
+2026-10-27: module-level script turned into functions + main();
 loaders from data_io; names use display_label.
 
 The program only assembles; decisions stay with the human reviewer.
@@ -46,7 +47,7 @@ def main() -> None:
     label = {row["id"]: data_io.display_label(row) for row in data_io.load_entity_rows(ROOT)}
     pending = [r for r in data_io.load_relation_dicts(ROOT) if r.get("status") == "review"]
     OUTPUT_MD.parent.mkdir(exist_ok=True)
-    OUTPUT_MD.write_text(build_queue_markdown(pending, load_notes(), label), encoding="utf-8")
+    data_io.write_text_lf(OUTPUT_MD, build_queue_markdown(pending, load_notes(), label))
     print(f"寫出 {len(pending)} 條待判斷關係 → {OUTPUT_MD.relative_to(ROOT)}")
 
 

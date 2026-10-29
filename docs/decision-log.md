@@ -84,3 +84,13 @@
 - **判斷：西方差不多了。** 七輪後，19 世紀發明與論爭、分離派與直接攝影、新視覺與新客觀、超現實、FSA 與紀實、馬格南與戰地、紐約學派、New Documents／New Topographics／新彩色、杜塞道夫、圖景世代與觀念攝影、後現代理論、主要獎項與選集、MoMA/Tate 的主題展，都已有 hub 級查證的錨點。剩下的西方空白多是「葉節點補著作」這類精修，邊際效益低於開一條新脈絡。下一輪轉東方：日本（木村伊兵衛獎、土門拳獎、東京都寫真美術館、Provoke 之外的戰後系譜）、台灣（國家攝影文化中心、攝影家叢書）、中國（三影堂、四月影會）、韓國。
 - **流程修正：** upgrade 改為附加 evidence 而非覆蓋。
 - **GitHub：** 容器端 token 無效、電腦端未裝 gh；改以內建瀏覽器由使用者親自登入 GitHub 建 repo，push 由電腦端 git 完成（Git Credential Manager 彈窗登入）。
+
+## 2026-10-29 第 8 輪擴充：轉東方（914→1112 節點）；GitHub 公開 repo 上線；產生檔改固定 LF
+
+- **新增叢集：** 日本三個獎項（木村伊兵衛寫真賞 40 位得主、土門拳賞 13 位、写真新世紀 4 位）與兩個展覽 hub（MoMA 1974《New Japanese Photography》15 位、Provoke 巡迴展 12 位）、東京都寫真美術館《Duet: Asian Contemporary》；臺灣《臺灣攝影家》系列叢書 35 冊與國家攝影文化中心／國美館四個展覽（舉起鏡子迎上他的凝視、凝光、回望、時代映像）；中國《Between Past and Future》與三影堂；韓國《Chaotic Harmony》。新概念：攝影與殖民現代性。
+- **數字：** 關係 1592→1892；正式入圖 1420→1712（自動 99 + 查證確認 1613）；待查證 170→178；剔除維持 2。
+- **判斷：東方以「名單型 hub」起步最划算。** 獎項名單與叢書目錄一頁可確認 30–40 條；臺灣部分以官方（文化部／國美館／國家攝影文化中心）頁面為主，可信度最高。日本官方獎項頁（朝日、每日）搜尋不到或拒絕爬取，改用專業媒體名單加公共圖書館名單交叉核對；土門拳賞因只有非機構來源，tier 保守標 other，confidence 0.4，但 status 仍為 approved（兩份獨立名單相符），這是本專案第一次把「名單相符」當作查證基礎，已在 verification-sources H 節明記，日後找到官方頁再升級。
+- **命名：** 東亞人物與作品一律 `label_pref=zh`（中文／漢字為主）；韓國人物漢字名不確定者（Atta Kim）改用 `en` 並以音譯為中譯，不假造漢字名；原題為英文的作品（APARTMENT、LIME WORKS、GIFT）用 `en`。
+- **流程修正：** `docs/review-queue.md`、`docs/原典查核清單.md` 與 `build/*` 在 Windows 上原以 CRLF 寫出，與容器端 bytes 不同；新增 `data_io.write_text_lf`，四支產生器一律 LF。另發現 PowerShell 5.1 以 ANSI 讀取 .ps1，同步腳本內不得放中文字串（曾把 .gitignore 寫壞一次，已以容器版覆寫並比對 md5）。
+- **GitHub：** 使用者於內建瀏覽器登入後，由我在 github.com/new 建公開 repo `laiting-mona/seeing-coordinates`（無 README／license 初始化），電腦端 `git push -u origin main`（Git Credential Manager），容器端 `git reset --hard origin/main` 對齊到 `e1c95d4`。往後流程固定：容器做事 → 同步電腦 → 電腦 commit/push → 容器 fetch。
+- **下一輪：** 東方縱深：日本（東京都寫真美術館典藏／「日本写真の1968」等展、VIVO 與《Camera Mainichi》系譜補著作）、臺灣（V-10 視覺藝術群、《人間》雜誌、阮義忠《攝影家》雜誌，需找到美術館級頁面）、中國（四月影會 1979、「新攝影」1996–98、顧錚）、韓國（具本昌／裴炳雨代表作、MMCA 展覽）。
