@@ -228,3 +228,9 @@ B 類是依標準攝影史參考升級、本輪未抓取單一網頁者，仍建
 結果：165 個來源（`leaf2_*_s`）、220 件作品、436 條關係（390 approved、46 review）。西方人物葉節點 → 50。
 
 未完成：35 人因搜尋額度用盡未查（Kamoinge 五位成員、Sally Mann、Taryn Simon、Charlotte Cotton、Valéry 等），另以追加研究補上。
+
+### J 補：追加研究 33 人
+
+搜尋額度用盡而未查的 33 人另以兩組追加研究補完（全部找到來源），新增 33 個來源、27 件作品、79 條關係（62 approved、17 review）。否決：Galella 與 Ming Smith 的「館藏」當「展出」；Ansel Adams → Sally Mann（頁面是曼以亞當斯為標竿，不是影響）與 Becher → Streuli（「貝歇學派」而非貝歇夫婦本人）降為 review；Adger Cowans 師從的是 Clarence H. White Jr.，不是圖中的 Clarence H. White，不連。
+
+最後仍為葉節點的 22 人：多數已有來源但頁面未載可用的關係（如 Borges、Scruton、Cavell），或提出的連結在 review（Taryn Simon、Kamoinge 三位成員的館藏與展覽）。這些留待原典查核清單處理。

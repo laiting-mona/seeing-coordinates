@@ -1,6 +1,6 @@
 # 待人工判斷佇列（review queue）
 
-共 227 條。程式自動彙整,判斷與決定由你填。
+共 244 條。程式自動彙整,判斷與決定由你填。
 
 > 每條的「你的決定」欄預設空白。你確認後填 approved / rejected / 重構,我再據此更新圖。
 
@@ -1815,6 +1815,142 @@
 ## Stephen Shore (蕭爾) → Alec Soth (亞歷克·索斯)（influence）
 - 可信度:0.38　來源層:institution　出處:leaf2_soth_s
 - 主張:索斯的作品植根於史蒂芬．蕭爾發展的美國公路攝影傳統
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Whitney Museum of American Art (惠特尼美術館) → Taryn Simon (塔琳·賽門)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_simon_taryn_s
+- 主張:惠特尼美術館 2007 年展出《美國隱祕與陌生事物索引》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 泰特美術館 (Tate) → Taryn Simon (塔琳·賽門)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_simon_taryn_s
+- 主張:泰特現代美術館 2011 年展出《被宣告死亡的活人及其他篇章》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 紐約現代美術館 (Museum of Modern Art) → Taryn Simon (塔琳·賽門)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_simon_taryn_s
+- 主張:紐約現代美術館 2012 年展出《被宣告死亡的活人及其他篇章》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Contemporary Arts Center, Cincinnati (辛辛那提當代藝術中心) → Taryn Simon (塔琳·賽門)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_simon_taryn_s
+- 主張:辛辛那提當代藝術中心 2006 年展出《無辜者》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Corcoran Gallery of Art (柯克倫美術館) → Taryn Simon (塔琳·賽門)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_simon_taryn_s
+- 主張:科克倫美術館 2013 年展出《被宣告死亡的活人及其他篇章》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Sally Stein (莎莉·斯坦) → Benjamin H. D. Buchloh (班傑明·布赫洛)（discusses）
+- 可信度:0.38　來源層:institution　出處:leaf2_stein_sally_s
+- 主張:斯坦 2024 年演講重新檢視布赫洛關於肖像的經典論文
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Esther Parada (艾絲特·帕拉達) → Institute of Design, Chicago (芝加哥設計學院)（belongs_to）
+- 可信度:0.38　來源層:institution　出處:leaf2_parada_esther_s
+- 主張:1971 年取得伊利諾理工學院設計學院學位
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Ansel Adams (安瑟·亞當斯) → Sally Mann (莎莉·曼)（influence）
+- 可信度:0.38　來源層:institution　出處:leaf2_mann_sally_s
+- 主張:曼的家庭照追求「勝過亞當斯」的精確,風景作品才轉而不再以亞當斯為參照
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Mirrors and Windows 1978 → Anthony Barboza (安東尼·巴博薩)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_barboza_s
+- 主張:1978 年 MoMA〈鏡與窗〉展出巴博薩作品,他與德卡拉瓦是僅有的兩位黑人攝影師
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Mirrors and Windows 1978 → Roy DeCarava (羅伊·德卡拉瓦)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_barboza_s
+- 主張:1978 年 MoMA〈鏡與窗〉展出德卡拉瓦作品
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Sarah Meister (莎拉·邁斯特) → August Sander (桑德)（discusses）
+- 可信度:0.38　來源層:institution　出處:leaf2_meister_sarah_s
+- 主張:邁斯特共同主持MoMA與哥倫比亞大學的奧古斯特·桑德研究計畫
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Eva Respini (伊娃·雷斯皮尼) → 紐約現代美術館 (Museum of Modern Art)（belongs_to）
+- 可信度:0.38　來源層:institution　出處:leaf2_respini_eva_s
+- 主張:雷斯皮尼曾任MoMA策展人約15年
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 紐約現代美術館 (Museum of Modern Art) → Cindy Sherman (辛蒂·雪曼)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_respini_eva_s
+- 主張:雷斯皮尼在MoMA策劃辛蒂·雪曼回顧展
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 紐約現代美術館 (Museum of Modern Art) → Walid Raad (瓦利德·拉德)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_respini_eva_s
+- 主張:雷斯皮尼在MoMA策劃瓦利德·拉德回顧展
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 紐約現代美術館 (Museum of Modern Art) → Robert Heinecken (羅伯特·海尼肯)（exhibit）
+- 可信度:0.38　來源層:institution　出處:leaf2_respini_eva_s
+- 主張:雷斯皮尼在MoMA策劃羅伯特·海涅肯回顧展
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## John Baldessari (約翰·巴爾代薩里) → Jack Goldstein (傑克·戈德斯坦)（influence）
+- 可信度:0.38　來源層:institution　出處:leaf2_eklund_s
+- 主張:戈德斯坦曾任巴爾德薩里的教學助理
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Bernd and Hilla Becher (貝歇夫婦) → Beat Streuli (畢特·史特勒利)（influence）
+- 可信度:0.38　來源層:institution　出處:leaf2_streuli_s
+- 主張:史特勒利移居杜塞道夫後受貝歇學派大幅攝影影響
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
