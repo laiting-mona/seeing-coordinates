@@ -208,3 +208,13 @@ B 類是依標準攝影史參考升級、本輪未抓取單一網頁者，仍建
 本輪新增 198 個節點、18 個來源、300 條關係；292 條 approved，8 條判斷（長島／HIROMIX 世代對照、《東京郊外》與新地誌、Camera Mainichi 隸屬、MoMA 1974 與快照美學、Provoke 與抗議攝影、集美·阿爾勒與三影堂、回望與紀實、Between Past and Future 與表演攝影）留 review，見 `docs/原典查核清單.md`（現 178 條）。
 
 > **查核限制**：（1）土門拳賞與 Chaotic Harmony 的部分名單只有非機構來源，已以 tier 與 evidence 文字標明，日後找到官方頁再升級；（2）NCPI 的 ncpiexhibition 子網域拒絕爬取，改用 ncpi.ntmofa.gov.tw 展覽頁；（3）IMA 的木村伊兵衛賞名單以「年度」標年（第 N 回＝該年度作品，頒獎在次年），claim 一律寫「第 N 回（YYYY 年度）」以免與頒獎年混淆。
+
+## I. 第 9 輪（2026-10-29）西方葉節點補完：每人一個機構頁
+
+對象：西方人物中只有一條正式邊（多為「收錄於選集」「某獎得主」「某團體成員」）的 299 人裡，挑出論述分量最高的 108 人（早期與現代主義攝影家、戰後攝影家、FSA/f.64/New Topographics/馬格南成員、哲學與批評家、攝影史論者與策展人）。
+
+做法：每人找一個機構級頁面（美術館、基金會、圖書館、大學、出版社、學術參考如 SEP／IEP／arthistorians.info／Monoskop），只收頁面明載的生平、代表作（含年份）與師承／流派；來源各自登記為 `leaf_<id>_s`，共 108 個（網址見 `data/sources.csv`）。研究分五組並行，回傳的引句若是摘要而非原文，再逐頁回查：Freund、Spence、Kuhn、Iversen、S. Edwards、E. Edwards、Nochlin、Enwezor、Hambourg、Eskildsen、Snyder、Amelunxen 均確認；Moderna Museet 頁未載 Baldessari 的作品名，故不收。
+
+結果：新增 122 個節點（約 100 件作品／展覽與 23 個概念、機構、期刊，如 達達、構成主義、人文主義攝影、女性主義藝術、體制批判、後現代主義、連續攝影、Institute of Design、LOOK、TIME、Dephot、AIZ、LEF、Critical Inquiry、Screen）、230 條關係，227 條 approved；3 條屬本專案詮釋（《規訓與懲罰》→ 監控、Ruscha → Jenkins、Barthes → Elkins）留 review。西方人物葉節點 299 → 200。
+
+查核限制：Maier（Encyclopaedia Universalis）、Hido（ROSEGALLERY）、Grossman（Howard Greenberg Gallery）、Robert Hughes（Melbourne Press Club）的來源不是美術館或學術機構，tier 標 critic；Jussim 只有圖書館書目紀錄可證其著作，生平未查到；William Jenkins 只有 CCA 書目紀錄證明其策展與導言。頁面內部矛盾照實保留（Doisneau 1912／1922、Freund 卒日 3/30 與 3/31、Jameson《Postmodernism》1991 與 1990.11）。

@@ -94,3 +94,12 @@
 - **流程修正：** `docs/review-queue.md`、`docs/原典查核清單.md` 與 `build/*` 在 Windows 上原以 CRLF 寫出，與容器端 bytes 不同；新增 `data_io.write_text_lf`，四支產生器一律 LF。另發現 PowerShell 5.1 以 ANSI 讀取 .ps1，同步腳本內不得放中文字串（曾把 .gitignore 寫壞一次，已以容器版覆寫並比對 md5）。
 - **GitHub：** 使用者於內建瀏覽器登入後，由我在 github.com/new 建公開 repo `laiting-mona/seeing-coordinates`（無 README／license 初始化），電腦端 `git push -u origin main`（Git Credential Manager），容器端 `git reset --hard origin/main` 對齊到 `e1c95d4`。往後流程固定：容器做事 → 同步電腦 → 電腦 commit/push → 容器 fetch。
 - **下一輪：** 東方縱深：日本（東京都寫真美術館典藏／「日本写真の1968」等展、VIVO 與《Camera Mainichi》系譜補著作）、臺灣（V-10 視覺藝術群、《人間》雜誌、阮義忠《攝影家》雜誌，需找到美術館級頁面）、中國（四月影會 1979、「新攝影」1996–98、顧錚）、韓國（具本昌／裴炳雨代表作、MMCA 展覽）。
+
+## 2026-10-29（二次）第 9 輪：補西方葉節點（1110→1232 節點）；合併重複實體
+
+- **使用者指示：**「先補西方葉節點」。
+- **做法：** 西方人物葉節點 299 個，挑 108 位，五組並行查機構頁，每人一個來源；摘要式引句逐頁回查，查不到就不收（Baldessari 作品名）。只連到頁面明載的既有節點（師承、團體、雜誌、展覽），本專案自己的詮釋一律 review。
+- **數字：** 關係 1892→2122；正式入圖 1712→1939（自動 99 + 查證確認 1840）；待查證 178→181；西方人物葉節點 299→200。
+- **資料品質：** 發現 Liz Wells、Fotomuseum Winterthur 各被建兩次，已合併；`graph_build` 遇到同類型同名的重複實體會直接報錯，`test_core` 加兩項（共 24 項）。
+- **推薦效果：** 讀 Sid Grossman 會被帶到他在 Photo League 的學生（Weegee、Lisette Model、Levinstein）；讀 Foucault 會先到《規訓與懲罰》《詞與物》；讀 Jo Spence 會到攝影治療與女性主義藝術。過去這些人只會被推到「某選集」。
+- **剩下的 200 個葉節點：** 多為選集收錄的次要作者、Deutsche Börse／哈蘇的當代得主、Last Picture Show 的觀念藝術家；下一次補西方時從 Deutsche Börse 得主的得獎作品與 Last Picture Show 藝術家的攝影作品著手。

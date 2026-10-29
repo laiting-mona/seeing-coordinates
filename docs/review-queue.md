@@ -1,6 +1,6 @@
 # 待人工判斷佇列（review queue）
 
-共 178 條。程式自動彙整,判斷與決定由你填。
+共 181 條。程式自動彙整,判斷與決定由你填。
 
 > 每條的「你的決定」欄預設空白。你確認後填 approved / rejected / 重構,我再據此更新圖。
 
@@ -1423,6 +1423,30 @@
 ## Between Past and Future: New Photography and Video from China (2004–07) (過去與未來之間:中國新攝影與錄像(ICP/亞洲協會/Smart/MCA,2004–07 巡迴)) → performance and photography (表演與攝影)（extend）
 - 可信度:0.52　來源層:institution　出處:smart_bpf_s
 - 主張:四主題之一「Performing the Self」(展覽歸類)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Ed Ruscha (魯沙) → William Jenkins (威廉·詹金斯)（influence）
+- 可信度:0.3　來源層:critic　出處:leaf_judgement
+- 主張:二手頁面(Falmouth 部落格)稱其深受 Ruscha 影響
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Discipline and Punish (1975) (規訓與懲罰) → voyeurism and surveillance (偷窺與監控)（influence）
+- 可信度:0.3　來源層:critic　出處:leaf_judgement
+- 主張:全景敞視是現代規訓權力的建築範型(SEP);連到監控概念為本專案判斷
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 巴特 (Roland Barthes) → James Elkins (艾爾金斯)（influence）
+- 可信度:0.3　來源層:critic　出處:leaf_judgement
+- 主張:Routledge 頁:以《明室》為討論起點
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)

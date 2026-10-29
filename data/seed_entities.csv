@@ -1109,3 +1109,125 @@ sbma,institution,聖塔芭芭拉美術館,Santa Barbara Museum of Art,en
 sinsheimer_karen,person,凱倫·辛斯海默,Karen Sinsheimer,en
 atta_kim,person,阿塔·金,Atta Kim,en
 bae_bienu,person,裴炳雨,Bae Bien-U,zh
+dada,concept,達達主義,Dada,zh_en
+constructivism,concept,構成主義,Constructivism,zh_en
+humanist_photography,concept,人文主義攝影,humanist photography,zh_en
+feminist_art,concept,女性主義藝術,feminist art,zh_en
+institutional_critique,concept,體制批判,institutional critique,en
+postmodernism,concept,後現代主義,postmodernism,zh_en
+chronophotography,concept,連續攝影,chronophotography,zh_en
+precisionism,concept,精確主義,Precisionism,en
+phototherapy,concept,攝影治療,phototherapy,en
+institute_of_design,institution,芝加哥設計學院,"Institute of Design, Chicago",en
+look_magazine,institution,LOOK 雜誌,LOOK magazine,en
+time_magazine,institution,TIME 雜誌,TIME magazine,en
+ucla,institution,加州大學洛杉磯分校,UCLA,en
+yale_art,institution,耶魯大學藝術學院,Yale School of Art,en
+dephot,institution,德意志攝影服務社,Dephot (Deutscher Fotodienst),en
+aiz,work,工人畫報,Arbeiter-Illustrierte-Zeitung (AIZ),en
+lef_journal,work,左翼藝術陣線(期刊),LEF / Novyi LEF (journal),en
+devetsil,institution,九力社,Devětsil,en
+hackney_flashers,institution,哈克尼閃光(攝影集體),Hackney Flashers,en
+side_gallery,institution,Side Gallery(紐卡索),"Side Gallery, Newcastle",en
+met_photographs_dept,institution,大都會美術館攝影部,"Department of Photographs, The Metropolitan Museum of Art",en
+critical_inquiry,work,Critical Inquiry 期刊,Critical Inquiry (journal),en
+screen_journal,work,Screen 期刊,Screen (journal),en
+lartigue_diary_w,work,百年日記,Diary of a Century (1970),en
+krull_metal_w,work,金屬,Métal (1928),en
+krull_marseille_w,work,馬賽,Marseille (1935),en
+doisneau_banlieue_w,work,巴黎郊區,La Banlieue de Paris (1949),en
+ronis_belleville_w,work,美麗城梅尼蒙當,Belleville-Ménilmontant (1954),en
+riis_other_half_w,work,另一半如何生活,How the Other Half Lives (1890),en
+riis_children_poor_w,work,窮人的孩子,The Children of the Poor (1892),en
+muybridge_locomotion_w,work,動物的運動,Animal Locomotion (1887),en
+muybridge_sf_panorama_w,work,舊金山全景,San Francisco Panorama (1878),en
+marey_fusil_w,work,攝影槍,Fusil photographique (1882),en
+lissitzky_constructor_w,work,自畫像(建構者),Self-Portrait (The Constructor) (1924),en
+lissitzky_two_squares_w,work,關於兩個方塊,About 2 Squares (1922),en
+richter_rhythmus21_w,work,節奏 21,Rhythmus 21 (1921),en
+sheeler_manhatta_w,work,曼哈塔,Manhatta (1920),en
+teige_film_w,work,電影,Film (1925),en
+stepanova_gaust_w,work,Gaust Chaba,Gaust Chaba (1918),en
+roh_nach_expr_w,work,後表現主義:魔幻寫實,Nach-Expressionismus: Magischer Realismus (1925),en
+roh_foto_auge_w,work,攝影之眼:當代 76 幅照片,Foto-Auge: 76 Fotos der Zeit (1929),en
+goldblatt_mines_w,work,礦場上,On the Mines (1973),en
+goldblatt_afrikaners_w,work,被拍攝的阿非利卡人,Some Afrikaners Photographed (1975),en
+calle_suite_w,work,威尼斯組曲,Suite Vénitienne (1980),en
+calle_hotel_w,work,旅館,The Hotel (1983),en
+calle_exquisite_w,work,極度痛苦,Exquisite Pain (1984/99),en
+fontcuberta_herbarium_w,work,植物標本集,Herbarium (1982),en
+fontcuberta_sputnik_w,work,史普尼克,Sputnik (1997),en
+singh_go_away_w,work,"走開,靠近點",Go Away Closer (2007),en
+singh_museum_bhavan_w,work,博物館之屋,Museum Bhavan (2017),en
+leiter_early_color_w,work,早期彩色,Early Color (2006),en
+newton_white_women_w,work,白人女性,White Women (1976),en
+newton_big_nudes_w,work,巨幅裸體,Big Nudes (1981),en
+bey_harlem_usa_w,work,"哈林,美國","Harlem, U.S.A. (1975–79)",en
+bey_birmingham_w,work,伯明罕計畫,The Birmingham Project (2013),en
+epstein_family_business_w,work,家族事業,Family Business (2003),en
+epstein_american_power_w,work,美國電力,American Power (2009),en
+hido_house_hunting_w,work,找房子,House Hunting (2001),en
+gowin_edith_w,work,"伊迪絲,欽科蒂格","Edith, Chincoteague, Virginia (1967)",en
+killip_seacoal_w,work,海煤,Seacoal (1982–84),en
+nachtwey_war_photographer_w,work,戰地攝影師,War Photographer (2001),en
+grossman_coney_w,work,康尼島,Coney Island (1947–48),en
+draper_store_closed_w,work,本店將關閉,This Store Will Be Closed (1968),en
+stryker_proud_land_w,work,在這片驕傲的土地,In This Proud Land (1973),en
+heinecken_are_you_rea_w,work,Are You Rea,Are You Rea (late 1960s),en
+metzker_composites_w,work,複合影像,Composites (1964–),en
+papageorge_eden_w,work,穿越伊甸,Passing through Eden (2007),en
+papageorge_core_w,work,核心課程,Core Curriculum (2011),en
+gohlke_emptiness_w,work,空無的尺度,Measure of Emptiness (1992),en
+deal_fault_zone_w,work,斷層帶,The Fault Zone,en
+seymour_children_europe_w,work,歐洲的孩子,Children of Europe (1949),en
+rodger_nuba_w,work,科爾多凡的努巴人,Nuba of Kordofan (1951),en
+lyon_bikeriders_w,work,機車騎士,The Bikeriders (1967),en
+lyon_lower_manhattan_w,work,下曼哈頓的拆毀,The Destruction of Lower Manhattan (1969),en
+burri_die_deutschen_w,work,德國人,Die Deutschen (1962),en
+discipline_punish_w,work,規訓與懲罰,Discipline and Punish (1975),en
+order_of_things_w,work,詞與物,The Order of Things (1966),en
+droit_de_regards_w,work,觀看之權,"Right of Inspection (Droit de regards, 1985)",en
+archive_fever_derrida_w,work,檔案熱,"Archive Fever (Mal d'archive, 1995)",en
+jameson_postmodernism_w,work,"後現代主義,或晚期資本主義的文化邏輯","Postmodernism, or, the Cultural Logic of Late Capitalism (1991)",en
+return_of_real_w,work,真實的回歸,The Return of the Real (1996),en
+anti_aesthetic_w,work,反美學:後現代文化論文集,The Anti-Aesthetic (1983),en
+beyond_recognition_w,work,超越辨識,Beyond Recognition (1992),en
+language_new_media_w,work,新媒體的語言,The Language of New Media (2001),en
+vision_machine_w,work,視覺機器,"The Vision Machine (La machine de vision, 1988)",en
+war_cinema_w,work,戰爭與電影,War and Cinema (1984),en
+lacan_seminar_xi_w,work,精神分析的四個基本概念(研討班 XI),The Four Fundamental Concepts of Psychoanalysis (Seminar XI),en
+poe_daguerreotype_w,work,達蓋爾銀版,The Daguerreotype (1840),en
+prints_visual_comm_w,work,版畫與視覺傳播,Prints and Visual Communication (1953),en
+eastlake_photography_w,work,攝影(1857),"Photography (Quarterly Review, 1857)",en
+de_zayas_evolution_w,work,現代繪畫的演進研究,A Study of the Evolution of Modern Painting (1913),en
+shock_of_new_w,work,新藝術的震撼,The Shock of the New (1980),en
+paragraphs_conceptual_w,work,觀念藝術短論,Paragraphs on Conceptual Art (1967),en
+photographie_societe_w,work,攝影與社會,Photographie et société (1974),en
+putting_myself_w,work,把自己放進畫面,Putting Myself in the Picture (1986),en
+picture_of_health_w,work,健康的圖像?,The Picture of Health? (1982–86),en
+family_secrets_w,work,家庭秘密,Family Secrets (1995; rev. 2002),en
+what_photography_is_w,work,攝影是什麼,What Photography Is (2011),en
+picturing_vision_w,work,描繪視覺,Picturing Vision (1980),en
+photography_vision_repr_w,work,攝影、視覺與再現,"Photography, Vision, and Representation (1975)",en
+photo_trace_trauma_w,work,攝影、痕跡與創傷,"Photography, Trace, and Trauma (2017)",en
+photo_after_conceptual_w,work,觀念藝術之後的攝影,Photography After Conceptual Art (2010),en
+signs_meaning_cinema_w,work,電影中的符號與意義,Signs and Meaning in the Cinema (1969),en
+bate_key_concepts_w,work,攝影:關鍵概念,Photography: The Key Concepts (2009),en
+bate_surrealism_w,work,攝影與超現實主義,Photography and Surrealism (2004),en
+edwards_vsi_w,work,攝影:簡短介紹,Photography: A Very Short Introduction (2006),en
+edwards_making_english_w,work,英國攝影的形成:寓言,The Making of English Photography: Allegories (2006),en
+raw_histories_w,work,原始的歷史,Raw Histories (2001),en
+anthro_photo_1860_w,work,人類學與攝影 1860–1920,Anthropology and Photography 1860–1920 (1992),en
+kemp_geschichte_w,work,攝影史:從達蓋爾到古斯基,Geschichte der Fotografie: Von Daguerre bis Gursky (2011),en
+photography_after_photography_1995,event,攝影之後的攝影 展(1995–96),Photography after Photography (1995–96),en
+copy_archive_signature_w,work,複製、檔案、簽名,"Copy, Archive, Signature (2010)",en
+panorama_sternberger_w,work,"全景,或十九世紀的景觀",Panorama oder Ansichten vom 19. Jahrhundert (1938),en
+jussim_visual_comm_w,work,視覺傳播與平面藝術,Visual Communication and the Graphic Arts (1974),en
+why_no_great_women_w,work,為什麼沒有偉大的女性藝術家?,Why Have There Been No Great Women Artists? (1971),en
+women_artists_1976,event,"女性藝術家 1550–1950 展(LACMA,1976)","Women Artists: 1550–1950 (LACMA, 1976)",en
+new_vision_met_1989,event,"新視覺:兩次大戰間的攝影 展(Met,1989)","The New Vision: Photography Between the World Wars (Met, 1989)",en
+waking_dream_1993,event,"醒著的夢:攝影的第一個世紀 展(Met,1993)","The Waking Dream: Photography's First Century (Met, 1993)",en
+film_foto_20er_1979,event,"二〇年代的電影與攝影 展(Folkwang,1979)",Film und Foto der 20er Jahre (1979),en
+post_partum_document_w,work,產後紀錄,Post-Partum Document (1973–79),en
+shapolsky_w,work,Shapolsky 等人曼哈頓房地產,Shapolsky et al. Manhattan Real Estate Holdings (1971),en
+naggar_rodger_w,work,George Rodger:攝影的冒險,"George Rodger: An Adventure in Photography, 1908–1995 (2003)",en
