@@ -1,6 +1,6 @@
 # 待人工判斷佇列（review queue）
 
-共 374 條。程式自動彙整,判斷與決定由你填。
+共 375 條。程式自動彙整,判斷與決定由你填。
 
 > 每條的「你的決定」欄預設空白。你確認後填 approved / rejected / 重構,我再據此更新圖。
 
@@ -1487,6 +1487,14 @@
 ## Theorie der Fotografie I–IV, 1839–1995 (2006) → Photography Theory (Art Seminar, 2007) (攝影理論(藝術研討會))（extend）
 - 可信度:0.3　來源層:critic　出處:perlentaucher_kemp_s
 - 主張:德語攝影理論選集對英語 Art Seminar 的平行脈絡
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## The Camera Goes to War: Vietnam (相機上戰場:越南(巡迴展)) → Malcolm Browne (馬爾科姆·布朗)（exhibit）
+- 可信度:0.2　來源層:other　出處:art2art_vietnam_s
+- 主張:展覽頁列名越戰攝影師
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)

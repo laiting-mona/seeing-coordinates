@@ -341,4 +341,20 @@ The Art Story（Gursky 冷面、Levitt 與 Cartier-Bresson 街頭）與 Phillips
 
 **〈Safety in Numbness〉：** 原文在 davidcampany.com（文末註明首刊於 David Green 編《Where is the Photograph?》，Photoworks／Photoforum，2003；大都會圖書館書目相符）。16 條依原文恢復核可：Campany 提出「遲到的攝影」、Meyerowitz 的世貿遺址影像是「事件痕跡的痕跡」、Doherty／Seawright／Ristelhueber／Misrach 為當代藝術的遲到取徑、Fenton 與 Brady 的戰場照片與 Atget 為歷史參照、以 Sekula「社會真實不是說服性風格的問題」作結。限制：四位當代藝術家只出自同一句話；文章談的是 2001 年起的影像，《Aftermath》一書 2006 年才出版，claim 已照實寫。
 
-**仍偏弱：** UGA openscholar 的碩士論文（3 條）可讀且第 13 輪回查相符，暫留；48 條聚合站名單照舊列警告。
+**仍偏弱：** UGA openscholar 的碩士論文（3 條）可讀且第 13 輪回查相符，暫留。48 條聚合站名單在第 15 輪改引機構頁，見 O 節。
+
+## O. 第 15 輪（2026-10-29）聚合站名單改引機構頁：土門拳賞、越戰攝影師、《Chaotic Harmony》
+
+對象：第 12 輪稽核列為警告的 48 條核可關係，原本只靠 prizesworld（土門拳賞歷屆名單）、art2art（巡迴展公司頁）、Powell's（書商轉載的出版社簡介）。兩組研究並行，《Chaotic Harmony》兩條我自己查。轉檔用 `apply_aggr_v18.py`（scratchpad，一次性），新來源 29 個（`ag_<md5>_s`）。
+
+| 叢集 | 條數 | 結果 | 主要頁面 |
+|---|---|---|---|
+| 土門拳賞 | 22 | 20 明載、2 收窄 | 國立新美術館アートコモンズ收錄的土門拳記念館受賞作品展展訊（大石芳野、鬼海弘雄、土田ヒロミ、廣河隆一、創設沿革）與吉祥寺美術館展訊（內藤正敏）；東京都寫真美術館 PDF（須田一政、本橋成一）；枚方市新聞稿（長倉洋海）；コトバンク（江成常夫）；Taka Ishii Gallery（石川直樹、高梨豐，商業畫廊，列 critic）；Canon Gallery S（十文字美信，列 critic）；Tokyo Art Beat（金村修） |
+| 越戰攝影師 | 24 | 15 明載或收窄、8 條展出改引評論、1 條降級 | 普立茲官網（Adams、澤田教一、Faas 兩次、黃功吾）、World Press Photo（澤田 1965）、Briscoe Center、Deutsche Biographie、威爾斯國家圖書館、Harry Ransom Center、科學博物館集團、Visa pour l'Image、Virginia War Memorial |
+| 《Chaotic Harmony》 | 2 | 2 收窄 | 休士頓美術館典藏系統（Atta Kim〈The Museum Project #042〉的展覽紀錄）、Glasstire 展評（裴炳雨〈慶州〉） |
+
+**判斷與限制：**
+- 土門拳賞頁面多寫「授賞年」，我們的 claim 寫「作品年度」，兩者差一年屬同一屆，不算不符。十文字美信的頁面只寫「91 年」、沒寫第幾回；金村修的頁面沒寫受賞作品名，兩條 claim 已照頁面收窄，不自行推算。原 claim 的「兩份獨立名單相符」字樣已刪除。創設沿革（每日新聞社創刊 110 年紀念、昭和 56 年制定）引土門拳記念館的文字，每日新聞社自己的頁面沒有搜到。
+- 《The Camera Goes to War: Vietnam》沒有任何美術館的展覽頁列出名單（2025 年的展出地 Mulva 文化中心只有地方活動公告），8 條展出關係改引 L'Œil de la Photographie 的展覽報導（critic）。兩份名單不一致：巡迴展公司頁列了 Malcolm Browne，L'Œil 的名單沒有，Browne 的展出關係降為待查證。
+- 研究者找到的 Henri Huet 頁面在 Hood Museum 的子網域上，看起來像課堂作業，改用 Visa pour l'Image 的生平頁與 Virginia War Memorial 的報導（LIFE 封面，1966 年 2 月）。
+- Malcolm Browne 的頁面稱他為戰地記者（war correspondent），claim 已照實寫；澤田教一的普立茲獎頁面寫的是 1965 年的戰地攝影整體，沒點名渡河那張照片，claim 已收窄。
