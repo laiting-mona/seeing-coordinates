@@ -1,6 +1,7 @@
 """Minimal regression tests (plain assert, no pytest) for the core behaviour.
 
-Last edited: 2026-10-28 — added checks that institution rosters never top a photographer's
+Last edited: 2026-10-29 — entity-table integrity check (no duplicate person/institution under two
+ids). 2026-10-28: added checks that institution rosters never top a photographer's
 recommendations and that a photographer's own works are reachable (inbound edges). 2026-10-27: tests grouped into functions; added checks for
 display_label naming rule, approved-as-in-graph labelling and the faster resolver.
 Usage: python test_core.py
@@ -63,6 +64,13 @@ def test_display_label_rule() -> None:
     check("中英重疊不重複括號", data_io.display_label(overlap) == "LIFE magazine")
 
 
+def test_entity_table_integrity() -> None:
+    rows = data_io.load_entity_rows()
+    check("實體表無同名重複(同類型同英文名只能有一個 id)", data_io.duplicate_entities(rows) == [])
+    dupes = data_io.duplicate_entities(rows + [{"id": "wells_2", "type": "person", "name_en": "Liz Wells", "name_zh": "x"}])
+    check("duplicate_entities 抓得到第二個 Liz Wells", dupes and "wells" in dupes[0][1])
+
+
 def test_graph_build() -> nx.MultiDiGraph:
     graph = graph_build.build(verbose=False)
     check("圖至少 60 節點", graph.number_of_nodes() >= 60)
@@ -101,6 +109,7 @@ def main() -> None:
     test_routing_threshold()
     test_metrics()
     test_display_label_rule()
+    test_entity_table_integrity()
     test_graph_build()
     test_recommend_and_query()
     print(f"\n全部通過:{passed} 項 ✓")

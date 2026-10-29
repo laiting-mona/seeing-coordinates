@@ -1,6 +1,7 @@
 """Shared file I/O for the curated dataset (entities, sources, relations).
 
-Last edited: 2026-10-29 — added write_text_lf(): generated text files (review queue,
+Last edited: 2026-10-29 — added duplicate_entities() (build/test guard against the same person
+or institution under two ids) and write_text_lf(): generated text files (review queue,
 checklist, graph.json, viewer.html) are written with LF on every OS, so the same data
 gives byte-identical output on Windows and Linux. 2026-10-27: new module; consolidates
 loaders that were duplicated across graph_build, agent, review_queue, extract and
@@ -105,6 +106,20 @@ def display_label(entity: dict) -> str:
 def short_label(entity: dict) -> str:
     """Primary name only (no parenthesis); used where space is tight, e.g. graph canvas."""
     return _primary_and_secondary(entity)[0]
+
+
+def duplicate_entities(rows: list[dict]) -> list[tuple[str, list[str]]]:
+    """Entities that share (type, normalised English name) under different ids: [(name, [ids])].
+
+    Catches the same person or institution being created twice under two ids (e.g. a second
+    'Liz Wells'); a concept and a work with the same title are allowed.
+    """
+    seen: dict[tuple[str, str], list[str]] = {}
+    for row in rows:
+        name = (row.get("name_en") or row.get("name_zh") or "").strip().lower()
+        if name:
+            seen.setdefault((row["type"], name), []).append(row["id"])
+    return [(f"{t}:{name}", ids) for (t, name), ids in seen.items() if len(ids) > 1]
 
 
 def relation_key(relation: dict) -> tuple[str, str, str]:

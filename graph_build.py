@@ -1,6 +1,7 @@
 """Build the knowledge graph from data/ and write build/graph.json.
 
-Last edited: 2026-10-29 — graph.json written with LF on every OS. 2026-10-27: split build() into single-purpose functions; loaders
+Last edited: 2026-10-29 — load_entities() refuses duplicate entities (same type + name under two
+ids); graph.json written with LF on every OS. 2026-10-27: split build() into single-purpose functions; loaders
 moved to data_io; main() only orchestrates; nodes now carry `label`/`short_label`
 (EN-first for Western, ZH for Chinese-world; see data_io.display_label).
 
@@ -24,8 +25,12 @@ TOP_CENTRALITY_SHOWN = 5
 
 def load_entities(root: Path = ROOT) -> dict[str, Entity]:
     """Validate seed_entities.csv rows into Entity models keyed by id."""
+    rows = data_io.load_entity_rows(root)
+    duplicates = data_io.duplicate_entities(rows)
+    if duplicates:
+        raise ValueError(f"duplicate entities (same type and name under different ids): {duplicates}")
     entities = {}
-    for row in data_io.load_entity_rows(root):
+    for row in rows:
         entity = Entity(**{k: row[k] for k in ("id", "type", "name_zh", "name_en", "label_pref") if row.get(k)})
         entities[entity.id] = entity
     return entities
