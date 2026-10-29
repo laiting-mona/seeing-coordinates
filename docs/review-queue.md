@@ -1,6 +1,6 @@
 # 待人工判斷佇列（review queue）
 
-共 386 條。程式自動彙整,判斷與決定由你填。
+共 374 條。程式自動彙整,判斷與決定由你填。
 
 > 每條的「你的決定」欄預設空白。你確認後填 approved / rejected / 重構,我再據此更新圖。
 
@@ -66,6 +66,14 @@
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
+- **你的決定:** ________
+
+## 桑塔格 (Susan Sontag) → Paul Strand (保羅·史川德)（discusses）
+- 可信度:0.42　來源層:primary　出處:on_photography
+- 主張:桑塔格《論攝影》討論保羅·史川德
+- 調查紀錄:《論攝影》提及史川德;待原典查證。
+- 參考來源:(無)
+- 我的建議:查證後可 approved。
 - **你的決定:** ________
 
 ## 卡提耶-布列松 (Henri Cartier-Bresson) → Stephen Shore (蕭爾)（contrast）
@@ -628,6 +636,14 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
+## Albert Renger-Patzsch (倫格-帕奇) → New Vision (新視覺)（belongs_to）
+- 可信度:0.38　來源層:institution　出處:lacma_fifo_s
+- 主張:LACMA 列為新視覺攝影家
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
 ## Albert Renger-Patzsch (倫格-帕奇) → Film und Foto 1929（belongs_to）
 - 可信度:0.38　來源層:institution　出處:lacma_fifo_s
 - 主張:參展 FiFo 1929
@@ -751,6 +767,22 @@
 ## Roy DeCarava (羅伊·德卡拉瓦) → 紀實攝影 (documentary photography)（belongs_to）
 - 可信度:0.42　來源層:critic　出處:africanah_s
 - 主張:哈林日常紀實
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Elliott Erwitt (厄威特) → Josef Koudelka (約瑟夫·寇德卡)（influence）
+- 可信度:0.38　來源層:institution　出處:ims_koudelka_s
+- 主張:1971 提議寇德卡加入馬格南
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Robert Delpire (羅伯特·德爾皮爾) → Josef Koudelka (約瑟夫·寇德卡)（extend）
+- 可信度:0.38　來源層:institution　出處:ims_koudelka_s
+- 主張:出版《吉普賽人》法文版與《流亡》,三十五年合作
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -1199,134 +1231,6 @@
 ## Mark Klett (馬克·克萊特) → New Topographics 展 1975（extend）
 - 可信度:0.38　來源層:institution　出處:icp_klett_s
 - 主張:「如同新地形學攝影家,視歷史與人類活動為自然地景的一部分」
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Safety in Numbness (2003) (麻木中的安全:論「遲到的攝影」) → David Campany (坎帕尼)（belongs_to）
-- 可信度:0.42　來源層:primary　出處:campany_safety_s
-- 主張:首刊於 David Green 編《Where is the Photograph?》(2003)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## David Campany (坎帕尼) → late photography (遲到的攝影)（influence）
-- 可信度:0.42　來源層:primary　出處:campany_safety_s
-- 主張:提出「遲到的攝影」:事件痕跡的痕跡
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Aftermath: World Trade Center Archive (2006) (餘波:世貿中心檔案) → Joel Meyerowitz (梅耶羅維茨)（belongs_to）
-- 可信度:0.42　來源層:primary　出處:campany_safety_s
-- 主張:世貿中心餘波影像
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Safety in Numbness (2003) (麻木中的安全:論「遲到的攝影」) → Aftermath: World Trade Center Archive (2006) (餘波:世貿中心檔案)（discusses）
-- 可信度:0.42　來源層:primary　出處:campany_safety_s
-- 主張:「不是事件的痕跡,而是事件痕跡的痕跡」
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Safety in Numbness (2003) (麻木中的安全:論「遲到的攝影」) → Willie Doherty (威利·多赫蒂)（discusses）
-- 可信度:0.42　來源層:primary　出處:campany_safety_s
-- 主張:當代藝術中遲到取徑的例子
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Willie Doherty (威利·多赫蒂) → late photography (遲到的攝影)（belongs_to）
-- 可信度:0.42　來源層:primary　出處:campany_safety_s
-- 主張:依 Campany 歸類
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Safety in Numbness (2003) (麻木中的安全:論「遲到的攝影」) → Paul Seawright (保羅·西萊特)（discusses）
-- 可信度:0.42　來源層:primary　出處:campany_safety_s
-- 主張:當代藝術中遲到取徑的例子
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Paul Seawright (保羅·西萊特) → late photography (遲到的攝影)（belongs_to）
-- 可信度:0.42　來源層:primary　出處:campany_safety_s
-- 主張:依 Campany 歸類
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Safety in Numbness (2003) (麻木中的安全:論「遲到的攝影」) → Sophie Ristelhueber (蘇菲·里斯泰勒于貝)（discusses）
-- 可信度:0.42　來源層:primary　出處:campany_safety_s
-- 主張:當代藝術中遲到取徑的例子
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Sophie Ristelhueber (蘇菲·里斯泰勒于貝) → late photography (遲到的攝影)（belongs_to）
-- 可信度:0.42　來源層:primary　出處:campany_safety_s
-- 主張:依 Campany 歸類
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Safety in Numbness (2003) (麻木中的安全:論「遲到的攝影」) → Richard Misrach (米斯拉奇)（discusses）
-- 可信度:0.42　來源層:primary　出處:campany_safety_s
-- 主張:當代藝術中遲到取徑的例子
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Richard Misrach (米斯拉奇) → late photography (遲到的攝影)（belongs_to）
-- 可信度:0.42　來源層:primary　出處:campany_safety_s
-- 主張:依 Campany 歸類
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Safety in Numbness (2003) (麻木中的安全:論「遲到的攝影」) → Roger Fenton (羅傑·芬頓)（discusses）
-- 可信度:0.42　來源層:primary　出處:campany_safety_s
-- 主張:歷史參照
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Safety in Numbness (2003) (麻木中的安全:論「遲到的攝影」) → Mathew Brady (馬修·布雷迪)（discusses）
-- 可信度:0.42　來源層:primary　出處:campany_safety_s
-- 主張:歷史參照
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Safety in Numbness (2003) (麻木中的安全:論「遲到的攝影」) → Eugène Atget (阿傑)（discusses）
-- 可信度:0.42　來源層:primary　出處:campany_safety_s
-- 主張:歷史參照
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Safety in Numbness (2003) (麻木中的安全:論「遲到的攝影」) → Allan Sekula (塞庫拉)（extend）
-- 可信度:0.42　來源層:primary　出處:campany_safety_s
-- 主張:「社會真實不是說服性風格的問題」
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)

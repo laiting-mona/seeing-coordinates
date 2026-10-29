@@ -318,3 +318,27 @@ The Art Story（Gursky 冷面、Levitt 與 Cartier-Bresson 街頭）與 Phillips
 - 48 條「頁面沒寫」全部重查：44 條確認沒寫；4 條找到了（越戰展名單確實有 Malcolm Browne、ICP 的 50 位關懷攝影師名單確實有 Salgado、Tate 新聞稿確實以 Kirstein 的「tender cruelty」框定展覽），我再自己抓頁確認後恢復核可。
 
 **無法讀取的 16 頁：** e-artexte（L'Amour fou，16 條，網站有機器人防護）、readingandwalking.ca（Marks of Indifference，11）、LACMA Unframed（8）、UCI Krauss 書目（6）、prasannakumarr.in（6）、史丹佛哲學百科 film 條目（6）、IMS Koudelka（5）、SUNY Oneonta 課程頁（5）、Chapman 課程彙編（4）、TMU 論文（3）等。其中課程頁、學生彙編與個人網站本來就偏弱，應優先替換。
+
+## N. 第 14 輪（2026-10-29）換源：讀不到或偏弱的頁面，與〈Safety in Numbness〉
+
+對象：第 13 輪讀不到的 16 個頁面上的 79 條核可關係，加上因網址指錯頁而降級的〈Safety in Numbness〉17 條，共 96 條。四組研究並行，brief 規定不得再用原網址，也不收課程講義、學生作業、個人部落格、Scribd；談「某文本討論了什麼」的關係，以文本本身的可讀副本為首選（tier primary）。轉檔用 `apply_replace_v17.py`（scratchpad，一次性），新來源 40 個（`rp_<md5>_s`），舊網址在 evidence 改標「原引」。
+
+| 判定 | 條數 | 處理 |
+|---|---|---|
+| 新頁面明載 | 77 | 改引新頁面，核可 |
+| 細節收窄 | 13 | 改引新頁面，claim 依頁面收窄 |
+| 新頁面只支持別的關係 | 4 | 降為待查證：Renger-Patzsch→新視覺（Getty 與大都會稱他為新即物主義）、Erwitt→Koudelka（引介進馬格南不是影響）、Delpire→Koudelka（長期合作出版不是思想延伸）、《Conflict, Time, Photography》→遲到的攝影（只有 Artlyst 評論者這樣連，Tate 頁面沒提） |
+| 找不到可讀頁面 | 2 | Sontag 論 Strand：原頁是個人網站，降為待查證；Rosler〈In, around, and afterthoughts〉批判紀實：原頁是 e-flux（機構），維持核可並註記 |
+
+**偏弱頁面換成什麼：**
+- Jeff Wall〈Marks of Indifference〉11 條：原本引個人部落格，改引 Monoskop 上的原文 PDF。依原文修正三條：Graham、Huebler、Smithson 在文中是「與報導攝影保持戲仿距離」的例子，表演式攝影的例子是 Long 與 Nauman。
+- Sontag《論攝影》5 條：原本引個人網站，改引波士頓大學數位典藏的《Partisan Review》書訊（點名 Evans、Stieglitz、Cartier-Bresson、Avedon）與 Kirkus 書評（Hine）。
+- 凝視（gaze）5 條：原本引 SUNY Oneonta 課程講義，改引 Mulvey 原文 PDF、SAGE 社會理論百科、New Statesman。
+- Sekula〈The Body and the Archive〉4 條：原本引 Chapman 課程彙編，改引原文掃描與 Art Journal。
+- October 文化 3 條：原本引多倫多都會大學論文，改引波士頓大學的 October 書訊與 Érudit 上的 CV Photo 文章。
+
+**讀不到的機構頁換成什麼：** L'Amour fou（1985）16 條改引 CCA 書目摘要、龐畢度中心「Explosante fixe」頁、芝加哥藝術館、UCI 圖書館與 Artforum；LACMA 的 Film und Foto 等 8 條中 7 條改引 Routledge 現代主義百科、柏林 Gropius Bau、LACMA 典藏頁、Sotheby's（Renger-Patzsch 降級）；Walton、Scruton、Cavell 等分析美學 6 條改引 Critical Inquiry、期刊與大學頁；Koudelka 5 條中 3 條改引 Aperture、Magnum、Bates College 美術館（Erwitt、Delpire 兩條降級）。
+
+**〈Safety in Numbness〉：** 原文在 davidcampany.com（文末註明首刊於 David Green 編《Where is the Photograph?》，Photoworks／Photoforum，2003；大都會圖書館書目相符）。16 條依原文恢復核可：Campany 提出「遲到的攝影」、Meyerowitz 的世貿遺址影像是「事件痕跡的痕跡」、Doherty／Seawright／Ristelhueber／Misrach 為當代藝術的遲到取徑、Fenton 與 Brady 的戰場照片與 Atget 為歷史參照、以 Sekula「社會真實不是說服性風格的問題」作結。限制：四位當代藝術家只出自同一句話；文章談的是 2001 年起的影像，《Aftermath》一書 2006 年才出版，claim 已照實寫。
+
+**仍偏弱：** UGA openscholar 的碩士論文（3 條）可讀且第 13 輪回查相符，暫留；48 條聚合站名單照舊列警告。
