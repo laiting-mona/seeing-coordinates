@@ -1,55 +1,15 @@
 # 資料流程稽核(tools/audit_data.py 產生)
 
-實體 1642、來源 588、關係 2892(auto 67、approved 2539、review 283、rejected 3)。
+實體 1643、來源 679、關係 2891(auto 67、approved 2544、review 276、rejected 4)。
 
 ## 硬性錯誤:0 項
 
 無。
 
-## 警告:191 項(不阻擋建圖,列出供人工判斷)
+## 警告:164 項(不阻擋建圖,列出供人工判斷)
 
-- **approved with no URL (evidence or source)**:102
-  - `krauss -critique-> barthes`
-  - `sekula -extend-> berger`
-  - `burgin -extend-> ideology`
-  - `batchen -critique-> sontag`
-  - `barthes -discusses-> kertesz`
-  - `barthes -discusses-> avedon`
-  - `flusser -extend-> mech_reproduction`
-  - `bourdieu -extend-> ideology`
-  - `azoulay -critique-> sontag`
-  - `stieglitz -belongs_to-> met`
-  - `solomon_godeau -belongs_to-> october`
-  - `marien_history_w -belongs_to-> marien`
-  - `cotton_art_w -belongs_to-> cotton`
-  - `wells_intro_w -belongs_to-> wells`
-  - `juan_masters -belongs_to-> juan_ijong`
-  - `juan_seven -belongs_to-> juan_ijong`
-  - `krauss -influence-> indexicality`
-  - `photo_secession -extend-> pictorialism`
-  - `strand -influence-> straight_photography`
-  - `sander -belongs_to-> new_objectivity`
-  - `blossfeldt -belongs_to-> new_objectivity`
-  - `riis -influence-> documentary`
-  - `hine -influence-> documentary`
-  - `nachtwey -belongs_to-> war_photography`
-  - `mccullin -belongs_to-> war_photography`
-  - `friedlander -influence-> social_landscape`
-  - `winogrand -influence-> social_landscape`
-  - `winogrand -influence-> snapshot_aesthetic`
-  - `new_topographics_1975 -extend-> deadpan`
-  - `gursky -influence-> deadpan`
-  - `prince_r -influence-> appropriation`
-  - `levine -influence-> appropriation`
-  - `kruger -belongs_to-> appropriation`
-  - `wall_jeff -influence-> tableau`
-  - `crewdson -belongs_to-> tableau`
-  - `demand -belongs_to-> tableau`
-  - `fried -discusses-> wall_jeff`
-  - `goldin -influence-> snapshot_aesthetic`
-  - `newhall_history_w -discusses-> stieglitz`
-  - `newhall_history_w -discusses-> strand`
-- **evidence URL differs from the cited source's URL (second page or upgrade)**:39 條,來源:`leaf2_walker_ian_s`×6、`leaf2_fusco_coco_s`×3、`leaf2_luce_henry_s`×3、`leaf2_heron_liz_s`×2、`leaf2_doy_gen_s`×2、`leaf2_antin_eleanor_s`×2、`leaf2_dibbets_jan_s`×2、`leaf2_hatch_connie_s`×2、`leaf2_van_gelder_hilde_s`×2、`eoa_evans_s`×1、`leaf2_richter_gerhard_s`×1、`leaf2_hausser_robert_s`×1、`leaf2_stromholm_s`×1、`leaf2_knorr_karen_s`×1、`leaf2_wajcman_s`×1、`leaf2_gilbert_george_s`×1、`leaf2_kolbowski_s`×1、`leaf2_wegman_s`×1、`leaf2_gilden_s`×1、`leaf2_schott_john_s`×1、`leaf2_jenkins_william_s`×1、`leaf2_scruton_s`×1、`leaf2_manet_s`×1、`leaf2_acconci_s`×1
+- **evidence URL differs from the cited source's URL (second page or upgrade)**:44 條,來源:`leaf2_walker_ian_s`×6、`leaf2_fusco_coco_s`×3、`leaf2_luce_henry_s`×3、`leaf2_heron_liz_s`×2、`leaf2_doy_gen_s`×2、`leaf2_antin_eleanor_s`×2、`leaf2_dibbets_jan_s`×2、`leaf2_hatch_connie_s`×2、`leaf2_van_gelder_hilde_s`×2、`verify_d47728c0f2_s`×1、`leaf_seymour_s`×1、`leaf_rodger_s`×1、`leaf_bischof_s`×1、`leaf_webb_alex_s`×1、`eoa_evans_s`×1、`leaf2_richter_gerhard_s`×1、`leaf2_hausser_robert_s`×1、`leaf2_stromholm_s`×1、`leaf2_knorr_karen_s`×1、`leaf2_wajcman_s`×1、`leaf2_gilbert_george_s`×1、`leaf2_kolbowski_s`×1、`leaf2_wegman_s`×1、`leaf2_gilden_s`×1、`leaf2_schott_john_s`×1、`leaf2_jenkins_william_s`×1、`leaf2_scruton_s`×1、`leaf2_manet_s`×1、`leaf2_acconci_s`×1
+- **approved edge resting on an other/popular-tier source (aggregator or legacy label)**:50 條,來源:`art2art_vietnam_s`×24、`prizesworld_domon_s`×23、`powells_chaotic_s`×3
 - **isolated entity**:4
   - `arles`
   - `ueda_shoji`
@@ -61,15 +21,37 @@
   - `lightaura_zh`
   - `october5_w`
   - `aiz`
-- **source cited by no relation**:41
+- **source cited by no relation**:61
   - `another_way`
   - `photographic_message`
   - `uncommon_places`
   - `american_photographs`
+  - `thinking_photography`
+  - `practices_looking`
   - `new_documents`
   - `moma_photo`
   - `aperture`
   - `george_eastman`
+  - `wells_intro_s`
+  - `azoulay_civil_s`
+  - `dyer_ongoing_s`
+  - `camera_lucida_zh_s`
+  - `lightaura_zh_s`
+  - `camera_lucida_en_s`
+  - `americans_intro_s`
+  - `arbus_retro_s`
+  - `wos_bbc_s`
+  - `azoulay_knowledge`
+  - `benjamin_knowledge`
+  - `flusser_knowledge`
+  - `knowledge:artforum`
+  - `knowledge:eastman`
+  - `knowledge:magnum`
+  - `knowledge:met`
+  - `knowledge:moma`
+  - `knowledge:new_documents`
+  - `knowledge:october`
+  - `lt_contest_s`
   - `nagoya_lib_kimura_s`
   - `wiki_domon_s`
   - `leaf_watkins_s`
@@ -78,27 +60,5 @@
   - `leaf_delano_jack_s`
   - `leaf_kanaga_s`
   - `leaf_jenkins_william_s`
-  - `leaf_bischof_s`
-  - `leaf_webb_alex_s`
   - `leaf_cavell_s`
   - `leaf_scruton_s`
-  - `leaf_valery_s`
-  - `leaf_kuspit_s`
-  - `leaf_williams_val_s`
-  - `leaf2_borges_s`
-  - `leaf2_bertillon_s`
-  - `leaf2_secchiaroli_s`
-  - `leaf2_edwards_john_paul_s`
-  - `leaf2_sidibe_s`
-  - `leaf2_baetens_jan_s`
-  - `leaf2_desnoes_edmundo_s`
-  - `leaf2_manchester_ellen_s`
-  - `leaf2_dubreuil_s`
-  - `leaf2_galella_ron_s`
-  - `leaf2_smith_ming_s`
-  - `leaf2_walker_shawn_s`
-  - `east_japan_provoke_artscape_provoke_2009_s`
-  - `east_japan_provoke_kotobank_provoke_s`
-  - `east_japan_provoke_moma_njp_1974_pr_s`
-  - `east_china_korea_mfah_bae_s`
-  - `east_china_korea_smart_haibo_s`

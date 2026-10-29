@@ -4,7 +4,7 @@
 A 類有抓取到可點的網頁佐證（網址已同時寫入對應關係的 evidence 欄，於互動圖節點面板與 `docs/review-queue.md` 可見）；
 B 類是依標準攝影史參考升級、本輪未抓取單一網頁者，仍建議之後回原典補頁碼。
 
-更新時間：2026-10-28
+更新時間：2026-10-29
 
 ## A. 有抓取網頁佐證（附網址）
 
@@ -34,20 +34,22 @@ B 類是依標準攝影史參考升級、本輪未抓取單一網頁者，仍建
 
 下列關係屬教科書級事實或評論家具名著作立場，本輪未逐一抓取單一網頁，依標準參考升級；仍列入日後原典頁碼補強：
 
-- **冷面美學（deadpan）**：Gursky/Ruff/Struth/Dijkstra、New Topographics→deadpan — 依 Charlotte Cotton《作為當代藝術的攝影》「Deadpan」章。
-- **直接攝影**：Weston/Ansel Adams/Strand — 依 Newhall《攝影史》與 f/64 文獻。
-- **新客觀**：Sander/Blossfeldt — 依 Neue Sachlichkeit 標準史。
-- **戰地攝影**：Nachtwey/McCullin/黃功吾、W. Eugene Smith→war — 標準攝影史。
-- **挪用**：R. Prince/Levine/Kruger — 依 Cotton 與圖景世代文獻。
-- **街頭攝影先驅**：Cartier-Bresson/Brassaï/Doisneau/Ronis/Levitt — 標準史。
-- **社會紀實先驅**：Riis/Hine；地景紀實先驅 O'Sullivan/Watkins/Atget — 標準史。
-- **社會地景**：Friedlander/Winogrand — 依 Szarkowski。
-- **快照美學**：Winogrand/Goldin — 標準史。
-- **技術 / 師承**：達蓋爾↔塔爾博特（銀版 vs 卡羅版）、Muybridge↔Marey（運動研究）、Callahan↔Siskind（ID Chicago）、Minor White→等價物、Bayard→擺拍先例 — 標準史 / 傳記。
+> 2026-10-29 第 12 輪稽核已把本節所列關係逐條回查機構頁：查到者改附網址，查不到或頁面用語不同者降為待查證，結果見 L 節。本節保留作為歷史記錄。
+
+- **冷面美學（deadpan）**：Gursky/Ruff/Struth/Dijkstra、New Topographics→deadpan；依 Charlotte Cotton《作為當代藝術的攝影》「Deadpan」章。
+- **直接攝影**：Weston/Ansel Adams/Strand；依 Newhall《攝影史》與 f/64 文獻。
+- **新客觀**：Sander/Blossfeldt；依 Neue Sachlichkeit 標準史。
+- **戰地攝影**：Nachtwey/McCullin/黃功吾、W. Eugene Smith→war；標準攝影史。
+- **挪用**：R. Prince/Levine/Kruger；依 Cotton 與圖景世代文獻。
+- **街頭攝影先驅**：Cartier-Bresson/Brassaï/Doisneau/Ronis/Levitt；標準史。
+- **社會紀實先驅**：Riis/Hine；地景紀實先驅 O'Sullivan/Watkins/Atget；標準史。
+- **社會地景**：Friedlander/Winogrand；依 Szarkowski。
+- **快照美學**：Winogrand/Goldin；標準史。
+- **技術 / 師承**：達蓋爾↔塔爾博特（銀版 vs 卡羅版）、Muybridge↔Marey（運動研究）、Callahan↔Siskind（ID Chicago）、Minor White→等價物、Bayard→擺拍先例；標準史 / 傳記。
 - **著作作者**（各書 belongs_to 作者）：定義性事實。
-- **郎靜山**：集錦攝影 / 畫意攝影的東亞轉化 — 標準史。
-- **評論家具名立場**：Sekula、Azoulay、Batchen、Krauss、Debord、Crary、Bourdieu、Burgin、Flusser — 依其具名著作（書名見 sources.csv），建議補頁碼。
-- **東亞個別**：濱谷浩《雪國》、關曉榮《蘭嶼報告》、吳印咸（延安）、張照堂、柯錫杰、林柏樑 — 依相關文獻，建議補原典。
+- **郎靜山**：集錦攝影 / 畫意攝影的東亞轉化；標準史。
+- **評論家具名立場**：Sekula、Azoulay、Batchen、Krauss、Debord、Crary、Bourdieu、Burgin、Flusser；依其具名著作（書名見 sources.csv），建議補頁碼。
+- **東亞個別**：濱谷浩《雪國》、關曉榮《蘭嶼報告》、吳印咸（延安）、張照堂、柯錫杰、林柏樑；依相關文獻，建議補原典。
 
 > （第 1–2 輪）待查證剩餘 43 條見 `docs/原典查核清單.md` 與 `原典查核清單_賴亭穎.xlsx`；查到頁碼後把決定填 approved / rejected / 重構 即可。
 
@@ -251,3 +253,38 @@ B 類是依標準攝影史參考升級、本輪未抓取單一網頁者，仍建
 命名：韓國人物中 hub 未載漢字者（林應植、韓榮洙等九人）改用羅馬拼音，不採研究者自擬的漢字；只有崔敏植、新線會的漢字有 hub。《人間》攝影者「鐘俊陞」依北師美術館新聞稿用字。另修正一個舊錯誤：MoMA 1974 新聞稿只寫「Shigeru Tamura」，第 8 輪我配上的漢字「田村彰英」沒有根據，已改回羅馬拼音。
 
 結果：新增 167 個節點、91 個來源、256 條關係（245 approved、11 review）。東方節點 371 個，相關正式關係 570 條。
+
+## L. 第 12 輪（2026-10-29）資料流程稽核：逐條回查與來源層級整理
+
+起因：`tools/audit_data.py` 第一次跑出來，第 1–2 輪留下 102 條「已核可但沒有網址」的關係（多數就是 B 節所列），另有 28 條人工給分、公式無法重現的 `auto` 邊被降為待查證。這 122 條交給四組獨立查證（brief 要求逐條找機構頁並抄原文，不得假設 claim 為真），用 `apply_verify_v13.py`（scratchpad，一次性）套用。
+
+| 判定 | 條數 | 處理 |
+|---|---|---|
+| 頁面明載 | 86 | approved，新增 `verify_<md5>_s` 來源，evidence 附原文與網址 |
+| 核心正確、細節收窄 | 14 | approved，claim 改寫成頁面原文的範圍（如 Gursky「冷面呈現」、Newhall《攝影史》論 Stieglitz/Strand、Atget 與班雅明） |
+| 收窄後已不支持原 target | 12 | 降為待查證：Watkins／O'Sullivan／林柏樑／吳印咸→紀實、Dijkstra／Struth／New Topographics→冷面、Callahan↔Siskind、Crary→凝視、柯錫杰→街頭、Bourdieu→意識形態、Ronis→街頭 |
+| 找不到機構頁 | 7 | 降為待查證：Sekula→Berger、Batchen 對桑塔格與巴特的批判（三條）、Marien 論 Cartier-Bresson、巴特論 Nadar、阮義忠《攝影美學七問》 |
+| 循環佐證 | 1 | Sontag→Arbus：機構頁文字照抄維基，不算獨立來源，降為待查證 |
+| 引句只是摘要 | 1 | Illuminations 英譯本→〈機械複製〉，降為待查證 |
+| 不成立 | 1 | Krauss〈Notes on the Index〉(1977)「修正」巴特「此曾在」：時序不可能（《明室》1980），rejected |
+
+同時修正：Kerouac→《美國人》原標為 review（書評），Whitney 圖書館書目載為 introduction，類型改為 discusses；`atget -discusses-> benjamin` 與 `benjamin -discusses-> atget` 重複且方向錯，合併為後者並沿用回查來源。
+
+### L 補一：只靠維基的已核可關係（15 條）
+
+稽核新增硬性檢查「approved／auto 邊的查證網址全是維基、百度百科或 namu wiki」。找到 15 條，全部改引機構頁：
+
+- 馬格南成員：Seymour、Rodger、Bischof、Alex Webb 改引第 9 輪已建的 Magnum 人物頁；Capa（1947 共同創辦）、Erwitt（1953 加入）、Bruce Davidson（1958 正式成員）、Gilden（1998 加入、2002 正式成員）、Parr（1994 正式成員）改引 Magnum Photos 頁；Salgado（1979 成為成員）改引 Hamilton College 博物館典藏頁。Davidson 原記 1959，依頁面改為 1958。
+- Sherrie Levine 參展 Artists Space《Pictures》(1977)：改引 Artists Space 展覽頁（列五位參展者）。
+- 土門拳、張才、鄧南光、李鳴鵰原本連到「紀實攝影」，但機構頁用的詞是「リアリズム写真」「寫實攝影」「寫實主義攝影」。不拉長引句去配舊 target，改連新概念節點「寫實攝影（realist photography）」：土門拳引國立新美術館アートコモンズ（「リアリズム写真を提唱し」），三劍客引數位島嶼（「為提倡寫實攝影，張才與鄧南光、李鳴鵰共同資助主辦『臺北攝影月賽』」「開啟台灣寫實主義攝影的扉頁」）。
+- 原維基網址保留在 evidence，但標成「原引維基」，不再算查證來源。
+
+### L 補二：已核可但來源層級為 other 的關係
+
+- 《The Contest of Meaning》(1989) 編者與 14 位作者（15 條）：原引 LibraryThing（other），改引加拿大建築中心（CCA）圖書館書目，逐篇記下篇名（如 Rosler〈In, around, and afterthoughts (on documentary photography)〉）。
+- 班雅明論 Sander、Blossfeldt：原引第 1 輪「既有知識」標籤，改引 The Jewish Museum「Walter Benjamin and the Edges of Photography」展覽頁；claim 收窄為「班雅明視其為引領攝影未來走向的藝術家」，因頁面沒有點名〈攝影小史〉。
+- 仍未升級（50 條，`docs/data-audit.md` 列為警告）：越戰攝影師 24 位（art2art 巡迴展名單）、土門拳賞得主 23 位（prizesworld 名單；國立新美術館アートコモンズ只有逐屆展訊，沒有總表）、《Chaotic Harmony》三位（Powell's 上的耶魯出版社簡介；glasstire 評論只點名裴炳雨）。
+
+### 這一輪用到、但層級偏弱的 hub
+
+The Art Story（Gursky 冷面、Levitt 與 Cartier-Bresson 街頭）與 Phillips 拍賣圖錄文章（Demand 的 tableau、Ruff 冷面）以 critic 層收錄，共 5 條。它們確實用了該詞形容作品，但不是美術館或學術出版，日後有更好的頁面應替換。

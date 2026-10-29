@@ -1,6 +1,6 @@
 # 待人工判斷佇列（review queue）
 
-共 283 條。程式自動彙整,判斷與決定由你填。
+共 276 條。程式自動彙整,判斷與決定由你填。
 
 > 每條的「你的決定」欄預設空白。你確認後填 approved / rejected / 重構,我再據此更新圖。
 
@@ -20,6 +20,22 @@
 - 我的建議:查到蕭爾訪談或評論明說再升為 approved。
 - **你的決定:** ________
 
+## Allan Sekula (塞庫拉) → 伯格 (John Berger)（extend）
+- 可信度:0.3　來源層:critic　出處:invention_meaning
+- 主張:塞庫拉延續伯格的意識形態路線,批判攝影意義的生產
+- 調查紀錄:同屬唯物/意識形態路線;但塞庫拉主要箭靶是薩考斯基的形式主義與檔案,與伯格的具體連結待查。
+- 參考來源:(無)
+- 我的建議:查證具體的伯格連結再定。
+- **你的決定:** ________
+
+## Geoffrey Batchen (巴欽) → 桑塔格 (Susan Sontag)（critique）
+- 可信度:0.3　來源層:critic　出處:burning_desire
+- 主張:巴欽渴望重探攝影起源,質疑桑塔格與巴特的某些預設
+- 調查紀錄:《Burning with Desire》確實把起源敘事(含桑塔格、巴特)當箭靶之一;具體主張待確認。
+- 參考來源:(無)
+- 我的建議:查證具體段落後定。
+- **你的決定:** ________
+
 ## Michael Fried (弗雷德) → Stephen Shore (蕭爾)（extend）
 - 可信度:0.6　來源層:critic　出處:why_matters
 - 主張:弗雷德以專注與劇場性論蕭爾等當代攝影為何作為藝術重要
@@ -34,22 +50,6 @@
 - 調查紀錄:華語圈對紀實倫理的評論,真實;依指示,華人圈確有與這些理論對話者可收為次要層、低權重。
 - 參考來源:(無)
 - 我的建議:列次要層、低權重,主軸維持西方正典不偏;待你確認。
-- **你的決定:** ________
-
-## 巴特 (Roland Barthes) → William Klein (威廉·克萊因)（discusses）
-- 可信度:0.3　來源層:popular　出處:wiki:Camera_Lucida
-- 主張:巴特《明室》以威廉·克萊因的照片作圖例
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## 巴特 (Roland Barthes) → Robert Mapplethorpe (梅普索普)（discusses）
-- 可信度:0.3　來源層:popular　出處:wiki:Camera_Lucida
-- 主張:巴特《明室》以梅普索普的照片作圖例
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
 - **你的決定:** ________
 
 ## 巴特 (Roland Barthes) → Nadar (納達爾)（discusses）
@@ -68,30 +68,6 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## John Szarkowski (薩考斯基) → New Documents 展 1967（influence）
-- 可信度:0.4　來源層:other　出處:knowledge:new_documents
-- 主張:薩考斯基策劃 1967 New Documents,確立當代紀實轉向
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Rosalind Krauss (克勞絲) → October (journal)（belongs_to）
-- 可信度:0.4　來源層:other　出處:knowledge:october
-- 主張:克勞絲 1976 與 Annette Michelson 共同創辦 October 期刊
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Allan Sekula (塞庫拉) → Artforum（belongs_to）
-- 可信度:0.4　來源層:other　出處:knowledge:artforum
-- 主張:塞庫拉〈On the Invention of Photographic Meaning〉1975 發表於 Artforum
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## 卡提耶-布列松 (Henri Cartier-Bresson) → Stephen Shore (蕭爾)（contrast）
 - 可信度:0.33　來源層:other　出處:interpretation
 - 主張:決定性瞬間與蕭爾冷面靜態美學相對,為蕭爾一代的反動
@@ -100,36 +76,12 @@
 - 我的建議:當詮釋性對照,保留低權重或由你定。
 - **你的決定:** ________
 
-## John Szarkowski (薩考斯基) → 紐約現代美術館 (Museum of Modern Art)（belongs_to）
-- 可信度:0.4　來源層:other　出處:knowledge:moma
-- 主張:薩考斯基 1962-1991 任 MoMA 攝影部主任
-- 調查紀錄:(待補)
+## 布迪厄 (Pierre Bourdieu) → 意識形態 (ideology)（extend）
+- 可信度:0.2　來源層:other　出處:bourdieu_knowledge
+- 主張:布迪厄《中產品味的藝術》從社會學談攝影實踐
+- 調查紀錄:布迪厄《中產品味的藝術》社會學地分析攝影實踐;與伯格意識形態線的連結待確認。
 - 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## New Documents 展 1967 → 紐約現代美術館 (Museum of Modern Art)（belongs_to）
-- 可信度:0.4　來源層:other　出處:knowledge:moma
-- 主張:New Documents 1967 於 MoMA 舉辦
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## New Topographics 展 1975 → George Eastman Museum (喬治伊士曼博物館)（belongs_to）
-- 可信度:0.4　來源層:other　出處:knowledge:eastman
-- 主張:New Topographics 1975 於 George Eastman House 舉辦
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## 卡提耶-布列松 (Henri Cartier-Bresson) → 馬格南攝影通訊社 (Magnum Photos)（belongs_to）
-- 可信度:0.4　來源層:other　出處:knowledge:magnum
-- 主張:布列松 1947 與 Capa 等共同創辦馬格南
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
+- 我的建議:當代擴充,待查證。
 - **你的決定:** ________
 
 ## Stephen Shore (蕭爾) → 日常庶民 (vernacular)（discusses）
@@ -148,129 +100,17 @@
 - 我的建議:綁定具體文章後再定;或維持 popular 低權重。
 - **你的決定:** ________
 
-## Techniques of the Observer (觀察者的技術) → Jonathan Crary (克拉里)（belongs_to）
-- 可信度:0.6　來源層:critic　出處:crary_techniques_s
-- 主張:《觀察者的技術》為克拉里所著
+## 攝影美學七問 → 阮義忠（belongs_to）
+- 可信度:0.3　來源層:critic　出處:juan_seven_s
+- 主張:《攝影美學七問》為阮義忠所著
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## The Civil Contract of Photography (攝影的公民契約) → Ariella Azoulay (阿祖萊)（belongs_to）
-- 可信度:0.6　來源層:critic　出處:azoulay_civil_s
-- 主張:《攝影的公民契約》為阿祖萊所著
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## The Ongoing Moment (持續進行的瞬間) → Geoff Dyer (傑夫·戴爾)（belongs_to）
-- 可信度:0.6　來源層:critic　出處:dyer_ongoing_s
-- 主張:《持續進行的瞬間》為傑夫·戴爾所著
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Immediate Family (親密家庭) → Sally Mann (莎莉·曼)（belongs_to）
-- 可信度:0.6　來源層:critic　出處:marien_history_s
-- 主張:《親密家庭》為莎莉·曼攝影集
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Tulsa (塔爾薩) → Larry Clark (賴瑞·克拉克)（belongs_to）
-- 可信度:0.6　來源層:critic　出處:photobook_history_s
-- 主張:《塔爾薩》為賴瑞·克拉克攝影集
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Sleeping by the Mississippi (眠於密西西比河畔) → Alec Soth (亞歷克·索斯)（belongs_to）
-- 可信度:0.6　來源層:critic　出處:photobook_history_s
-- 主張:《眠於密西西比河畔》為索斯攝影集
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Uncommon Places → Stephen Shore (蕭爾)（belongs_to）
-- 可信度:0.6　來源層:critic　出處:photobook_history_s
-- 主張:《Uncommon Places》為蕭爾攝影集
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Diane Arbus (黛安·阿巴斯) → New Documents 展 1967（belongs_to）
-- 可信度:0.6　來源層:critic　出處:practices_looking
-- 主張:阿巴斯為 New Documents 三位參展者之一
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Lee Friedlander (弗里德蘭德) → New Documents 展 1967（belongs_to）
-- 可信度:0.6　來源層:critic　出處:practices_looking
-- 主張:弗里德蘭德為 New Documents 參展者
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Garry Winogrand (威諾格蘭德) → New Documents 展 1967（belongs_to）
-- 可信度:0.6　來源層:critic　出處:practices_looking
-- 主張:威諾格蘭德為 New Documents 參展者
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Bernd and Hilla Becher (貝歇夫婦) → Kunstakademie Düsseldorf (杜塞道夫藝術學院)（belongs_to）
-- 可信度:0.6　來源層:critic　出處:cotton_art_s
-- 主張:貝歇夫婦任教於杜塞道夫藝術學院
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Bernd and Hilla Becher (貝歇夫婦) → Andreas Gursky (古斯基)（influence）
-- 可信度:0.6　來源層:critic　出處:cotton_art_s
-- 主張:古斯基師從貝歇夫婦
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Bernd and Hilla Becher (貝歇夫婦) → Thomas Struth (史特魯斯)（influence）
-- 可信度:0.6　來源層:critic　出處:cotton_art_s
-- 主張:史特魯斯師從貝歇夫婦
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Bernd and Hilla Becher (貝歇夫婦) → Candida Höfer (霍弗)（influence）
-- 可信度:0.6　來源層:critic　出處:cotton_art_s
-- 主張:霍弗師從貝歇夫婦
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Bernd and Hilla Becher (貝歇夫婦) → Thomas Ruff (魯夫)（influence）
-- 可信度:0.6　來源層:critic　出處:cotton_art_s
-- 主張:魯夫師從貝歇夫婦
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Bernd and Hilla Becher (貝歇夫婦) → Axel Hütte (許特)（influence）
-- 可信度:0.6　來源層:critic　出處:cotton_art_s
-- 主張:許特師從貝歇夫婦
+## New Topographics 展 1975 → deadpan (冷面美學)（extend）
+- 可信度:0.3　來源層:critic　出處:cotton_art_s
+- 主張:新地誌的冷面視角預示冷面美學
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -316,9 +156,9 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## John Szarkowski (薩考斯基) → Diane Arbus (黛安·阿巴斯)（discusses）
-- 可信度:0.6　來源層:critic　出處:practices_looking
-- 主張:薩考斯基策劃 New Documents 展出阿巴斯
+## Photography: A Cultural History (攝影：一部文化史) → 卡提耶-布列松 (Henri Cartier-Bresson)（discusses）
+- 可信度:0.3　來源層:critic　出處:marien_history_s
+- 主張:文化史討論卡提耶-布列松的決定性瞬間
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -359,6 +199,14 @@
 ## 巴贊 (André Bazin) → 巴特 (Roland Barthes)（influence）
 - 可信度:0.3　來源層:critic　出處:marien_history_s
 - 主張:巴贊的指示性本體論與巴特《明室》遙相呼應
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Jonathan Crary (克拉里) → 凝視 (gaze)（influence）
+- 可信度:0.3　來源層:critic　出處:crary_techniques_s
+- 主張:克拉里把觀看主體歷史化，重構凝視問題
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -444,9 +292,41 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
+## Timothy O'Sullivan (歐蘇利文) → 紀實攝影 (documentary photography)（influence）
+- 可信度:0.3　來源層:critic　出處:marien_history_s
+- 主張:歐蘇利文的西部勘查影像為地景紀實先聲
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Carleton Watkins (沃特金斯) → 紀實攝影 (documentary photography)（influence）
+- 可信度:0.3　來源層:critic　出處:marien_history_s
+- 主張:沃特金斯的優勝美地影像推動地景攝影
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Willy Ronis (羅尼斯) → 街頭攝影 (street photography)（belongs_to）
+- 可信度:0.3　來源層:critic　出處:marien_history_s
+- 主張:羅尼斯為法國人文街頭攝影代表
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
 ## Man Ray (曼·雷) → New Vision (新視覺)（influence）
 - 可信度:0.3　來源層:critic　出處:marien_history_s
 - 主張:曼·雷以實物投影等實驗延展新視覺
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Harry Callahan (卡拉漢) → Aaron Siskind (西斯金)（contrast）
+- 可信度:0.3　來源層:critic　出處:marien_history_s
+- 主張:卡拉漢與西斯金同在設計學院推進抽象攝影
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -500,9 +380,33 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
+## 柯錫杰 → 街頭攝影 (street photography)（influence）
+- 可信度:0.3　來源層:critic　出處:juan_seven_s
+- 主張:柯錫杰以現代主義影像拓展台灣攝影語彙
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 林柏樑 → 紀實攝影 (documentary photography)（influence）
+- 可信度:0.3　來源層:critic　出處:rewrite_photo
+- 主張:林柏樑以人文紀實記錄台灣
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
 ## 侯淑姿 → 紀實攝影 (documentary photography)（influence）
 - 可信度:0.3　來源層:critic　出處:rewrite_photo
 - 主張:侯淑姿以影像裝置處理性別與移民議題
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 吳印咸 → 紀實攝影 (documentary photography)（influence）
+- 可信度:0.3　來源層:critic　出處:marien_history_s
+- 主張:吳印咸以延安時期影像確立中國紀實
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -535,6 +439,46 @@
 ## Richard Misrach (米斯拉奇) → New Color (新彩色)（influence）
 - 可信度:0.3　來源層:critic　出處:photobook_history_s
 - 主張:米斯拉奇以沙漠彩色地景延展新地誌
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Rineke Dijkstra (黛克斯特拉) → deadpan (冷面美學)（influence）
+- 可信度:0.3　來源層:critic　出處:cotton_art_s
+- 主張:黛克斯特拉以正面肖像屬冷面肖像一脈
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Thomas Struth (史特魯斯) → deadpan (冷面美學)（influence）
+- 可信度:0.3　來源層:critic　出處:cotton_art_s
+- 主張:史特魯斯的美術館與街景屬冷面一脈
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Illuminations (啟迪（Illuminations）) → 機械複製時代的藝術作品 (The Work of Art in the Age of Mechanical Reproduction)（translate）
+- 可信度:0.38　來源層:institution　出處:illuminations_s
+- 主張:《啟迪》收錄並英譯〈機械複製時代的藝術作品〉
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Burning with Desire (慾望的燃燒：攝影的起源) → 明室 (Camera Lucida)（critique）
+- 可信度:0.3　來源層:critic　出處:burning_desire
+- 主張:Batchen 質疑巴特對攝影起源的預設
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Burning with Desire (慾望的燃燒：攝影的起源) → 論攝影 (On Photography)（critique）
+- 可信度:0.3　來源層:critic　出處:burning_desire
+- 主張:Batchen 質疑桑塔格對攝影起源的預設
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)

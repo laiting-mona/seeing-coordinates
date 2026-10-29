@@ -1,18 +1,23 @@
 """Data-pipeline audit: checks the curated dataset for integrity problems.
 
-Last edited: 2026-10-29 — new tool. Written after an audit found hand-scored 'auto'
-edges that the scoring formula cannot reproduce, event --belongs_to--> person edges
-that reverse the project's direction convention, and canonical works with no author.
+Last edited: 2026-10-29 (second pass) — two new hard errors: approved/auto edges whose only
+verification URLs are Wikipedia / Baidu Baike / Namu wiki (not acceptable hubs), and data
+files with mixed line endings; a new warning for approved edges resting on an other/popular-
+tier source; self-primary edges (a work citing itself, tier primary) no longer count as
+"approved with no URL". First version the same day: written after an audit
+found hand-scored 'auto' edges that the scoring formula cannot reproduce, event
+--belongs_to--> person edges that reverse the direction convention, and works with no author.
 
 Hard errors (must be zero; test_core.py asserts this):
   missing entity / source ids, duplicate (source, target, kind), self-loops,
   duplicate entities, em-dashes in claims or names, event/institution --belongs_to--> person,
   'auto' edges whose confidence the formula cannot reproduce from the cited source's tier,
-  relation tier different from its source's tier.
+  relation tier different from its source's tier, approved/auto edges verified only by a
+  wiki page, mixed line endings in a data file.
 Warnings (reported, not fatal):
-  approved edges with no URL anywhere, evidence URL different from the source's URL,
-  isolated entities, works with no person author (magazines and translations excepted),
-  sources no relation cites.
+  approved edges with no URL anywhere (self-primary excepted), approved edges on an
+  other/popular-tier source, evidence URL different from the source's URL, isolated entities, works with no person author (magazines and
+  translations excepted), sources no relation cites.
 Writes docs/data-audit.md. Usage: python tools/audit_data.py
 """
 import collections
@@ -33,6 +38,8 @@ except Exception:
 OUTPUT_MD = ROOT / "docs/data-audit.md"
 EM_DASH = "—"
 URL_IN_EVIDENCE = re.compile(r"查證來源: (\S+?)(?:｜|$)")
+WIKI_HOSTS = ("wikipedia.org", "baike.baidu.com", "namu.wiki")   # not acceptable verification hubs
+DATA_FILES = ("data/seed_entities.csv", "data/sources.csv", "data/raw_relations.jsonl")
 # Works that legitimately have no person author edge: periodicals, series, translations, anthologies of others.
 AUTHORLESS_OK_TYPES = ("magazine", "journal", "雜誌", "期刊", "季刊", "叢書", "series", "文庫", "Chinese ed", "中譯", "Illuminations")
 MAX_LISTED = 40
@@ -50,8 +57,35 @@ def reproducible(relation: dict, source_tier: str) -> bool:
     return AUTO_THRESHOLD <= relation["confidence"] <= auto_confidence(source_tier, 1, 1.0) + 1e-9
 
 
-def hard_errors(entities, sources, relations) -> dict[str, list]:
+def verification_urls(relation: dict, source: dict) -> list[str]:
+    """Every URL offered as verification: '查證來源' entries in evidence plus the cited source's own URL."""
+    urls = URL_IN_EVIDENCE.findall(relation.get("evidence") or "")
+    return urls + ([source["ref"]] if source.get("ref", "").startswith("http") else [])
+
+
+def wiki_only(relation: dict, source: dict) -> bool:
+    urls = verification_urls(relation, source)
+    return bool(urls) and all(any(host in url for host in WIKI_HOSTS) for url in urls)
+
+
+def is_self_primary(relation: dict, source: dict) -> bool:
+    """A primary work cited as its own source (authorship or concepts the work itself states)."""
+    return source.get("tier") == "primary" and relation["source_ref"] == relation["source_id"]
+
+
+def mixed_line_endings(root: Path) -> list[str]:
+    bad = []
+    for name in DATA_FILES:
+        data = (root / name).read_bytes()
+        crlf, lf = data.count(b"\r\n"), data.count(b"\n")
+        if 0 < crlf < lf:
+            bad.append(f"{name} (CRLF {crlf} / LF {lf})")
+    return bad
+
+
+def hard_errors(entities, sources, relations, root: Path = ROOT) -> dict[str, list]:
     errors = collections.defaultdict(list)
+    errors["mixed line endings in data file"] = mixed_line_endings(root)
     keys = collections.Counter(data_io.relation_key(r) for r in relations)
     errors["duplicate relation"] = [k for k, n in keys.items() if n > 1]
     errors["duplicate entity"] = data_io.duplicate_entities(list(entities.values()))
@@ -79,6 +113,8 @@ def hard_errors(entities, sources, relations) -> dict[str, list]:
         if r["status"] == "auto" and not reproducible(r, source["tier"]):
             errors["'auto' confidence not reproducible from source tier"].append(
                 f"{label} (conf {r['confidence']}, source {r['source_ref']} = {source['tier']})")
+        if r["status"] in ("approved", "auto") and wiki_only(r, source):
+            errors["approved/auto edge verified only by a wiki page"].append(label)
     return {k: v for k, v in errors.items() if v}
 
 
@@ -93,8 +129,10 @@ def warnings(entities, sources, relations) -> dict[str, list]:
             authored.add(r["source_id"])
         source = sources.get(r["source_ref"], {})
         match = URL_IN_EVIDENCE.search(r.get("evidence") or "")
-        if r["status"] == "approved" and not match and not source.get("ref"):
+        if r["status"] == "approved" and not match and not source.get("ref") and not is_self_primary(r, source):
             warn["approved with no URL (evidence or source)"].append(f"{r['source_id']} -{r['kind']}-> {r['target_id']}")
+        if r["status"] == "approved" and source.get("tier") in ("other", "popular"):
+            warn["approved edge resting on an other/popular-tier source (aggregator or legacy label)"].append(r["source_ref"])
         if match and source.get("ref") and not match.group(1).startswith(source["ref"].split("?")[0][:40]):
             warn["evidence URL differs from the cited source's URL (second page or upgrade)"].append(r["source_ref"])
     warn["isolated entity"] = [i for i in entities if used[i] == 0]
@@ -118,7 +156,7 @@ def render(errors, warns, entities, sources, relations) -> str:
         lines.append("無。")
     lines += ["", f"## 警告:{sum(len(v) for v in warns.values())} 項(不阻擋建圖,列出供人工判斷)", ""]
     for name, items in warns.items():
-        counted = collections.Counter(items) if name.startswith("evidence URL") else None
+        counted = collections.Counter(items) if name.startswith(("evidence URL", "approved edge resting")) else None
         if counted:
             lines += [f"- **{name}**:{len(items)} 條,來源:" + "、".join(f"`{k}`×{v}" for k, v in counted.most_common(MAX_LISTED))]
         else:
@@ -128,7 +166,7 @@ def render(errors, warns, entities, sources, relations) -> str:
 
 def audit(root: Path = ROOT, write: bool = True) -> tuple[dict, dict]:
     entities, sources, relations = load()
-    errors, warns = hard_errors(entities, sources, relations), warnings(entities, sources, relations)
+    errors, warns = hard_errors(entities, sources, relations, root), warnings(entities, sources, relations)
     if write:
         data_io.write_text_lf(OUTPUT_MD, render(errors, warns, entities, sources, relations))
     return errors, warns
