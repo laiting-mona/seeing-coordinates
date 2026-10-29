@@ -1,12 +1,14 @@
 """Minimal regression tests (plain assert, no pytest) for the core behaviour.
 
-Last edited: 2026-10-29 — entity-table integrity check (no duplicate person/institution under two
+Last edited: 2026-10-29 — data audit (tools/audit_data.py) must report zero hard errors;
+entity-table integrity check (no duplicate person/institution under two
 ids). 2026-10-28: added checks that institution rosters never top a photographer's
 recommendations and that a photographer's own works are reachable (inbound edges). 2026-10-27: tests grouped into functions; added checks for
 display_label naming rule, approved-as-in-graph labelling and the faster resolver.
 Usage: python test_core.py
 """
 import sys
+from pathlib import Path
 
 import networkx as nx
 from pydantic import ValidationError
@@ -71,6 +73,13 @@ def test_entity_table_integrity() -> None:
     check("duplicate_entities 抓得到第二個 Liz Wells", dupes and "wells" in dupes[0][1])
 
 
+def test_data_audit() -> None:
+    sys.path.insert(0, str(Path(__file__).resolve().parent / "tools"))
+    import audit_data
+    errors, _ = audit_data.audit(write=False)
+    check("資料稽核無硬性錯誤(id、重複、方向、層級、auto 可重現)", not errors)
+
+
 def test_graph_build() -> nx.MultiDiGraph:
     graph = graph_build.build(verbose=False)
     check("圖至少 60 節點", graph.number_of_nodes() >= 60)
@@ -110,6 +119,7 @@ def main() -> None:
     test_metrics()
     test_display_label_rule()
     test_entity_table_integrity()
+    test_data_audit()
     test_graph_build()
     test_recommend_and_query()
     print(f"\n全部通過:{passed} 項 ✓")

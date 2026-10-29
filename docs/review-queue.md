@@ -1,6 +1,6 @@
 # 待人工判斷佇列（review queue）
 
-共 255 條。程式自動彙整,判斷與決定由你填。
+共 283 條。程式自動彙整,判斷與決定由你填。
 
 > 每條的「你的決定」欄預設空白。你確認後填 approved / rejected / 重構,我再據此更新圖。
 
@@ -36,16 +36,104 @@
 - 我的建議:列次要層、低權重,主軸維持西方正典不偏;待你確認。
 - **你的決定:** ________
 
+## 巴特 (Roland Barthes) → William Klein (威廉·克萊因)（discusses）
+- 可信度:0.3　來源層:popular　出處:wiki:Camera_Lucida
+- 主張:巴特《明室》以威廉·克萊因的照片作圖例
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 巴特 (Roland Barthes) → Robert Mapplethorpe (梅普索普)（discusses）
+- 可信度:0.3　來源層:popular　出處:wiki:Camera_Lucida
+- 主張:巴特《明室》以梅普索普的照片作圖例
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 巴特 (Roland Barthes) → Nadar (納達爾)（discusses）
+- 可信度:0.3　來源層:popular　出處:wiki:Camera_Lucida
+- 主張:巴特《明室》以納達爾的照片作圖例
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 桑塔格 (Susan Sontag) → Diane Arbus (黛安·阿巴斯)（discusses）
+- 可信度:0.3　來源層:popular　出處:wiki:On_Photography
+- 主張:桑塔格《論攝影》以阿巴斯對比 FSA 紀實,論 1970 年代犬儒美學
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## John Szarkowski (薩考斯基) → New Documents 展 1967（influence）
+- 可信度:0.4　來源層:other　出處:knowledge:new_documents
+- 主張:薩考斯基策劃 1967 New Documents,確立當代紀實轉向
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Rosalind Krauss (克勞絲) → October (journal)（belongs_to）
+- 可信度:0.4　來源層:other　出處:knowledge:october
+- 主張:克勞絲 1976 與 Annette Michelson 共同創辦 October 期刊
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Allan Sekula (塞庫拉) → Artforum（belongs_to）
+- 可信度:0.4　來源層:other　出處:knowledge:artforum
+- 主張:塞庫拉〈On the Invention of Photographic Meaning〉1975 發表於 Artforum
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
 ## 卡提耶-布列松 (Henri Cartier-Bresson) → Stephen Shore (蕭爾)（contrast）
-- 可信度:0.5　來源層:critic　出處:interpretation
+- 可信度:0.33　來源層:other　出處:interpretation
 - 主張:決定性瞬間與蕭爾冷面靜態美學相對,為蕭爾一代的反動
 - 調查紀錄:詮釋性:決定性瞬間 vs 蕭爾冷面靜態,是常見的世代對照,非文本明說。
 - 參考來源:(無)
 - 我的建議:當詮釋性對照,保留低權重或由你定。
 - **你的決定:** ________
 
+## John Szarkowski (薩考斯基) → 紐約現代美術館 (Museum of Modern Art)（belongs_to）
+- 可信度:0.4　來源層:other　出處:knowledge:moma
+- 主張:薩考斯基 1962-1991 任 MoMA 攝影部主任
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## New Documents 展 1967 → 紐約現代美術館 (Museum of Modern Art)（belongs_to）
+- 可信度:0.4　來源層:other　出處:knowledge:moma
+- 主張:New Documents 1967 於 MoMA 舉辦
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## New Topographics 展 1975 → George Eastman Museum (喬治伊士曼博物館)（belongs_to）
+- 可信度:0.4　來源層:other　出處:knowledge:eastman
+- 主張:New Topographics 1975 於 George Eastman House 舉辦
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 卡提耶-布列松 (Henri Cartier-Bresson) → 馬格南攝影通訊社 (Magnum Photos)（belongs_to）
+- 可信度:0.4　來源層:other　出處:knowledge:magnum
+- 主張:布列松 1947 與 Capa 等共同創辦馬格南
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
 ## Stephen Shore (蕭爾) → 日常庶民 (vernacular)（discusses）
-- 可信度:0.3　來源層:popular　出處:asx
+- 可信度:0.4　來源層:other　出處:asx
 - 主張:評論平台(如 ASX)評蕭爾作品的庶民美學
 - 調查紀錄:popular 層示意邊:評論平台對蕭爾庶民美學的討論真實,但未綁定具體文章。
 - 參考來源:(無)
@@ -53,11 +141,139 @@
 - **你的決定:** ________
 
 ## Stephen Shore (蕭爾) → deadpan (冷面美學)（discusses）
-- 可信度:0.3　來源層:popular　出處:cphmag
+- 可信度:0.4　來源層:other　出處:cphmag
 - 主張:攝影評論平台常以冷面美學描述蕭爾
 - 調查紀錄:popular 層示意邊:平台常以冷面描述蕭爾,待綁定具體文章。
 - 參考來源:(無)
 - 我的建議:綁定具體文章後再定;或維持 popular 低權重。
+- **你的決定:** ________
+
+## Techniques of the Observer (觀察者的技術) → Jonathan Crary (克拉里)（belongs_to）
+- 可信度:0.6　來源層:critic　出處:crary_techniques_s
+- 主張:《觀察者的技術》為克拉里所著
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## The Civil Contract of Photography (攝影的公民契約) → Ariella Azoulay (阿祖萊)（belongs_to）
+- 可信度:0.6　來源層:critic　出處:azoulay_civil_s
+- 主張:《攝影的公民契約》為阿祖萊所著
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## The Ongoing Moment (持續進行的瞬間) → Geoff Dyer (傑夫·戴爾)（belongs_to）
+- 可信度:0.6　來源層:critic　出處:dyer_ongoing_s
+- 主張:《持續進行的瞬間》為傑夫·戴爾所著
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Immediate Family (親密家庭) → Sally Mann (莎莉·曼)（belongs_to）
+- 可信度:0.6　來源層:critic　出處:marien_history_s
+- 主張:《親密家庭》為莎莉·曼攝影集
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Tulsa (塔爾薩) → Larry Clark (賴瑞·克拉克)（belongs_to）
+- 可信度:0.6　來源層:critic　出處:photobook_history_s
+- 主張:《塔爾薩》為賴瑞·克拉克攝影集
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Sleeping by the Mississippi (眠於密西西比河畔) → Alec Soth (亞歷克·索斯)（belongs_to）
+- 可信度:0.6　來源層:critic　出處:photobook_history_s
+- 主張:《眠於密西西比河畔》為索斯攝影集
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Uncommon Places → Stephen Shore (蕭爾)（belongs_to）
+- 可信度:0.6　來源層:critic　出處:photobook_history_s
+- 主張:《Uncommon Places》為蕭爾攝影集
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Diane Arbus (黛安·阿巴斯) → New Documents 展 1967（belongs_to）
+- 可信度:0.6　來源層:critic　出處:practices_looking
+- 主張:阿巴斯為 New Documents 三位參展者之一
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Lee Friedlander (弗里德蘭德) → New Documents 展 1967（belongs_to）
+- 可信度:0.6　來源層:critic　出處:practices_looking
+- 主張:弗里德蘭德為 New Documents 參展者
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Garry Winogrand (威諾格蘭德) → New Documents 展 1967（belongs_to）
+- 可信度:0.6　來源層:critic　出處:practices_looking
+- 主張:威諾格蘭德為 New Documents 參展者
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Bernd and Hilla Becher (貝歇夫婦) → Kunstakademie Düsseldorf (杜塞道夫藝術學院)（belongs_to）
+- 可信度:0.6　來源層:critic　出處:cotton_art_s
+- 主張:貝歇夫婦任教於杜塞道夫藝術學院
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Bernd and Hilla Becher (貝歇夫婦) → Andreas Gursky (古斯基)（influence）
+- 可信度:0.6　來源層:critic　出處:cotton_art_s
+- 主張:古斯基師從貝歇夫婦
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Bernd and Hilla Becher (貝歇夫婦) → Thomas Struth (史特魯斯)（influence）
+- 可信度:0.6　來源層:critic　出處:cotton_art_s
+- 主張:史特魯斯師從貝歇夫婦
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Bernd and Hilla Becher (貝歇夫婦) → Candida Höfer (霍弗)（influence）
+- 可信度:0.6　來源層:critic　出處:cotton_art_s
+- 主張:霍弗師從貝歇夫婦
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Bernd and Hilla Becher (貝歇夫婦) → Thomas Ruff (魯夫)（influence）
+- 可信度:0.6　來源層:critic　出處:cotton_art_s
+- 主張:魯夫師從貝歇夫婦
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Bernd and Hilla Becher (貝歇夫婦) → Axel Hütte (許特)（influence）
+- 可信度:0.6　來源層:critic　出處:cotton_art_s
+- 主張:許特師從貝歇夫婦
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
 - **你的決定:** ________
 
 ## 挪用 (appropriation) → 索引性 (indexicality)（contrast）
@@ -95,6 +311,14 @@
 ## The Photographer's Eye (攝影師之眼) → Lee Friedlander (弗里德蘭德)（discusses）
 - 可信度:0.38　來源層:institution　出處:photographers_eye
 - 主張:薩考斯基的框緣/視點語彙用於解讀街拍
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## John Szarkowski (薩考斯基) → Diane Arbus (黛安·阿巴斯)（discusses）
+- 可信度:0.6　來源層:critic　出處:practices_looking
+- 主張:薩考斯基策劃 New Documents 展出阿巴斯
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -141,7 +365,7 @@
 - **你的決定:** ________
 
 ## Jean Baudrillard (布希亞) → 此曾在 (that-has-been)（contrast）
-- 可信度:0.3　來源層:critic　出處:baudrillard_sim_s
+- 可信度:0.42　來源層:primary　出處:baudrillard_sim_s
 - 主張:擬像論對巴特『此曾在』的指示性構成挑戰
 - 調查紀錄:(待補)
 - 參考來源:(無)
@@ -189,7 +413,7 @@
 - **你的決定:** ________
 
 ## 國家攝影文化中心 → 紀實攝影 (documentary photography)（extend）
-- 可信度:0.52　來源層:institution　出處:rewrite_photo
+- 可信度:0.42　來源層:critic　出處:rewrite_photo
 - 主張:國家攝影文化中心典藏並重整台灣攝影史
 - 調查紀錄:(待補)
 - 參考來源:(無)
@@ -325,7 +549,7 @@
 - **你的決定:** ________
 
 ## Stanley Cavell (史丹利·卡維爾) → 巴贊 (André Bazin)（extend）
-- 可信度:0.3　來源層:critic　出處:sep_film_s
+- 可信度:0.38　來源層:institution　出處:sep_film_s
 - 主張:卡維爾延續巴贊對電影本體的思考
 - 調查紀錄:(待補)
 - 參考來源:(無)
@@ -357,7 +581,7 @@
 - **你的決定:** ________
 
 ## Peter Galassi (彼得·加拉西) → 紐約現代美術館 (Museum of Modern Art)（belongs_to）
-- 可信度:0.52　來源層:institution　出處:dis_index_s
+- 可信度:0.42　來源層:critic　出處:dis_index_s
 - 主張:加拉西任 MoMA 攝影部策展人
 - 調查紀錄:(待補)
 - 參考來源:(無)
@@ -853,7 +1077,7 @@
 - **你的決定:** ________
 
 ## Rosalind Krauss (克勞絲) → 超現實主義攝影 (surrealist photography)（interpret）
-- 可信度:0.42　來源層:critic　出處:artexte_amour_s
+- 可信度:0.52　來源層:institution　出處:artexte_amour_s
 - 主張:以索引/間隔理論重讀超現實主義攝影
 - 調查紀錄:(待補)
 - 參考來源:(無)
@@ -861,7 +1085,7 @@
 - **你的決定:** ________
 
 ## 超現實主義攝影 (surrealist photography) → 直接攝影 (straight photography)（contrast）
-- 可信度:0.3　來源層:critic　出處:artexte_amour_s
+- 可信度:0.38　來源層:institution　出處:artexte_amour_s
 - 主張:暗房操作與擺拍對直接攝影
 - 調查紀錄:(待補)
 - 參考來源:(無)
