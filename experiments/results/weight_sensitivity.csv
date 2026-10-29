@@ -2,7 +2,7 @@ weights,avg_top5_jaccard,avg_spearman
 baseline,1.0,1.0
 flat,1.0,0.65
 steep,1.0,1.0
-swapped,0.558,-0.294
+swapped,0.558,-0.297
 pop_0.30,1.0,1.0
 pop_0.15,1.0,1.0
 pop_0.10,1.0,1.0

@@ -288,3 +288,33 @@ B 類是依標準攝影史參考升級、本輪未抓取單一網頁者，仍建
 ### 這一輪用到、但層級偏弱的 hub
 
 The Art Story（Gursky 冷面、Levitt 與 Cartier-Bresson 街頭）與 Phillips 拍賣圖錄文章（Demand 的 tableau、Ruff 冷面）以 critic 層收錄，共 5 條。它們確實用了該詞形容作品，但不是美術館或學術出版，日後有更好的頁面應替換。
+
+## M. 第 13 輪（2026-10-29）全量回查：2,395 條已核可關係逐頁重讀
+
+對象：所有附網址、且第 12 輪尚未回查的核可關係，共 2,395 條、495 個網頁。依網頁分組，十組並行，每頁只抓一次（一次最多 12 條 claim），逐條判斷「明載／需收窄／頁面沒寫／矛盾／抓不到」。轉檔用 `fullcheck_tasks.py`、`apply_fullcheck_v16.py`（scratchpad，一次性）；每條關係的 evidence 都加上「［2026-10-29 全量回查…］」與原文。
+
+| 判定 | 條數 | 處理 |
+|---|---|---|
+| 頁面明載 | 2,030 | 維持核可，附回查原文（其中 9 條的原文只是抓取工具的摘要，照實標註） |
+| 核心正確、細節收窄 | 155 | 維持核可，claim 改寫成頁面範圍，原 claim 留在 evidence |
+| 原頁未載、改引機構頁 | 20 | 《Pictures Generation》12 位參展者改引大都會 2009 展覽頁；《Thinking Photography》8 條改引 CCA 圖書館書目 |
+| 頁面只支持別的關係 | 48 | 降為待查證 |
+| 頁面沒寫 | 63 | 降為待查證 |
+| 頁面無法讀取 | 79 | 維持原判，標註「未能回查」 |
+| 矛盾 | 0 | |
+
+**網址指錯頁（資料本身的錯）：** davidcampany.com/?p=346 現在是 Sekula 訪談，掛在上面的 16 條〈Safety in Numbness〉關係降為待查證；monoskop 的 ?p=1045 現在是 Bourdieu 的書，《Thinking Photography》8 條改引 CCA；arthistoryunstuffed 的 ?p=1084 現在是 Foucault，攝影蒙太奇 3 條降為待查證。網站重編文章號碼是這類錯誤的來源，日後引用部落格型網站要存標題。
+
+**關係類型不符（降為待查證，常見型態）：**
+- 雇用、合作、婚姻、結識、推薦不是影響：Brady→Gardner、Gardner→O'Sullivan、Strand→Sheeler、Rodchenko→Stepanova、Hausmann→Höch、Evans→Shahn、Stieglitz→Newman、山岸章二→深瀨昌久、森山大道「以 VIVO 為目標」。
+- 策展、典藏、拍攝對象不是展出或作者：Marcoci 策劃的三檔展覽頁面沒寫在 MoMA、Tate→Weski（策展人）、東京都寫真美術館→《感傷之旅》（典藏）、《War Photographer》的導演是 Christian Frei，Nachtwey 是拍攝對象。
+- 頁面沒用那個概念詞：Riis／W. Eugene Smith／Kamoinge→紀實、Groover→New Color、東松照明與川田喜久治→戰爭攝影、LeWitt／Sultan→觀念攝影、Doisneau→人文主義攝影。
+- 頁面說的相反方向：Jeff Wall 頁面說他「超越」觀念藝術，不是延伸。
+
+**收窄的例子：** Beaton 的 Vogue 合約依 V&A 是 1926 年；Rancière 該書依 Verso 是 2011 年；《Beyond Recognition》依 UC Press 是 1994 年；Fischli/Weiss 回顧展是「英國首次」；芝加哥藝術館說作品「超過六成」是館藏。
+
+**第二意見（盲測，不給第一次的判定）：**
+- 抽 40 條「頁面明載」重查：39 條核心一致，3 條細節再收窄，1 條（Lucie Rie→具本昌，頁面只說一張照片啟發了《器》系列）不支持「影響」，降為待查證。推估第一輪「明載」中約 2.5% 仍不足以支持連結。
+- 48 條「頁面沒寫」全部重查：44 條確認沒寫；4 條找到了（越戰展名單確實有 Malcolm Browne、ICP 的 50 位關懷攝影師名單確實有 Salgado、Tate 新聞稿確實以 Kirstein 的「tender cruelty」框定展覽），我再自己抓頁確認後恢復核可。
+
+**無法讀取的 16 頁：** e-artexte（L'Amour fou，16 條，網站有機器人防護）、readingandwalking.ca（Marks of Indifference，11）、LACMA Unframed（8）、UCI Krauss 書目（6）、prasannakumarr.in（6）、史丹佛哲學百科 film 條目（6）、IMS Koudelka（5）、SUNY Oneonta 課程頁（5）、Chapman 課程彙編（4）、TMU 論文（3）等。其中課程頁、學生彙編與個人網站本來就偏弱，應優先替換。
