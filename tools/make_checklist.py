@@ -1,6 +1,9 @@
 """Build the source-verification checklist for every status=review relation.
 
-Last edited: 2026-10-30 — rows sorted by influence (影響力 column): how many formal-graph
+Last edited: 2026-10-30 (second pass): relations the user chose to keep as the project's
+interpretation layer (marker INTERPRETATION_MARK in evidence) are labelled in 備註 and counted
+in the header, so they are not mistaken for unchecked facts.
+2026-10-30: rows sorted by influence (影響力 column): how many formal-graph
 links the two endpoints already have, plus a bonus when the relation would connect a node
 that has no formal link yet; the most consequential checks come first.
 2026-10-29: markdown written with LF on every OS (data_io.write_text_lf).
@@ -31,6 +34,8 @@ HEADERS = ["#", "影響力", "來源", "目標", "類型", "主張", "建議查�
 COLUMN_WIDTHS = [5, 8, 24, 24, 8, 46, 34, 14, 14, 40]
 FORMAL_STATUSES = ("approved", "auto")
 BRIDGE_BONUS = 20    # a relation that would bring an unconnected node into the formal graph
+INTERPRETATION_MARK = "使用者決定:保留為本專案的詮釋層"
+INTERPRETATION_NOTE = "詮釋層:找不到外部來源作此連結,使用者決定保留在待查證、不進正式圖"
 DECISION_OPTIONS = '"approved,rejected,重構"'
 DECISION_COLUMN = chr(65 + HEADERS.index("決定"))   # Excel column letter of the dropdown
 
@@ -88,6 +93,8 @@ def checklist_rows(pending: list[tuple[int, dict]], label: dict[str, str], sourc
         source_name = label.get(r["source_id"], r["source_id"])
         target_name = label.get(r["target_id"], r["target_id"])
         note = NOTES.get((r["source_id"], r["target_id"], r["kind"]), "")
+        if INTERPRETATION_MARK in (r.get("evidence") or ""):
+            note = INTERPRETATION_NOTE
         rows.append([index, score, source_name, target_name, KIND_SHORT.get(r["kind"], r["kind"]), r["claim"],
                      suggested_source(r, sources), "", "", note])
     return rows
@@ -96,6 +103,7 @@ def checklist_rows(pending: list[tuple[int, dict]], label: dict[str, str], sourc
 def write_markdown(rows: list[list], path: Path = OUTPUT_MD) -> None:
     lines = ["# 原典查核清單（觀看的座標）", "",
              f"待查證關係共 **{len(rows)}** 條,依『影響力』排序(兩端節點在正式圖中的連結數總和;會把尚未入圖的節點接進來者加 {BRIDGE_BONUS})。",
+             f"其中 **{sum(1 for row in rows if row[-1] == INTERPRETATION_NOTE)}** 條是本專案的詮釋層(備註欄標明),不是待查的事實,依使用者決定留在待查證、不進正式圖。",
              "建議回對應原典補上頁碼級出處後,把『決定』填為 approved / rejected / 重構;",
              "確認後,把對應關係在 `data/raw_relations.jsonl` 的 `status` 改為 approved / rejected,並於 evidence 補上頁碼與來源,再執行 `python graph_build.py` 重建圖。", "",
              "| " + " | ".join(HEADERS) + " |", "|" + "---|" * len(HEADERS)]
