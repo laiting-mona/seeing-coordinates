@@ -1,6 +1,9 @@
 """Build the source-verification checklist for every status=review relation.
 
-Last edited: 2026-10-29 — markdown written with LF on every OS (data_io.write_text_lf).
+Last edited: 2026-10-30 — rows sorted by influence (影響力 column): how many formal-graph
+links the two endpoints already have, plus a bonus when the relation would connect a node
+that has no formal link yet; the most consequential checks come first.
+2026-10-29: markdown written with LF on every OS (data_io.write_text_lf).
 2026-10-28: 關係 column split into separate 來源 / 目標 columns; decision
 dropdown column derived from HEADERS. 2026-10-27: functions + main(); loaders from data_io;
 entity names follow data_io.display_label; openpyxl styling isolated in one function.
@@ -13,6 +16,7 @@ Usage (from the project root): python tools/make_checklist.py
 import sys
 from pathlib import Path
 
+import networkx as nx
 import openpyxl
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.worksheet.datavalidation import DataValidation
@@ -23,8 +27,10 @@ import data_io  # noqa: E402
 
 OUTPUT_MD = ROOT / "docs/原典查核清單.md"
 OUTPUT_XLSX = ROOT / "docs/原典查核清單.xlsx"
-HEADERS = ["#", "來源", "目標", "類型", "主張", "建議查核原典", "頁碼(待補)", "決定", "備註"]
-COLUMN_WIDTHS = [5, 24, 24, 8, 46, 34, 14, 14, 40]
+HEADERS = ["#", "影響力", "來源", "目標", "類型", "主張", "建議查核原典", "頁碼(待補)", "決定", "備註"]
+COLUMN_WIDTHS = [5, 8, 24, 24, 8, 46, 34, 14, 14, 40]
+FORMAL_STATUSES = ("approved", "auto")
+BRIDGE_BONUS = 20    # a relation that would bring an unconnected node into the formal graph
 DECISION_OPTIONS = '"approved,rejected,重構"'
 DECISION_COLUMN = chr(65 + HEADERS.index("決定"))   # Excel column letter of the dropdown
 
@@ -43,10 +49,25 @@ KIND_SHORT = {"influence": "影響", "critique": "批判", "extend": "延伸", "
               "discusses": "討論", "translate": "譯本", "study": "研究", "review": "評論", "interpret": "詮釋", "exhibit": "展覽"}
 
 
-def pending_relations(root: Path = ROOT) -> list[dict]:
-    """status=review relations, grouped by target then source so one book is checked at once."""
-    pending = [r for r in data_io.load_relation_dicts(root) if r["status"] == "review"]
-    return sorted(pending, key=lambda r: (r["target_id"], r["source_id"]))
+def formal_degrees(relations: list[dict]) -> nx.Graph:
+    """Undirected graph of the formal (approved + auto) relations, for counting each node's links."""
+    graph = nx.Graph()
+    graph.add_edges_from((r["source_id"], r["target_id"]) for r in relations if r["status"] in FORMAL_STATUSES)
+    return graph
+
+
+def influence(relation: dict, graph: nx.Graph) -> int:
+    """Formal links of both endpoints, plus a bonus if one endpoint has none (the relation would connect it)."""
+    degrees = [graph.degree(n) if n in graph else 0 for n in (relation["source_id"], relation["target_id"])]
+    return sum(degrees) + (BRIDGE_BONUS if min(degrees) == 0 else 0)
+
+
+def pending_relations(root: Path = ROOT) -> list[tuple[int, dict]]:
+    """status=review relations with their influence, highest first (ties grouped by target, then source)."""
+    relations = data_io.load_relation_dicts(root)
+    graph = formal_degrees(relations)
+    pending = [(influence(r, graph), r) for r in relations if r["status"] == "review"]
+    return sorted(pending, key=lambda item: (-item[0], item[1]["target_id"], item[1]["source_id"]))
 
 
 def suggested_source(relation: dict, sources: dict[str, dict]) -> str:
@@ -60,21 +81,22 @@ def suggested_source(relation: dict, sources: dict[str, dict]) -> str:
     return "(需自行指定原典)"
 
 
-def checklist_rows(pending: list[dict], label: dict[str, str], sources: dict[str, dict]) -> list[list]:
+def checklist_rows(pending: list[tuple[int, dict]], label: dict[str, str], sources: dict[str, dict]) -> list[list]:
     """One table row per pending relation (page and decision columns left blank)."""
     rows = []
-    for index, r in enumerate(pending, 1):
+    for index, (score, r) in enumerate(pending, 1):
         source_name = label.get(r["source_id"], r["source_id"])
         target_name = label.get(r["target_id"], r["target_id"])
         note = NOTES.get((r["source_id"], r["target_id"], r["kind"]), "")
-        rows.append([index, source_name, target_name, KIND_SHORT.get(r["kind"], r["kind"]), r["claim"],
+        rows.append([index, score, source_name, target_name, KIND_SHORT.get(r["kind"], r["kind"]), r["claim"],
                      suggested_source(r, sources), "", "", note])
     return rows
 
 
 def write_markdown(rows: list[list], path: Path = OUTPUT_MD) -> None:
     lines = ["# 原典查核清單（觀看的座標）", "",
-             f"待查證關係共 **{len(rows)}** 條。建議回對應原典補上頁碼級出處後,把『決定』填為 approved / rejected / 重構;",
+             f"待查證關係共 **{len(rows)}** 條,依『影響力』排序(兩端節點在正式圖中的連結數總和;會把尚未入圖的節點接進來者加 {BRIDGE_BONUS})。",
+             "建議回對應原典補上頁碼級出處後,把『決定』填為 approved / rejected / 重構;",
              "確認後,把對應關係在 `data/raw_relations.jsonl` 的 `status` 改為 approved / rejected,並於 evidence 補上頁碼與來源,再執行 `python graph_build.py` 重建圖。", "",
              "| " + " | ".join(HEADERS) + " |", "|" + "---|" * len(HEADERS)]
     lines += ["| " + " | ".join(str(c) for c in row) + " |" for row in rows]
