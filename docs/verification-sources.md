@@ -359,7 +359,7 @@ The Art Story（Gursky 冷面、Levitt 與 Cartier-Bresson 街頭）與 Phillips
 - 研究者找到的 Henri Huet 頁面在 Hood Museum 的子網域上，看起來像課堂作業，改用 Visa pour l'Image 的生平頁與 Virginia War Memorial 的報導（LIFE 封面，1966 年 2 月）。
 - Malcolm Browne 的頁面稱他為戰地記者（war correspondent），claim 已照實寫；澤田教一的普立茲獎頁面寫的是 1965 年的戰地攝影整體，沒點名渡河那張照片，claim 已收窄。
 
-## P. 第 16 輪（2026-10-30）依影響力處理待查證：前 180 條
+## P. 第 16 輪（2026-10-30）依影響力處理待查證：全部 375 條
 
 **排序：** `tools/make_checklist.py` 新增「影響力」欄：兩端節點在正式圖（approved + auto）中的連結數總和；若有一端還沒有任何正式連結（這條關係會把它接進圖），另加 20。原典查核清單依此排序。375 條中前 180 條（影響力 ≥ 14）分六組並行處理，每組最多 30 次搜尋；其餘 195 條留待下一輪。
 
@@ -376,3 +376,23 @@ The Art Story（Gursky 冷面、Levitt 與 Cartier-Bresson 街頭）與 Phillips
 **審核否決的 23 條（研究者判為成立，我依既有規則退回）：** 頁面只用動詞 documented 而未用「紀實攝影」一詞（Watkins、W. Eugene Smith、O'Sullivan、回望展、國家攝影文化中心）；頁面講的是別的概念（吳印咸是民族主義影像美學、侯淑姿是超越新聞攝影式觀看、LIFE 是白人中產視角與發表園地、《Images in Spite of All》是集中營照片）；「植根於某傳統」或「某學派」不等於影響（Soth 與 Evans／Shore、Streuli 與貝歇）；只有評論者詮釋或論文標題（《Conflict, Time, Photography》、Bazin 與巴特）；證據不足或反證（October 與索引性只有書目、Edward 對 Brett Weston 頁面說「未指導拍攝」、超現實與直接攝影的引句沒有對照、《Between Past and Future》只有展區名）；仍需人工判斷（寇德卡說從布列松身上「學到很多，但不太是攝影」；多木浩二、岡田隆彥在 Provoke 展中只列為創刊同人）；霍華英譯《明室》應以英譯本節點建模。
 
 **稽核抓到的問題：** 兩組研究者對同一頁（Routledge 書頁、SPE 講者頁）給了不同層級，第一次建來源時採了先到的那個，造成兩條關係的層級與來源不一致；`audit_data.py` 判為硬性錯誤、測試擋下，已統一為 institution。
+
+### P 補一：第二批 195 條（影響力 < 14）
+
+使用者要求「繼續詳實判斷檢查」，第二批七組並行，每組最多 25 次搜尋，規則與第一批相同（`apply_resolve_v20.py`）。
+
+| 結果 | 條數 | 說明 |
+|---|---|---|
+| 核可 | 88 | 頁面明載 |
+| 核可、claim 收窄 | 27 | 例：Goldblatt 1989 年創辦 Market Photo Workshop（Tate）；東京都寫真美術館 2017 年展出〈感傷之旅〉全 108 件（原本只記為典藏，現升為展出） |
+| 更正類型後核可 | 16 | 例：Dan Graham、Huebler、Smithson 對觀念攝影由「影響」改為「屬於」（David Zwirner《Conceptual Photography》展，畫廊頁列 critic）；Klett 對新地誌由「延伸」改為「對照」（評論：再攝影計畫是對新地誌的反動）；具本昌對杉本博司由「對照」改為「延伸」（評論：《Ocean》的系譜可直接追溯至杉本）；Film und Foto 改為「屬於」新視覺 |
+| 剔除 | 17 | 合作、雇用、婚姻、引介、編書、友誼不是影響（Strand→Sheeler、Brady→Gardner、Gardner→O'Sullivan、Rodchenko→Stepanova、Modotti→Álvarez Bravo、Erwitt→Koudelka、山岸章二→深瀨昌久、Frank→Faurer、Bassman→Faurer）；出版不是思想延伸（Delpire→Koudelka、Delpire→《美國人》）；同事不是對照（Callahan↔Siskind）；被歸為同一群不是對照（長島有里枝↔HIROMIX）；典藏不是展出（SFMOMA→Goldberg）；女性主義科學研究不是女性主義藝術（Kember）；Scruton 與 Walton 被視為同一陣營（矛盾）；Renger-Patzsch 被 Getty 與大都會明確放在新視覺之外 |
+| 仍待查證 | 47 | 查無 20、純屬詮釋 17、審核否決 8、改類型後與既有關係重複 2 |
+
+審核否決 8 條：Soth「根源可追溯至」艾格斯頓、Soth「像 Frank 一樣」取材公路（傳統型說法）；《Camera Work》刊載 Strand 不等於討論直接攝影；MoMA 1976 年新聞稿沒有「New Color」一詞（1981 才出現）；Rosler 文章的用語是 liberal documentary 而非關懷攝影；post-photography 只在網址與書目；《無題電影劇照》頁面沒有 tableau 一詞；蛇形藝廊的 Stan Douglas 展在 Corrin 任期之後。
+
+### P 補二：盲測抽查與 claim 改寫
+
+從本輪新核可的 249 條隨機抽 45 條，交給另一位查核者只抓所引網址、不給前一輪的判定：33 條明載、7 條細節超出頁面、2 條不支持、2 條頁面無法讀取（Tate 作品頁不在可抓取名單）。
+- 不支持的 2 條：Evans 屬現代主義攝影（大都會說他早期受歐洲現代主義影響、之後遠離）降為待查證；《殘酷與溫柔》「延伸」紀實攝影改為「討論」（頁面只說展覽綜覽紀實風格的寫實脈絡，也沒提 diCorcia）。
+- 細節問題的共同原因：研究者判「明載」時，轉檔程式沿用了早期輪次的 claim，其中有「待原典頁碼」「依展覽歸類」「推定為 Ansel Adams」這類說明文字，或頁面沒寫的年份。已逐條依頁面原文改寫 42 條 claim（例：Kemp 選集目錄確有 Ansel Adams〈Ein persönliches Credo〉(1943)，「推定」字樣刪除；科克倫的 Taryn Simon 展改為 2012.11–2013.2）。下一輪轉檔程式在研究者給出修正文字時一律採用。
