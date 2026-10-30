@@ -1,6 +1,6 @@
 # 待人工判斷佇列（review queue）
 
-共 104 條。程式自動彙整,判斷與決定由你填。
+共 108 條。程式自動彙整,判斷與決定由你填。
 
 > 每條的「你的決定」欄預設空白。你確認後填 approved / rejected / 重構,我再據此更新圖。
 
@@ -372,6 +372,22 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
+## male gaze (男性凝視) → 凝視 (gaze)（extend）
+- 可信度:0.3　來源層:critic　出處:rp_79955a9e5f_s
+- 主張:男性凝視為凝視理論的性別化分支
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 雅各·拉岡 (Jacques Lacan) → 凝視 (gaze)（influence）
+- 可信度:0.3　來源層:critic　出處:rp_79955a9e5f_s
+- 主張:觀者同時是「觀看者與被觀看者」的分裂
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
 ## Thinking Photography (1982) (思考攝影) → 意識形態 (ideology)（influence）
 - 可信度:0.38　來源層:institution　出處:thinking_photo_s
 - 主張:以意識形態批判為共同取徑
@@ -455,6 +471,22 @@
 ## Gardner's Photographic Sketch Book of the War (1865–66) (加德納戰爭攝影素描集) → Timothy O'Sullivan (歐蘇利文)（belongs_to）
 - 可信度:0.52　來源層:institution　出處:met_civilwar_s
 - 主張:素描集中多張為 O'Sullivan 所攝
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## L'Amour fou: Photography and Surrealism (1985) (瘋狂的愛:攝影與超現實主義(1985)) → Raoul Ubac (拉烏爾·尤巴克)（exhibit）
+- 可信度:0.38　來源層:institution　出處:rp_b118180a31_s
+- 主張:圖錄列名藝術家
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## L'Amour fou: Photography and Surrealism (1985) (瘋狂的愛:攝影與超現實主義(1985)) → Jacques-André Boiffard (賈克-安德烈·布瓦法)（exhibit）
+- 可信度:0.38　來源層:institution　出處:rp_b118180a31_s
+- 主張:圖錄列名藝術家
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
