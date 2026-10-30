@@ -396,3 +396,21 @@ The Art Story（Gursky 冷面、Levitt 與 Cartier-Bresson 街頭）與 Phillips
 從本輪新核可的 249 條隨機抽 45 條，交給另一位查核者只抓所引網址、不給前一輪的判定：33 條明載、7 條細節超出頁面、2 條不支持、2 條頁面無法讀取（Tate 作品頁不在可抓取名單）。
 - 不支持的 2 條：Evans 屬現代主義攝影（大都會說他早期受歐洲現代主義影響、之後遠離）降為待查證；《殘酷與溫柔》「延伸」紀實攝影改為「討論」（頁面只說展覽綜覽紀實風格的寫實脈絡，也沒提 diCorcia）。
 - 細節問題的共同原因：研究者判「明載」時，轉檔程式沿用了早期輪次的 claim，其中有「待原典頁碼」「依展覽歸類」「推定為 Ansel Adams」這類說明文字，或頁面沒寫的年份。已逐條依頁面原文改寫 42 條 claim（例：Kemp 選集目錄確有 Ansel Adams〈Ein persönliches Credo〉(1943)，「推定」字樣刪除；科克倫的 Taryn Simon 展改為 2012.11–2013.2）。下一輪轉檔程式在研究者給出修正文字時一律採用。
+
+## Q. 第 17 輪（2026-10-30）盲測、二查、孤立節點
+
+**盲測第 14–15 輪的 138 條核可：** 兩位查核者只讀所引網址、不搜尋、不知前判（`apply_blind_v22.py`）。100 條明載；34 條細節超出頁面，claim 依頁面改寫（多為土門拳賞的「作品年度」改為頁面寫的受賞年、普立茲獎與出版資料的措辭）；4 條不支持而降級：
+- Ubac、Boiffard 參展 L'Amour fou：所引龐畢度頁面講的是 1986 年巴黎站「Explosante fixe」，頁面本身沒有把它和 L'Amour fou 連起來。
+- 男性凝視延伸凝視、拉岡影響凝視：SAGE 百科頁對查核者只顯示預覽，讀不到第 14 輪引用的那句。
+
+**二查其餘 70 條待查證：** 三組研究，每組最多 40 次搜尋，明確要求針對前次退回理由找頁面，並以日、中、法、德文搜尋（`apply_resolve_v23.py`）。
+| 結果 | 條數 | 說明 |
+|---|---|---|
+| 核可 | 13 | 前次退回理由被新頁面回應：Brett Weston 為父親的學徒並受其啟發（聖荷西美術館）；Soth 自承受 Frank 影響（Magnum）；artnet 明言 Shore 影響 Soth；Ruscha 影響 Jenkins（東安格利亞大學論文）；巴特《明室》帶有明顯的巴贊影響（UNED 期刊）；W. Eugene Smith「紀實攝影大師」（SUNY New Paltz）；O'Sullivan 的照片「發揮紀實功能」（芝加哥藝術館）；Corrin 與 Borchardt-Hume 共同策劃 2002 年蛇形藝廊 Stan Douglas 展（CCA 書目，回應任期疑點）等 |
+| 更正類型後核可 | 5 | Shore 與 Frank 改為「對照」（Shore 自述其作品是對 Frank 的反動）；Brik 與 Rodchenko 改為「對照」（學者指兩人攝影立場對立）；diCorcia 改為「屬於」tableau 攝影；O'Sullivan 改為「屬於」紀實攝影；林柏樑改為「屬於」紀實攝影 |
+| 剔除 | 4 | Hausmann→Höch（戀人並引介入達達圈）、Cartier-Bresson→Koudelka（寇德卡說學到很多「但不太是攝影」）、《Camera Work》→直接攝影（刊載不等於影響）、Baldessari→觀念攝影「影響」（「屬於」已核可） |
+| 審核否決 | 6 | 新證據仍未回應退回理由：國家攝影文化中心「延伸」紀實、Riis 屬紀實（Foam 仍未用該詞）、《Between Past and Future》延伸表演攝影、Crimp 論文與圖景世代（未用該詞）、回望展與清里美術館展是否同一、本間貴史與新地誌（方向相反且來源為轉載） |
+| 純屬詮釋 | 2 | 依使用者先前決定併入詮釋層 |
+| 仍查無 | 40 | 兩次上網都找不到可接受頁面，需回原典 |
+
+**孤立節點：** 植田正治、阿爾勒攝影節、Paris Photo、《The Photobook: A History》原本沒有任何關係，新增 13 條（`apply_iso_v24.py`），都連到既有節點：植田正治 1978 年受邀阿爾勒、1975 年日本寫真協會年度賞（島根縣立美術館）、東京都寫真美術館 2013–14 年展、2008 年 Paris Photo 日本主賓國；2024 年阿爾勒日本女性攝影師展（石內都、川內倫子，Aperture）；Paris Photo 的森山大道《再見攝影》（Collector Daily）；《The Photobook》由 Parr 與 Badger 合編（三影堂圖書館書目，取代研究者找到的 Phaidon 測試站網址），並在章節中討論《Die Welt ist schön》《American Photographs》《Antlitz der Zeit》（sehepunkte 書評）。

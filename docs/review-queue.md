@@ -1,16 +1,8 @@
 # 待人工判斷佇列（review queue）
 
-共 108 條。程式自動彙整,判斷與決定由你填。
+共 86 條。程式自動彙整,判斷與決定由你填。
 
 > 每條的「你的決定」欄預設空白。你確認後填 approved / rejected / 重構,我再據此更新圖。
-
-## Robert Frank (法蘭克) → Stephen Shore (蕭爾)（influence）
-- 可信度:0.65　來源層:primary　出處:the_americans
-- 主張:法蘭克美國人的庶民美國視角為蕭爾前驅
-- 調查紀錄:攝影史常見的傳承(庶民美國公路題材),但未取得蕭爾或評論明說的出處。
-- 參考來源:(無)
-- 我的建議:查到蕭爾訪談或評論明說再升為 approved。
-- **你的決定:** ________
 
 ## Allan Sekula (塞庫拉) → 伯格 (John Berger)（extend）
 - 可信度:0.3　來源層:critic　出處:invention_meaning
@@ -44,14 +36,6 @@
 - 我的建議:列次要層、低權重,主軸維持西方正典不偏;待你確認。
 - **你的決定:** ________
 
-## 巴特 (Roland Barthes) → Nadar (納達爾)（discusses）
-- 可信度:0.3　來源層:popular　出處:wiki:Camera_Lucida
-- 主張:巴特《明室》以納達爾的照片作圖例
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## 桑塔格 (Susan Sontag) → Paul Strand (保羅·史川德)（discusses）
 - 可信度:0.42　來源層:primary　出處:on_photography
 - 主張:桑塔格《論攝影》討論保羅·史川德
@@ -79,14 +63,6 @@
 ## 挪用 (appropriation) → 索引性 (indexicality)（contrast）
 - 可信度:0.3　來源層:critic　出處:cotton_art_s
 - 主張:挪用鬆動了攝影的指示性與原真
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Philip-Lorca diCorcia (迪科西亞) → tableau (圖景 / 舞台式)（influence）
-- 可信度:0.3　來源層:critic　出處:cotton_art_s
-- 主張:迪科西亞以佈光街拍介於紀實與圖景
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -135,14 +111,6 @@
 ## 當代攝影大師 → Sebastião Salgado (薩爾加多)（discusses）
 - 可信度:0.3　來源層:critic　出處:juan_masters_s
 - 主張:《當代攝影大師》導讀薩爾加多
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## 巴贊 (André Bazin) → 巴特 (Roland Barthes)（influence）
-- 可信度:0.3　來源層:critic　出處:marien_history_s
-- 主張:巴贊的指示性本體論與巴特《明室》遙相呼應
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -212,14 +180,6 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## Timothy O'Sullivan (歐蘇利文) → 紀實攝影 (documentary photography)（influence）
-- 可信度:0.3　來源層:critic　出處:marien_history_s
-- 主張:歐蘇利文的西部勘查影像為地景紀實先聲
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## Carleton Watkins (沃特金斯) → 紀實攝影 (documentary photography)（influence）
 - 可信度:0.3　來源層:critic　出處:marien_history_s
 - 主張:沃特金斯的優勝美地影像推動地景攝影
@@ -255,14 +215,6 @@
 ## 柯錫杰 → 街頭攝影 (street photography)（influence）
 - 可信度:0.3　來源層:critic　出處:juan_seven_s
 - 主張:柯錫杰以現代主義影像拓展台灣攝影語彙
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## 林柏樑 → 紀實攝影 (documentary photography)（influence）
-- 可信度:0.3　來源層:critic　出處:rewrite_photo
-- 主張:林柏樑以人文紀實記錄台灣
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -332,33 +284,9 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## Camera Work (journal) → 直接攝影 (straight photography)（influence）
-- 可信度:0.38　來源層:institution　出處:artic_cw_s
-- 主張:末期刊 Strand「預示史蒂格利茲轉向直接攝影」
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## August Sander (桑德) → Film und Foto 1929（belongs_to）
 - 可信度:0.38　來源層:institution　出處:lacma_fifo_s
 - 主張:參展 FiFo 1929
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## 卡提耶-布列松 (Henri Cartier-Bresson) → Josef Koudelka (約瑟夫·寇德卡)（influence）
-- 可信度:0.75　來源層:institution　出處:ims_koudelka_s
-- 主張:1972 結識並成為摯友與支持者(對其創作的影響待補)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## John Baldessari (約翰·巴爾代薩里) → conceptual photography (概念攝影)（influence）
-- 可信度:0.42　來源層:primary　出處:wall_marks_s
-- 主張:概念攝影代表
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -468,14 +396,6 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## Gardner's Photographic Sketch Book of the War (1865–66) (加德納戰爭攝影素描集) → Timothy O'Sullivan (歐蘇利文)（belongs_to）
-- 可信度:0.52　來源層:institution　出處:met_civilwar_s
-- 主張:素描集中多張為 O'Sullivan 所攝
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## L'Amour fou: Photography and Surrealism (1985) (瘋狂的愛:攝影與超現實主義(1985)) → Raoul Ubac (拉烏爾·尤巴克)（exhibit）
 - 可信度:0.38　來源層:institution　出處:rp_b118180a31_s
 - 主張:圖錄列名藝術家
@@ -503,14 +423,6 @@
 ## The Photographic Activity of Postmodernism (1980) (後現代主義的攝影活動) → 圖景世代 (Pictures Generation)（discusses）
 - 可信度:0.42　來源層:critic　出處:tmu_october_s
 - 主張:以 Levine、Sherman 等論後現代攝影
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## October (journal) → 索引性 (indexicality)（influence）
-- 可信度:0.6　來源層:critic　出處:tmu_october_s
-- 主張:October 在攝影理論轉向中扮演關鍵角色(索引性為其中一線,待補直接文獻)
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -548,14 +460,6 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## W. Eugene Smith (尤金·史密斯) → 紀實攝影 (documentary photography)（belongs_to）
-- 可信度:0.3　來源層:critic　出處:bsr_life_s
-- 主張:助產士 Maude Callen 專題(2,600 張)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## LIFE 雜誌 → concerned photography (關懷攝影)（influence）
 - 可信度:0.3　來源層:critic　出處:bsr_life_s
 - 主張:圖片雜誌形塑人道紀實傳統
@@ -575,14 +479,6 @@
 ## Mirrors and Windows 1978 → 紀實攝影 (documentary photography)（contrast）
 - 可信度:0.75　來源層:institution　出處:moma_mw_s
 - 主張:「自我表達的手段」對「探索的方法」(與紀實的對應關係為詮釋)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Edward Weston (愛德華·威斯頓) → Brett Weston (布雷特·威斯頓)（influence）
-- 可信度:0.3　來源層:critic　出處:britannica_f64_s
-- 主張:父子;Brett 隨父學習攝影
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -668,14 +564,6 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## Walker Evans (沃克·伊凡斯) → modernist photography (現代主義攝影(1920–50 年代))（belongs_to）
-- 可信度:0.38　來源層:institution　出處:rq_8f0d811e5c_s
-- 主張:伊凡斯早期作品受歐洲現代主義(特別是其形式主義)影響
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## Exposed: Voyeurism, Surveillance and the Camera Since 1870 (2010–11) (曝光:偷窺、監控與相機(2010–11)) → Bill Brandt (比爾·布蘭特)（exhibit）
 - 可信度:0.38　來源層:institution　出處:sfmoma_exposed_s
 - 主張:新聞稿列名
@@ -748,57 +636,9 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## Raoul Hausmann (拉烏爾·豪斯曼) → Hannah Höch (漢娜·霍赫)（influence）
-- 可信度:0.38　來源層:institution　出處:leaf_hoch_hannah_s
-- 主張:1915 年相識,由 Hausmann 引介進入柏林團體
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Osip Brik (奧西普·布里克) → Alexander Rodchenko (羅欽可)（influence）
-- 可信度:0.38　來源層:institution　出處:leaf_brik_osip_s
-- 主張:〈攝影蒙太奇〉等文;頁面以 Brik 文字連結到 Rodchenko 的早期創作
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Ed Ruscha (魯沙) → William Jenkins (威廉·詹金斯)（influence）
-- 可信度:0.3　來源層:critic　出處:leaf_judgement
-- 主張:二手頁面(Falmouth 部落格)稱其深受 Ruscha 影響
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Lisa Corrin (麗莎·柯林) → Stan Douglas (史坦·道格拉斯)（exhibit）
-- 可信度:0.38　來源層:institution　出處:leaf2_corrin_lisa_s
-- 主張:柯林任蛇形藝廊首席策展人期間展出史丹·道格拉斯
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Richard Howard (理查·霍華) → 巴特 (Roland Barthes)（discusses）
-- 可信度:0.38　來源層:institution　出處:leaf2_howard_r_s
-- 主張:霍華是羅蘭·巴特著作的英譯者
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## Koen Wessing (柯恩·韋辛) → 刺點 (punctum)（discusses）
 - 可信度:0.38　來源層:institution　出處:leaf2_wessing_koen_s
 - 主張:韋辛的尼加拉瓜照片成為巴特刺點概念的例證
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## The Day Nobody Died (2008) (《沒有人死去的那天》) → Adam Broomberg & Oliver Chanarin (布魯姆伯格與查納林)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:leaf2_broomberg_chanarin_s
-- 主張:2008;Tate holds 'The Press Conference, June 9, 2008, The Day Nobody Died' (second page)
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -823,22 +663,6 @@
 ## Walker Evans (沃克·伊凡斯) → Alec Soth (亞歷克·索斯)（influence）
 - 可信度:0.38　來源層:institution　出處:leaf2_soth_s
 - 主張:索斯的作品植根於沃克．艾文斯開創的美國公路攝影傳統
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Robert Frank (法蘭克) → Alec Soth (亞歷克·索斯)（influence）
-- 可信度:0.38　來源層:institution　出處:leaf2_soth_s
-- 主張:索斯的作品植根於羅伯．法蘭克發展的美國公路攝影傳統
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Stephen Shore (蕭爾) → Alec Soth (亞歷克·索斯)（influence）
-- 可信度:0.38　來源層:institution　出處:leaf2_soth_s
-- 主張:索斯的作品植根於史蒂芬．蕭爾發展的美國公路攝影傳統
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
