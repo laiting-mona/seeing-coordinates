@@ -358,3 +358,21 @@ The Art Story（Gursky 冷面、Levitt 與 Cartier-Bresson 街頭）與 Phillips
 - 《The Camera Goes to War: Vietnam》沒有任何美術館的展覽頁列出名單（2025 年的展出地 Mulva 文化中心只有地方活動公告），8 條展出關係改引 L'Œil de la Photographie 的展覽報導（critic）。兩份名單不一致：巡迴展公司頁列了 Malcolm Browne，L'Œil 的名單沒有，Browne 的展出關係降為待查證。
 - 研究者找到的 Henri Huet 頁面在 Hood Museum 的子網域上，看起來像課堂作業，改用 Visa pour l'Image 的生平頁與 Virginia War Memorial 的報導（LIFE 封面，1966 年 2 月）。
 - Malcolm Browne 的頁面稱他為戰地記者（war correspondent），claim 已照實寫；澤田教一的普立茲獎頁面寫的是 1965 年的戰地攝影整體，沒點名渡河那張照片，claim 已收窄。
+
+## P. 第 16 輪（2026-10-30）依影響力處理待查證：前 180 條
+
+**排序：** `tools/make_checklist.py` 新增「影響力」欄：兩端節點在正式圖（approved + auto）中的連結數總和；若有一端還沒有任何正式連結（這條關係會把它接進圖），另加 20。原典查核清單依此排序。375 條中前 180 條（影響力 ≥ 14）分六組並行處理，每組最多 30 次搜尋；其餘 195 條留待下一輪。
+
+**判定類型：** 頁面明載／收窄／改類型（同兩個節點、頁面支持另一種關係）／關係類型不成立／矛盾／純屬詮釋（找不到評論者、策展人或學者作此連結）／查無。轉檔用 `apply_resolve_v19.py`（scratchpad，一次性），新來源 108 個（`rq_<md5>_s`）。
+
+| 結果 | 條數 | 說明 |
+|---|---|---|
+| 核可 | 89 | 頁面明載 |
+| 核可、claim 收窄 | 19 | 例：Steichen 以「徹底改變時尚攝影」入時尚攝影（ICP），Höch 與 Hausmann「一般認為」發現蒙太奇（Britannica） |
+| 更正類型後核可 | 10 | DeCarava 與紀實攝影由「屬於」改為「對照」（Whitney：與攝影聯盟的紀實模式「形成鮮明對照」）；Penn 與 Sander 由「對照」改為 Sander 影響 Penn；Krauss 對超現實主義改為「討論」；Elkins 與巴特改為 Elkins 討論巴特；Wall 對觀念攝影改為「討論」；紀錄片《War Photographer》對 Nachtwey 改為「討論」；Shore 對冷面美學改為「屬於」；《Cruel and Tender》改為討論《American Photographs》；何藩改為「屬於」街頭攝影；波特萊爾與班雅明改為班雅明討論波特萊爾 |
+| 剔除 | 6 | Lucie Rie→具本昌（觸發《白瓷》系列的是一張照片裡的月亮壺）、Steichen→Shore（買下他 14 歲的照片）、土門拳賞「延伸」土門拳（以其名設立的獎）、Stieglitz→Arnold Newman（「發掘」）、Szarkowski→Lartigue（為他辦展）、Tate→Thomas Weski（策展人不是展出對象） |
+| 仍待查證 | 56 | 純屬詮釋 17、查無 15、審核否決 23、改類型後與既有關係重複 1 |
+
+**審核否決的 23 條（研究者判為成立，我依既有規則退回）：** 頁面只用動詞 documented 而未用「紀實攝影」一詞（Watkins、W. Eugene Smith、O'Sullivan、回望展、國家攝影文化中心）；頁面講的是別的概念（吳印咸是民族主義影像美學、侯淑姿是超越新聞攝影式觀看、LIFE 是白人中產視角與發表園地、《Images in Spite of All》是集中營照片）；「植根於某傳統」或「某學派」不等於影響（Soth 與 Evans／Shore、Streuli 與貝歇）；只有評論者詮釋或論文標題（《Conflict, Time, Photography》、Bazin 與巴特）；證據不足或反證（October 與索引性只有書目、Edward 對 Brett Weston 頁面說「未指導拍攝」、超現實與直接攝影的引句沒有對照、《Between Past and Future》只有展區名）；仍需人工判斷（寇德卡說從布列松身上「學到很多，但不太是攝影」；多木浩二、岡田隆彥在 Provoke 展中只列為創刊同人）；霍華英譯《明室》應以英譯本節點建模。
+
+**稽核抓到的問題：** 兩組研究者對同一頁（Routledge 書頁、SPE 講者頁）給了不同層級，第一次建來源時採了先到的那個，造成兩條關係的層級與來源不一致；`audit_data.py` 判為硬性錯誤、測試擋下，已統一為 institution。

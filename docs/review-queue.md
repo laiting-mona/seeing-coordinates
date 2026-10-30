@@ -1,16 +1,8 @@
 # 待人工判斷佇列（review queue）
 
-共 375 條。程式自動彙整,判斷與決定由你填。
+共 251 條。程式自動彙整,判斷與決定由你填。
 
 > 每條的「你的決定」欄預設空白。你確認後填 approved / rejected / 重構,我再據此更新圖。
-
-## 巴特 (Roland Barthes) → 班雅明 (Walter Benjamin)（extend）
-- 可信度:0.55　來源層:critic　出處:photography_theory
-- 主張:明室的此曾在與班雅明靈光有理論共鳴(詮釋性連結)
-- 調查紀錄:巴特《明室》本身未引用班雅明(維基 Camera Lucida 證實)。但《明室》中譯者許綺玲(中央大學法文系教授)同時也譯班雅明《迎向靈光消逝的年代》,華語圈多篇評論明確討論班雅明與巴特在攝影上的關係(靈光 vs 刺點、攝影的『危險』)。故此關係屬『評論者/譯者主張』的二手連結,非直接影響。
-- 參考來源:https://french.ncu.edu.tw/?page_id=541; https://www.thenewslens.com/article/138472
-- 我的建議:改標為 critic 層的二手主張,引許綺玲為來源;不要當直接 influence。
-- **你的決定:** ________
 
 ## Robert Frank (法蘭克) → Stephen Shore (蕭爾)（influence）
 - 可信度:0.65　來源層:primary　出處:the_americans
@@ -60,28 +52,12 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## 桑塔格 (Susan Sontag) → Diane Arbus (黛安·阿巴斯)（discusses）
-- 可信度:0.3　來源層:popular　出處:wiki:On_Photography
-- 主張:桑塔格《論攝影》以阿巴斯對比 FSA 紀實,論 1970 年代犬儒美學
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## 桑塔格 (Susan Sontag) → Paul Strand (保羅·史川德)（discusses）
 - 可信度:0.42　來源層:primary　出處:on_photography
 - 主張:桑塔格《論攝影》討論保羅·史川德
 - 調查紀錄:《論攝影》提及史川德;待原典查證。
 - 參考來源:(無)
 - 我的建議:查證後可 approved。
-- **你的決定:** ________
-
-## 卡提耶-布列松 (Henri Cartier-Bresson) → Stephen Shore (蕭爾)（contrast）
-- 可信度:0.33　來源層:other　出處:interpretation
-- 主張:決定性瞬間與蕭爾冷面靜態美學相對,為蕭爾一代的反動
-- 調查紀錄:詮釋性:決定性瞬間 vs 蕭爾冷面靜態,是常見的世代對照,非文本明說。
-- 參考來源:(無)
-- 我的建議:當詮釋性對照,保留低權重或由你定。
 - **你的決定:** ________
 
 ## 布迪厄 (Pierre Bourdieu) → 意識形態 (ideology)（extend）
@@ -98,14 +74,6 @@
 - 調查紀錄:popular 層示意邊:評論平台對蕭爾庶民美學的討論真實,但未綁定具體文章。
 - 參考來源:(無)
 - 我的建議:綁定具體 ASX/平台文章後再定;或維持 popular 低權重。
-- **你的決定:** ________
-
-## Stephen Shore (蕭爾) → deadpan (冷面美學)（discusses）
-- 可信度:0.4　來源層:other　出處:cphmag
-- 主張:攝影評論平台常以冷面美學描述蕭爾
-- 調查紀錄:popular 層示意邊:平台常以冷面描述蕭爾,待綁定具體文章。
-- 參考來源:(無)
-- 我的建議:綁定具體文章後再定;或維持 popular 低權重。
 - **你的決定:** ________
 
 ## W. Eugene Smith (尤金·史密斯) → concerned photography (關懷攝影)（influence）
@@ -196,14 +164,6 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## 克拉考爾 (Siegfried Kracauer) → 班雅明 (Walter Benjamin)（influence）
-- 可信度:0.3　來源層:critic　出處:marien_history_s
-- 主張:克拉考爾對攝影與歷史的思考與班雅明相呼應
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## 巴贊 (André Bazin) → 巴特 (Roland Barthes)（influence）
 - 可信度:0.3　來源層:critic　出處:marien_history_s
 - 主張:巴贊的指示性本體論與巴特《明室》遙相呼應
@@ -228,14 +188,6 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## 東松照明 → 森山大道（influence）
-- 可信度:0.3　來源層:critic　出處:marien_history_s
-- 主張:東松照明影響森山大道一代
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## 荒木經惟 → 深瀨昌久（contrast）
 - 可信度:0.3　來源層:critic　出處:marien_history_s
 - 主張:荒木經惟與深瀨昌久同屬戰後日本私寫真的不同面向
@@ -247,14 +199,6 @@
 ## 阮義忠 → 郭力昕（contrast）
 - 可信度:0.3　來源層:critic　出處:rewrite_photo
 - 主張:阮義忠與郭力昕對台灣影像倫理觀點各異
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## 何藩 → 街頭攝影 (street photography)（influence）
-- 可信度:0.3　來源層:critic　出處:marien_history_s
-- 主張:何藩以光影構成的香港街景聞名
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -343,14 +287,6 @@
 ## Harry Callahan (卡拉漢) → Aaron Siskind (西斯金)（contrast）
 - 可信度:0.3　來源層:critic　出處:marien_history_s
 - 主張:卡拉漢與西斯金同在設計學院推進抽象攝影
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Irving Penn (佩恩) → August Sander (桑德)（contrast）
-- 可信度:0.3　來源層:critic　出處:marien_history_s
-- 主張:佩恩的職人肖像與桑德的類型肖像相呼應
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -476,14 +412,6 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## Illuminations (啟迪（Illuminations）) → 機械複製時代的藝術作品 (The Work of Art in the Age of Mechanical Reproduction)（translate）
-- 可信度:0.38　來源層:institution　出處:illuminations_s
-- 主張:《啟迪》收錄並英譯〈機械複製時代的藝術作品〉
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## Burning with Desire (慾望的燃燒：攝影的起源) → 明室 (Camera Lucida)（critique）
 - 可信度:0.3　來源層:critic　出處:burning_desire
 - 主張:Batchen 質疑巴特對攝影起源的預設
@@ -524,33 +452,9 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## L'acte photographique (1983) (攝影行為) → Philippe Dubois (菲利普·杜布瓦)（belongs_to）
-- 可信度:0.42　來源層:critic　出處:dis_index_s
-- 主張:杜布瓦《攝影行為》(1983)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## Philippe Dubois (菲利普·杜布瓦) → Charles Sanders Peirce (查爾斯·桑德斯·皮爾斯)（extend）
 - 可信度:0.3　來源層:critic　出處:dis_index_s
 - 主張:杜布瓦以索引論攝影
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Peter Galassi (彼得·加拉西) → 紐約現代美術館 (Museum of Modern Art)（belongs_to）
-- 可信度:0.42　來源層:critic　出處:dis_index_s
-- 主張:加拉西任 MoMA 攝影部策展人
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## After Photography (2008) (攝影之後) → Fred Ritchin (弗雷德·里奇)（belongs_to）
-- 可信度:0.42　來源層:critic　出處:dis_index_s
-- 主張:里奇《攝影之後》(2008)
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -564,33 +468,9 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## 波特萊爾 (Charles Baudelaire) → 班雅明 (Walter Benjamin)（influence）
-- 可信度:0.3　來源層:critic　出處:baudelaire_1859_s
-- 主張:班雅明〈攝影小史〉引用波特萊爾
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## Jonathan Crary (克拉里) → The Stereoscope and the Stereograph (1859) (立體鏡與立體照片)（discusses）
 - 可信度:0.42　來源層:critic　出處:crary_techniques_s
 - 主張:《觀察者的技術》以立體鏡為核心案例
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Pictorial Effect in Photography (1869) (攝影中的繪畫效果) → Henry Peach Robinson (亨利·皮奇·羅賓遜)（belongs_to）
-- 可信度:0.42　來源層:critic　出處:ap_emerson_s
-- 主張:羅賓遜《攝影中的繪畫效果》(1869)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## The Two Ways of Life (1857) (人生的兩條路) → Oscar Gustave Rejlander (奧斯卡·雷蘭德)（belongs_to）
-- 可信度:0.42　來源層:critic　出處:ap_emerson_s
-- 主張:雷蘭德《人生的兩條路》(1857)
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -700,73 +580,9 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## Raoul Hausmann (拉烏爾·豪斯曼) → 攝影蒙太奇 (photomontage)（influence）
-- 可信度:0.3　來源層:critic　出處:dada_montage_s
-- 主張:豪斯曼自稱與霍赫「發明」攝影蒙太奇
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Hannah Höch (漢娜·霍赫) → 攝影蒙太奇 (photomontage)（influence）
-- 可信度:0.3　來源層:critic　出處:dada_montage_s
-- 主張:《用菜刀切開…》(1919)等蒙太奇
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## John Heartfield (約翰·哈特菲爾德) → 攝影蒙太奇 (photomontage)（influence）
-- 可信度:0.3　來源層:critic　出處:dada_montage_s
-- 主張:為 AIZ 製作政治攝影蒙太奇
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Alexander Rodchenko (羅欽可) → 攝影蒙太奇 (photomontage)（influence）
-- 可信度:0.3　來源層:critic　出處:dada_montage_s
-- 主張:蘇聯構成主義蒙太奇
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## László Moholy-Nagy (莫侯利-納吉) → 攝影蒙太奇 (photomontage)（influence）
-- 可信度:0.3　來源層:critic　出處:dada_montage_s
-- 主張:包浩斯的「fotoplastik」
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## 攝影蒙太奇 (photomontage) → 直接攝影 (straight photography)（contrast）
-- 可信度:0.3　來源層:critic　出處:dada_montage_s
-- 主張:蒙太奇挑戰攝影的真實性宣稱
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Naked City (1945) (裸城) → Weegee (維吉)（belongs_to）
-- 可信度:0.52　來源層:institution　出處:moma_abbott_s
-- 主張:維吉《裸城》(1945)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## Weegee (維吉) → 街頭攝影 (street photography)（belongs_to）
 - 可信度:0.38　來源層:institution　出處:moma_abbott_s
 - 主張:紐約犯罪現場與街頭
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Roy DeCarava (羅伊·德卡拉瓦) → 紀實攝影 (documentary photography)（belongs_to）
-- 可信度:0.42　來源層:critic　出處:africanah_s
-- 主張:哈林日常紀實
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -804,81 +620,9 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## In Flagrante (1988) (現行犯) → Chris Killip (克里斯·基利普)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:ims_koudelka_s
-- 主張:基利普《現行犯》(1988)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Chris Killip (克里斯·基利普) → 紀實攝影 (documentary photography)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:ims_koudelka_s
-- 主張:英格蘭東北部去工業化紀實
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Bill Brandt (比爾·布蘭特) → 紀實攝影 (documentary photography)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:ims_koudelka_s
-- 主張:《英國人在家》等英國社會紀實
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## Paul Graham (保羅·葛拉漢) → New Color (新彩色)（extend）
 - 可信度:0.38　來源層:institution　出處:ims_koudelka_s
 - 主張:將彩色帶入英國紀實攝影
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Douglas Crimp (道格拉斯·克林普) → 圖景世代 (Pictures Generation)（influence）
-- 可信度:0.38　來源層:institution　出處:artists_space_s
-- 主張:策劃命名此世代的展覽並撰圖錄論文
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Pictures (essay, 1979) (〈圖景〉) → Douglas Crimp (道格拉斯·克林普)（belongs_to）
-- 可信度:0.52　來源層:institution　出處:artists_space_s
-- 主張:克林普〈圖景〉(October,1979 擴寫版)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## 圖景世代 (Pictures Generation) → 挪用 (appropriation)（extend）
-- 可信度:0.38　來源層:institution　出處:met_pg_s
-- 主張:圖景世代以挪用為核心策略
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Twentysix Gasoline Stations (1963) (二十六個加油站) → Ed Ruscha (魯沙)（belongs_to）
-- 可信度:0.59　來源層:primary　出處:wall_marks_s
-- 主張:魯沙《二十六個加油站》(1963)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Homes for America (1966) (美國的家) → Dan Graham (丹·葛拉漢)（belongs_to）
-- 可信度:0.59　來源層:primary　出處:wall_marks_s
-- 主張:丹·葛拉漢〈美國的家〉(1966)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Ed Ruscha (魯沙) → conceptual photography (概念攝影)（influence）
-- 可信度:0.42　來源層:primary　出處:wall_marks_s
-- 主張:概念攝影代表
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -996,55 +740,7 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## Vilém Flusser (傅拉瑟) → 班雅明 (Walter Benjamin)（contrast）
-- 可信度:0.3　來源層:critic　出處:flusser_pz_s
-- 主張:技術影像論與機械複製論的差異
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Why Photography Matters as Art as Never Before (2008) (攝影為何前所未有地重要) → tableau (圖景 / 舞台式)（discusses）
-- 可信度:0.3　來源層:critic　出處:frieze_fried_s
-- 主張:以大型 tableau 攝影為主要對象
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## 明室 (Camera Lucida) → Robert Mapplethorpe (梅普索普)（discusses）
-- 可信度:0.3　來源層:critic　出處:ss_cl_s
-- 主張:《明室》論及之攝影家(待原典頁碼)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## 明室 (Camera Lucida) → Nadar (納達爾)（discusses）
-- 可信度:0.3　來源層:critic　出處:ss_cl_s
-- 主張:《明室》論及之攝影家(待原典頁碼)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## 明室 (Camera Lucida) → August Sander (桑德)（discusses）
-- 可信度:0.3　來源層:critic　出處:ss_cl_s
-- 主張:《明室》論及之攝影家(待原典頁碼)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## 明室 (Camera Lucida) → Lewis Hine (路易斯·海因)（discusses）
-- 可信度:0.3　來源層:critic　出處:ss_cl_s
-- 主張:《明室》論及之攝影家(待原典頁碼)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## 明室 (Camera Lucida) → Alfred Stieglitz (史蒂格利茲)（discusses）
 - 可信度:0.3　來源層:critic　出處:ss_cl_s
 - 主張:《明室》論及之攝影家(待原典頁碼)
 - 調查紀錄:(待補)
@@ -1084,14 +780,6 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## Mission Héliographique 1851 → 紀實攝影 (documentary photography)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:met_mission_s
-- 主張:法國政府歷史建築委員會委託的建築紀錄
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## Mathew Brady (馬修·布雷迪) → Alexander Gardner (亞歷山大·加德納)（influence）
 - 可信度:0.38　來源層:institution　出處:met_civilwar_s
 - 主張:Gardner 管理 Brady 華府工作室,1862.11 離開自立
@@ -1111,30 +799,6 @@
 ## Gardner's Photographic Sketch Book of the War (1865–66) (加德納戰爭攝影素描集) → Timothy O'Sullivan (歐蘇利文)（belongs_to）
 - 可信度:0.52　來源層:institution　出處:met_civilwar_s
 - 主張:素描集中多張為 O'Sullivan 所攝
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Roger Fenton (羅傑·芬頓) → 戰地攝影 (war photography)（belongs_to）
-- 可信度:0.59　來源層:primary　出處:campany_safety_s
-- 主張:克里米亞戰爭攝影
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Mathew Brady (馬修·布雷迪) → 肖像攝影 (portraiture)（belongs_to）
-- 可信度:0.52　來源層:institution　出處:met_civilwar_s
-- 主張:華府與紐約肖像工作室
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Rosalind Krauss (克勞絲) → 超現實主義攝影 (surrealist photography)（interpret）
-- 可信度:0.52　來源層:institution　出處:artexte_amour_s
-- 主張:以索引/間隔理論重讀超現實主義攝影
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -1188,14 +852,6 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## Kamoinge Workshop (卡莫因格工作坊) → 紀實攝影 (documentary photography)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:whitney_kamoinge_s
-- 主張:「以自己參與其中的方式描繪自己的社群」
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## Kamoinge Workshop (卡莫因格工作坊) → concerned photography (關懷攝影)（contrast）
 - 可信度:0.38　來源層:institution　出處:whitney_kamoinge_s
 - 主張:自我再現對外來者的關懷式紀實
@@ -1244,14 +900,6 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## late photography (遲到的攝影) → 戰地攝影 (war photography)（extend）
-- 可信度:0.59　來源層:primary　出處:campany_safety_s
-- 主張:戰後/災後地景的遲到紀錄
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## W. Eugene Smith (尤金·史密斯) → 紀實攝影 (documentary photography)（belongs_to）
 - 可信度:0.3　來源層:critic　出處:bsr_life_s
 - 主張:助產士 Maude Callen 專題(2,600 張)
@@ -1271,30 +919,6 @@
 ## LIFE 雜誌 → 意識形態 (ideology)（influence）
 - 可信度:0.42　來源層:critic　出處:bsr_life_s
 - 主張:展覽論點:LIFE 的報導推廣以白人中產為主的視角,形塑主流意識形態
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Man Ray (曼·雷) → Harper's Bazaar（belongs_to）
-- 可信度:0.38　來源層:institution　出處:barnes_brodovitch_s
-- 主張:與 Brodovitch 合作、作品刊於 Bazaar
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Richard Avedon (阿維頓) → 時尚攝影 (fashion photography)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:barnes_brodovitch_s
-- 主張:時尚攝影代表
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Irving Penn (佩恩) → 時尚攝影 (fashion photography)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:barnes_brodovitch_s
-- 主張:時尚攝影代表
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -1332,14 +956,6 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## Edward Steichen (史泰欽) → 時尚攝影 (fashion photography)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:barnes_brodovitch_s
-- 主張:1923–37 Condé Nast 首席攝影師
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## Frederick Douglass (弗雷德里克·道格拉斯) → 肖像攝影 (portraiture)（belongs_to）
 - 可信度:0.3　來源層:critic　出處:pw_douglass_s
 - 主張:「19 世紀被拍最多的美國人」;從不對鏡頭微笑
@@ -1365,22 +981,6 @@
 - **你的決定:** ________
 
 ## Julia Margaret Cameron (茱莉亞·瑪格麗特·卡麥隆) → 肖像攝影 (portraiture)（belongs_to）
-- 可信度:0.3　來源層:critic　出處:pw_douglass_s
-- 主張:肖像攝影代表
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## August Sander (桑德) → 肖像攝影 (portraiture)（belongs_to）
-- 可信度:0.3　來源層:critic　出處:pw_douglass_s
-- 主張:肖像攝影代表
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Diane Arbus (黛安·阿巴斯) → 肖像攝影 (portraiture)（belongs_to）
 - 可信度:0.3　來源層:critic　出處:pw_douglass_s
 - 主張:肖像攝影代表
 - 調查紀錄:(待補)
@@ -1444,41 +1044,9 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## New York School (photography) (紐約學派(攝影)) → 街頭攝影 (street photography)（extend）
-- 可信度:0.3　來源層:critic　出處:lensculture_nys_s
-- 主張:紐約街頭的主觀、粗粒子取徑
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Alexey Brodovitch (阿列克謝·布羅多維奇) → New York School (photography) (紐約學派(攝影))（influence）
-- 可信度:0.3　來源層:critic　出處:lensculture_nys_s
-- 主張:Design Laboratory 教學影響多位成員
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Roy E. Stryker (羅伊·史崔克) → 紀實攝影 (documentary photography)（influence）
-- 可信度:0.38　來源層:institution　出處:loc_fsa_s
-- 主張:以拍攝腳本指導攝影師,形塑美國紀實攝影典範
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## Edward Weston (愛德華·威斯頓) → Brett Weston (布雷特·威斯頓)（influence）
 - 可信度:0.3　來源層:critic　出處:britannica_f64_s
 - 主張:父子;Brett 隨父學習攝影
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Ansel Adams (安瑟·亞當斯) → Theorie der Fotografie I–IV, 1839–1995 (2006)（belongs_to）
-- 可信度:0.42　來源層:critic　出處:perlentaucher_kemp_s
-- 主張:書評僅列「Adams」;推定為 Ansel Adams,待核對目錄
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -1503,30 +1071,6 @@
 ## Nick Ut (黃功吾) → 普立茲獎 (Pulitzer Prize)（belongs_to）
 - 可信度:0.28　來源層:other　出處:art2art_vietnam_s
 - 主張:1973 年普立茲獎(頁面未載年份)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## American Photographs → Cruel and Tender: The Real in the Twentieth-Century Photograph (2003) (殘酷與溫柔:二十世紀攝影中的真實(2003))（influence）
-- 可信度:0.38　來源層:institution　出處:tate_cruel_s
-- 主張:「Evans 的《American Photographs》開啟了許多融合神話與日常的美國影像」
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Cruel and Tender: The Real in the Twentieth-Century Photograph (2003) (殘酷與溫柔:二十世紀攝影中的真實(2003)) → 紀實攝影 (documentary photography)（extend）
-- 可信度:0.38　來源層:institution　出處:tate_cruel_s
-- 主張:從 Sander 到 diCorcia 的紀實譜系(詮釋)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## The Photographer's Eye (攝影師之眼) → The Photographer's Eye 1964（extend）
-- 可信度:0.52　來源層:institution　出處:moma_pe1964_s
-- 主張:1966 年同名書以展覽為基礎(新聞稿未提書)
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -1564,25 +1108,9 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## Salon of 1859 (一八五九年沙龍) → Classic Essays on Photography (1980) (攝影經典論文集)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:cca_classic_s
-- 主張:收錄
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## John Tagg (塔格) → 米歇爾·傅柯 (Michel Foucault)（extend）
 - 可信度:0.38　來源層:institution　出處:cca_burden_s
 - 主張:以傅柯的權力/知識分析攝影的證據功能(教科書共識)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Camera Lucida: Another Little History of Photography (2008) (明室:另一部攝影小史) → 明室 (Camera Lucida)（discusses）
-- 可信度:0.38　來源層:institution　出處:cca_meaning_s
-- 主張:〈明室:另一部攝影小史〉
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -1604,33 +1132,9 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## Untitled Film Stills (1977–80) (無題電影劇照) → 圖景世代 (Pictures Generation)（belongs_to）
-- 可信度:0.52　來源層:institution　出處:moma_sherman_s
-- 主張:圖景世代代表作(詮釋)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## Untitled Film Stills (1977–80) (無題電影劇照) → tableau (圖景 / 舞台式)（belongs_to）
 - 可信度:0.38　來源層:institution　出處:moma_sherman_s
 - 主張:擺拍/舞台式自拍(詮釋)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Jeff Wall (傑夫·沃爾) → conceptual photography (概念攝影)（extend）
-- 可信度:0.3　來源層:critic　出處:cdnenc_wall_s
-- 主張:觀念藝術為其形成期的關鍵運動
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Carrie Mae Weems (凱莉·梅·威姆斯) → 挪用 (appropriation)（belongs_to）
-- 可信度:0.52　來源層:institution　出處:moma_weems_s
-- 主張:挪用既有影像(詮釋)
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -1708,14 +1212,6 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## Man Ray (曼·雷) → modernist photography (現代主義攝影(1920–50 年代))（belongs_to）
-- 可信度:0.52　來源層:institution　出處:tate_radical_s
-- 主張:展覽歸類(1920–50 年代現代主義)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## Imogen Cunningham (康寧漢) → modernist photography (現代主義攝影(1920–50 年代))（belongs_to）
 - 可信度:0.52　來源層:institution　出處:tate_radical_s
 - 主張:展覽歸類(1920–50 年代現代主義)
@@ -1740,33 +1236,9 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## Walker Evans (沃克·伊凡斯) → modernist photography (現代主義攝影(1920–50 年代))（belongs_to）
-- 可信度:0.52　來源層:institution　出處:tate_radical_s
-- 主張:展覽歸類(1920–50 年代現代主義)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## Otto Steinert (奧托·施泰納特) → abstract photography (抽象攝影)（influence）
 - 可信度:0.38　來源層:institution　出處:tate_sol_s
 - 主張:luminograms
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Edward Steichen (史泰欽) → Stephen Shore (蕭爾)（influence）
-- 可信度:0.42　來源層:critic　出處:loeil_shore_s
-- 主張:14 歲作品即被 Steichen(時任 MoMA 攝影部主任)購藏
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Andy Warhol (安迪·沃荷) → Stephen Shore (蕭爾)（influence）
-- 可信度:0.42　來源層:critic　出處:loeil_shore_s
-- 主張:曾在 Warhol 的 Factory 工作
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -1799,14 +1271,6 @@
 ## Tokyo Suburbia (1998) → New Topographics 展 1975（extend）
 - 可信度:0.3　來源層:critic　出處:ima_kimura_s
 - 主張:郊外住宅地景的無表情取徑,評論常溯及新地誌(判斷)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## 土門拳賞 → 土門拳（extend）
-- 可信度:0.2　來源層:other　出處:prizesworld_domon_s
-- 主張:以土門拳之名設立;正賞為佐藤忠良製作之銅像
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -1868,14 +1332,6 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## 國立臺灣美術館 → 文化部(臺灣)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:ncpi_mirror_s
-- 主張:展覽頁:指導單位文化部
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## 回望:臺灣攝影家的島嶼凝視 1970s–1990s(國美館,2018) → 紀實攝影 (documentary photography)（extend）
 - 可信度:0.52　來源層:institution　出處:ntmofa_lookback_s
 - 主張:展覽主旨:1970–90 年代攝影家深入閩南、客家、外省與原住民族群,以影像紀錄時代困頓與個人探問
@@ -1895,110 +1351,6 @@
 ## Chaotic Harmony: Contemporary Korean Photography (2009–10) (混沌的和諧:韓國當代攝影(休士頓美術館/聖塔芭芭拉,2009–10)) → 具本昌（exhibit）
 - 可信度:0.15　來源層:popular　出處:powells_chaotic_s
 - 主張:出版社簡介點名(與另 40 位新興韓國藝術家)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Diary of a Century (1970) (百年日記) → Jacques Henri Lartigue (拉蒂格)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:leaf_lartigue_s
-- 主張:1970 出版;版面由 Richard Avedon 與 Bea Feitler 設計
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## La Banlieue de Paris (1949) (巴黎郊區) → Robert Doisneau (杜瓦諾)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:leaf_doisneau_s
-- 主張:1949 出版
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## On the Mines (1973) (礦場上) → David Goldblatt (大衛·戈德布拉特)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:leaf_goldblatt_s
-- 主張:1973
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Some Afrikaners Photographed (1975) (被拍攝的阿非利卡人) → David Goldblatt (大衛·戈德布拉特)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:leaf_goldblatt_s
-- 主張:1975
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## The Hotel (1983) (旅館) → Sophie Calle (蘇菲·卡爾)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:leaf_calle_sophie_s
-- 主張:1983 (Room 28, February 16th 1981)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Herbarium (1982) (植物標本集) → Joan Fontcuberta (瓊·方庫貝塔)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:leaf_fontcuberta_s
-- 主張:1982 (Guillumeta Polymorpha)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Sputnik (1997) (史普尼克) → Joan Fontcuberta (瓊·方庫貝塔)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:leaf_fontcuberta_s
-- 主張:1997 (Official portrait of Ivan Istochnikov)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## War Photographer (2001) (戰地攝影師) → James Nachtwey (納赫特韋)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:leaf_nachtwey_s
-- 主張:2001(紀錄片)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## In This Proud Land (1973) (在這片驕傲的土地) → Roy E. Stryker (羅伊·史崔克)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:leaf_stryker_roy_s
-- 主張:Stryker 與 Nancy Wood 合著,收 200 幅 FSA 照片
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## What Photography Is (2011) (攝影是什麼) → James Elkins (艾爾金斯)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:leaf_elkins_s
-- 主張:Routledge 2011
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Geschichte der Fotografie: Von Daguerre bis Gursky (2011) (攝影史:從達蓋爾到古斯基) → Wolfgang Kemp (沃夫岡·坎普)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:leaf_kemp_wolfgang_s
-- 主張:2011
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## George Rodger: An Adventure in Photography, 1908–1995 (2003) → Carole Naggar (卡羅·納加)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:leaf_naggar_carole_s
-- 主張:2003
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## John Szarkowski (薩考斯基) → Jacques Henri Lartigue (拉蒂格)（influence）
-- 可信度:0.38　來源層:institution　出處:leaf_lartigue_s
-- 主張:Szarkowski 見其作品後隔年於 MoMA 為其辦首展
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -2124,25 +1476,9 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## Walker Evans (沃克·伊凡斯) → Ben Shahn (夏恩)（influence）
-- 可信度:0.38　來源層:institution　出處:leaf_shahn_s
-- 主張:Walker Evans 推薦他給 Stryker 加入攝影小組
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## Ed Ruscha (魯沙) → William Jenkins (威廉·詹金斯)（influence）
 - 可信度:0.3　來源層:critic　出處:leaf_judgement
 - 主張:二手頁面(Falmouth 部落格)稱其深受 Ruscha 影響
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Alfred Stieglitz (史蒂格利茲) → Arnold Newman (阿諾·紐曼)（influence）
-- 可信度:0.38　來源層:institution　出處:leaf_newman_arnold_s
-- 主張:頁面列 Stieglitz 與 Ansel Adams 為其結識並受影響者
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -2159,22 +1495,6 @@
 ## Sol LeWitt (索爾·勒維特) → conceptual photography (概念攝影)（belongs_to）
 - 可信度:0.38　來源層:institution　出處:leaf_lewitt_s
 - 主張:與觀念藝術及極簡藝術相關(1966–70 群展)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## 巴特 (Roland Barthes) → James Elkins (艾爾金斯)（influence）
-- 可信度:0.3　來源層:critic　出處:leaf_judgement
-- 主張:Routledge 頁:以《明室》為討論起點
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## George Rodger: An Adventure in Photography, 1908–1995 (2003) → George Rodger (羅傑)（discusses）
-- 可信度:0.38　來源層:institution　出處:leaf_naggar_carole_s
-- 主張:George Rodger 傳記
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -2204,30 +1524,6 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## 泰特美術館 (Tate) → Tacita Dean (塔西塔·迪恩)（exhibit）
-- 可信度:0.38　來源層:institution　出處:leaf2_dean_tacita_s
-- 主張:泰特現代美術館渦輪大廳展出迪恩的35mm影片投影
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Five Day Forecast (1991) (《五日預報》) → Lorna Simpson (蘿娜·辛普森)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:leaf2_simpson_lorna_s
-- 主張:1991;work in Tate collection (second page)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Twenty Questions (A Sampler) (1986) (《二十個問題（樣本）》) → Lorna Simpson (蘿娜·辛普森)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:leaf2_simpson_lorna_s
-- 主張:1986;work in Tate collection (second page)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## Donald B. Kuspit (唐納·庫斯皮特) → Artforum（belongs_to）
 - 可信度:0.3　來源層:critic　出處:leaf2_kuspit_s
 - 主張:庫斯皮特曾任《Artforum》特約編輯
@@ -2244,14 +1540,6 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## Thomas Lawson (湯瑪斯·勞森) → 圖景世代 (Pictures Generation)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:leaf2_lawson_thomas_s
-- 主張:勞森文集被出版社定位為說明圖像世代興起的關鍵文本
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## Thomas Lawson (湯瑪斯·勞森) → Artforum（belongs_to）
 - 可信度:0.38　來源層:institution　出處:leaf2_lawson_thomas_s
 - 主張:勞森的評論文章刊於《Artforum》等刊物
@@ -2260,25 +1548,9 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## Julien Levy (朱利安·列維) → 卡提耶-布列松 (Henri Cartier-Bresson)（exhibit）
-- 可信度:0.38　來源層:institution　出處:leaf2_levy_julien_s
-- 主張:列維畫廊展出並販售卡蒂埃－布列松作品
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## Julien Levy (朱利安·列維) → Nadar (納達爾)（exhibit）
 - 可信度:0.38　來源層:institution　出處:leaf2_levy_julien_s
 - 主張:列維畫廊展出並販售納達爾作品
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Julien Levy (朱利安·列維) → Alfred Stieglitz (史蒂格利茲)（exhibit）
-- 可信度:0.38　來源層:institution　出處:leaf2_levy_julien_s
-- 主張:列維畫廊展出並販售史蒂格利茲作品
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -2308,14 +1580,6 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## Lisa Corrin (麗莎·柯林) → Andreas Gursky (古斯基)（exhibit）
-- 可信度:0.38　來源層:institution　出處:leaf2_corrin_lisa_s
-- 主張:柯林任蛇形藝廊首席策展人期間（1997-2001）展出古斯基
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## Lisa Corrin (麗莎·柯林) → Hans Haacke (漢斯·哈克)（exhibit）
 - 可信度:0.38　來源層:institution　出處:leaf2_corrin_lisa_s
 - 主張:柯林任蛇形藝廊首席策展人期間展出漢斯·哈克
@@ -2340,14 +1604,6 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## Feast: Radical Hospitality in Contemporary Art (2012) (《盛宴：當代藝術中的激進款待》) → Stephanie Smith (史蒂芬妮·史密斯)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:leaf2_smith_stephanie_s
-- 主張:2012;exhibition, Smart Museum
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## Richard Howard (理查·霍華) → 巴特 (Roland Barthes)（discusses）
 - 可信度:0.38　來源層:institution　出處:leaf2_howard_r_s
 - 主張:霍華是羅蘭·巴特著作的英譯者
@@ -2359,22 +1615,6 @@
 ## Koen Wessing (柯恩·韋辛) → 刺點 (punctum)（discusses）
 - 可信度:0.38　來源層:institution　出處:leaf2_wessing_koen_s
 - 主張:韋辛的尼加拉瓜照片成為巴特刺點概念的例證
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## 泰特美術館 (Tate) → Thomas Weski (托馬斯·韋斯基)（exhibit）
-- 可信度:0.38　來源層:institution　出處:leaf2_weski_thomas_s
-- 主張:韋斯基與德克斯特於泰特現代美術館共同策劃《Cruel and Tender》
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## 泰特美術館 (Tate) → Richard Billingham (比林漢)（exhibit）
-- 可信度:0.38　來源層:institution　出處:leaf2_billingham_s
-- 主張:泰特英國館2001年透納獎入圍展展出比林漢
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -2460,22 +1700,6 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## 泰特美術館 (Tate) → Ingrid Pollard (英格麗·波拉德)（exhibit）
-- 可信度:0.38　來源層:institution　出處:leaf2_pollard_s
-- 主張:2022 年入圍透納獎，於泰特利物浦展出
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## 泰特美術館 (Tate) → Karen Knorr (凱倫·諾爾)（exhibit）
-- 可信度:0.38　來源層:institution　出處:leaf2_knorr_karen_s
-- 主張:泰特典藏其《Belgravia》《Gentlemen》等作品
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## Louise Dahl-Wolfe (露易絲·達爾-沃爾夫) → Harper's Bazaar（belongs_to）
 - 可信度:0.38　來源層:institution　出處:leaf2_dahl_wolfe_s
 - 主張:1936 至 1958 年任《Harper's Bazaar》首席攝影師
@@ -2556,14 +1780,6 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## 泰特美術館 (Tate) → Shireen Seno (希林·施諾)（exhibit）
-- 可信度:0.38　來源層:institution　出處:leaf2_shireen_seno_s
-- 主張:泰特現代美術館於2018年放映施諾的《緊張的翻譯》英國首映
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## Jan Groover (珍·葛魯佛) → tableau (圖景 / 舞台式)（belongs_to）
 - 可信度:0.3　來源層:critic　出處:leaf2_groover_jan_s
 - 主張:葛魯佛以大型相機拍攝靜物場景，實驗空間與錯覺
@@ -2596,30 +1812,6 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## Lucy Soutter (露西·蘇特) → Aperture (magazine)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:leaf2_soutter_lucy_s
-- 主張:蘇特曾為《Aperture》等刊物撰寫藝評
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Lucy Soutter (露西·蘇特) → Afterimage（belongs_to）
-- 可信度:0.38　來源層:institution　出處:leaf2_soutter_lucy_s
-- 主張:蘇特曾為《Afterimage》撰寫藝評
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Love and Money: Queers, Class, and Cultural Production (2013) (愛與金錢：酷兒、階級與文化生產) → Lisa Henderson (麗莎·亨德森)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:leaf2_henderson_lisa_s
-- 主張:2013;book; NYU Press
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## Lisa Henderson (麗莎·亨德森) → 街頭攝影 (street photography)（discusses）
 - 可信度:0.38　來源層:institution　出處:leaf2_henderson_lisa_s
 - 主張:亨德森〈公共攝影中的取用與同意〉探討公共場域拍攝的同意倫理
@@ -2636,41 +1828,9 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## Photography Theory in Historical Perspective: Case Studies from Contemporary Art (2011) (歷史視角下的攝影理論：當代藝術個案研究) → Hilde Van Gelder (希爾德·范格爾德)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:leaf2_van_gelder_hilde_s
-- 主張:2011;book co-authored with Helen Westgeest; Wiley-Blackwell
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## Martin Lister (馬丁·李斯特) → digital manipulation / composite imaging (數位合成影像)（discusses）
 - 可信度:0.38　來源層:institution　出處:leaf2_lister_martin_s
 - 主張:李斯特探討數位科技對攝影約二十年的再媒介化與轉化
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Significant Insignificance: Banality in Contemporary Photography (2013) (意味深長的無意義：當代攝影中的平庸) → Steven Skopik (史蒂文·斯科皮克)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:leaf2_skopik_steven_s
-- 主張:2013;lecture, SPE National Conference (9 March 2013)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Steven Skopik (史蒂文·斯科皮克) → Afterimage（belongs_to）
-- 可信度:0.38　來源層:institution　出處:leaf2_skopik_steven_s
-- 主張:斯科皮克的文章與評論刊於《Afterimage》
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Steven Skopik (史蒂文·斯科皮克) → History of Photography（belongs_to）
-- 可信度:0.38　來源層:institution　出處:leaf2_skopik_steven_s
-- 主張:斯科皮克的文章刊於《History of Photography》期刊
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -2716,22 +1876,6 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## 泰特美術館 (Tate) → Taryn Simon (塔琳·賽門)（exhibit）
-- 可信度:0.38　來源層:institution　出處:leaf2_simon_taryn_s
-- 主張:泰特現代美術館 2011 年展出《被宣告死亡的活人及其他篇章》
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## 紐約現代美術館 (Museum of Modern Art) → Taryn Simon (塔琳·賽門)（exhibit）
-- 可信度:0.38　來源層:institution　出處:leaf2_simon_taryn_s
-- 主張:紐約現代美術館 2012 年展出《被宣告死亡的活人及其他篇章》
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## Contemporary Arts Center, Cincinnati (辛辛那提當代藝術中心) → Taryn Simon (塔琳·賽門)（exhibit）
 - 可信度:0.38　來源層:institution　出處:leaf2_simon_taryn_s
 - 主張:辛辛那提當代藝術中心 2006 年展出《無辜者》
@@ -2772,81 +1916,9 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## Mirrors and Windows 1978 → Anthony Barboza (安東尼·巴博薩)（exhibit）
-- 可信度:0.38　來源層:institution　出處:leaf2_barboza_s
-- 主張:1978 年 MoMA〈鏡與窗〉展出巴博薩作品,他與德卡拉瓦是僅有的兩位黑人攝影師
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Mirrors and Windows 1978 → Roy DeCarava (羅伊·德卡拉瓦)（exhibit）
-- 可信度:0.38　來源層:institution　出處:leaf2_barboza_s
-- 主張:1978 年 MoMA〈鏡與窗〉展出德卡拉瓦作品
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## 紐約現代美術館 (Museum of Modern Art) → Louise Lawler (露易絲·勞勒)（exhibit）
-- 可信度:0.38　來源層:institution　出處:leaf2_marcoci_roxana_s
-- 主張:MoMA舉辦〈Louise Lawler: WHY PICTURES NOW〉(2017)，由瑪可琪策劃
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## 紐約現代美術館 (Museum of Modern Art) → Zoe Leonard (柔伊·李奧納德)（exhibit）
-- 可信度:0.38　來源層:institution　出處:leaf2_marcoci_roxana_s
-- 主張:MoMA舉辦〈Zoe Leonard: Analogue〉(2015)，由瑪可琪策劃
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## 紐約現代美術館 (Museum of Modern Art) → Wolfgang Tillmans (提爾曼斯)（exhibit）
-- 可信度:0.38　來源層:institution　出處:leaf2_marcoci_roxana_s
-- 主張:MoMA舉辦〈Wolfgang Tillmans: To look without fear〉(2022)，由瑪可琪策劃
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## Sarah Meister (莎拉·邁斯特) → August Sander (桑德)（discusses）
 - 可信度:0.38　來源層:institution　出處:leaf2_meister_sarah_s
 - 主張:邁斯特共同主持MoMA與哥倫比亞大學的奧古斯特·桑德研究計畫
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Eva Respini (伊娃·雷斯皮尼) → 紐約現代美術館 (Museum of Modern Art)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:leaf2_respini_eva_s
-- 主張:雷斯皮尼曾任MoMA策展人約15年
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## 紐約現代美術館 (Museum of Modern Art) → Cindy Sherman (辛蒂·雪曼)（exhibit）
-- 可信度:0.38　來源層:institution　出處:leaf2_respini_eva_s
-- 主張:雷斯皮尼在MoMA策劃辛蒂·雪曼回顧展
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## 紐約現代美術館 (Museum of Modern Art) → Walid Raad (瓦利德·拉德)（exhibit）
-- 可信度:0.38　來源層:institution　出處:leaf2_respini_eva_s
-- 主張:雷斯皮尼在MoMA策劃瓦利德·拉德回顧展
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## 紐約現代美術館 (Museum of Modern Art) → Robert Heinecken (羅伯特·海尼肯)（exhibit）
-- 可信度:0.38　來源層:institution　出處:leaf2_respini_eva_s
-- 主張:雷斯皮尼在MoMA策劃羅伯特·海涅肯回顧展
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -2863,14 +1935,6 @@
 ## Bernd and Hilla Becher (貝歇夫婦) → Beat Streuli (畢特·史特勒利)（influence）
 - 可信度:0.38　來源層:institution　出處:leaf2_streuli_s
 - 主張:史特勒利移居杜塞道夫後受貝歇學派大幅攝影影響
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Karl Kraus and the critics (1997) (卡爾·克勞斯及其批評者) → Harry Zohn (哈利·佐恩)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:leaf2_zohn_s
-- 主張:1997;book
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -2900,22 +1964,6 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## 趙介軒 → 四月影會（belongs_to）
-- 可信度:0.38　來源層:institution　出處:east_china_korea_aaa_april_s
-- 主張:趙介軒為四月影會少數女性攝影者之一(1979–81)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Limb Eung-sik → 人類一家 展 1955（belongs_to）
-- 可信度:0.38　來源層:institution　出處:east_china_korea_mmca_limb_pr_s
-- 主張:林應植於1957年將MoMA「人類一家」展引進韓國
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## 來自南韓的問候(三影堂攝影藝術中心,2019) → 具本昌（exhibit）
 - 可信度:0.38　來源層:institution　出處:east_china_korea_ts_korea2019_s
 - 主張:2019年三影堂「Reinventing Our Time」單元展出具本昌等五位戰後世代攝影家
@@ -2924,25 +1972,9 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## Lucie Rie (露西·里) → 具本昌（influence）
-- 可信度:0.38　來源層:institution　出處:east_china_korea_state_koo_s
-- 主張:具本昌因見到露西·里的照片而開始《白瓷》系列
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## VIVO → 「10人之眼」展(1957–59)（extend）
 - 可信度:0.3　來源層:critic　出處:east_japan_vivo_artscape_vivo_s
 - 主張:VIVO（1959）成員與「10人之眼」展（1957–59）參展者大幅重疊，承其而起
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## 「10人之眼」展(1957–59) → 東松照明（exhibit）
-- 可信度:0.3　來源層:critic　出處:east_japan_vivo_tab_vivo_2007_s
-- 主張:東松照明參加「10人之眼」展，並以此為契機於 1959 年共組 VIVO
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -2972,33 +2004,9 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## 東松照明 → Provoke（influence）
-- 可信度:0.38　來源層:institution　出處:east_japan_vivo_top_1968_2013_s
-- 主張:東松照明自 1966 年起經「寫真100年」展至《Provoke》創刊（1968）皆居核心位置
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## VIVO → 森山大道（influence）
-- 可信度:0.38　來源層:institution　出處:east_japan_vivo_top_moriyama_2020_s
-- 主張:森山大道 1961 年以加入 VIVO 為目標上京
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## 王信 → 報導攝影 (reportage photography)（belongs_to）
 - 可信度:0.38　來源層:institution　出處:east_taiwan_ntu_tdr_wangxin_s
 - 主張:王信被視為臺灣報導攝影的先驅(陳姿琳2018年碩論)
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## 王信 → 紀實攝影 (documentary photography)（belongs_to）
-- 可信度:0.38　來源層:institution　出處:east_taiwan_anu_wayfaring_s
-- 主張:王信被視為臺灣紀實攝影的先驅
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
