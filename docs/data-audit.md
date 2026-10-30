@@ -6,9 +6,17 @@
 
 無。
 
-## 警告:148 項(不阻擋建圖,列出供人工判斷)
+## 警告:213 項(不阻擋建圖,列出供人工判斷)
 
+- **formal edge resting only on a book (no URL, no page): cited source**:60 條,來源:`newhall_history_s`×18、`new_topographics`×6、`provoke_s`×6、`camera_lucida`×4、`work_of_art`×2、`photographers_eye`×2、`bazin_ontology_s`×2、`debord_spectacle_s`×2、`baudrillard_sim_s`×2、`decisive_s`×2、`nakahira_plants_s`×2、`becher_typ_s`×2、`ways_of_seeing`×1、`about_looking`×1、`on_photography`×1、`eggleston_guide`×1、`steichen_fom_s`×1、`szarkowski_mw_s`×1、`arbus_mono_s`×1、`ballad_s`×1、`moriyama_bye_s`×1、`fukase_ravens_s`×1
 - **evidence URL differs from the cited source's URL (second page or upgrade)**:44 條,來源:`leaf2_walker_ian_s`×6、`leaf2_fusco_coco_s`×3、`leaf2_luce_henry_s`×3、`leaf2_heron_liz_s`×2、`leaf2_doy_gen_s`×2、`leaf2_antin_eleanor_s`×2、`leaf2_dibbets_jan_s`×2、`leaf2_hatch_connie_s`×2、`leaf2_van_gelder_hilde_s`×2、`verify_d47728c0f2_s`×1、`leaf_seymour_s`×1、`leaf_rodger_s`×1、`leaf_bischof_s`×1、`leaf_webb_alex_s`×1、`eoa_evans_s`×1、`leaf2_richter_gerhard_s`×1、`leaf2_hausser_robert_s`×1、`leaf2_stromholm_s`×1、`leaf2_knorr_karen_s`×1、`leaf2_wajcman_s`×1、`leaf2_gilbert_george_s`×1、`leaf2_kolbowski_s`×1、`leaf2_wegman_s`×1、`leaf2_gilden_s`×1、`leaf2_schott_john_s`×1、`leaf2_jenkins_william_s`×1、`leaf2_scruton_s`×1、`leaf2_manet_s`×1、`leaf2_acconci_s`×1
+- **verification URL on a dev/staging/test host**:2
+  - `cartier_bresson -contrast-> shore: https://staging2.phaidon.com/agenda/photography/articles/2017/november/27/how-stephen-shores-serial-pictures-changed-photography`
+  - `tillmans -belongs_to-> snapshot_aesthetic: https://test01.ku.dk/:obvius/pureproxy/3974268/en/publications/snapshot%C3%A6stetik-om-wolfgang-tillmans-refleksive-realisme`
+- **entity with no formal edge (isolated dot in the viewer)**:3
+  - `wu_yinxian`
+  - `workshop_mag_w`
+  - `lucie_rie`
 - **work with no person author**:5
   - `provoke_journal`
   - `lightaura_zh`

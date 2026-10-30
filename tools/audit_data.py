@@ -1,6 +1,10 @@
 """Data-pipeline audit: checks the curated dataset for integrity problems.
 
-Last edited: 2026-10-29 (second pass) — two new hard errors: approved/auto edges whose only
+Last edited: 2026-10-30: four new warnings from the pipeline check: approved edges whose
+confidence differs from the tier formula, formal edges resting only on a book (no URL, no
+page), verification URLs on a dev / staging / test host, and entities with no formal edge
+(isolated dots in the viewer).
+2026-10-29 (second pass): two new hard errors: approved/auto edges whose only
 verification URLs are Wikipedia / Baidu Baike / Namu wiki (not acceptable hubs), and data
 files with mixed line endings; a new warning for approved edges resting on an other/popular-
 tier source; self-primary edges (a work citing itself, tier primary) no longer count as
@@ -16,8 +20,10 @@ Hard errors (must be zero; test_core.py asserts this):
   wiki page, mixed line endings in a data file.
 Warnings (reported, not fatal):
   approved edges with no URL anywhere (self-primary excepted), approved edges on an
-  other/popular-tier source, evidence URL different from the source's URL, isolated entities, works with no person author (magazines and
-  translations excepted), sources no relation cites.
+  other/popular-tier source, evidence URL different from the source's URL, isolated entities,
+  entities with no formal edge, works with no person author (magazines and translations
+  excepted), sources no relation cites, approved confidence off the tier formula, formal
+  edges resting only on a book, verification URLs on a dev/staging/test host.
 Writes docs/data-audit.md. Usage: python tools/audit_data.py
 """
 import collections
@@ -36,9 +42,11 @@ except Exception:
     pass
 
 OUTPUT_MD = ROOT / "docs/data-audit.md"
-EM_DASH = "—"
+EM_DASH = "\u2014"   # em-dash, written as an escape
 URL_IN_EVIDENCE = re.compile(r"查證來源: (\S+?)(?:｜|$)")
 WIKI_HOSTS = ("wikipedia.org", "baike.baidu.com", "namu.wiki")   # not acceptable verification hubs
+NON_PRODUCTION_HOST = re.compile(r"(^|[./])(dev|staging\d*|test\d*)[.-]")   # e.g. staging2.phaidon.com, test01.ku.dk
+FORMAL = ("approved", "auto")
 DATA_FILES = ("data/seed_entities.csv", "data/sources.csv", "data/raw_relations.jsonl")
 # Works that legitimately have no person author edge: periodicals, series, translations, anthologies of others.
 AUTHORLESS_OK_TYPES = ("magazine", "journal", "雜誌", "期刊", "季刊", "叢書", "series", "文庫", "Chinese ed", "中譯", "Illuminations")
@@ -135,7 +143,17 @@ def warnings(entities, sources, relations) -> dict[str, list]:
             warn["approved edge resting on an other/popular-tier source (aggregator or legacy label)"].append(r["source_ref"])
         if match and source.get("ref") and not match.group(1).startswith(source["ref"].split("?")[0][:40]):
             warn["evidence URL differs from the cited source's URL (second page or upgrade)"].append(r["source_ref"])
+        label = f"{r['source_id']} -{r['kind']}-> {r['target_id']}"
+        if r["status"] == "approved" and abs(r["confidence"] - auto_confidence(source.get("tier", "other"), 1, 1.0)) > 1e-6:
+            warn["approved confidence differs from the tier formula"].append(f"{label} ({r['confidence']})")
+        urls = verification_urls(r, source)
+        if r["status"] in FORMAL and not urls and not is_self_primary(r, source):
+            warn["formal edge resting only on a book (no URL, no page): cited source"].append(r["source_ref"])
+        if r["status"] in FORMAL and urls and NON_PRODUCTION_HOST.search(re.sub(r"^https?://", "", urls[-1])):
+            warn["verification URL on a dev/staging/test host"].append(f"{label}: {urls[-1]}")
+    formal_used = collections.Counter(n for r in relations if r["status"] in FORMAL for n in (r["source_id"], r["target_id"]))
     warn["isolated entity"] = [i for i in entities if used[i] == 0]
+    warn["entity with no formal edge (isolated dot in the viewer)"] = [i for i in entities if used[i] and not formal_used[i]]
     warn["work with no person author"] = [
         i for i, e in entities.items() if e["type"] == "work" and i not in authored
         and not any(tag.lower() in (e["name_zh"] + " " + e["name_en"]).lower() for tag in AUTHORLESS_OK_TYPES)]
@@ -156,7 +174,7 @@ def render(errors, warns, entities, sources, relations) -> str:
         lines.append("無。")
     lines += ["", f"## 警告:{sum(len(v) for v in warns.values())} 項(不阻擋建圖,列出供人工判斷)", ""]
     for name, items in warns.items():
-        counted = collections.Counter(items) if name.startswith(("evidence URL", "approved edge resting")) else None
+        counted = collections.Counter(items) if name.startswith(("evidence URL", "approved edge resting", "formal edge resting")) else None
         if counted:
             lines += [f"- **{name}**:{len(items)} 條,來源:" + "、".join(f"`{k}`×{v}" for k, v in counted.most_common(MAX_LISTED))]
         else:
