@@ -1,6 +1,7 @@
 """Query layer: natural-language question → graph lookup → structured result → text.
 
-Last edited: 2026-10-27 — wrapped state in QueryEngine; resolve() now does an exact
+Last edited: 2026-11-02: edge records carry role and year; a belongs_to edge is read with its role verb.
+2026-10-27: wrapped state in QueryEngine; resolve() now does an exact
 substring pass first (incl. unambiguous person surnames) and falls back to
 difflib.get_close_matches at cutoff 0.8 (≈4× faster than the old per-window loop); fixed status label so `approved` edges are
 shown as in-graph rather than 待判斷; renderers split per result type.
@@ -21,7 +22,7 @@ import networkx as nx
 
 import recommend
 from authority import TIER_BASE
-from schema import KIND_VERB_ZH
+from schema import KIND_VERB_ZH, ROLE_VERB_ZH
 
 ROOT = Path(__file__).resolve().parent
 FUZZY_CUTOFF = 0.8          # 0.75 let 的攝影 match 遲到的攝影; 0.8 keeps genuine typos (桑塔各)
@@ -148,7 +149,8 @@ class QueryEngine:
         return {"from": self.display(source), "to": self.display(target), "kind": data.get("kind"),
                 "claim": data.get("claim"), "evidence": data.get("evidence") or "",
                 "source": data.get("source_ref"), "tier": data.get("source_tier"),
-                "confidence": data.get("confidence"), "status": data.get("status")}
+                "confidence": data.get("confidence"), "status": data.get("status"),
+                "role": data.get("role"), "year": data.get("year")}
 
     def both_directions(self, a: str, b: str) -> list[dict]:
         return ([self.edge_record(a, b, d) for d in self.edges_between(a, b)]
@@ -227,7 +229,8 @@ class QueryEngine:
 # ---------- renderers: structured dict → text ----------
 def edge_line(edge: dict) -> str:
     tag = "入圖" if is_in_graph(edge["status"]) else "待判斷"
-    return (f"{edge['from']} {KIND_VERB_ZH.get(edge['kind'], edge['kind'])} {edge['to']}"
+    verb = ROLE_VERB_ZH.get(edge.get("role")) if edge.get("role") else KIND_VERB_ZH.get(edge["kind"], edge["kind"])
+    return (f"{edge['from']} {verb} {edge['to']}"
             f"(可信度 {edge['confidence']}、{edge['tier']}層、出處 {edge['source']}、{tag})")
 
 
@@ -248,7 +251,8 @@ def render_provenance(r: dict) -> str:
     blocks = []
     for e in r["edges"]:
         tag = "已入圖(查證或可信度達標)" if is_in_graph(e["status"]) else "⚠ 待人工判斷(尚未確認,不可當定論)"
-        blocks.append(f"🔎 查核:{e['from']} {KIND_VERB_ZH.get(e['kind'], e['kind'])} {e['to']}\n  主張:{e['claim']}\n"
+        verb = ROLE_VERB_ZH.get(e.get("role")) if e.get("role") else KIND_VERB_ZH.get(e["kind"], e["kind"])
+        blocks.append(f"🔎 查核:{e['from']} {verb} {e['to']}\n  主張:{e['claim']}\n"
                       f"  證據:{e['evidence'] or '(無)'}\n  出處:{e['source']}　來源層:{e['tier']}"
                       f"　可信度:{e['confidence']}\n  狀態:{tag}")
     return "\n".join(blocks)

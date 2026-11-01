@@ -1,6 +1,8 @@
 """Render build/graph.json into a single-file interactive viewer (build/viewer.html).
 
-Last edited: 2026-10-29 — viewer.html written with LF on every OS. 2026-10-28: fixed black/white theme; removed hint text; UX pass: search box,
+Last edited: 2026-11-02: edge cards show the belongs_to role (作者是 / 收錄於 / 獲獎 ...) instead of
+the bare verb 屬於, and the relation year when known.
+2026-10-29: viewer.html written with LF on every OS. 2026-10-28: fixed black/white theme; removed hint text; UX pass: search box,
 type filter chips, neighbour focus on click, clickable verification links, layout frozen after
 stabilisation. 2026-10-27: functions + main(); kind labels from schema.KIND_VERB_ZH.
 
@@ -13,7 +15,7 @@ import json
 from pathlib import Path
 
 import data_io
-from schema import KIND_VERB_ZH
+from schema import KIND_VERB_ZH, ROLE_VERB_ZH
 
 ROOT = Path(__file__).resolve().parent
 OUTPUT_HTML = ROOT / "build/viewer.html"
@@ -110,6 +112,7 @@ TEMPLATE = r"""<title>觀看的座標 譜系地圖</title>
 <script>
 const DATA = /*__DATA__*/;
 const KIND = /*__KIND__*/;
+const ROLE = /*__ROLE__*/;
 const css = k => getComputedStyle(document.documentElement).getPropertyValue(k).trim();
 const TYPES = {person:"人物", work:"著作", concept:"概念", event:"事件", institution:"機構"};
 const colorOf = t => css("--" + t) || css("--concept");
@@ -196,12 +199,13 @@ function evidenceHtml(ev){
 }
 function relCard(e, dir){
   const other = dir === "out" ? e.to : e.from;
-  const verb = KIND[e.kind] || e.kind;
+  const verb = (e.kind === "belongs_to" && ROLE[e.role]) ? ROLE[e.role] : (KIND[e.kind] || e.kind);
+  const year = e.year ? `<span>${e.year}</span>` : "";
   const badge = e.status === "review" ? '<span class="badge b-review">待判斷</span>' : '<span class="badge b-auto">入圖</span>';
   const arrow = dir === "out" ? `<span class="verb">${esc(verb)}</span> → ${esc(nameOf(other))}` : `${esc(nameOf(other))} <span class="verb">${esc(verb)}</span> →`;
   return `<div class="rel"><div class="top"><span class="arrow" data-id="${esc(other)}">${arrow}</span>${badge}</div>`
     + `<div class="claim">${esc(e.claim || "")}</div>`
-    + `<div class="meta"><span>可信度 ${e.conf}</span><span>${esc(e.tier)} 層</span><span>出處 ${esc(e.ref)}</span>${evidenceHtml(e.evidence)}</div></div>`;
+    + `<div class="meta">${year}<span>可信度 ${e.conf}</span><span>${esc(e.tier)} 層</span><span>出處 ${esc(e.ref)}</span>${evidenceHtml(e.evidence)}</div></div>`;
 }
 function showNode(id){
   const n = byId[id]; if(!n) return;
@@ -268,7 +272,8 @@ def to_viewer_edges(graph_json: dict) -> list[dict]:
     return [{"from": e["source"], "to": e["target"], "kind": e.get("kind", ""),
              "claim": e.get("claim", ""), "evidence": e.get("evidence", ""),
              "ref": e.get("source_ref", ""), "tier": e.get("source_tier", ""),
-             "conf": e.get("confidence", 0), "status": e.get("status", "")}
+             "conf": e.get("confidence", 0), "status": e.get("status", ""),
+             "role": e.get("role"), "year": e.get("year")}
             for e in graph_json["links"]]
 
 
@@ -276,7 +281,8 @@ def render_html(nodes: list[dict], edges: list[dict]) -> str:
     """Embed data and kind labels into the HTML template."""
     data_json = json.dumps({"nodes": nodes, "edges": edges}, ensure_ascii=False)
     kind_json = json.dumps(KIND_VERB_ZH, ensure_ascii=False)
-    return TEMPLATE.replace("/*__DATA__*/", data_json).replace("/*__KIND__*/", kind_json)
+    role_json = json.dumps(ROLE_VERB_ZH, ensure_ascii=False)
+    return TEMPLATE.replace("/*__DATA__*/", data_json).replace("/*__KIND__*/", kind_json).replace("/*__ROLE__*/", role_json)
 
 
 def build_viewer(root: Path = ROOT) -> tuple[int, int]:

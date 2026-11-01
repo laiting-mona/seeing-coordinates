@@ -21,7 +21,7 @@ import networkx as nx
 
 import data_io
 from authority import TIER_BASE
-from schema import KIND_VERB_ZH
+from schema import KIND_VERB_ZH, ROLE_VERB_ZH
 
 ROOT = Path(__file__).resolve().parent
 CENTRALITY_FLOOR = 0.5   # keeps low-centrality targets from scoring zero
@@ -102,10 +102,11 @@ def format_recommendation(graph: nx.MultiDiGraph, target: str, score: float, see
                           direction: str = "out") -> dict:
     """Turn one scored candidate into a reader-facing item with reason, source and status."""
     name = lambda node_id: graph.nodes[node_id].get("label") or graph.nodes[node_id].get("name_zh", node_id)
-    verb = KIND_VERB_ZH.get(edge.get("kind"), "連結到")
+    verb = (ROLE_VERB_ZH.get(edge.get("role")) if edge.get("kind") == "belongs_to" and edge.get("role")
+            else KIND_VERB_ZH.get(edge.get("kind"), "連結到"))
     pending_note = "(待查證,尚未確認)" if edge.get("status") == "review" else ""
     if direction == "in":
-        verb = "是其作品" if edge.get("kind") == "belongs_to" else verb + "它"
+        verb = "是其作品" if edge.get("role") == "author" else ("收錄它" if edge.get("role") == "contributor" else verb + "它")
         reason = f"你已讀「{name(seed)}」;「{name(target)}」{verb}:{edge.get('claim', '')}{pending_note}"
     else:
         reason = f"你已讀「{name(seed)}」,它{verb}「{name(target)}」:{edge.get('claim', '')}{pending_note}"

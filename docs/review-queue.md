@@ -1,6 +1,6 @@
 # 待人工判斷佇列（review queue）
 
-共 86 條。程式自動彙整,判斷與決定由你填。
+共 87 條。程式自動彙整,判斷與決定由你填。
 
 > 每條的「你的決定」欄預設空白。你確認後填 approved / rejected / 重構,我再據此更新圖。
 
@@ -118,7 +118,7 @@
 
 ## Jonathan Crary (克拉里) → 凝視 (gaze)（influence）
 - 可信度:0.3　來源層:critic　出處:crary_techniques_s
-- 主張:克拉里把觀看主體歷史化，重構凝視問題
+- 主張:克拉里把觀看主體歷史化,重構凝視問題
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -319,6 +319,14 @@
 ## Thinking Photography (1982) (思考攝影) → 意識形態 (ideology)（influence）
 - 可信度:0.38　來源層:institution　出處:thinking_photo_s
 - 主張:以意識形態批判為共同取徑
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## The Bowery in two inadequate descriptive systems (1974–75) (鮑爾里街:兩個不充分的描述系統) → Whitney Museum of American Art (惠特尼美術館)（belongs_to）
+- 可信度:0.75　來源層:institution　出處:whitney_bowery_s
+- 主張:惠特尼美術館館藏
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)

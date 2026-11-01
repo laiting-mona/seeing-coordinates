@@ -1,6 +1,6 @@
 # 資料流程稽核(tools/audit_data.py 產生)
 
-實體 1643、來源 990、關係 2904(auto 67、approved 2720、review 86、rejected 31)。
+實體 1645、來源 990、關係 2906(auto 67、approved 2721、review 87、rejected 31)。
 
 ## 硬性錯誤:0 項
 

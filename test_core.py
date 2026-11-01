@@ -73,6 +73,26 @@ def test_entity_table_integrity() -> None:
     check("duplicate_entities 抓得到第二個 Liz Wells", dupes and "wells" in dupes[0][1])
 
 
+def test_role_and_year() -> None:
+    base = dict(source_id="a", target_id="b", kind="belongs_to", claim="c", source_ref="s", source_tier="primary", confidence=0.85)
+    try:
+        schema.Relation(**base)
+        ok_missing = False
+    except Exception:
+        ok_missing = True
+    check("belongs_to 沒有 role 會被 schema 擋掉", ok_missing)
+    try:
+        schema.Relation(**dict(base, kind="influence", role="author"))
+        ok_wrong = False
+    except Exception:
+        ok_wrong = True
+    check("非 belongs_to 帶 role 會被 schema 擋掉", ok_wrong)
+    check("infer_role: 作品→人物 = author", data_io.infer_role("work", "person") == "author")
+    check("infer_role: 人物→獎項 = award", data_io.infer_role("person", "institution", "木村伊兵衛寫真賞") == "award")
+    check("year_from_claim: 單一年份", data_io.year_from_claim("1975 年成為會員") == 1975)
+    check("year_from_claim: 兩個年份不猜,改用事件 id", data_io.year_from_claim("1974–1984 (2009)", "pictures_gen_met_2009") == 2009)
+
+
 def test_data_audit() -> None:
     sys.path.insert(0, str(Path(__file__).resolve().parent / "tools"))
     import audit_data
@@ -119,6 +139,7 @@ def main() -> None:
     test_metrics()
     test_display_label_rule()
     test_entity_table_integrity()
+    test_role_and_year()
     test_data_audit()
     test_graph_build()
     test_recommend_and_query()

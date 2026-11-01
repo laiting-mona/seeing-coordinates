@@ -1,6 +1,9 @@
 """Data-pipeline audit: checks the curated dataset for integrity problems.
 
-Last edited: 2026-10-30: four new warnings from the pipeline check: approved edges whose
+Last edited: 2026-11-02: role / year rules. Hard errors: a belongs_to edge without a role, a
+role on another kind, a role that contradicts the node types (the rule in data_io.infer_role),
+a year outside 1500-2100. Warning: a year the claim does not state and the event id does not
+carry. 2026-10-30: four new warnings from the pipeline check: approved edges whose
 confidence differs from the tier formula, formal edges resting only on a book (no URL, no
 page), verification URLs on a dev / staging / test host, and entities with no formal edge
 (isolated dots in the viewer).
@@ -17,7 +20,8 @@ Hard errors (must be zero; test_core.py asserts this):
   duplicate entities, em-dashes in claims or names, event/institution --belongs_to--> person,
   'auto' edges whose confidence the formula cannot reproduce from the cited source's tier,
   relation tier different from its source's tier, approved/auto edges verified only by a
-  wiki page, mixed line endings in a data file.
+  wiki page, mixed line endings in a data file, belongs_to without role / role on another kind /
+  role contradicting the node types.
 Warnings (reported, not fatal):
   approved edges with no URL anywhere (self-primary excepted), approved edges on an
   other/popular-tier source, evidence URL different from the source's URL, isolated entities,
@@ -47,6 +51,9 @@ URL_IN_EVIDENCE = re.compile(r"查證來源: (\S+?)(?:｜|$)")
 WIKI_HOSTS = ("wikipedia.org", "baike.baidu.com", "namu.wiki")   # not acceptable verification hubs
 NON_PRODUCTION_HOST = re.compile(r"(^|[./])(dev|staging\d*|test\d*)[.-]")   # e.g. staging2.phaidon.com, test01.ku.dk
 FORMAL = ("approved", "auto")
+# role pairs (stored, rule) a reviewer may legitimately choose: a person -> institution edge can be an award only
+# when the name says so, so these are the cases where the stored role is a deliberate refinement of the rule.
+ROLE_TOLERATED = {("award", "member"), ("member", "part_of"), ("participant", "contributor"), ("contributor", "participant")}
 DATA_FILES = ("data/seed_entities.csv", "data/sources.csv", "data/raw_relations.jsonl")
 # Works that legitimately have no person author edge: periodicals, series, translations, anthologies of others.
 AUTHORLESS_OK_TYPES = ("magazine", "journal", "雜誌", "期刊", "季刊", "叢書", "series", "文庫", "Chinese ed", "中譯", "Illuminations")
@@ -123,6 +130,16 @@ def hard_errors(entities, sources, relations, root: Path = ROOT) -> dict[str, li
                 f"{label} (conf {r['confidence']}, source {r['source_ref']} = {source['tier']})")
         if r["status"] in ("approved", "auto") and wiki_only(r, source):
             errors["approved/auto edge verified only by a wiki page"].append(label)
+        role = r.get("role")
+        if k == "belongs_to" and not role:
+            errors["belongs_to without role"].append(label)
+        if k != "belongs_to" and role:
+            errors["role on a non-belongs_to edge"].append(f"{label} ({role})")
+        if k == "belongs_to" and role:
+            target = entities[t]
+            expected = data_io.infer_role(entities[s]["type"], target["type"], f"{target['name_zh']} {target['name_en'] or ''}")
+            if expected and role != expected and not (role, expected) in ROLE_TOLERATED:
+                errors["role contradicts the node types"].append(f"{label} ({role}, rule says {expected})")
     return {k: v for k, v in errors.items() if v}
 
 
@@ -146,6 +163,11 @@ def warnings(entities, sources, relations) -> dict[str, list]:
         label = f"{r['source_id']} -{r['kind']}-> {r['target_id']}"
         if r["status"] == "approved" and abs(r["confidence"] - auto_confidence(source.get("tier", "other"), 1, 1.0)) > 1e-6:
             warn["approved confidence differs from the tier formula"].append(f"{label} ({r['confidence']})")
+        if r.get("year"):
+            event = r["target_id"] if entities.get(r["target_id"], {}).get("type") == "event" else (
+                r["source_id"] if entities.get(r["source_id"], {}).get("type") == "event" else "")
+            if str(r["year"]) not in (r.get("claim") or "") and not data_io.EVENT_ID_YEAR.search(event):
+                warn["year not stated in the claim or the event id"].append(f"{label} ({r['year']})")
         urls = verification_urls(r, source)
         if r["status"] in FORMAL and not urls and not is_self_primary(r, source):
             warn["formal edge resting only on a book (no URL, no page): cited source"].append(r["source_ref"])

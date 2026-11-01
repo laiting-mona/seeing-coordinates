@@ -1,6 +1,7 @@
 """Extraction pipeline on the subscription route (no paid API calls).
 
-Last edited: 2026-10-27 — loaders moved to data_io; template read inside the function;
+Last edited: 2026-11-02: ingest fills `role` for belongs_to relations (data_io.infer_role) and
+`year` from the claim, so new relations satisfy the schema. 2026-10-27: loaders moved to data_io; template read inside the function;
 main() dispatches by mode.
 
   prepare  write one prompt file per source to build/prompts/<source_id>.txt; paste your
@@ -39,8 +40,13 @@ def prepare(root: Path = ROOT) -> int:
     return len(sources)
 
 
-def to_relation(raw: dict) -> Relation:
-    """Fill confidence/status for an extracted relation dict and validate it."""
+def to_relation(raw: dict, entities: dict[str, dict]) -> Relation:
+    """Fill confidence/status/role/year for an extracted relation dict and validate it."""
+    if raw.get("kind") == "belongs_to" and not raw.get("role"):
+        s, t = entities.get(raw["source_id"], {}), entities.get(raw["target_id"], {})
+        raw["role"] = data_io.infer_role(s.get("type", ""), t.get("type", ""), f"{t.get('name_zh', '')} {t.get('name_en', '')}")
+    if raw.get("year") is None:
+        raw["year"] = data_io.year_from_claim(raw.get("claim", ""))
     raw.setdefault("confidence", auto_confidence(raw.get("source_tier", "other"),
                                                  raw.get("n_sources", 1), raw.get("directness", 1.0)))
     raw["status"] = route(raw["confidence"])
@@ -50,12 +56,13 @@ def to_relation(raw: dict) -> Relation:
 def ingest(root: Path = ROOT) -> int:
     """Append new relations from build/responses/*.json. Returns the number added."""
     existing = data_io.load_relation_dicts(root)
+    entities = {row["id"]: row for row in data_io.load_entity_rows(root)}
     seen = {data_io.relation_key(r) for r in existing}
     added = []
     for response_file in sorted(RESPONSES_DIR.glob("*.json")):
         payload = json.loads(response_file.read_text(encoding="utf-8"))
         for raw in payload.get("relations", []):
-            relation = to_relation(raw)
+            relation = to_relation(raw, entities)
             key = (relation.source_id, relation.target_id, relation.kind)
             if key not in seen:
                 added.append(relation.model_dump())

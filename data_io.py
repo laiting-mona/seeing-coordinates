@@ -1,6 +1,9 @@
 """Shared file I/O for the curated dataset (entities, sources, relations).
 
-Last edited: 2026-10-29 — added duplicate_entities() (build/test guard against the same person
+Last edited: 2026-11-02: infer_role() (rule-based role for a belongs_to edge from the two node
+types and the target's name) and year_from_claim() (the one year a claim states, else None),
+shared by the migration, extract.ingest and audit_data.
+2026-10-29: added duplicate_entities() (build/test guard against the same person
 or institution under two ids) and write_text_lf(): generated text files (review queue,
 checklist, graph.json, viewer.html) are written with LF on every OS, so the same data
 gives byte-identical output on Windows and Linux. 2026-10-27: new module; consolidates
@@ -120,6 +123,39 @@ def duplicate_entities(rows: list[dict]) -> list[tuple[str, list[str]]]:
         if name:
             seen.setdefault((row["type"], name), []).append(row["id"])
     return [(f"{t}:{name}", ids) for (t, name), ids in seen.items() if len(ids) > 1]
+
+
+AWARD_NAME = re.compile(r"賞|獎|Award|Prize|Prix", re.IGNORECASE)
+YEAR_IN_TEXT = re.compile(r"(?<!\d)(1[6-9]\d\d|20[0-2]\d)(?!\d)")
+EVENT_ID_YEAR = re.compile(r"_(1[6-9]\d\d|20[0-2]\d)$")
+
+
+def infer_role(source_type: str, target_type: str, target_name: str = "") -> str | None:
+    """Role of a belongs_to edge from the node types (and an award-like target name). None if no rule fits."""
+    if target_type == "concept":
+        return "movement"
+    if source_type == "work" and target_type == "person":
+        return "author"
+    if target_type == "institution" and AWARD_NAME.search(target_name or ""):
+        return "award"
+    if target_type == "work":
+        return "contributor"
+    if target_type == "event":
+        return "participant" if source_type in ("person", "work") else "part_of"
+    if source_type == "person" and target_type == "institution":
+        return "member"
+    if target_type == "institution":
+        return "part_of"
+    return None
+
+
+def year_from_claim(claim: str, event_id: str = "") -> int | None:
+    """The single year a claim states; for an event with a year suffix in its id, that year. None when ambiguous."""
+    years = sorted(set(YEAR_IN_TEXT.findall(claim or "")))
+    if len(years) == 1:
+        return int(years[0])
+    match = EVENT_ID_YEAR.search(event_id or "")
+    return int(match.group(1)) if match else None
 
 
 def relation_key(relation: dict) -> tuple[str, str, str]:
