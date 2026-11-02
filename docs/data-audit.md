@@ -1,56 +1,25 @@
 # 資料流程稽核(tools/audit_data.py 產生)
 
-實體 1645、來源 990、關係 2906(auto 67、approved 2721、review 87、rejected 31)。
+實體 1645、來源 1042、關係 2906(auto 15、approved 2773、review 87、rejected 31)。
 
 ## 硬性錯誤:0 項
 
 無。
 
-## 警告:283 項(不阻擋建圖,列出供人工判斷)
+## 警告:184 項(不阻擋建圖,列出供人工判斷)
 
-- **formal edge without a verbatim quote in evidence**:70
-  - `benjamin -influence-> aura`
-  - `benjamin -influence-> mech_reproduction`
-  - `berger -extend-> benjamin`
+- **formal edge without a verbatim quote in evidence**:9
   - `berger -extend-> ideology`
   - `sontag -extend-> benjamin`
-  - `barthes -influence-> punctum`
-  - `barthes -influence-> studium`
-  - `punctum -contrast-> studium`
-  - `barthes -influence-> that_has_been`
-  - `szarkowski -influence-> shore`
-  - `photographers_eye -belongs_to-> szarkowski`
   - `new_topographics_1975 -influence-> deadpan`
-  - `szarkowski -influence-> eggleston`
-  - `ontology_bazin -belongs_to-> bazin`
-  - `society_spectacle -belongs_to-> debord`
-  - `simulacra_sim -belongs_to-> baudrillard`
-  - `newhall_history_w -belongs_to-> newhall`
-  - `decisive_book -belongs_to-> cartier_bresson`
-  - `family_of_man_cat -belongs_to-> steichen`
-  - `mirrors_windows_cat -belongs_to-> szarkowski`
-  - `arbus_mono -belongs_to-> arbus`
-  - `ballad_goldin -belongs_to-> goldin`
-  - `provoke_journal -belongs_to-> provoke_collective`
   - `nakahira_plants -belongs_to-> nakahira`
   - `moriyama_bye -belongs_to-> moriyama`
-  - `ravens_fukase -belongs_to-> fukase`
   - `becher_typologies -belongs_to-> becher`
-  - `bazin -influence-> indexicality`
-  - `debord -influence-> spectacle`
-  - `baudrillard -influence-> simulacrum`
-  - `stieglitz -influence-> equivalents`
-  - `cartier_bresson -influence-> decisive_moment`
-  - `becher -influence-> typology`
-  - `stieglitz -belongs_to-> photo_secession`
-  - `steichen -belongs_to-> photo_secession`
-  - `kasebier -belongs_to-> photo_secession`
-  - `white_clarence -belongs_to-> photo_secession`
   - `coburn -belongs_to-> photo_secession`
   - `f64 -extend-> straight_photography`
-  - `adams_ansel -belongs_to-> f64`
-- **formal edge resting only on a book (no URL, no page): cited source**:60 條,來源:`newhall_history_s`×18、`new_topographics`×6、`provoke_s`×6、`camera_lucida`×4、`work_of_art`×2、`photographers_eye`×2、`bazin_ontology_s`×2、`debord_spectacle_s`×2、`baudrillard_sim_s`×2、`decisive_s`×2、`nakahira_plants_s`×2、`becher_typ_s`×2、`ways_of_seeing`×1、`about_looking`×1、`on_photography`×1、`eggleston_guide`×1、`steichen_fom_s`×1、`szarkowski_mw_s`×1、`arbus_mono_s`×1、`ballad_s`×1、`moriyama_bye_s`×1、`fukase_ravens_s`×1
-- **evidence URL differs from the cited source's URL (second page or upgrade)**:44 條,來源:`leaf2_walker_ian_s`×6、`leaf2_fusco_coco_s`×3、`leaf2_luce_henry_s`×3、`leaf2_heron_liz_s`×2、`leaf2_doy_gen_s`×2、`leaf2_antin_eleanor_s`×2、`leaf2_dibbets_jan_s`×2、`leaf2_hatch_connie_s`×2、`leaf2_van_gelder_hilde_s`×2、`verify_d47728c0f2_s`×1、`leaf_seymour_s`×1、`leaf_rodger_s`×1、`leaf_bischof_s`×1、`leaf_webb_alex_s`×1、`eoa_evans_s`×1、`leaf2_richter_gerhard_s`×1、`leaf2_hausser_robert_s`×1、`leaf2_stromholm_s`×1、`leaf2_knorr_karen_s`×1、`leaf2_wajcman_s`×1、`leaf2_gilbert_george_s`×1、`leaf2_kolbowski_s`×1、`leaf2_wegman_s`×1、`leaf2_gilden_s`×1、`leaf2_schott_john_s`×1、`leaf2_jenkins_william_s`×1、`leaf2_scruton_s`×1、`leaf2_manet_s`×1、`leaf2_acconci_s`×1
+  - `tapp_und_tastkino_tap_and_touch_cinema_export_valie_w -belongs_to-> export_valie`
+- **formal edge resting only on a book (no URL, no page): cited source**:8 條,來源:`newhall_history_s`×2、`about_looking`×1、`on_photography`×1、`new_topographics`×1、`nakahira_plants_s`×1、`moriyama_bye_s`×1、`becher_typ_s`×1
+- **evidence URL differs from the cited source's URL (second page or upgrade)**:47 條,來源:`leaf2_walker_ian_s`×6、`leaf2_fusco_coco_s`×3、`leaf2_luce_henry_s`×3、`leaf2_heron_liz_s`×2、`leaf2_doy_gen_s`×2、`leaf2_antin_eleanor_s`×2、`leaf2_dibbets_jan_s`×2、`leaf2_hatch_connie_s`×2、`leaf2_van_gelder_hilde_s`×2、`verify_d47728c0f2_s`×1、`leaf_seymour_s`×1、`leaf_rodger_s`×1、`leaf_bischof_s`×1、`leaf_webb_alex_s`×1、`eoa_evans_s`×1、`bk_0f8c9bd9e8_s`×1、`bk_a15f8a8ab4_s`×1、`leaf2_richter_gerhard_s`×1、`leaf2_hausser_robert_s`×1、`leaf2_stromholm_s`×1、`leaf2_knorr_karen_s`×1、`leaf2_wajcman_s`×1、`leaf2_gilbert_george_s`×1、`leaf2_kolbowski_s`×1、`leaf2_wegman_s`×1、`leaf2_gilden_s`×1、`leaf2_schott_john_s`×1、`leaf2_jenkins_william_s`×1、`leaf2_scruton_s`×1、`leaf2_manet_s`×1、`leaf2_acconci_s`×1、`bk_50364afae2_s`×1
 - **verification URL on a dev/staging/test host**:2
   - `cartier_bresson -contrast-> shore: https://staging2.phaidon.com/agenda/photography/articles/2017/november/27/how-stephen-shores-serial-pictures-changed-photography`
   - `tillmans -belongs_to-> snapshot_aesthetic: https://test01.ku.dk/:obvius/pureproxy/3974268/en/publications/snapshot%C3%A6stetik-om-wolfgang-tillmans-refleksive-realisme`
@@ -64,11 +33,12 @@
   - `october5_w`
   - `aiz`
   - `nachtwey_war_photographer_w`
-- **source cited by no relation**:99
+- **source cited by no relation**:110
   - `another_way`
   - `photographic_message`
   - `uncommon_places`
   - `american_photographs`
+  - `eggleston_guide`
   - `photography_theory`
   - `thinking_photography`
   - `burden_rep`
@@ -78,8 +48,17 @@
   - `aperture`
   - `george_eastman`
   - `wells_intro_s`
+  - `steichen_fom_s`
+  - `szarkowski_mw_s`
+  - `bazin_ontology_s`
+  - `debord_spectacle_s`
   - `azoulay_civil_s`
   - `dyer_ongoing_s`
+  - `provoke_s`
+  - `fukase_ravens_s`
+  - `decisive_s`
+  - `ballad_s`
+  - `arbus_mono_s`
   - `camera_lucida_zh_s`
   - `lightaura_zh_s`
   - `camera_lucida_en_s`
@@ -95,13 +74,3 @@
   - `asx`
   - `cphmag`
   - `interpretation`
-  - `azoulay_knowledge`
-  - `benjamin_knowledge`
-  - `flusser_knowledge`
-  - `knowledge:artforum`
-  - `knowledge:eastman`
-  - `knowledge:magnum`
-  - `knowledge:met`
-  - `knowledge:moma`
-  - `knowledge:new_documents`
-  - `knowledge:october`
