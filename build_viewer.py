@@ -273,7 +273,7 @@ def to_viewer_edges(graph_json: dict) -> list[dict]:
              "claim": e.get("claim", ""), "evidence": e.get("evidence", ""),
              "ref": e.get("source_ref", ""), "tier": e.get("source_tier", ""),
              "conf": e.get("confidence", 0), "status": e.get("status", ""),
-             "role": e.get("role"), "year": e.get("year")}
+             "role": e.get("role"), "year": e.get("year"), "quote": e.get("quote"), "url": e.get("evidence_url")}
             for e in graph_json["links"]]
 
 

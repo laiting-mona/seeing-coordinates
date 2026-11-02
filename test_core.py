@@ -93,6 +93,15 @@ def test_role_and_year() -> None:
     check("year_from_claim: 兩個年份不猜,改用事件 id", data_io.year_from_claim("1974–1984 (2009)", "pictures_gen_met_2009") == 2009)
 
 
+def test_parse_evidence() -> None:
+    ev = "說明｜［2026-10-28 上網查證通過］｜查證來源: https://a.org/x｜［2026-10-29 全量回查:頁面明載］原文:quoted words｜回查頁: https://a.org/y"
+    parsed = data_io.parse_evidence(ev)
+    check("parse_evidence 取最後一個網址", parsed["evidence_url"] == "https://a.org/y")
+    check("parse_evidence 取原文引句", parsed["quote"] == "quoted words")
+    check("parse_evidence 取最後查核日期與輪數", parsed["verified_on"] == "2026-10-29" and parsed["check_rounds"] == 2)
+    check("parse_evidence 空字串不爆", data_io.parse_evidence("")["quote"] is None)
+
+
 def test_data_audit() -> None:
     sys.path.insert(0, str(Path(__file__).resolve().parent / "tools"))
     import audit_data
@@ -140,6 +149,7 @@ def main() -> None:
     test_display_label_rule()
     test_entity_table_integrity()
     test_role_and_year()
+    test_parse_evidence()
     test_data_audit()
     test_graph_build()
     test_recommend_and_query()

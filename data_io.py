@@ -1,6 +1,9 @@
 """Shared file I/O for the curated dataset (entities, sources, relations).
 
-Last edited: 2026-11-02: infer_role() (rule-based role for a belongs_to edge from the two node
+Last edited: 2026-11-02 (second pass): parse_evidence() splits the accumulated evidence text
+into the fields an agent needs (latest verification URL, verbatim quote, verification date,
+number of check rounds). The stored field stays as the audit trail; the parsed fields are
+attached at build time, never written back. Earlier the same day: infer_role() (rule-based role for a belongs_to edge from the two node
 types and the target's name) and year_from_claim() (the one year a claim states, else None),
 shared by the migration, extract.ingest and audit_data.
 2026-10-29: added duplicate_entities() (build/test guard against the same person
@@ -123,6 +126,22 @@ def duplicate_entities(rows: list[dict]) -> list[tuple[str, list[str]]]:
         if name:
             seen.setdefault((row["type"], name), []).append(row["id"])
     return [(f"{t}:{name}", ids) for (t, name), ids in seen.items() if len(ids) > 1]
+
+
+EVIDENCE_URL = re.compile(r"(?:查證來源|回查頁): (https?://\S+?)(?:｜|］|$)")
+EVIDENCE_QUOTE = re.compile(r"原文:(.+?)(?:｜|$)")
+EVIDENCE_DATE = re.compile(r"［(\d{4}-\d{2}-\d{2})")
+
+
+def parse_evidence(evidence: str) -> dict:
+    """Structured view of an evidence string: the latest URL, the latest verbatim quote, the latest check date
+    and how many dated check rounds it records. Missing parts are None / 0."""
+    text = evidence or ""
+    urls, quotes, dates = EVIDENCE_URL.findall(text), EVIDENCE_QUOTE.findall(text), EVIDENCE_DATE.findall(text)
+    return {"evidence_url": urls[-1] if urls else None,
+            "quote": quotes[-1].strip() if quotes else None,
+            "verified_on": max(dates) if dates else None,
+            "check_rounds": len(dates)}
 
 
 AWARD_NAME = re.compile(r"賞|獎|Award|Prize|Prix", re.IGNORECASE)

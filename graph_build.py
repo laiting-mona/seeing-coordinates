@@ -1,6 +1,8 @@
 """Build the knowledge graph from data/ and write build/graph.json.
 
-Last edited: 2026-10-29 — load_entities() refuses duplicate entities (same type + name under two
+Last edited: 2026-11-02: every edge in graph.json also carries the parsed evidence fields
+(evidence_url, quote, verified_on, check_rounds; see data_io.parse_evidence) so a consumer
+need not parse the audit trail. 2026-10-29: load_entities() refuses duplicate entities (same type + name under two
 ids); graph.json written with LF on every OS. 2026-10-27: split build() into single-purpose functions; loaders
 moved to data_io; main() only orchestrates; nodes now carry `label`/`short_label`
 (EN-first for Western, ZH for Chinese-world; see data_io.display_label).
@@ -63,7 +65,8 @@ def build_graph(entities: dict[str, Entity], all_relations: list[Relation],
                 graph.add_node(node_id, id=node_id, type="concept", name_zh=node_id, name_en=None,
                                label_pref="zh", label=node_id, short_label=node_id)
     for relation in graph_relations:
-        graph.add_edge(relation.source_id, relation.target_id, key=relation.kind, **relation.model_dump())
+        graph.add_edge(relation.source_id, relation.target_id, key=relation.kind, **relation.model_dump(),
+                       **data_io.parse_evidence(relation.evidence))
     return graph
 
 

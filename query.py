@@ -150,7 +150,8 @@ class QueryEngine:
                 "claim": data.get("claim"), "evidence": data.get("evidence") or "",
                 "source": data.get("source_ref"), "tier": data.get("source_tier"),
                 "confidence": data.get("confidence"), "status": data.get("status"),
-                "role": data.get("role"), "year": data.get("year")}
+                "role": data.get("role"), "year": data.get("year"),
+                "url": data.get("evidence_url"), "quote": data.get("quote"), "verified_on": data.get("verified_on")}
 
     def both_directions(self, a: str, b: str) -> list[dict]:
         return ([self.edge_record(a, b, d) for d in self.edges_between(a, b)]

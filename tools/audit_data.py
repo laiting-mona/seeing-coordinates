@@ -1,6 +1,7 @@
 """Data-pipeline audit: checks the curated dataset for integrity problems.
 
-Last edited: 2026-11-02: role / year rules. Hard errors: a belongs_to edge without a role, a
+Last edited: 2026-11-02 (second pass): warning for a formal edge whose evidence has no parseable verbatim
+quote (self-primary excepted). Earlier the same day: role / year rules. Hard errors: a belongs_to edge without a role, a
 role on another kind, a role that contradicts the node types (the rule in data_io.infer_role),
 a year outside 1500-2100. Warning: a year the claim does not state and the event id does not
 carry. 2026-10-30: four new warnings from the pipeline check: approved edges whose
@@ -168,6 +169,8 @@ def warnings(entities, sources, relations) -> dict[str, list]:
                 r["source_id"] if entities.get(r["source_id"], {}).get("type") == "event" else "")
             if str(r["year"]) not in (r.get("claim") or "") and not data_io.EVENT_ID_YEAR.search(event):
                 warn["year not stated in the claim or the event id"].append(f"{label} ({r['year']})")
+        if r["status"] in FORMAL and not data_io.parse_evidence(r.get("evidence"))["quote"] and not is_self_primary(r, source):
+            warn["formal edge without a verbatim quote in evidence"].append(label)
         urls = verification_urls(r, source)
         if r["status"] in FORMAL and not urls and not is_self_primary(r, source):
             warn["formal edge resting only on a book (no URL, no page): cited source"].append(r["source_ref"])
