@@ -106,7 +106,7 @@ npm install docx && node tools/build_reflection.js        # 重建反思 docx
 | `source_id`、`target_id` | 兩端節點 id | 方向依慣例(見上) |
 | `kind` | 關係類型(11 種) | `belongs_to`、`exhibit`、`influence`、`discusses`、`extend`、`contrast`、`critique`、`study`、`interpret`、`translate`、`review` |
 | `role` | 只用於 `belongs_to`:這條「屬於」是什麼意思 | 七種:`author` 作者、`contributor` 收錄或刊登、`movement` 流派歸屬、`member` 成員或任職、`award` 得獎、`participant` 參展或參與、`part_of` 主辦、出版或隸屬。由 `data_io.infer_role` 依兩端節點類型自動判定,稽核會比對 |
-| `year` | 這段關係成立的年份(出版、得獎、展出、加入) | 只在 claim 恰好寫了一個年份、或事件節點 id 帶年份時填入;其餘留空,不猜 |
+| `year` | 這段關係成立的年份(出版、得獎、展出、加入) | 作者關係以作品標題所載年份為準;其餘只在 claim 恰好寫了一個年份、或事件節點 id 帶年份時填入;不猜 |
 | `claim` | 一句話的主張 | 繁體中文,半形逗號,不加句號,不用破折號 |
 | `evidence` | 原文引句、查證網址與歷次查核紀錄 | 以「｜」分段;最新一段在最後 |
 | `source_ref`、`source_tier` | 來源 id 與其層級 | 層級必須與 `sources.csv` 一致 |

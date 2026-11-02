@@ -3,8 +3,8 @@
 Last edited: 2026-11-02 (second pass): warning for a formal edge whose evidence has no parseable verbatim
 quote (self-primary excepted). Earlier the same day: role / year rules. Hard errors: a belongs_to edge without a role, a
 role on another kind, a role that contradicts the node types (the rule in data_io.infer_role),
-a year outside 1500-2100. Warning: a year the claim does not state and the event id does not
-carry. 2026-10-30: four new warnings from the pipeline check: approved edges whose
+a year outside 1500-2100. Warning: a year the claim does not state and neither the event id nor (for an author edge) the work's
+title carries. 2026-10-30: four new warnings from the pipeline check: approved edges whose
 confidence differs from the tier formula, formal edges resting only on a book (no URL, no
 page), verification URLs on a dev / staging / test host, and entities with no formal edge
 (isolated dots in the viewer).
@@ -167,7 +167,8 @@ def warnings(entities, sources, relations) -> dict[str, list]:
         if r.get("year"):
             event = r["target_id"] if entities.get(r["target_id"], {}).get("type") == "event" else (
                 r["source_id"] if entities.get(r["source_id"], {}).get("type") == "event" else "")
-            if str(r["year"]) not in (r.get("claim") or "") and not data_io.EVENT_ID_YEAR.search(event):
+            title_year = str(r["year"]) in (entities.get(r["source_id"], {}).get("name_en") or "") and r.get("role") == "author"
+            if str(r["year"]) not in (r.get("claim") or "") and not data_io.EVENT_ID_YEAR.search(event) and not title_year:
                 warn["year not stated in the claim or the event id"].append(f"{label} ({r['year']})")
         if r["status"] in FORMAL and not data_io.parse_evidence(r.get("evidence"))["quote"] and not is_self_primary(r, source):
             warn["formal edge without a verbatim quote in evidence"].append(label)
