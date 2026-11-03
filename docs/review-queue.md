@@ -1,6 +1,6 @@
 # 待人工判斷佇列（review queue）
 
-共 87 條。程式自動彙整,判斷與決定由你填。
+共 160 條。程式自動彙整,判斷與決定由你填。
 
 > 每條的「你的決定」欄預設空白。你確認後填 approved / rejected / 重構,我再據此更新圖。
 
@@ -71,6 +71,14 @@
 ## Sally Mann (莎莉·曼) → 紀實攝影 (documentary photography)（contrast）
 - 可信度:0.3　來源層:critic　出處:marien_history_s
 - 主張:莎莉·曼的家庭影像介於私密與紀實之間
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## The History of Photography (攝影史) → Paul Strand (保羅·史川德)（discusses）
+- 可信度:0.52　來源層:institution　出處:verify_d79d0e441f_s
+- 主張:《攝影史》收錄並論及史川德的作品
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -260,6 +268,14 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
+## Harry Zohn (哈利·佐恩) → 機械複製時代的藝術作品 (The Work of Art in the Age of Mechanical Reproduction)（translate）
+- 可信度:0.52　來源層:institution　出處:rq_c083286791_s
+- 主張:Harry Zohn 將〈機械複製時代的藝術作品〉譯為英文
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
 ## Burning with Desire (慾望的燃燒：攝影的起源) → 明室 (Camera Lucida)（critique）
 - 可信度:0.3　來源層:critic　出處:burning_desire
 - 主張:Batchen 質疑巴特對攝影起源的預設
@@ -325,7 +341,7 @@
 - **你的決定:** ________
 
 ## The Bowery in two inadequate descriptive systems (1974–75) (鮑爾里街:兩個不充分的描述系統) → Whitney Museum of American Art (惠特尼美術館)（belongs_to）
-- 可信度:0.75　來源層:institution　出處:whitney_bowery_s
+- 可信度:0.75　來源層:institution　出處:r21u_912802561c_s
 - 主張:惠特尼美術館館藏
 - 調查紀錄:(待補)
 - 參考來源:(無)
@@ -351,6 +367,14 @@
 ## In, Around, and Afterthoughts (1981) (在紀實攝影之內、周圍與之後) → Lewis Hine (路易斯·海因)（discusses）
 - 可信度:0.38　來源層:institution　出處:eflux_rosler_s
 - 主張:以海因為紀實傳統案例
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Photography: A Middle-brow Art (1965) (中等品味的藝術) → 日常庶民 (vernacular)（discusses）
+- 可信度:0.52　來源層:institution　出處:r21_e5ae6c1d1d_s
+- 主張:《中等品味的藝術》分析攝影在農民及城鎮居民家庭生活中的角色
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -644,9 +668,65 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
+## Karel Teige (卡雷爾·泰格) → 構成主義 (Constructivism)（belongs_to）
+- 可信度:0.52　來源層:institution　出處:leaf_teige_s
+- 主張:泰格著有〈構成主義與「藝術」的清算〉(1925)、〈邁向構成主義理論〉等文
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Varvara Stepanova (瓦爾瓦拉·斯捷潘諾娃) → 構成主義 (Constructivism)（belongs_to）
+- 可信度:0.52　來源層:institution　出處:r21_01967cc147_s
+- 主張:瓦爾瓦拉·斯捷潘諾娃在構成主義者與生產主義者的刊物 LEF 上發表關於工作服的理論
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 德希達 (Jacques Derrida) → 後現代主義 (postmodernism)（belongs_to）
+- 可信度:0.52　來源層:institution　出處:leaf_derrida_s
+- 主張:後結構主義與後現代哲學的主要人物
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Hubertus von Amelunxen (胡貝圖斯·馮·阿梅倫克森) → 德希達 (Jacques Derrida)（discusses）
+- 可信度:0.52　來源層:institution　出處:r21_984d608ebc_s
+- 主張:胡貝圖斯·馮·阿梅倫克森與 Michael Wetzel 於 1992 年就攝影主題訪談德希達,收於《複製、檔案、簽名》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Graham Clarke (格雷姆·克拉克) → 肖像攝影 (portraiture)（discusses）
+- 可信度:0.52　來源層:institution　出處:r21_867d2b41bb_s
+- 主張:《攝影中的肖像》在廣泛的脈絡中討論攝影肖像
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
 ## Koen Wessing (柯恩·韋辛) → 刺點 (punctum)（discusses）
 - 可信度:0.38　來源層:institution　出處:leaf2_wessing_koen_s
 - 主張:韋辛的尼加拉瓜照片成為巴特刺點概念的例證
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Gen Doy (珍·多伊) → 後現代主義 (postmodernism)（discusses）
+- 可信度:0.4　來源層:other　出處:r21u_e62c454611_s
+- 主張:《Materializing Art History》批評藝術社會史對後現代理論的接受
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## William Jenkins (威廉·詹金斯) → Ed Ruscha (魯沙)（discusses）
+- 可信度:0.4　來源層:other　出處:r21u_470b50776f_s
+- 主張:詹金斯在《新地形》展目錄中論及魯沙對1970年代攝影的影響
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -695,6 +775,510 @@
 ## 季刊《WORKSHOP》 → WORKSHOP寫真學校（belongs_to）
 - 可信度:0.3　來源層:critic　出處:east_japan_provoke_phillips_kurata_s
 - 主張:WORKSHOP寫真學校發行同名季刊(1974–76,共8冊)
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Provoke 同人 → 東松照明（extend）
+- 可信度:0.52　來源層:institution　出處:bk_e835933888_s
+- 主張:東松照明發展出的策略以更尖銳的形式出現在Provoke 同人藝術家的作品中
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 寫真100年:日本人的寫真表現歷史展(1968) → Provoke 同人（influence）
+- 可信度:0.52　來源層:institution　出處:bk_e835933888_s
+- 主張:1968年的日本攝影大展刺激了雜誌創辦者去探索攝影媒介
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 多木浩二 → Provoke（influence）
+- 可信度:0.52　來源層:institution　出處:bk_e835933888_s
+- 主張:多木浩二與中平卓馬負責Provoke的論述方向
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 荒木經惟 → Provoke 同人（contrast）
+- 可信度:0.52　來源層:institution　出處:bk_e835933888_s
+- 主張:荒木經惟與Provoke競爭,製作了多本影印攝影書
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Eikoh Hosoe: Theatre of Memory (AGNSW, 2011) (細江英公:記憶的劇場(新南威爾斯州立美術館,2011)) → 鎌鼬（exhibit）
+- 可信度:0.52　來源層:institution　出處:r21_d54e2ff415_s
+- 主張:《鎌鼬》等系列納入本展
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 細江英公 → 寫實攝影 (realist photography)（contrast）
+- 可信度:0.42　來源層:critic　出處:r21_5d96161cf6_s
+- 主張:細江英公的作品體現對主觀且實驗性攝影的渴求,與當時主流的社會寫實主義對立
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 荒木經惟 → 紀實攝影 (documentary photography)（extend）
+- 可信度:0.52　來源層:institution　出處:r21_0853a45ada_s
+- 主張:荒木經惟以其具影響力的私寫真徹底革新了古典紀實攝影
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 感傷之旅 → snapshot aesthetic (快照美學)（belongs_to）
+- 可信度:0.52　來源層:institution　出處:r21_0853a45ada_s
+- 主張:荒木經惟在這個長期計畫中以直白的快照式照片拍攝妻子洋子並以自身生活為主題
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 東松照明 → 報導攝影 (reportage photography)（critique）
+- 可信度:0.52　來源層:institution　出處:r21_35792cc77f_s
+- 主張:東松照明主張為避免攝影硬化必須驅除報導攝影的惡靈
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 土門拳 → 東松照明（influence）
+- 可信度:0.52　來源層:institution　出處:r21_6667642638_s
+- 主張:東松照明稱土門拳為父親
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## On the Road (1957) (《在路上》) → 森山大道（influence）
+- 可信度:0.52　來源層:institution　出處:r21_9e18ebe1ed_s
+- 主張:森山大道是凱魯亞克《在路上》的愛好者,其作品多關注攝影的旅程與偶遇
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 郭力昕 → 沈昭良（discusses）
+- 可信度:0.59　來源層:primary　出處:r21_44496bf31c_s
+- 主張:郭力昕的文章以沈昭良為論述對象
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Burning with Desire (慾望的燃燒：攝影的起源) → 後現代主義 (postmodernism)（critique）
+- 可信度:0.52　來源層:institution　出處:r21_b56b7e397d_s
+- 主張:《慾望的燃燒：攝影的起源》對攝影的後現代主義批評者與形式主義批評者提出挑戰
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Burning with Desire (慾望的燃燒：攝影的起源) → post-photography (後攝影)（discusses）
+- 可信度:0.52　來源層:institution　出處:r21_b56b7e397d_s
+- 主張:巴欽的《慾望的燃燒：攝影的起源》被視為當前關於是否已進入後攝影時代之辯論中的必讀之作
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## The Currency of the Photograph (1978) (照片的通貨) → 紀實攝影 (documentary photography)（discusses）
+- 可信度:0.52　來源層:institution　出處:r21_cd3ad26bf9_s
+- 主張:〈照片的通貨〉以新政改革主義與紀實修辭為主題
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Douglas Crimp (道格拉斯·克林普) → Sherrie Levine (雪莉·萊文)（discusses）
+- 可信度:0.52　來源層:institution　出處:leaf2_smith_philip_s
+- 主張:克林普在 Pictures 展(1977)的圖錄文章中討論萊文等五位藝術家的作品
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Douglas Crimp (道格拉斯·克林普) → Troy Brauntuch (特洛伊·布朗塔克)（discusses）
+- 可信度:0.52　來源層:institution　出處:leaf2_smith_philip_s
+- 主張:克林普在 Pictures 展(1977)的圖錄文章中討論布朗塔克等五位藝術家的作品
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Douglas Crimp (道格拉斯·克林普) → Jack Goldstein (傑克·戈德斯坦)（discusses）
+- 可信度:0.52　來源層:institution　出處:leaf2_smith_philip_s
+- 主張:克林普在 Pictures 展(1977)的圖錄文章中討論戈德斯坦等五位藝術家的作品
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Douglas Crimp (道格拉斯·克林普) → Robert Longo (羅伯特·隆哥)（discusses）
+- 可信度:0.52　來源層:institution　出處:leaf2_smith_philip_s
+- 主張:克林普在 Pictures 展(1977)的圖錄文章中討論隆哥等五位藝術家的作品
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Douglas Crimp (道格拉斯·克林普) → Philip Smith (菲利普·史密斯)（discusses）
+- 可信度:0.52　來源層:institution　出處:leaf2_smith_philip_s
+- 主張:克林普在 Pictures 展(1977)的圖錄文章中討論史密斯等五位藝術家的作品
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Bad New Days: Art, Criticism, Emergency → 檔案 (archive)（discusses）
+- 可信度:0.52　來源層:institution　出處:r21_725a6643ad_s
+- 主張:哈爾·福斯特在《Bad New Days: Art, Criticism, Emergency》中提出檔案性等近年藝術的範式
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Returning to Benjamin → 機械複製時代的藝術作品 (The Work of Art in the Age of Mechanical Reproduction)（discusses）
+- 可信度:0.52　來源層:institution　出處:r21_f5a517d45a_s
+- 主張:柏金在《Returning to Benjamin》中重讀班雅明的〈機械複製時代的藝術作品〉
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Returning to Benjamin → 班雅明 (Walter Benjamin)（extend）
+- 可信度:0.52　來源層:institution　出處:r21_f5a517d45a_s
+- 主張:柏金在《Returning to Benjamin》中重讀班雅明1935年的文本以提出新的論證
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Victor Burgin (柏金) → 意識形態 (ideology)（discusses）
+- 可信度:0.52　來源層:institution　出處:r21_7f1614f93c_s
+- 主張:柏金的理論文章借助符號學、精神分析與女性主義思考照片的意識形態角色
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## W. J. T. Mitchell (米契爾) → 意識形態 (ideology)（discusses）
+- 可信度:0.52　來源層:institution　出處:r21_7b8c4c33c3_s
+- 主張:米契爾的《Iconology》有一章討論馬克思主義、意識形態與拜物
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## André Kertész (柯特茲) → Brassaï (布拉塞)（influence）
+- 可信度:0.52　來源層:institution　出處:r21_89ef4b73f4_s
+- 主張:柯特茲鼓勵布拉塞嘗試攝影
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Lucia Moholy (露西亞·莫霍利) → 包浩斯 (Bauhaus)（belongs_to）
+- 可信度:0.52　來源層:institution　出處:r21_f0261e9453_s
+- 主張:露西亞·莫霍利是與國際包浩斯網絡相關的教師、作家與藝術家
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Paul Strand (保羅·史川德) → Ansel Adams (安瑟·亞當斯)（influence）
+- 可信度:0.52　來源層:institution　出處:r21_5630531266_s
+- 主張:安瑟·亞當斯於1930年接觸保羅·史川德的攝影後,放棄原本的畫意柔焦風格轉向純粹銳利對焦
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Walker Evans (沃克·伊凡斯) → Gregory Crewdson (克魯森)（influence）
+- 可信度:0.42　來源層:critic　出處:r21_5f6737b5a0_s
+- 主張:克魯森的圖景作品令人聯想到沃克·伊凡斯的攝影
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Diane Arbus (黛安·阿巴斯) → Gregory Crewdson (克魯森)（influence）
+- 可信度:0.42　來源層:critic　出處:r21_5f6737b5a0_s
+- 主張:克魯森的圖景作品令人聯想到黛安·阿巴斯的攝影
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## The Photographers' Gallery (攝影師畫廊(倫敦)) → Lindokuhle Sobekwa (林多庫勒·索貝克瓦)（exhibit）
+- 可信度:0.52　來源層:institution　出處:r21_3a438e41b2_s
+- 主張:林多庫勒·索貝克瓦為2025年德意志交易所攝影基金會獎入圍藝術家,作品於攝影師畫廊展出
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Alfredo Jaar (阿爾弗雷多·哈爾) → Koen Wessing (柯恩·韋辛)（discusses）
+- 可信度:0.52　來源層:institution　出處:r21_7eac4bbb69_s
+- 主張:阿爾弗雷多·哈爾的作品以新聞攝影師柯恩·韋辛的照片為核心
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Roy DeCarava (羅伊·德卡拉瓦) → Carrie Mae Weems (凱莉·梅·威姆斯)（influence）
+- 可信度:0.52　來源層:institution　出處:r21_ac67d4014c_s
+- 主張:《The Black Photographers Annual》啟發凱莉·梅·威姆斯成為攝影師,並讓她接觸到羅伊·德卡拉瓦的作品
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Ming Smith (明·史密斯) → Carrie Mae Weems (凱莉·梅·威姆斯)（influence）
+- 可信度:0.52　來源層:institution　出處:r21_ac67d4014c_s
+- 主張:《The Black Photographers Annual》啟發凱莉·梅·威姆斯成為攝影師,並讓她接觸到明·史密斯的作品
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Carrie Mae Weems (凱莉·梅·威姆斯) → Kamoinge Workshop (卡莫因格工作坊)（belongs_to）
+- 可信度:0.52　來源層:institution　出處:r21_ac67d4014c_s
+- 主張:凱莉·梅·威姆斯在紐約於卡莫因格工作坊找到攝影社群
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Larry Sultan: Here and Home (SFMOMA, 2017) → Evidence (1977) (證據)（exhibit）
+- 可信度:0.52　來源層:institution　出處:r21_15721837bb_s
+- 主張:Larry Sultan: Here and Home 展展出賴瑞·蘇丹1970年代與麥克·曼德爾合作的計畫
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Thomas Demand (德曼) → Kunstakademie Düsseldorf (杜塞道夫藝術學院)（belongs_to）
+- 可信度:0.52　來源層:institution　出處:r21_acb26d2285_s
+- 主張:德曼於1990年起在杜塞道夫跟隨 Fritz Schwegler 繼續藝術學業
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Josef Koudelka: Nationality Doubtful (Getty, 2014–15) → Exiles (1988) (流亡)（exhibit）
+- 可信度:0.52　來源層:institution　出處:r21_b4f67a42ac_s
+- 主張:Josef Koudelka 回顧展「國籍可疑」提及其無國籍時期產生的作品《流亡》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Josef Koudelka: Nationality Doubtful (Getty, 2014–15) → Black Triangle (1994) (黑三角)（exhibit）
+- 可信度:0.52　來源層:institution　出處:r21_b4f67a42ac_s
+- 主張:Josef Koudelka 回顧展「國籍可疑」提及其手風琴式出版物《黑三角》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Josef Koudelka: Nationality Doubtful (Getty, 2014–15) → Chaos (1999) (混沌)（exhibit）
+- 可信度:0.52　來源層:institution　出處:r21_b4f67a42ac_s
+- 主張:Josef Koudelka 回顧展「國籍可疑」提及其手風琴式出版物《混沌》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Zanele Muholi (Tate Modern, 2020–21) → Only Half the Picture (2002–06) (只有一半的圖像)（exhibit）
+- 可信度:0.52　來源層:institution　出處:tate_muholi_s
+- 主張:Zanele Muholi 展(Tate Modern)提及早期系列《只有一半的圖像》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Rineke Dijkstra: A Retrospective (SFMOMA, 2012) → Beach Portraits (1992–98) (海灘肖像)（exhibit）
+- 可信度:0.52　來源層:institution　出處:r21_1a96a43412_s
+- 主張:Rineke Dijkstra 回顧展(SFMOMA)提及其最早的持續系列《海灘肖像》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Rineke Dijkstra: A Retrospective (SFMOMA, 2012) → The Buzz Club (1995–97)（exhibit）
+- 可信度:0.52　來源層:institution　出處:r21_1a96a43412_s
+- 主張:Rineke Dijkstra 回顧展(SFMOMA)提及錄像作品《The Buzz Club》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Rineke Dijkstra: A Retrospective (SFMOMA, 2012) → Almerisa (1994–)（exhibit）
+- 可信度:0.52　來源層:institution　出處:r21_1a96a43412_s
+- 主張:Rineke Dijkstra 回顧展(SFMOMA)提及其拍攝波士尼亞難民兒童的系列《Almerisa》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Rineke Dijkstra: A Retrospective (SFMOMA, 2012) → I See a Woman Crying (2009) (我看見一個哭泣的女人)（exhibit）
+- 可信度:0.52　來源層:institution　出處:r21_1a96a43412_s
+- 主張:Rineke Dijkstra 回顧展(SFMOMA)提及《我看見一個哭泣的女人》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Present Tense: Photographs by JoAnn Verburg (MoMA, 2007) → 3 x Jim (1989) (《三乘吉姆》)（exhibit）
+- 可信度:0.52　來源層:institution　出處:r21_0bf8e7bd8d_s
+- 主張:「現在時態」展(MoMA)提及三格作品《三乘吉姆》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Present Tense: Photographs by JoAnn Verburg (MoMA, 2007) → With Michael and John in Minnesota (1982) (《與麥可和約翰在明尼蘇達》)（exhibit）
+- 可信度:0.52　來源層:institution　出處:r21_0bf8e7bd8d_s
+- 主張:「現在時態」展(MoMA)提及三聯作品《與麥可和約翰在明尼蘇達》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Present Tense: Photographs by JoAnn Verburg (MoMA, 2007) → Thanksgiving (2001) (《感恩節》)（exhibit）
+- 可信度:0.52　來源層:institution　出處:r21_0bf8e7bd8d_s
+- 主張:「現在時態」展(MoMA)提及多格作品《感恩節》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Irving Penn: Centennial (Met, 2017) → Small Trades (1950–51) (小行當)（exhibit）
+- 可信度:0.52　來源層:institution　出處:r21_0052025eec_s
+- 主張:「Irving Penn: Centennial」(2017)新聞稿提及 2014 年入藏的 64 幅《小行當》系列鉑金印相
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Jeff Wall (MoMA, 2007) → Dead Troops Talk (1992) (死去的士兵在說話)（exhibit）
+- 可信度:0.52　來源層:institution　出處:rq_1e3e561905_s
+- 主張:Jeff Wall 回顧展(MoMA)新聞稿提及《死去的士兵在說話》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## The Flooded Grave (1998–2000) (淹水的墓穴) → digital manipulation / composite imaging (數位合成影像)（belongs_to）
+- 可信度:0.52　來源層:institution　出處:r21_b242fcfede_s
+- 主張:《淹水的墓穴》是藝術家融合無數照片而成的影像
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Friedlander (MoMA, 2005) → Sticks & Stones: Architectural America (2004) (棍與石:建築美國)（exhibit）
+- 可信度:0.52　來源層:institution　出處:moma_fried2005_s
+- 主張:Friedlander 回顧展(MoMA)新聞稿稱《棍與石:建築美國》為已完成計畫中最令人印象深刻者
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Friedlander (MoMA, 2005) → The American Monument (1976) (美國紀念碑)（exhibit）
+- 可信度:0.52　來源層:institution　出處:moma_fried2005_s
+- 主張:Friedlander 回顧展(MoMA,2005)新聞稿提及 1976 年的《美國紀念碑》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Friedlander (MoMA, 2005) → Factory Valleys: Ohio and Pennsylvania (1982) (工廠山谷)（exhibit）
+- 可信度:0.52　來源層:institution　出處:moma_fried2005_s
+- 主張:Friedlander 回顧展(MoMA)新聞稿提及由 Akron Art Institute 委託的《工廠山谷》展覽與書
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Friedlander (MoMA, 2005) → Nudes (1991) (裸體(Friedlander))（exhibit）
+- 可信度:0.52　來源層:institution　出處:moma_fried2005_s
+- 主張:Friedlander 回顧展(MoMA)新聞稿提及《裸體(Friedlander)》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Friedlander (MoMA, 2005) → Letters from the People (1993) (來自人民的信)（exhibit）
+- 可信度:0.52　來源層:institution　出處:moma_fried2005_s
+- 主張:Friedlander 回顧展(MoMA)新聞稿提及《來自人民的信》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Friedlander (MoMA, 2005) → Self Portrait (1970) (自畫像(Friedlander))（exhibit）
+- 可信度:0.52　來源層:institution　出處:moma_fried2005_s
+- 主張:Friedlander 回顧展(MoMA)新聞稿提及其第一本書《自畫像(Friedlander)》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Wolfgang Tillmans: To look without fear (MoMA, 2022–23) → Neue Welt (2009-2012) (新世界)（exhibit）
+- 可信度:0.52　來源層:institution　出處:r21_04685b59a9_s
+- 主張:「To look without fear」展新聞稿提及《新世界》系列
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Aktionshose: Genitalpanik (Action Pants: Genital Panic) (1969) (行動褲：生殖器恐慌) → performance and photography (表演與攝影)（belongs_to）
+- 可信度:0.52　來源層:institution　出處:r21_f1be35f8b2_s
+- 主張:《行動褲：生殖器恐慌》的網版印刷系列關聯於一場表演
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## 歲月/照堂:1959-2013影像展(臺北市立美術館,2013) → 《王船祭典》（exhibit）
+- 可信度:0.42　來源層:critic　出處:verify_8df747b69f_s
+- 主張:「歲月/照堂:1959-2013影像展」的評論提及張照堂的紀錄片《王船祭典》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Zoe Leonard: Survey (MOCA Los Angeles, 2018–19) → The Fae Richards Photo Archive (1993–96) (《菲·理查茲照片檔案》)（exhibit）
+- 可信度:0.52　來源層:institution　出處:r21_8ea3d820ba_s
+- 主張:「Zoe Leonard: Survey」新聞稿提及為電影《The Watermelon Woman》製作的《菲·理查茲照片檔案》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Zoe Leonard: Survey (MOCA Los Angeles, 2018–19) → MOCA Los Angeles (洛杉磯當代美術館)（belongs_to）
+- 可信度:0.52　來源層:institution　出處:r21_8ea3d820ba_s
+- 主張:「Zoe Leonard: Survey」在洛杉磯當代美術館的 Geffen Contemporary 展出
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Fotografia Polska, 1839–1979 (ICP, New York, 1979) → Zofia Rydet（exhibit）
+- 可信度:0.52　來源層:institution　出處:r21_d794b88010_s
+- 主張:Zofia Rydet於1979年前往紐約國際攝影中心參加Fotografia Polska, 1839–1979展覽
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)

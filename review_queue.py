@@ -1,6 +1,6 @@
 """Export status=review relations, with investigation notes, to docs/review-queue.md.
 
-Last edited: 2026-10-29 — output written with LF on every OS (data_io.write_text_lf).
+Last edited: 2026-10-29: output written with LF on every OS (data_io.write_text_lf).
 2026-10-27: module-level script turned into functions + main();
 loaders from data_io; names use display_label.
 

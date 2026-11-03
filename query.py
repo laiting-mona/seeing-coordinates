@@ -84,7 +84,7 @@ class QueryEngine:
     def _build_form_index(self) -> dict[str, str]:
         """Map every normalized surface form to a node id.
 
-        Forms: Chinese name, English name, aliases, and — for persons — the English surname
+        Forms: Chinese name, English name, aliases, and - for persons - the English surname
         when it is unambiguous (users type "sontag", not "Susan Sontag"; "adams" is skipped
         because Ansel and Robert both carry it).
         """
@@ -241,7 +241,7 @@ def render_recommend(r: dict) -> str:
     if not r["items"]:
         return f"以「{r['seed']}」為起點,鄰居都讀過了,可能要擴充來源。"
     return (f"📚 你讀過「{r['seed']}」,沿知識前緣建議下一步:\n"
-            + "\n".join(f"  • {i['target']} — {i['reason']}（出處:{i['source']}）" for i in r["items"]))
+            + "\n".join(f"  • {i['target']} - {i['reason']}（出處:{i['source']}）" for i in r["items"]))
 
 
 def render_provenance(r: dict) -> str:
@@ -288,7 +288,7 @@ def render_authority(r: dict) -> str:
 
 def render_path(r: dict) -> str:
     return ("🗓 三週入門路線(從『觀看的政治』進,循主線遞進):\n"
-            + "\n".join(f"  {w[0]}:{w[1]} —— {w[2]}" for w in r["weeks"]))
+            + "\n".join(f"  {w[0]}:{w[1]} | {w[2]}" for w in r["weeks"]))
 
 
 def render_default(r: dict) -> str:

@@ -1,10 +1,10 @@
 """Weight-sensitivity experiment for the recommender (stdlib only, read-only on the graph).
 
-Last edited: 2026-10-27 — module-level script turned into functions + main().
+Last edited: 2026-10-27: module-level script turned into functions + main().
 
 Measures, for several tier-weight vectors, how much the recommendations move:
-  top-5 Jaccard  — did the recommended set change?
-  Spearman rho   — did the ranking of all candidates change?
+  top-5 Jaccard  - did the recommended set change?
+  Spearman rho   - did the ranking of all candidates change?
 Reads ../build/graph.json; writes results/weight_sensitivity.csv; never modifies data.
 Usage (from the project root): python experiments/weight_sensitivity.py
 """

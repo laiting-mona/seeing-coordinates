@@ -1,6 +1,6 @@
 """Minimal regression tests (plain assert, no pytest) for the core behaviour.
 
-Last edited: 2026-10-29 — data audit (tools/audit_data.py) must report zero hard errors;
+Last edited: 2026-10-29: data audit (tools/audit_data.py) must report zero hard errors;
 entity-table integrity check (no duplicate person/institution under two
 ids). 2026-10-28: added checks that institution rosters never top a photographer's
 recommendations and that a photographer's own works are reachable (inbound edges). 2026-10-27: tests grouped into functions; added checks for

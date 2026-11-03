@@ -1,6 +1,8 @@
 """Personalised recommendation along the knowledge frontier (no model training).
 
-Last edited: 2026-10-28 — (1) membership edges are context, not readings: a
+Last edited: 2026-11-03: an inbound exhibit edge is discounted by the exhibitor's type (institution 0.5,
+event 0.8), so the museums and shows added in round 21 do not outrank a photographer's own works.
+2026-10-28: (1) membership edges are context, not readings: a
 belongs_to edge is weighted by its target type (institution 0.5, anthology/work
 0.7, event 0.8) so award rosters and anthologies cannot crowd out intellectual
 links; (2) the frontier now also walks INBOUND edges: a photographer's own works
@@ -9,7 +11,7 @@ them are candidates too, so "read Koudelka" can lead to Gypsies, not only to awa
 
 Frontier = unread nodes one hop out from (or into) what the reader has read.
 Score = confidence × tier weight × (0.5 + target centrality) × context weight
-        (× INBOUND_WEIGHT for an inbound edge).
+        (× INBOUND_WEIGHT, discounted for an inbound exhibit edge, for an inbound edge).
 Every item carries its reason, source and status, so pending (review) edges are
 never presented as fact.
 Usage: python recommend.py [read_id ...]
@@ -53,6 +55,14 @@ def edge_score(graph: nx.MultiDiGraph, candidate: str, edge: dict, context_weigh
             * (CENTRALITY_FLOOR + graph.nodes[candidate].get("centrality", 0)) * context_weight)
 
 
+def inbound_context_weight(graph: nx.MultiDiGraph, source: str, edge: dict) -> float:
+    """INBOUND_WEIGHT, discounted by the exhibitor's type for an exhibit edge: a museum or a show that
+    exhibited the seed is context, like a membership, and must not outrank the seed's own works."""
+    if edge.get("kind") != "exhibit":
+        return INBOUND_WEIGHT
+    return INBOUND_WEIGHT * MEMBERSHIP_WEIGHT.get(graph.nodes[source].get("type"), 1.0)
+
+
 def inbound_candidate(graph: nx.MultiDiGraph, source: str, edge: dict) -> bool:
     """An inbound edge is a reading path when it is a text/exhibition about the seed,
     or the seed's own work (work --belongs_to--> person)."""
@@ -94,7 +104,7 @@ def score_candidates(graph: nx.MultiDiGraph, seeds: set[str], exclude: set[str])
             offer(target, edge_score(graph, target, data, edge_context_weight(graph, target, data)), seed, data, "out")
         for source, _, data in graph.in_edges(seed, data=True):   # the seed's own works, shows and critics
             if inbound_candidate(graph, source, data):
-                offer(source, edge_score(graph, source, data, INBOUND_WEIGHT), seed, data, "in")
+                offer(source, edge_score(graph, source, data, inbound_context_weight(graph, source, data)), seed, data, "in")
     return candidates
 
 
@@ -136,7 +146,7 @@ def main() -> None:
     graph = load_graph()
     profile = sys.argv[1:] or ["benjamin", "on_photography"]
     for item in recommend(graph, profile):
-        print(f"• {item['target']}  [{item['score']}]  — {item['reason']}  (出處:{item['source']})")
+        print(f"• {item['target']}  [{item['score']}]  | {item['reason']}  (出處:{item['source']})")
 
 
 if __name__ == "__main__":

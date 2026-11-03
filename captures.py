@@ -1,6 +1,6 @@
 """Raw capture log (fetched evidence), kept apart from the curated graph.
 
-Last edited: 2026-10-27 — English docstrings; shared read helper; no behaviour change.
+Last edited: 2026-10-27: English docstrings; shared read helper; no behaviour change.
 
 Stored as plain JSONL (git-diffable); a content hash de-duplicates entries.
 load_sqlite() loads the log into an in-memory SQLite database for ad-hoc queries,

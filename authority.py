@@ -1,6 +1,6 @@
 """Authority weighting: how a relation gets its confidence score and its route.
 
-Last edited: 2026-10-27 — English docstrings; no logic change.
+Last edited: 2026-10-27: English docstrings; no logic change.
 
 Photography discourse has no citation graph, so authority is approximated with
 three checkable signals: source tier, number of corroborating sources, and how

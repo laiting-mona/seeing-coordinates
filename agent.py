@@ -1,6 +1,6 @@
 """Agent v1 demo: the program drives; the LLM only does step 3 (relation extraction).
 
-Last edited: 2026-10-27 — module-level loading moved into functions; main() only
+Last edited: 2026-10-27: module-level loading moved into functions; main() only
 dispatches; approved relations are now counted as in-graph (previously only auto).
 
 One round = plan → retrieve → extract (LLM) → score & route → update graph → monitor.
@@ -74,7 +74,7 @@ def print_recommendation_demo() -> None:
         import recommend
         graph = recommend.load_graph()
         for item in recommend.recommend(graph, ["sontag", "on_photography"], top_n=3):
-            print(f"   • {item['target']}  — {item['reason'][:46]}…（出處:{item['source']}）")
+            print(f"   • {item['target']}  - {item['reason'][:46]}…（出處:{item['source']}）")
     except Exception as error:  # graph.json missing until graph_build has run
         print(f"   (推薦模組需先 python graph_build.py;{error})")
 

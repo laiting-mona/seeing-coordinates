@@ -1,12 +1,12 @@
 # 資料流程稽核(tools/audit_data.py 產生)
 
-實體 1645、來源 1042、關係 2906(auto 15、approved 2773、review 87、rejected 31)。
+實體 1738、來源 1198、關係 3261(auto 15、approved 3055、review 160、rejected 31)。
 
 ## 硬性錯誤:0 項
 
 無。
 
-## 警告:184 項(不阻擋建圖,列出供人工判斷)
+## 警告:162 項(不阻擋建圖,列出供人工判斷)
 
 - **formal edge without a verbatim quote in evidence**:9
   - `berger -extend-> ideology`
@@ -19,21 +19,23 @@
   - `f64 -extend-> straight_photography`
   - `tapp_und_tastkino_tap_and_touch_cinema_export_valie_w -belongs_to-> export_valie`
 - **formal edge resting only on a book (no URL, no page): cited source**:8 條,來源:`newhall_history_s`×2、`about_looking`×1、`on_photography`×1、`new_topographics`×1、`nakahira_plants_s`×1、`moriyama_bye_s`×1、`becher_typ_s`×1
-- **evidence URL differs from the cited source's URL (second page or upgrade)**:47 條,來源:`leaf2_walker_ian_s`×6、`leaf2_fusco_coco_s`×3、`leaf2_luce_henry_s`×3、`leaf2_heron_liz_s`×2、`leaf2_doy_gen_s`×2、`leaf2_antin_eleanor_s`×2、`leaf2_dibbets_jan_s`×2、`leaf2_hatch_connie_s`×2、`leaf2_van_gelder_hilde_s`×2、`verify_d47728c0f2_s`×1、`leaf_seymour_s`×1、`leaf_rodger_s`×1、`leaf_bischof_s`×1、`leaf_webb_alex_s`×1、`eoa_evans_s`×1、`bk_0f8c9bd9e8_s`×1、`bk_a15f8a8ab4_s`×1、`leaf2_richter_gerhard_s`×1、`leaf2_hausser_robert_s`×1、`leaf2_stromholm_s`×1、`leaf2_knorr_karen_s`×1、`leaf2_wajcman_s`×1、`leaf2_gilbert_george_s`×1、`leaf2_kolbowski_s`×1、`leaf2_wegman_s`×1、`leaf2_gilden_s`×1、`leaf2_schott_john_s`×1、`leaf2_jenkins_william_s`×1、`leaf2_scruton_s`×1、`leaf2_manet_s`×1、`leaf2_acconci_s`×1、`bk_50364afae2_s`×1
-- **verification URL on a dev/staging/test host**:2
-  - `cartier_bresson -contrast-> shore: https://staging2.phaidon.com/agenda/photography/articles/2017/november/27/how-stephen-shores-serial-pictures-changed-photography`
-  - `tillmans -belongs_to-> snapshot_aesthetic: https://test01.ku.dk/:obvius/pureproxy/3974268/en/publications/snapshot%C3%A6stetik-om-wolfgang-tillmans-refleksive-realisme`
+- **year not stated in the claim or the event id**:4
+  - `tillmans -belongs_to-> snapshot_aesthetic (2007)`
+  - `stepanova -belongs_to-> lef_journal (1923)`
+  - `amelunxen -discusses-> derrida (2010)`
+  - `clarke -discusses-> portraiture (1992)`
 - **entity with no formal edge (isolated dot in the viewer)**:3
   - `wu_yinxian`
   - `workshop_mag_w`
   - `lucie_rie`
-- **work with no person author**:5
+- **work with no person author**:6
   - `provoke_journal`
   - `lightaura_zh`
   - `october5_w`
   - `aiz`
   - `nachtwey_war_photographer_w`
-- **source cited by no relation**:110
+  - `lucken_taki_koji_counter_photography_w`
+- **source cited by no relation**:132
   - `another_way`
   - `photographic_message`
   - `uncommon_places`
@@ -68,9 +70,9 @@
   - `wos_bbc_s`
   - `met_nv_s`
   - `gaze_oneonta_s`
+  - `whitney_bowery_s`
   - `dada_montage_s`
   - `chapman_sekula_s`
+  - `bourdieu_ms_s`
+  - `met_mission_s`
   - `uci_krauss_s`
-  - `asx`
-  - `cphmag`
-  - `interpretation`

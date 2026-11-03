@@ -414,3 +414,21 @@ The Art Story（Gursky 冷面、Levitt 與 Cartier-Bresson 街頭）與 Phillips
 | 仍查無 | 40 | 兩次上網都找不到可接受頁面，需回原典 |
 
 **孤立節點：** 植田正治、阿爾勒攝影節、Paris Photo、《The Photobook: A History》原本沒有任何關係，新增 13 條（`apply_iso_v24.py`），都連到既有節點：植田正治 1978 年受邀阿爾勒、1975 年日本寫真協會年度賞（島根縣立美術館）、東京都寫真美術館 2013–14 年展、2008 年 Paris Photo 日本主賓國；2024 年阿爾勒日本女性攝影師展（石內都、川內倫子，Aperture）；Paris Photo 的森山大道《再見攝影》（Collector Daily）；《The Photobook》由 Parr 與 Badger 合編（三影堂圖書館書目，取代研究者找到的 Phaidon 測試站網址），並在章節中討論《Die Welt ist schön》《American Photographs》《Antlitz der Zeit》（sehepunkte 書評）。
+
+## R. 第 21 輪（2026-11-03）擴充、Monoskop 換源、source_ref 對齊
+
+**新增來源 156 列（機構 130、評論 22、原典 1、其他 3）。** 其他 3 列是個人網站與書商列表（cocofusco.com、La Central、ABAA），只保留在來源表作為「曾被引用、現已剔出查證來源」的紀錄，所引關係已換源或降為待查證。
+
+### 擴充用到的 hub（依類型）
+- **美術館與館所：** MoMA（新聞稿、館藏作品頁、年表）、大都會藝術博物館（Heilbrunn 時間線、新聞稿、出版目錄）、Tate（新聞稿、Tate Etc、研究論文）、Getty、SFMOMA、芝加哥藝術館檔案、Whitney、Fotomuseum Winterthur、Hasselblad Foundation、Städel 數位館藏、Berlinische Galerie、Garage Museum、Walker Art Center、Studio Museum in Harlem、MOCA Los Angeles、Burchfield Penney、Centre Pompidou、Jeu de Paume、National Gallery of Canada、National Galleries of Scotland、V&A、British Museum、Smithsonian NMAA、Harvard Art Museums、Fondation Cartier、Fundación MAPFRE、Walther Collection、Singapore Art Museum、The Photographers' Gallery、Artists Space、Rencontres d'Arles、Prix Pictet、Newton Foundation、東京國立近代美術館、東京都寫真美術館、新南威爾斯州立美術館、Albertina、Three Shadows。
+- **出版社自家書頁：** MIT Press、Duke UP、Verso、MACK、Stanford UP、Minnesota UP、Chicago UP、Reaktion、Twisted Spoon、The New Press、Seven Stories、Kehrer、Triarchy。
+- **圖書館與研究檔案：** 哥本哈根大學研究檔案、賓州大學圖書館目錄、梵谷美術館圖書館目錄、CCA 圖書館、ECU 圖書館、Smithsonian Libraries、CiNii、Nantes 大學、Charles 大學 dspace、UCI 圖書館（Krauss 書目）、數位島嶼（中研院 TELDAP）、post.moma.org。
+- **評論層（critic）：** Magnum Photos 攝影家頁、Aperture、Frieze、BJP（1854.photography）、Dazed、美術手帖、Taipei Times、報導者、聯合報、Collector Daily、L. Parker Stephenson、Ubu Gallery、Gagosian、David Zwirner、Takaishi Gallery（商業藝廊一律評論層）。
+
+### 這一輪剔出查證來源的頁面
+- Monoskop（wiki）：32 條改引機構頁或降級；Monoskop 上的原典掃描檔（Wall〈Marks of Indifference〉、Mulvey〈視覺快感與敘事電影〉、Sekula〈On the Invention of Photographic Meaning〉）維持原典自證。
+- 個人網站（cocofusco.com）、書商列表（La Central、ABAA）。
+- dev/staging 子網域（staging2.phaidon.com、test01.ku.dk）：改引正式站或同作者的機構頁。
+
+### 盲測
+見下方「R 補一」。

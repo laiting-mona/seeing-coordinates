@@ -1,6 +1,7 @@
 """Data-pipeline audit: checks the curated dataset for integrity problems.
 
-Last edited: 2026-11-02 (second pass): warning for a formal edge whose evidence has no parseable verbatim
+Last edited: 2026-11-03: the URL checks read the latest evidence URL through data_io.parse_evidence (the same view
+graph_build exposes); ("award", "part_of") tolerated. 2026-11-02 (second pass): warning for a formal edge whose evidence has no parseable verbatim
 quote (self-primary excepted). Earlier the same day: role / year rules. Hard errors: a belongs_to edge without a role, a
 role on another kind, a role that contradicts the node types (the rule in data_io.infer_role),
 a year outside 1500-2100. Warning: a year the claim does not state and neither the event id nor (for an author edge) the work's
@@ -53,8 +54,9 @@ WIKI_HOSTS = ("wikipedia.org", "baike.baidu.com", "namu.wiki")   # not acceptabl
 NON_PRODUCTION_HOST = re.compile(r"(^|[./])(dev|staging\d*|test\d*)[.-]")   # e.g. staging2.phaidon.com, test01.ku.dk
 FORMAL = ("approved", "auto")
 # role pairs (stored, rule) a reviewer may legitimately choose: a person -> institution edge can be an award only
-# when the name says so, so these are the cases where the stored role is a deliberate refinement of the rule.
-ROLE_TOLERATED = {("award", "member"), ("member", "part_of"), ("participant", "contributor"), ("contributor", "participant")}
+# when the name says so, so these are the cases where the stored role is a deliberate refinement of the rule
+# (("award", "part_of") covers a work that won a prize given by an institution not named as one, e.g. a biennale's Golden Lion).
+ROLE_TOLERATED = {("award", "member"), ("award", "part_of"), ("member", "part_of"), ("participant", "contributor"), ("contributor", "participant")}
 DATA_FILES = ("data/seed_entities.csv", "data/sources.csv", "data/raw_relations.jsonl")
 # Works that legitimately have no person author edge: periodicals, series, translations, anthologies of others.
 AUTHORLESS_OK_TYPES = ("magazine", "journal", "雜誌", "期刊", "季刊", "叢書", "series", "文庫", "Chinese ed", "中譯", "Illuminations")
@@ -154,12 +156,12 @@ def warnings(entities, sources, relations) -> dict[str, list]:
         if r["kind"] == "belongs_to" and entities.get(r["target_id"], {}).get("type") == "person":
             authored.add(r["source_id"])
         source = sources.get(r["source_ref"], {})
-        match = URL_IN_EVIDENCE.search(r.get("evidence") or "")
-        if r["status"] == "approved" and not match and not source.get("ref") and not is_self_primary(r, source):
+        latest_url = data_io.parse_evidence(r.get("evidence") or "")["evidence_url"]   # same view the build exposes
+        if r["status"] == "approved" and not latest_url and not source.get("ref") and not is_self_primary(r, source):
             warn["approved with no URL (evidence or source)"].append(f"{r['source_id']} -{r['kind']}-> {r['target_id']}")
         if r["status"] == "approved" and source.get("tier") in ("other", "popular"):
             warn["approved edge resting on an other/popular-tier source (aggregator or legacy label)"].append(r["source_ref"])
-        if match and source.get("ref") and not match.group(1).startswith(source["ref"].split("?")[0][:40]):
+        if latest_url and source.get("ref") and not latest_url.startswith(source["ref"].split("?")[0][:40]):
             warn["evidence URL differs from the cited source's URL (second page or upgrade)"].append(r["source_ref"])
         label = f"{r['source_id']} -{r['kind']}-> {r['target_id']}"
         if r["status"] == "approved" and abs(r["confidence"] - auto_confidence(source.get("tier", "other"), 1, 1.0)) > 1e-6:

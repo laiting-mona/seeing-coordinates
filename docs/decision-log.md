@@ -250,3 +250,13 @@
 - **問題：** 第 18 輪補 `year` 時只看 claim 裡的年份。作者關係的 claim 常寫「某人於某年出版某書」以外的事（例如再版、英譯年），結果 158 條作者關係的 year 與作品節點標題所載的出版年不同。
 - **決定：** 作者關係（`role=author`）的 year 一律取作品 `name_en` 標題括號內的年份；標題沒有年份的維持原值。其餘 role 不動。稽核規則同步放寬：作者關係的 year 只要在標題裡就不警告。
 - **影響：** 158 條 year 改值，evidence 各加一段「欄位整理」紀錄保留原值；正式入圖數、來源數不變；警告 258→184。
+
+## 2026-11-03 第 21 輪：擴充 93 個節點、355 條關係；Monoskop、個人網站、書商列表剔出查證來源
+
+- **流程查驗先發現的兩件事：** (1) 稽核程式取 evidence 裡第一個「查證來源」網址，建圖程式（`data_io.parse_evidence`）取最後一個；改為一致後，86 條關係的 `source_ref` 仍指著舊頁、而最新查證頁是另一頁。已逐條把 `source_ref`、`source_tier`、confidence 對齊到最新頁（新增 28 個來源列）；其中 6 條最新頁是個人網站（cocofusco.com）或書商列表（La Central、ABAA），4 條換成 The New Press、Seven Stories、MIT、梵谷美術館圖書館目錄頁重新核可，2 條（Doy 論後現代、Jenkins 論 Ruscha）降為待查證。(2) Monoskop 是 wiki，卻有 46 條核可關係以它為據：14 條引的是 Monoskop 上的原典掃描檔（Wall、Mulvey、Sekula 原文），屬原典自證，保留；32 條引 wiki 人物頁或 log 貼文，交一組研究找替代頁：22 條找到出版社、圖書館目錄、美術館頁改核可，7 條新頁只間接提及而降為待查證，3 條查無替代頁（Newhall《攝影史》論 Strand、Teige 屬構成主義、Derrida 屬後現代）降為待查證。
+- **兩條 dev/staging 網址：** Phaidon 文章改引正式站（同一句仍在）；哥本哈根大學 test01 讀不到，改引同作者 Sandbye 2007 年專書《Kedelige Billeder: Fotografiets snapshotæstetik》的大學研究檔案頁，claim 依頁面改寫。
+- **擴充：** 八組研究並行（日本戰後、台港中韓、理論文本、歐美經典、當代、只有作者邊的作品、非洲南亞東南亞中東東歐拉美新節點、Monoskop 換源），每組上限 30 次搜尋、40 次讀頁；轉檔程式（scratchpad `compile_r21.py`）檢查 id、方向、主機、引句長度、claim 格式，依 `infer_role`／`year_from_claim` 補 role 與 year，摘要式引句一律待查證。研究者回報 362 條；審核後 355 條入檔（290 核可、65 待查證；另 2 條事後補 Dijkstra 回顧展本身的邊）、7 條否決或重複。審核改寫 36 條 claim（研究者直接套用節點名稱造成「Pictures 展 1977展出」之類的句子、年份落在 claim 裡誤導 `year`、作者邊 claim 寫成內容摘要）；29 條研究者標為「摘要」但引句其實明載（展覽圖說、年表條目、「influenced by」、「the central figure of the book is」）改為核可；2 條研究者核可但審核退回（AGNSW 新聞稿只說《鎌鼬》是代表系列、未寫本展展出；Export 頁面寫 performance 而非 performance photography）；1 條剔除（Getty 展廳陳列 Vogue 雜誌不等於《小行當》屬於 Vogue）。
+- **新節點：** 93 個，全部附機構或評論 hub 與至少一條核可關係：22 位人物，其中 15 位是非歐美日的攝影家（Neshat、Štyrský、Sudek、Rydet、Andujar、Larrain、Raghu Rai、Hura、Sunil Gupta、Gauri Gill、Mofokeng、Errázuriz、Fani-Kayode、Manit Sriwanichpoom、Pushpamala N.），其餘是山崎博與師承或合作者（Karel Novák、Clare Arni、Yva、Marvin Israel、Bergman、Duchamp）；Bill Brandt 已存在，併入 `brandt_bill`；27 件作品；31 個展覽事件（兩組研究各自提出的深瀨昌久回顧展合併為一個 id）；13 個機構（Prix Pictet、Turner Prize、Afrapix、Autograph ABP、AFI Chile、Padma Shri、東川賞海外作家賞、金鐘獎等）。
+- **推薦引擎：** 新增的館所與展覽「展出了」邊讓 MoMA、Getty 擠掉寇德卡自己的《吉普賽人》，回歸測試抓到；入邊的 exhibit 依展方類型折減（館所 0.5、展覽 0.8），與出邊的成員關係同一套權重。
+- **數字：** 節點 1645→1738、關係 2906→3261、正式入圖 2788→3070、待查證 87→160（其中 63 條是本輪摘要式引句）、來源 1042→1198；智識關係（影響、討論、延伸、對照、批判、研究、詮釋）415→576。盲測：另見 verification-sources R 節。
+- **程式整理：** 推薦、查詢、稽核等八個檔案殘留的破折號全數改為一般標點；稽核新增容許 `("award", "part_of")`（雙年展金獅獎這類由非獎項名稱的機構頒發的獎）。

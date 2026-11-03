@@ -1,6 +1,6 @@
 """Two monitoring metrics that decide when the agent should expand its sources.
 
-Last edited: 2026-10-27 — English docstrings; repetition_rate simplified with set size.
+Last edited: 2026-10-27: English docstrings; repetition_rate simplified with set size.
 
 Plain counting only; no analytics library is needed.
 """
