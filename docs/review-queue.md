@@ -660,6 +660,14 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
+## Copy, Archive, Signature (2010) (複製、檔案、簽名) → Hubertus von Amelunxen (胡貝圖斯·馮·阿梅倫克森)（belongs_to）
+- 可信度:0.52　來源層:institution　出處:r21_984d608ebc_s
+- 主張:《複製、檔案、簽名》收錄德希達 1992 年接受胡貝圖斯·馮·阿梅倫克森與 Michael Wetzel 訪談的攝影主題對話
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
 ## Jacob Riis (里斯) → 紀實攝影 (documentary photography)（belongs_to）
 - 可信度:0.38　來源層:institution　出處:leaf_riis_s
 - 主張:社會改革者、記者與攝影師;以鎂光燈拍攝下東區居民
@@ -687,14 +695,6 @@
 ## 德希達 (Jacques Derrida) → 後現代主義 (postmodernism)（belongs_to）
 - 可信度:0.52　來源層:institution　出處:leaf_derrida_s
 - 主張:後結構主義與後現代哲學的主要人物
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Hubertus von Amelunxen (胡貝圖斯·馮·阿梅倫克森) → 德希達 (Jacques Derrida)（discusses）
-- 可信度:0.52　來源層:institution　出處:r21_984d608ebc_s
-- 主張:胡貝圖斯·馮·阿梅倫克森與 Michael Wetzel 於 1992 年就攝影主題訪談德希達,收於《複製、檔案、簽名》
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
