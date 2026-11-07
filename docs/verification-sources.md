@@ -441,10 +441,10 @@ The Art Story（Gursky 冷面、Levitt 與 Cartier-Bresson 街頭）與 Phillips
 
 ## S. 第 22 輪（2026-11-07）擴充與弱主機普查
 
-**新增來源 90 列（機構 68、評論 20、原典 2）。**
+**新增來源 97 列（機構 75、評論 20、原典 2）。**
 
 ### 擴充用到的 hub（依類型）
-- **美術館與館所：** 大都會藝術博物館（Heilbrunn 時間線、新聞稿、展覽頁）、MoMA（新聞稿檔案 1964／1979、館藏作品頁）、Getty（展覽頁圖說）、MOCA Los Angeles、Whitney、Fondation Cartier、Grand Palais、Rubin Museum（含其存檔站）、Alkazi Foundation、Toledo Museum、MFA Boston、Fundación Larivière、Nguyen Art Foundation、Smithsonian NMAA、Foam、Hammer Museum、Jewish Museum、Walther Collection、MACBA、Fotomuseum Winterthur、Generali Foundation、Norton Simon、Henry Moore Institute、Centre Pompidou、Nelson-Atkins、Berlinische Galerie、ICP、M+、Museo Thyssen-Bornemisza、Seoul Museum of Art、MMCA 研究檔案、Asia Art Archive 展覽資料庫、中央美術學院美術館、國立中興大學、文化部、東京都寫真美術館、Canon Gallery、藝術平台 artplatform.go.jp、Tate 詞彙、Bauhaus Kooperation。
+- **美術館與館所：** 大都會藝術博物館（Heilbrunn 時間線、新聞稿、展覽頁）、MoMA（新聞稿檔案 1964／1979／1993／1997／2011、館藏作品頁）、沙迦藝術基金會、歐洲攝影之家、龐畢度中心（Goldblatt 2018）、Getty（展覽頁圖說）、MOCA Los Angeles、Whitney、Fondation Cartier、Grand Palais、Rubin Museum（含其存檔站）、Alkazi Foundation、Toledo Museum、MFA Boston、Fundación Larivière、Nguyen Art Foundation、Smithsonian NMAA、Foam、Hammer Museum、Jewish Museum、Walther Collection、MACBA、Fotomuseum Winterthur、Generali Foundation、Norton Simon、Henry Moore Institute、Centre Pompidou、Nelson-Atkins、Berlinische Galerie、ICP、M+、Museo Thyssen-Bornemisza、Seoul Museum of Art、MMCA 研究檔案、Asia Art Archive 展覽資料庫、中央美術學院美術館、國立中興大學、文化部、東京都寫真美術館、Canon Gallery、藝術平台 artplatform.go.jp、Tate 詞彙、Bauhaus Kooperation。
 - **出版社與大學：** Verso、Edition Argentum、JRP|Editions、Reaktion、UAL Research Online、復旦大學發展研究院、政大學術集成、蘇黎世大學 China und der Westen、UCSD（Cohen 與 Meskin 論文）。
 - **評論層：** Artforum、Frieze、Aperture、報導者、中國時報、中央社、e-flux 公告、商業藝廊（303、Nonaka-Hill、Stevenson、Fraenkel、Goodman、Jack Shainman、Silverlens、Howard Greenberg、Michael Hoppen、Yossi Milo、Richard Saltoun）、LensCulture。
 

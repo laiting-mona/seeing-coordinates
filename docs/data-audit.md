@@ -1,6 +1,6 @@
 # 資料流程稽核(tools/audit_data.py 產生)
 
-實體 1850、來源 1288、關係 3540(auto 15、approved 3317、review 177、rejected 31)。
+實體 1868、來源 1295、關係 3575(auto 15、approved 3352、review 177、rejected 31)。
 
 ## 硬性錯誤:0 項
 
