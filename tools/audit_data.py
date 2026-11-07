@@ -1,6 +1,6 @@
 """Data-pipeline audit: checks the curated dataset for integrity problems.
 
-Last edited: 2026-11-03: the URL checks read the latest evidence URL through data_io.parse_evidence (the same view
+Last edited: 2026-11-07: weak-host warning (wikis, blogs, booksellers, auction houses). 2026-11-03: the URL checks read the latest evidence URL through data_io.parse_evidence (the same view
 graph_build exposes); ("award", "part_of") tolerated. 2026-11-02 (second pass): warning for a formal edge whose evidence has no parseable verbatim
 quote (self-primary excepted). Earlier the same day: role / year rules. Hard errors: a belongs_to edge without a role, a
 role on another kind, a role that contradicts the node types (the rule in data_io.infer_role),
@@ -52,6 +52,10 @@ EM_DASH = "\u2014"   # em-dash, written as an escape
 URL_IN_EVIDENCE = re.compile(r"查證來源: (\S+?)(?:｜|$)")
 WIKI_HOSTS = ("wikipedia.org", "baike.baidu.com", "namu.wiki")   # not acceptable verification hubs
 NON_PRODUCTION_HOST = re.compile(r"(^|[./])(dev|staging\d*|test\d*)[.-]")   # e.g. staging2.phaidon.com, test01.ku.dk
+# hosts the verification rules do not accept: wikis, personal blogs, booksellers, auction houses, social and
+# document-sharing sites. Institution-run blogs are listed in INSTITUTION_BLOGS and pass.
+WEAK_HOST = re.compile(r"wiki|blog|wordpress|medium\.com|substack|scribd|pinterest|amazon\.|abebooks|ebay\.|sothebys|phillips\.com|christies|artsy\.net|academia\.edu|researchgate|issuu|tumblr|facebook|instagram|youtube", re.IGNORECASE)
+INSTITUTION_BLOGS = {"blogs.getty.edu", "blogs.ncl.ac.uk", "blog.scienceandmediamuseum.org.uk", "samblog.seattleartmuseum.org", "blog.mcny.org", "blog.photoeye.com"}
 FORMAL = ("approved", "auto")
 # role pairs (stored, rule) a reviewer may legitimately choose: a person -> institution edge can be an award only
 # when the name says so, so these are the cases where the stored role is a deliberate refinement of the rule
@@ -84,6 +88,15 @@ def verification_urls(relation: dict, source: dict) -> list[str]:
 def wiki_only(relation: dict, source: dict) -> bool:
     urls = verification_urls(relation, source)
     return bool(urls) and all(any(host in url for host in WIKI_HOSTS) for url in urls)
+
+
+def is_weak_host(url: str) -> bool:
+    """True when the host is one the rules reject, unless it is an institution-run blog or a scan of the
+    primary text itself (Monoskop /images/ files, which the rules accept as the text citing itself)."""
+    host = re.sub(r"^https?://", "", url).split("/")[0].lower()
+    if host in INSTITUTION_BLOGS or "/images/" in url or "File:" in url:
+        return False
+    return bool(WEAK_HOST.search(host))
 
 
 def is_self_primary(relation: dict, source: dict) -> bool:
@@ -179,6 +192,8 @@ def warnings(entities, sources, relations) -> dict[str, list]:
             warn["formal edge resting only on a book (no URL, no page): cited source"].append(r["source_ref"])
         if r["status"] in FORMAL and urls and NON_PRODUCTION_HOST.search(re.sub(r"^https?://", "", urls[-1])):
             warn["verification URL on a dev/staging/test host"].append(f"{label}: {urls[-1]}")
+        if r["status"] in FORMAL and urls and is_weak_host(urls[-1]):
+            warn["verification URL on a wiki, blog, bookseller or auction host (primary-text scans excepted)"].append(f"{label}: {urls[-1]}")
     formal_used = collections.Counter(n for r in relations if r["status"] in FORMAL for n in (r["source_id"], r["target_id"]))
     warn["isolated entity"] = [i for i in entities if used[i] == 0]
     warn["entity with no formal edge (isolated dot in the viewer)"] = [i for i in entities if used[i] and not formal_used[i]]

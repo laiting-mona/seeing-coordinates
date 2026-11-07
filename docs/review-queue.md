@@ -1,6 +1,6 @@
 # 待人工判斷佇列（review queue）
 
-共 160 條。程式自動彙整,判斷與決定由你填。
+共 153 條。程式自動彙整,判斷與決定由你填。
 
 > 每條的「你的決定」欄預設空白。你確認後填 approved / rejected / 重構,我再據此更新圖。
 
@@ -812,14 +812,6 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## Eikoh Hosoe: Theatre of Memory (AGNSW, 2011) (細江英公:記憶的劇場(新南威爾斯州立美術館,2011)) → 鎌鼬（exhibit）
-- 可信度:0.52　來源層:institution　出處:r21_d54e2ff415_s
-- 主張:《鎌鼬》等系列納入本展
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## 細江英公 → 寫實攝影 (realist photography)（contrast）
 - 可信度:0.42　來源層:critic　出處:r21_5d96161cf6_s
 - 主張:細江英公的作品體現對主觀且實驗性攝影的渴求,與當時主流的社會寫實主義對立
@@ -855,14 +847,6 @@
 ## 土門拳 → 東松照明（influence）
 - 可信度:0.52　來源層:institution　出處:r21_6667642638_s
 - 主張:東松照明稱土門拳為父親
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## On the Road (1957) (《在路上》) → 森山大道（influence）
-- 可信度:0.52　來源層:institution　出處:r21_9e18ebe1ed_s
-- 主張:森山大道是凱魯亞克《在路上》的愛好者,其作品多關注攝影的旅程與偶遇
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -988,14 +972,6 @@
 - 我的建議:(待補)
 - **你的決定:** ________
 
-## Lucia Moholy (露西亞·莫霍利) → 包浩斯 (Bauhaus)（belongs_to）
-- 可信度:0.52　來源層:institution　出處:r21_f0261e9453_s
-- 主張:露西亞·莫霍利是與國際包浩斯網絡相關的教師、作家與藝術家
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
 ## Paul Strand (保羅·史川德) → Ansel Adams (安瑟·亞當斯)（influence）
 - 可信度:0.52　來源層:institution　出處:r21_5630531266_s
 - 主張:安瑟·亞當斯於1930年接觸保羅·史川德的攝影後,放棄原本的畫意柔焦風格轉向純粹銳利對焦
@@ -1015,14 +991,6 @@
 ## Diane Arbus (黛安·阿巴斯) → Gregory Crewdson (克魯森)（influence）
 - 可信度:0.42　來源層:critic　出處:r21_5f6737b5a0_s
 - 主張:克魯森的圖景作品令人聯想到黛安·阿巴斯的攝影
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## The Photographers' Gallery (攝影師畫廊(倫敦)) → Lindokuhle Sobekwa (林多庫勒·索貝克瓦)（exhibit）
-- 可信度:0.52　來源層:institution　出處:r21_3a438e41b2_s
-- 主張:林多庫勒·索貝克瓦為2025年德意志交易所攝影基金會獎入圍藝術家,作品於攝影師畫廊展出
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -1063,22 +1031,6 @@
 ## Larry Sultan: Here and Home (SFMOMA, 2017) → Evidence (1977) (證據)（exhibit）
 - 可信度:0.52　來源層:institution　出處:r21_15721837bb_s
 - 主張:Larry Sultan: Here and Home 展展出賴瑞·蘇丹1970年代與麥克·曼德爾合作的計畫
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Thomas Demand (德曼) → Kunstakademie Düsseldorf (杜塞道夫藝術學院)（belongs_to）
-- 可信度:0.52　來源層:institution　出處:r21_acb26d2285_s
-- 主張:德曼於1990年起在杜塞道夫跟隨 Fritz Schwegler 繼續藝術學業
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Josef Koudelka: Nationality Doubtful (Getty, 2014–15) → Exiles (1988) (流亡)（exhibit）
-- 可信度:0.52　來源層:institution　出處:r21_b4f67a42ac_s
-- 主張:Josef Koudelka 回顧展「國籍可疑」提及其無國籍時期產生的作品《流亡》
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
@@ -1263,14 +1215,6 @@
 ## Zoe Leonard: Survey (MOCA Los Angeles, 2018–19) → The Fae Richards Photo Archive (1993–96) (《菲·理查茲照片檔案》)（exhibit）
 - 可信度:0.52　來源層:institution　出處:r21_8ea3d820ba_s
 - 主張:「Zoe Leonard: Survey」新聞稿提及為電影《The Watermelon Woman》製作的《菲·理查茲照片檔案》
-- 調查紀錄:(待補)
-- 參考來源:(無)
-- 我的建議:(待補)
-- **你的決定:** ________
-
-## Zoe Leonard: Survey (MOCA Los Angeles, 2018–19) → MOCA Los Angeles (洛杉磯當代美術館)（belongs_to）
-- 可信度:0.52　來源層:institution　出處:r21_8ea3d820ba_s
-- 主張:「Zoe Leonard: Survey」在洛杉磯當代美術館的 Geffen Contemporary 展出
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)
