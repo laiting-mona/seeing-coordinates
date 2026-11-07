@@ -1,6 +1,6 @@
 # 待人工判斷佇列（review queue）
 
-共 153 條。程式自動彙整,判斷與決定由你填。
+共 177 條。程式自動彙整,判斷與決定由你填。
 
 > 每條的「你的決定」欄預設空白。你確認後填 approved / rejected / 重構,我再據此更新圖。
 
@@ -1223,6 +1223,198 @@
 ## Fotografia Polska, 1839–1979 (ICP, New York, 1979) → Zofia Rydet（exhibit）
 - 可信度:0.52　來源層:institution　出處:r21_d794b88010_s
 - 主張:Zofia Rydet於1979年前往紐約國際攝影中心參加Fotografia Polska, 1839–1979展覽
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Jack Goldstein (傑克·戈德斯坦) → Robert Longo (羅伯特·隆哥)（contrast）
+- 可信度:0.42　來源層:critic　出處:r22_db59251fb7_s
+- 主張:該文先以傑克·戈德斯坦等人的早期作品呈現CalArts的影響,再引入羅伯特·隆哥等人所屬的對立水牛城群體
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Louise Lawler: WHY PICTURES NOW (2017) (露易絲·勞勒：為何是圖像，此刻) → Louise Lawler (露易絲·勞勒)（study）
+- 可信度:0.52　來源層:institution　出處:r22_4d045455dd_s
+- 主張:《露易絲·勞勒:為何是圖像,此刻》所屬展覽是紐約首次以露易絲·勞勒作品為對象的美術館回顧
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Silvia Kolbowski (西爾維亞·科博斯基) → 挪用 (appropriation)（extend）
+- 可信度:0.52　來源層:institution　出處:r22_e8f787525a_s
+- 主張:西爾維亞·科博斯基運用挪用與蒙太奇技法以及精神分析、語言學與女性主義理論來批判女性特質的再現
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Pictures (essay, 1979) (〈圖景〉) → Sherrie Levine (雪莉·萊文)（discusses）
+- 可信度:0.42　來源層:critic　出處:r22_6a8bcc6d75_s
+- 主張:〈圖景〉聚焦於雪莉·萊文等一代藝術家的態度
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Pictures (essay, 1979) (〈圖景〉) → Robert Longo (羅伯特·隆哥)（discusses）
+- 可信度:0.42　來源層:critic　出處:r22_6a8bcc6d75_s
+- 主張:〈圖景〉聚焦於羅伯特·隆哥等一代藝術家的態度
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Rineke Dijkstra: Still - Moving. Portraits 1992–2024 (Berlinische Galerie, 2024–25) → Olivier (2000–03)（exhibit）
+- 可信度:0.52　來源層:institution　出處:bg_dijkstra_s
+- 主張:柏林畫廊回顧展的新聞稿介紹黛克斯特拉的 Olivier 系列
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Rineke Dijkstra: Still - Moving. Portraits 1992–2024 (Berlinische Galerie, 2024–25) → Almerisa (1994–)（exhibit）
+- 可信度:0.52　來源層:institution　出處:bg_dijkstra_s
+- 主張:柏林畫廊回顧展的新聞稿介紹黛克斯特拉的 Almerisa 系列
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Rineke Dijkstra: Still - Moving. Portraits 1992–2024 (Berlinische Galerie, 2024–25) → Beach Portraits (1992–98) (海灘肖像)（exhibit）
+- 可信度:0.52　來源層:institution　出處:bg_dijkstra_s
+- 主張:柏林畫廊回顧展的新聞稿介紹黛克斯特拉的海灘肖像系列
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Rineke Dijkstra: Still - Moving. Portraits 1992–2024 (Berlinische Galerie, 2024–25) → The Buzz Club (1995–97)（exhibit）
+- 可信度:0.52　來源層:institution　出處:bg_dijkstra_s
+- 主張:柏林畫廊回顧展的新聞稿介紹黛克斯特拉的 The Buzz Club
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Rineke Dijkstra: Still - Moving. Portraits 1992–2024 (Berlinische Galerie, 2024–25) → I See a Woman Crying (2009) (我看見一個哭泣的女人)（exhibit）
+- 可信度:0.52　來源層:institution　出處:bg_dijkstra_s
+- 主張:柏林畫廊回顧展的新聞稿介紹黛克斯特拉的三頻道錄像《我看見一個哭泣的女人》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Andreas Gursky (MoMA, 2001) → Tokyo Stock Exchange (1990) (東京證交所)（exhibit）
+- 可信度:0.52　來源層:institution　出處:moma_gursky2001_s
+- 主張:MoMA 2001年古斯基展的新聞稿提及《東京證交所》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Andreas Gursky (MoMA, 2001) → May Day IV (2000)（exhibit）
+- 可信度:0.52　來源層:institution　出處:moma_gursky2001_s
+- 主張:MoMA 2001年古斯基展的新聞稿提及《五一 IV》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Andreas Gursky (MoMA, 2001) → Paris, Montparnasse (1993) (巴黎,蒙帕納斯)（exhibit）
+- 可信度:0.52　來源層:institution　出處:moma_gursky2001_s
+- 主張:MoMA 2001年古斯基展的新聞稿提及《巴黎,蒙帕納斯》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Andreas Gursky (MoMA, 2001) → Untitled V (1997)（exhibit）
+- 可信度:0.52　來源層:institution　出處:moma_gursky2001_s
+- 主張:MoMA 2001年古斯基展的新聞稿提及《無題 V》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Andreas Gursky (MoMA, 2001) → Shanghai (2000) (上海)（exhibit）
+- 可信度:0.52　來源層:institution　出處:moma_gursky2001_s
+- 主張:MoMA 2001年古斯基展的新聞稿提及《上海》
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Carving: A Traditional Sculpture (1972) (雕刻：一件傳統雕塑) → conceptual photography (概念攝影)（belongs_to）
+- 可信度:0.52　來源層:institution　出處:r22_c428f88e99_s
+- 主張:《雕刻:一件傳統雕塑》是概念藝術史上的里程碑作品
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## In and Out of the Studio: Photographic Portraits from West Africa (The Met, 2015–16) → Malick Sidibé (馬利克·西迪貝)（exhibit）
+- 可信度:0.52　來源層:institution　出處:r22_16ba842065_s
+- 主張:In and Out of the Studio 展介紹馬利克·西迪貝以1960年代馬利文化的動感照片聞名
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Martín Chambi → Edward Ranney（influence）
+- 可信度:0.52　來源層:institution　出處:r22_4ad8b4afde_s
+- 主張:Chambi 的作品影響了 Edward Ranney 作為攝影師的發展
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## František Drtikol → 畫意攝影 (pictorialism)（belongs_to）
+- 可信度:0.52　來源層:institution　出處:r22_bd97abd739_s
+- 主張:Drtikol 在慕尼黑求學時接觸到畫意攝影
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Lee Friedlander (弗里德蘭德) → Raghubir Singh（influence）
+- 可信度:0.52　來源層:institution　出處:r22_ad9b1bff51_s
+- 主張:Raghubir Singh 深受弗里德蘭德等美國街頭攝影師作品的影響
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Modernism on the Ganges: Raghubir Singh Photographs (The Met Breuer, 2017–18) → 卡提耶-布列松 (Henri Cartier-Bresson)（exhibit）
+- 可信度:0.52　來源層:institution　出處:r22_ad9b1bff51_s
+- 主張:Modernism on the Ganges 展中也展出影響 Singh 的卡提耶-布列松的作品
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Modernism on the Ganges: Raghubir Singh Photographs (The Met Breuer, 2017–18) → Lee Friedlander (弗里德蘭德)（exhibit）
+- 可信度:0.52　來源層:institution　出處:r22_ad9b1bff51_s
+- 主張:Modernism on the Ganges 展中也展出影響 Singh 的弗里德蘭德的作品
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Foam KLM Paul Huf Award → Foam Fotografiemuseum Amsterdam（belongs_to）
+- 可信度:0.52　來源層:institution　出處:r22_b9f300d4a9_s
+- 主張:KLM Paul Huf Award 由 Foam 攝影博物館頒發
+- 調查紀錄:(待補)
+- 參考來源:(無)
+- 我的建議:(待補)
+- **你的決定:** ________
+
+## Between Past and Future: New Photography and Video from China (2004–07) (過去與未來之間:中國新攝影與錄像(ICP/亞洲協會/Smart/MCA,2004–07 巡迴)) → 劉錚（exhibit）
+- 可信度:0.42　來源層:critic　出處:r22_25d9e4aaad_s
+- 主張:劉錚的作品被納入巡迴展「過去與未來之間:中國新攝影與錄像」
 - 調查紀錄:(待補)
 - 參考來源:(無)
 - 我的建議:(待補)

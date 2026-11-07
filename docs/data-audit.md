@@ -1,6 +1,6 @@
 # 資料流程稽核(tools/audit_data.py 產生)
 
-實體 1738、來源 1208、關係 3261(auto 15、approved 3062、review 153、rejected 31)。
+實體 1850、來源 1288、關係 3540(auto 15、approved 3317、review 177、rejected 31)。
 
 ## 硬性錯誤:0 項
 
@@ -23,17 +23,17 @@
   - `demand -belongs_to-> tableau: https://phillips.com/detail/thomas-demand/79412`
   - `ruff -influence-> deadpan: https://www.phillips.com/detail/thomas-struth/97077`
   - `moriyama -influence-> kurata_seiji: https://phillips.com/article/11848907/the-tattooed-man-seiji-kurata-and-flash-up`
-- **entity with no formal edge (isolated dot in the viewer)**:3
-  - `wu_yinxian`
+- **entity with no formal edge (isolated dot in the viewer)**:2
   - `workshop_mag_w`
   - `lucie_rie`
-- **work with no person author**:6
+- **work with no person author**:7
   - `provoke_journal`
   - `lightaura_zh`
   - `october5_w`
   - `aiz`
   - `nachtwey_war_photographer_w`
   - `lucken_taki_koji_counter_photography_w`
+  - `cohen_meskin_photographs_not_transparent_w`
 - **source cited by no relation**:136
   - `another_way`
   - `photographic_message`

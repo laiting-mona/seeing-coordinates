@@ -438,3 +438,22 @@ The Art Story（Gursky 冷面、Levitt 與 Cartier-Bresson 街頭）與 Phillips
 從本輪 292 條新核可隨機抽 40 條、Monoskop 換源後的 22 條核可抽 10 條，交另一位查核者只讀所引網址、不搜尋、不知前判（scratchpad `blind_sample.py`，種子 2111／7）：49 條明載、1 條不支持、0 條細節超出、0 條讀不到。
 - 不支持的 1 條：《Copy, Archive, Signature》的作者邊連到阿梅倫克森。Stanford UP／De Gruyter 頁面列德希達為作者，阿梅倫克森只是 1992 年的訪談者；作者邊降為待查證，同頁明載的「阿梅倫克森訪談德希達談攝影」則由待查證改為核可。
 - 推估：本輪新核可中連結本身不足的比例約 2%（1/50，95% 區間上限約 10%），低於第 16–17 輪盲測的 3–5%；claim 帶頁面沒寫細節的情形本輪為 0，因為轉檔前審核已逐條改寫研究者直接套用節點名稱或帶年份的句子。
+
+## S. 第 22 輪（2026-11-07）擴充與弱主機普查
+
+**新增來源 90 列（機構 68、評論 20、原典 2）。**
+
+### 擴充用到的 hub（依類型）
+- **美術館與館所：** 大都會藝術博物館（Heilbrunn 時間線、新聞稿、展覽頁）、MoMA（新聞稿檔案 1964／1979、館藏作品頁）、Getty（展覽頁圖說）、MOCA Los Angeles、Whitney、Fondation Cartier、Grand Palais、Rubin Museum（含其存檔站）、Alkazi Foundation、Toledo Museum、MFA Boston、Fundación Larivière、Nguyen Art Foundation、Smithsonian NMAA、Foam、Hammer Museum、Jewish Museum、Walther Collection、MACBA、Fotomuseum Winterthur、Generali Foundation、Norton Simon、Henry Moore Institute、Centre Pompidou、Nelson-Atkins、Berlinische Galerie、ICP、M+、Museo Thyssen-Bornemisza、Seoul Museum of Art、MMCA 研究檔案、Asia Art Archive 展覽資料庫、中央美術學院美術館、國立中興大學、文化部、東京都寫真美術館、Canon Gallery、藝術平台 artplatform.go.jp、Tate 詞彙、Bauhaus Kooperation。
+- **出版社與大學：** Verso、Edition Argentum、JRP|Editions、Reaktion、UAL Research Online、復旦大學發展研究院、政大學術集成、蘇黎世大學 China und der Westen、UCSD（Cohen 與 Meskin 論文）。
+- **評論層：** Artforum、Frieze、Aperture、報導者、中國時報、中央社、e-flux 公告、商業藝廊（303、Nonaka-Hill、Stevenson、Fraenkel、Goodman、Jack Shainman、Silverlens、Howard Greenberg、Michael Hoppen、Yossi Milo、Richard Saltoun）、LensCulture。
+
+### 這一輪換掉的頁面
+- udn 部落格（《論攝影》黃翰荻譯本 3 條）→ 蘇黎世大學書目資料庫。
+- PZI wiki（傅拉瑟 3 條）→ Reaktion Books 書頁。
+- Sotheby's 圖錄（Cunningham 參展 Film und Foto）→ Imogen Cunningham Trust 年表。
+- tfaoi.org 轉載的美術館牆面文字（Szarkowski 五個詞）→ MoMA 1964 年新聞稿。
+- 仍以 Phillips 拍賣文案為據的 3 條保留為稽核警告。
+
+### 盲測
+見下方「S 補一」。
