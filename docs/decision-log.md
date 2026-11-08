@@ -276,3 +276,8 @@
 - **新節點：** 130 個：人物 23（含 15 位非歐美日攝影家、Tatlin、Rosy Martin、Ian Wallace、Rodney Graham、Ken Lum、William J. Mitchell、Hill 與 Adamson、Judy Freya Sibayan）、作品 32、館所 29（M+、提森博物館、卡地亞基金會、大皇宮、魯賓博物館、Drik、江陵寫友會、Fundación Larivière、Nguyen Art Foundation、捷克攝影協會、沙迦藝術基金會、歐洲攝影之家等）、事件 46。
 - **數字：** 節點 1738→1868、關係 3261→3575、正式入圖 3070→3367、待查證 160→177、來源 1198→1295；智識關係 576→643。
 - **盲測：** 兩組 64 條（40 + 24）：53 明載、0 不支持、2 細節超出（Rennó 展隸屬 MOCA 的年份取自事件 id；王慶松「staged compositions」對應本圖「圖景 / 舞台式」節點），9 條查核者的抓取工具讀不到、其中 2 條另行確認。詳見 verification-sources S 補一。
+
+## 2026-11-08 第 23 輪（上）：拍賣行文案換源
+
+- 3 條以 Phillips 拍賣文案為據的核可關係：Ruff 為冷面美學代表改引 IMMA 2002 年新聞稿（"his famous oversized, deadpan 'Portrait' series"）；德曼屬「圖景」查了 MOT、Mudam、Matthew Marks、SAM、NGV、Tate Etc 六頁都不用 tableau 一詞，只有拍賣文案如此，依「頁面用語須與概念相同」規則降為待查證；森山大道在 WORKSHOP 教過倉田精二只有書商（引 Parr 與 Badger）與維基寫到，Zen Foto 頁讀不到，保留核可與稽核警告。
+- 兩個孤立節點：WORKSHOP 季刊只有書商與拍賣行說它由 WORKSHOP 寫真學校出版，國會圖書館目錄查無；Lucie Rie 與具本昌的關係 Aperture 頁未寫「啟發」，先前已剔除，不再提出。兩者維持孤立、不剔除節點。
