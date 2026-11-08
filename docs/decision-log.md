@@ -281,3 +281,9 @@
 
 - 3 條以 Phillips 拍賣文案為據的核可關係：Ruff 為冷面美學代表改引 IMMA 2002 年新聞稿（"his famous oversized, deadpan 'Portrait' series"）；德曼屬「圖景」查了 MOT、Mudam、Matthew Marks、SAM、NGV、Tate Etc 六頁都不用 tableau 一詞，只有拍賣文案如此，依「頁面用語須與概念相同」規則降為待查證；森山大道在 WORKSHOP 教過倉田精二只有書商（引 Parr 與 Badger）與維基寫到，Zen Foto 頁讀不到，保留核可與稽核警告。
 - 兩個孤立節點：WORKSHOP 季刊只有書商與拍賣行說它由 WORKSHOP 寫真學校出版，國會圖書館目錄查無；Lucie Rie 與具本昌的關係 Aperture 頁未寫「啟發」，先前已剔除，不再提出。兩者維持孤立、不剔除節點。
+
+## 2026-11-08 第 23 輪（下）：補 14 個節點、97 條關係
+
+- **三組研究**：(C) 45 位沒有智識邊的人物補 39 條（法蘭克啟發梅耶羅維茨、Met 以卡麥隆對照雷蘭德與羅賓遜、Walther Collection 以福索對照 Keïta 與西迪貝、Gordon Parks 基金會載帕克斯受史崔克與休斯啟發、ICP 載帕克斯看到 FSA 照片後成為攝影師、Aperture 列出 Robert Adams 撰文論及的九位攝影家、Tate Papers 載德布林論桑德、Princeton 載西斯金等三人為高溫的導師、Cotton《作為當代藝術的攝影》收錄的攝影家、Aperture 載蘿絲勒貶斥海尼肯、席德進開啟林柏樑的視野）；(D) 90 件只有作者邊的作品補 32 條（戈德堡《Open See》與摩斯《飛地》的德意志交易所獎、Tate 展出諾爾《貝爾格拉維亞》與《紳士》、Fischli/Weiss 回顧展、牛頓基金會與休士頓美術館展出《白人女性》《巨幅裸體》、Tate 麥布里奇回顧展、克魯爾《金屬》與新視覺、艾普斯坦《家族事業》Kraszna-Krausz 獎、三影堂榮榮展、索貝克瓦《足跡》《Nyaope》、帕爾《非國教徒》Compton Verney 展、卡納加與攝影聯盟、卡爾《旅館》龐畢度展示、V&A 作品頁的利西茨基《建構者》展示紀錄）；(F) 36 個邊數少的概念補 34 條（Tate 詞彙：靈光對照機械複製、班雅明使用靈光一詞；Reaktion 書頁章名：技術影像、裝置；AAA 載《被解放的觀眾》章名〈沉思的影像〉；Frieze 與 e-flux 論《明室》的知面與刺點；Whitney 載 Andrea Fraser 與體制批判；CCP 載《第二視角》再攝影調查；MoMA 1964 新聞稿載 Szarkowski 評述事物本身、框取、時間；Frieze 載莫薇男性凝視、Fried《攝影為何前所未有地重要》的專注與劇場性及其論及的十二位攝影家；AGO 載溫哥華學派；Tate 載沃爾的燈箱透明片；Met 載史川德影響精確主義；Kentucky 大學載 1966 年 Toward a Social Landscape 展）。
+- **審核：** 研究者回報 105 條；97 條入檔（91 核可、6 待查證）、8 條重複或因新節點沒有核可邊而連同節點丟棄（Spence 1985 工作坊展、Lyon 克里夫蘭展、Broodthaers MoMA 展、黃世澤）。研究者標為「摘要」但引句明載而改核可 17 條；claim 改寫 3 條；role 改 1 條（《Nyaope》刊於 Mail & Guardian 為 contributor，稽核新增容許 `("contributor", "part_of")`）。
+- **數字：** 節點 1868→1882、關係 3575→3672、正式入圖 3366→3457、待查證 178→184、來源 1296→1336；智識關係 643→700。盲測另見 verification-sources T 節。

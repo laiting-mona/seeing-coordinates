@@ -61,7 +61,8 @@ FORMAL = ("approved", "auto")
 # when the name says so, so these are the cases where the stored role is a deliberate refinement of the rule
 # (("award", "part_of") covers a work that won a prize given by an institution not named as one, e.g. a biennale's Golden Lion).
 ROLE_TOLERATED = {("award", "member"), ("award", "part_of"), ("member", "part_of"), ("participant", "contributor"), ("contributor", "participant"),
-                  ("participant", "member")}   # a person who took part in a biennale or documenta typed as an institution
+                  ("participant", "member"),   # a person who took part in a biennale or documenta typed as an institution
+                  ("contributor", "part_of")}  # a work published in a newspaper or magazine typed as an institution
 DATA_FILES = ("data/seed_entities.csv", "data/sources.csv", "data/raw_relations.jsonl")
 # Works that legitimately have no person author edge: periodicals, series, translations, anthologies of others.
 AUTHORLESS_OK_TYPES = ("magazine", "journal", "雜誌", "期刊", "季刊", "叢書", "series", "文庫", "Chinese ed", "中譯", "Illuminations")

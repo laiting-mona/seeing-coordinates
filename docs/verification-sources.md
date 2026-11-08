@@ -464,3 +464,14 @@ The Art Story（Gursky 冷面、Levitt 與 Cartier-Bresson 街頭）與 Phillips
 - 細節超出的 2 條：Rennó《Cicatriz》展隸屬 MOCA（頁面只載 Aug 25 - Nov 3、未寫年份，主辦館由 moca.org 展覽檔案頁本身可知，year 取自事件 id）；王慶松屬「圖景 / 舞台式」（頁面用語是 staged compositions，本圖節點名稱已含「舞台式」）。兩條保留核可並在 evidence 註記。
 - 第二組：從後兩批 101 條新核可抽 24 條（種子 2208）：24 條全部明載、0 條不支持、0 條細節超出。
 - 合計 64 條：53 明載、2 細節超出（連結本身成立）、0 不支持、9 查核者讀不到（其中 2 條另行確認）。本輪新核可中連結不足的比例推估接近 0（上限約 5%）。
+
+## T. 第 23 輪（2026-11-08）概念節點、批評者、作品展出紀錄
+
+**新增來源 41 列（機構 32、評論 9）。**
+- **美術館與館所：** Tate（詞彙、Tate Papers、展覽頁、BSL 導覽頁）、Met（Heilbrunn 時間線）、MoMA（1964 新聞稿）、ICP、Whitney、Brooklyn Museum、V&A 作品頁、Centre Pompidou 作品頁、AGO、Jeu de Paume、IMMA、Compton Verney、Hammer Museum、Walther Collection、Center for Creative Photography、Gordon Parks Foundation、Helmut Newton Foundation、International Photography Hall of Fame、American Academy in Berlin、三影堂、Asia Art Archive、Princeton（Dean of Faculty）、University of Kentucky、Deutsche Börse Photography Foundation、The Photographers' Gallery。
+- **出版社：** Aperture（書店頁）、Reaktion、Thames & Hudson。
+- **評論層：** Frieze、e-flux、Aperture（雜誌）、Magnum、報導者、中央社、商業藝廊（Sean Kelly、Goodman、Howard Greenberg）。
+- **換掉的頁面：** Phillips 拍賣文案（Ruff 冷面美學）改引 IMMA 2002 年新聞稿；德曼「圖景」降為待查證。
+
+### 盲測
+見下方「T 補一」。
