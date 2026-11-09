@@ -1,6 +1,9 @@
 """Render build/graph.json into a single-file interactive viewer (build/viewer.html).
 
-Last edited: 2026-11-02: edge cards show the belongs_to role (作者是 / 收錄於 / 獲獎 ...) instead of
+Last edited: 2026-11-09: page title and header carry the agent's formal name; --with-review reads
+build/graph_with_review.json and writes build/viewer_with_review.html with a header note; when
+vis-network cannot be loaded (offline) the page says so instead of staying black.
+2026-11-02: edge cards show the belongs_to role (作者是 / 收錄於 / 獲獎 ...) instead of
 the bare verb 屬於, and the relation year when known.
 2026-10-29: viewer.html written with LF on every OS. 2026-10-28: fixed black/white theme; removed hint text; UX pass: search box,
 type filter chips, neighbour focus on click, clickable verification links, layout frozen after
@@ -9,9 +12,10 @@ stabilisation. 2026-10-27: functions + main(); kind labels from schema.KIND_VERB
 Uses vis-network from cdnjs; data is embedded so the file is portable and can be
 published as an artifact. Edges with status `review` are dashed and labelled 待判斷.
 Theme is intentionally fixed (black background, white text) by the project owner's request.
-Usage: python build_viewer.py
+Usage: python build_viewer.py [--with-review]
 """
 import json
+import sys
 from pathlib import Path
 
 import data_io
@@ -19,8 +23,9 @@ from schema import KIND_VERB_ZH, ROLE_VERB_ZH
 
 ROOT = Path(__file__).resolve().parent
 OUTPUT_HTML = ROOT / "build/viewer.html"
+OUTPUT_HTML_WITH_REVIEW = ROOT / "build/viewer_with_review.html"
 
-TEMPLATE = r"""<title>觀看的座標 譜系地圖</title>
+TEMPLATE = r"""<title>觀看的座標：攝影論述譜系推薦 Agent｜譜系地圖</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap">
 <style>
   /* Fixed dark theme (user request: black background, white text) */
@@ -93,7 +98,7 @@ TEMPLATE = r"""<title>觀看的座標 譜系地圖</title>
 </style>
 <div id="app">
   <header>
-    <h1>觀看的座標 · 譜系地圖</h1>
+    <h1>觀看的座標 · 譜系地圖 <small style="font-weight:400;opacity:.7">攝影論述譜系推薦 Agent</small></h1>
     <span class="stats" id="stats"></span>
     <div class="search">
       <input id="q" type="search" placeholder="搜尋人物、著作、概念、機構…" autocomplete="off" aria-label="搜尋節點">
@@ -111,6 +116,7 @@ TEMPLATE = r"""<title>觀看的座標 譜系地圖</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.9/dist/vis-network.min.js"></script>
 <script>
 const DATA = /*__DATA__*/;
+const REVIEW_NOTE = /*__NOTE__*/;
 const KIND = /*__KIND__*/;
 const ROLE = /*__ROLE__*/;
 const css = k => getComputedStyle(document.documentElement).getPropertyValue(k).trim();
@@ -123,7 +129,11 @@ const neighbours = {}; DATA.nodes.forEach(n => neighbours[n.id] = new Set([n.id]
 DATA.edges.forEach(e => { neighbours[e.from]?.add(e.to); neighbours[e.to]?.add(e.from); });
 const isolated = new Set(DATA.nodes.filter(n => neighbours[n.id].size === 1).map(n => n.id));  // no in-graph relation yet
 let showIsolated = false;   // hidden by default: they only orbit the map and add no path
-document.getElementById("stats").textContent = `${DATA.nodes.length} 節點 · ${DATA.edges.length} 關係`;
+document.getElementById("stats").textContent = `${DATA.nodes.length} 節點 · ${DATA.edges.length} 關係` + (REVIEW_NOTE ? ` · ${REVIEW_NOTE}` : "");
+if (typeof vis === "undefined") {
+  document.getElementById("net").innerHTML = '<p style="padding:24px;color:#fff;font-size:14px">無法載入 vis-network(此頁從 cdnjs.cloudflare.com 讀取繪圖程式庫,需要網路)。資料本身已內嵌,連上網路後重新整理即可。</p>';
+  throw new Error("vis-network not loaded");
+}
 const FONT = {color:css("--fg"), size:14, face:"'Noto Sans TC', sans-serif", strokeWidth:3, strokeColor:css("--bg")};
 const FONT_DIM = {...FONT, color:"rgba(255,255,255,0)", strokeWidth:0};   // focus mode: non-neighbours lose their label
 const LABEL_SCALE = {overview:{min:10, max:22, drawThreshold:8}, focus:{min:16, max:28, drawThreshold:2}};
@@ -277,25 +287,31 @@ def to_viewer_edges(graph_json: dict) -> list[dict]:
             for e in graph_json["links"]]
 
 
-def render_html(nodes: list[dict], edges: list[dict]) -> str:
-    """Embed data and kind labels into the HTML template."""
+def render_html(nodes: list[dict], edges: list[dict], review_note: str = "") -> str:
+    """Embed data, kind labels and the optional header note into the HTML template."""
     data_json = json.dumps({"nodes": nodes, "edges": edges}, ensure_ascii=False)
     kind_json = json.dumps(KIND_VERB_ZH, ensure_ascii=False)
     role_json = json.dumps(ROLE_VERB_ZH, ensure_ascii=False)
-    return TEMPLATE.replace("/*__DATA__*/", data_json).replace("/*__KIND__*/", kind_json).replace("/*__ROLE__*/", role_json)
+    note_json = json.dumps(review_note, ensure_ascii=False)
+    return (TEMPLATE.replace("/*__DATA__*/", data_json).replace("/*__KIND__*/", kind_json)
+            .replace("/*__ROLE__*/", role_json).replace("/*__NOTE__*/", note_json))
 
 
-def build_viewer(root: Path = ROOT) -> tuple[int, int]:
-    """Read graph.json, render the viewer, write it. Returns (node_count, edge_count)."""
-    graph_json = data_io.load_graph_json(root)
+def build_viewer(root: Path = ROOT, with_review: bool = False) -> tuple[int, int]:
+    """Read graph.json (or graph_with_review.json), render the viewer, write it. Returns (node_count, edge_count)."""
+    graph_json = data_io.load_graph_json(root, with_review)
     nodes, edges = to_viewer_nodes(graph_json), to_viewer_edges(graph_json)
-    data_io.write_text_lf(root / "build/viewer.html", render_html(nodes, edges))
+    review_count = sum(1 for e in edges if e.get("status") == "review")
+    note = f"含 {review_count} 條待查證(虛線),非定論" if with_review else ""
+    target = root / ("build/viewer_with_review.html" if with_review else "build/viewer.html")
+    data_io.write_text_lf(target, render_html(nodes, edges, note))
     return len(nodes), len(edges)
 
 
 def main() -> None:
-    node_count, edge_count = build_viewer()
-    print(f"viewer.html 產生,節點 {node_count} 關係 {edge_count}")
+    with_review = "--with-review" in sys.argv
+    node_count, edge_count = build_viewer(with_review=with_review)
+    print(f"{'viewer_with_review.html' if with_review else 'viewer.html'} 產生,節點 {node_count} 關係 {edge_count}")
 
 
 if __name__ == "__main__":

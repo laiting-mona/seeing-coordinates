@@ -1,2 +1,2 @@
-# Keep bytes exactly as committed on every OS (data files are LF, sources.csv is CRLF on purpose).
+# Keep bytes exactly as committed on every OS (jsonl and generated files are LF; seed_entities.csv and sources.csv are CRLF on purpose).
 * -text

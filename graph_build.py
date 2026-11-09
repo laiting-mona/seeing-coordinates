@@ -1,6 +1,8 @@
 """Build the knowledge graph from data/ and write build/graph.json.
 
-Last edited: 2026-11-02: every edge in graph.json also carries the parsed evidence fields
+Last edited: 2026-11-09: --with-review writes build/graph_with_review.json instead of overwriting
+build/graph.json, and its summary line says "formal + review" rather than calling the total formal.
+2026-11-02: every edge in graph.json also carries the parsed evidence fields
 (evidence_url, quote, verified_on, check_rounds; see data_io.parse_evidence) so a consumer
 need not parse the audit trail. 2026-10-29: load_entities() refuses duplicate entities (same type + name under two
 ids); graph.json written with LF on every OS. 2026-10-27: split build() into single-purpose functions; loaders
@@ -8,7 +10,8 @@ moved to data_io; main() only orchestrates; nodes now carry `label`/`short_label
 (EN-first for Western, ZH for Chinese-world; see data_io.display_label).
 
 Default: only the formal graph (status auto + approved). `--with-review` also
-draws the pending relations for inspection. Rejected relations never enter.
+draws the pending relations for inspection, into build/graph_with_review.json so the formal
+build/graph.json is never overwritten. Rejected relations never enter.
 Usage: python graph_build.py [--with-review]
 """
 import json
@@ -78,9 +81,9 @@ def attach_degree_centrality(graph: nx.MultiDiGraph) -> dict[str, float]:
     return centrality
 
 
-def write_graph_json(graph: nx.MultiDiGraph, root: Path = ROOT) -> Path:
-    """Serialise the graph in node-link format to build/graph.json; returns the path."""
-    output_path = root / data_io.GRAPH_JSON
+def write_graph_json(graph: nx.MultiDiGraph, root: Path = ROOT, include_review: bool = False) -> Path:
+    """Serialise the graph in node-link format to build/graph.json (or graph_with_review.json); returns the path."""
+    output_path = root / (data_io.GRAPH_WITH_REVIEW_JSON if include_review else data_io.GRAPH_JSON)
     output_path.parent.mkdir(exist_ok=True)
     payload = nx.node_link_data(graph, edges="links")
     data_io.write_text_lf(output_path, json.dumps(payload, ensure_ascii=False, indent=2))
@@ -88,13 +91,17 @@ def write_graph_json(graph: nx.MultiDiGraph, root: Path = ROOT) -> Path:
 
 
 def summarize(graph: nx.MultiDiGraph, all_relations: list[Relation],
-              graph_relations: list[Relation], centrality: dict[str, float]) -> str:
+              graph_relations: list[Relation], centrality: dict[str, float], include_review: bool = False) -> str:
     """Human-readable status line plus the top-centrality nodes."""
     by_status = Counter(r.status for r in all_relations)
     top_nodes = sorted(centrality.items(), key=lambda kv: -kv[1])[:TOP_CENTRALITY_SHOWN]
     top_text = ", ".join(f"{graph.nodes[n]['short_label']}({c:.2f})" for n, c in top_nodes)
-    return (f"節點 {graph.number_of_nodes()}  關係(全) {len(all_relations)}  "
-            f"正式入圖 {len(graph_relations)}(自動 {by_status['auto']} + 查證確認 {by_status['approved']})  "
+    formal = by_status["auto"] + by_status["approved"]
+    if include_review:
+        drawn = f"入圖 {len(graph_relations)}(正式 {formal} + 待查證 {by_status['review']},供檢視,寫入 {data_io.GRAPH_WITH_REVIEW_JSON})"
+    else:
+        drawn = f"正式入圖 {len(graph_relations)}(自動 {by_status['auto']} + 查證確認 {by_status['approved']})"
+    return (f"節點 {graph.number_of_nodes()}  關係(全) {len(all_relations)}  {drawn}  "
             f"待查證 {by_status['review']}  已剔除 {by_status['rejected']}\n"
             f"中心性 Top{TOP_CENTRALITY_SHOWN}: {top_text}")
 
@@ -106,9 +113,9 @@ def build(include_review: bool = False, root: Path = ROOT, verbose: bool = True)
     graph_relations = select_graph_relations(relations, include_review)
     graph = build_graph(entities, relations, graph_relations)
     centrality = attach_degree_centrality(graph)
-    write_graph_json(graph, root)
+    write_graph_json(graph, root, include_review)
     if verbose:
-        print(summarize(graph, relations, graph_relations, centrality))
+        print(summarize(graph, relations, graph_relations, centrality, include_review))
     return graph
 
 

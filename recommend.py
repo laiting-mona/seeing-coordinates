@@ -1,6 +1,7 @@
 """Personalised recommendation along the knowledge frontier (no model training).
 
-Last edited: 2026-11-03: an inbound exhibit edge is discounted by the exhibitor's type (institution 0.5,
+Last edited: 2026-11-09: unknown ids on the command line are reported on stderr (exit 1) instead of
+printing nothing. 2026-11-03: an inbound exhibit edge is discounted by the exhibitor's type (institution 0.5,
 event 0.8), so the museums and shows added in round 21 do not outrank a photographer's own works.
 2026-10-28: (1) membership edges are context, not readings: a
 belongs_to edge is weighted by its target type (institution 0.5, anthology/work
@@ -145,6 +146,10 @@ def recommend(graph: nx.MultiDiGraph, read_ids, top_n: int = 5) -> list[dict]:
 def main() -> None:
     graph = load_graph()
     profile = sys.argv[1:] or ["benjamin", "on_photography"]
+    unknown = [p for p in profile if p not in graph]
+    if unknown:
+        print(f"找不到節點 id:{', '.join(unknown)}(id 是 data/seed_entities.csv 第一欄的小寫 id,例如 barthes、camera_lucida)", file=sys.stderr)
+        sys.exit(1)
     for item in recommend(graph, profile):
         print(f"• {item['target']}  [{item['score']}]  | {item['reason']}  (出處:{item['source']})")
 

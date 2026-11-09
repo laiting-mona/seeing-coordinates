@@ -1,6 +1,7 @@
 """Query layer: natural-language question → graph lookup → structured result → text.
 
-Last edited: 2026-11-02: edge records carry role and year; a belongs_to edge is read with its role verb.
+Last edited: 2026-11-09: --test ends with a summary line (intent agreement, unresolved count) and says
+it is a diagnostic report. 2026-11-02: edge records carry role and year; a belongs_to edge is read with its role verb.
 2026-10-27: wrapped state in QueryEngine; resolve() now does an exact
 substring pass first (incl. unambiguous person surnames) and falls back to
 difflib.get_close_matches at cutoff 0.8 (≈4× faster than the old per-window loop); fixed status label so `approved` edges are
@@ -15,6 +16,7 @@ Usage:
 """
 import difflib
 import json
+from collections import Counter
 import sys
 from pathlib import Path
 
@@ -320,16 +322,23 @@ def answer(question: str) -> tuple[str, list[str], dict]:
 def run_stability_test(root: Path = ROOT) -> None:
     """Check that paraphrases of the same question resolve to the same intent and the same (unordered) nodes."""
     prompts = json.loads((root / "data/test_prompts.json").read_text(encoding="utf-8"))
-    print("穩定性掃描:同一題的多個變體應導到相同意圖與節點\n" + "─" * 60)
+    print("穩定性掃描:同一題的多個變體應導到相同意圖與節點(診斷報表,不是通過/失敗測試)\n" + "─" * 60)
+    total = intent_agree = unresolved = 0
     for item in prompts:
         print(f"\n【{item['id']}】{item['persona']}")
-        outcomes = set()
+        outcomes, intents = set(), Counter()
         for variant in item["variants"]:
             intent, ids, _ = answer(variant)
             outcomes.add((intent, frozenset(ids[:2])))  # order of the two resolved nodes is not a difference
+            intents[intent] += 1
+            total += 1
+            unresolved += not ids
             shown = ",".join(ENGINE.display(i) for i in ids[:2]) or "(未解析)"
             print(f"  [{intent:<10}] {shown:<14} ｜ {variant[:24]}")
+        intent_agree += intents.most_common(1)[0][1]
         print(f"  → 一致性:{'✓ 全一致' if len(outcomes) == 1 else f'✗ {len(outcomes)} 種結果'}")
+    print("\n" + "─" * 60 + f"\n合計 {total} 個問法:意圖與該題多數一致 {intent_agree}/{total},實體解析失敗 {unresolved}/{total}"
+          "(純程式比對的已知上限;失敗的問法用來改 ALIASES 與 INTENT_KEYWORDS)")
 
 
 def main() -> None:

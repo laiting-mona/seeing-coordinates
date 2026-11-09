@@ -288,3 +288,11 @@
 - **審核：** 研究者回報 105 條；97 條入檔（91 核可、6 待查證）、8 條重複或因新節點沒有核可邊而連同節點丟棄（Spence 1985 工作坊展、Lyon 克里夫蘭展、Broodthaers MoMA 展、黃世澤）。研究者標為「摘要」但引句明載而改核可 17 條；claim 改寫 3 條；role 改 1 條（《Nyaope》刊於 Mail & Guardian 為 contributor，稽核新增容許 `("contributor", "part_of")`）。
 - **數字：** 節點 1868→1882、關係 3575→3672、正式入圖 3366→3457、待查證 178→184、來源 1296→1336；智識關係 643→700。
 - **盲測：** 30 條：29 明載、1 細節超出（榮榮《Wedding Gown》的年份，已去掉）、0 不支持；3 條引句補齊漏掉的片語。詳見 verification-sources T 補一。
+
+## 2026-11-09 定名、停止擴充、轉向驗證
+
+- **正式名稱：** 使用者定案「觀看的座標：攝影論述譜系推薦 Agent」（英文 Seeing Coordinates: a source-traced recommender for the genealogy of photography discourse）。公開 repo 名 `seeing-coordinates` 不變。README 標題、viewer 頁標題與頁首、Slides 同步改用。
+- **資料擴充暫停：** 第 22、23 輪盲測不足率皆為 0%，但每輪只增加約 3% 關係；在結案前把工夫改放在三件事：讓 Agent 回答一組有設計的問題並留下紀錄、小樣本使用者評估、乾淨環境的可重現性驗證。第 24 輪的目標清單（約 380 位沒有智識邊的人物、約 370 件只有作者邊的作品、九個仍無新邊的概念）保留在 Current_Status，不在結案前執行。
+- **評估問題集：** 新增 `data/eval_questions.csv`（100 題）與 `docs/eval-design.md`。設計為 10 種角色 × 10 種需求面向各一題，另在語調、情緒、禮貌程度、身分與需求的連結強弱（強 70：弱 30）、敘述詳細程度（含只給關鍵字）、句型（錯字、無問號、無標點、多句、中英夾雜）上分層配置；每題註明涉及節點與預期行為（圖內可答、圖內部分可答、圖外應說明沒有來源）。題目先給使用者審閱，再用來跑 query.py、recommend.py、agent.py 並記錄問答。
+- **可重現性驗證：** 由獨立 agent 在乾淨目錄 clone 公開 repo，只憑 README 從安裝跑到 viewer，逐步計時並記錄卡點；結果寫入 `docs/reproducibility.md`。
+- **行政：** 學習反思（一）簽名已完成。

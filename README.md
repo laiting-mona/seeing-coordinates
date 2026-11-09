@@ -1,4 +1,8 @@
-# 觀看的座標：攝影論述知識圖譜 Agent
+# 觀看的座標：攝影論述譜系推薦 Agent
+
+Seeing Coordinates: a source-traced recommender for the genealogy of photography discourse
+
+(正式名稱 2026-11-09 定案;公開 repo 名 `seeing-coordinates` 不變。「譜系」指圖裡的影響、討論、延伸、對照、師承與流派關係,「推薦」指沿這些關係走知識前緣給出下一步,每一步都附出處。)
 
 把攝影理論與攝影史裡「誰影響誰、哪本書談哪個概念、哪個流派有哪些成員」
 這類關係,建成一張**每條連結都附出處與可信度**的知識圖譜,
@@ -22,9 +26,37 @@
 | 待查證 | 184 | 隔離在佇列、不進正式圖:86 條是第 21–23 輪研究者只找到摘要式引句的新關係(多為新聞稿「提及」作品、沒有展品清單,第 22 輪已二查過 63 條、只救回 7 條);51 條待回原典補頁碼或找到頁面後才採用(其中 40 條已上網查兩次未果);36 條是本專案的詮釋層(找不到外部來源作此連結,依使用者決定保留於此);11 條是把 Monoskop wiki 頁、個人網站、書商列表與拍賣行文案剔出查證來源後查無替代頁的降級 |
 | 已剔除 | 31 | 查證不成立或關係類型不成立(如 1977 Pictures 展未含辛蒂·雪曼;Krauss 1977 的〈Notes on the Index〉不可能修正 1980 的《明室》;Steichen 買下少年 Shore 的照片不等於影響) |
 
-184 條待查證的明細(依影響力排序,每條註明仍待查證的原因)見 `docs/原典查核清單.xlsx`(附書名、待補頁碼欄、決定欄)。
+184 條待查證的明細(依影響力排序,每條註明仍待查證的原因)見 `docs/原典查核清單.md`(xlsx 版附書名、待補頁碼欄、決定欄,由 `tools/make_checklist.py` 產生,不納版控)。
 查證來源網址見 `docs/verification-sources.md`。
 涵蓋範圍:第 1–7 輪建立西方攝影史與理論的主幹(發明史、分離派到新地誌、後現代理論、主要獎項、選集與 MoMA/Tate 主題展);第 8 輪起轉向東亞:日本(木村伊兵衛賞、土門拳賞、写真新世紀、MoMA 1974《New Japanese Photography》、Provoke 巡迴展)、臺灣(《臺灣攝影家》系列叢書 35 冊、國家攝影文化中心與國美館四個展覽)、中國(《Between Past and Future》、三影堂)與韓國(《Chaotic Harmony》)的首批 hub;第 9 輪回頭補西方「葉節點」:108 位只靠一條收錄/得獎邊掛在圖上的人物,各以其機構頁補上代表作與師承/流派;第 10 輪續補其餘 198 人(西方人物葉節點 299→22);第 11 輪回到東方做縱深:日本 VIVO 與「10人之眼」、Camera Mainichi/山岸章二、Provoke 同人的攝影集、WORKSHOP 寫真學校,臺灣 V-10 視覺藝術群、《人間》雜誌與報導攝影、三劍客與中國攝影學會,中國四月影會與《新攝影》,韓國林應植的生活主義寫實與新線會、具本昌與裴炳雨;第 12 輪不擴充,改做資料流程稽核:新增 `tools/audit_data.py`,122 條無網址或人工給分的關係逐條回查機構頁,只靠維基或聚合站的關係改引機構頁,查不到的降為待查證;第 13 輪把 2,395 條已附網址的核可關係逐頁重讀一遍,頁面沒寫或只支持較窄說法的 111 條降為待查證,155 條把 claim 收窄到頁面原文;第 14 輪把讀不到或偏弱(課程頁、學生彙編、個人網站)的 16 個頁面換成原文、圖書館書目或機構頁,並找到 Campany〈Safety in Numbness〉原文,把 16 條重新掛回;第 15 輪把 48 條只靠聚合站名單的關係(土門拳賞得主、越戰攝影師、《Chaotic Harmony》)逐屆、逐人改引機構頁;第 16 輪依影響力排序處理全部 375 條待查證:248 條找到頁面核可(其中 27 條更正關係類型),23 條剔除,104 條仍待查證並註明原因(查無、純屬詮釋、審核否決、與既有關係重複);第 17 輪盲測第 14–15 輪的 138 條核可、二查其餘 70 條待查證,並把 4 個孤立節點接進圖;第 18–19 輪新增 `role` 與 `year` 欄位,把「屬於」拆成七種意思;第 20 輪替 70 條只靠書的正式關係補上頁面;第 21 輪再擴充 93 個節點、355 條關係,重點是智識關係(影響、討論、延伸、對照)、只有作者邊的作品的展出紀錄,以及非洲、南亞、東南亞、中東、東歐與拉美的首批節點,同時把 Monoskop(wiki)、個人網站與書商列表剔出查證來源,並讓每條關係的 `source_ref` 指向 evidence 裡最新的查證頁;第 22 輪再擴充 130 個節點、314 條關係(港韓中台日人物、沒有智識邊的人物、只有作者邊的作品、非洲南亞東南亞中東東歐拉美第二批、邊數少的概念節點),把 udn 部落格、PZI wiki、拍賣行圖錄換成大學書目資料庫、出版社與藝術家基金會頁,稽核加上弱主機警告;第 23 輪再補 14 個節點、97 條關係,重點是概念節點的提出者與討論文本(靈光、技術影像、裝置、沉思的影像、知面、體制批判、再攝影、Szarkowski 的詞)、Robert Adams 與 Fried 等批評者論及的對象、以及 20 件作品的展出與得獎紀錄,並把拍賣行文案換成美術館頁。
+
+---
+
+## 查證方法怎麼演進(這是方法上的貢獻,比數字大更值得講)
+
+圖從第 1 輪的 298 個節點長到 1882 個,但真正改變的是「什麼算證據」。每一輪的規則都是被前一輪的錯誤逼出來的:
+
+| 輪次 | 發現的問題 | 定下的規則 | 效果 |
+|---|---|---|---|
+| 1–7 | 依原典與公式自動入圖,confidence ≥ 0.70 即 `auto` | 關係必附 claim、evidence、source、confidence | 建立西方主幹,但 283 條待查證無人回查 |
+| 9–12 | 只靠維基、百度百科、聚合站名單的關係撐不住 | 維基與聚合站不算查證來源;新增 `tools/audit_data.py`,硬性錯誤須為 0 | 122 條逐條改引機構頁或降級 |
+| 13 | 頁面「沒寫那麼多」:claim 比原文寬 | 2395 條已附網址的關係逐頁重讀;claim 收窄到頁面原文 | 111 條降級、155 條收窄 |
+| 14–15 | 課程頁、學生彙編、個人網站、得主名單是弱來源 | 換成原文、圖書館書目或機構頁;名單逐屆逐人查 | 64 條換源 |
+| 16–17 | 待查證積壓到 375 條;核可的關係沒被獨立檢查過 | 依影響力排序逐條處理;第一次**盲測**:另一個只看網址與引句、不知研究者判斷的檢查者抽樣重讀 | 第 16 輪 45 條中 2 條不支持(4%);第 17 輪 138 條中 4 條(3%) |
+| 18–20 | 「屬於」一詞混了七種意思;只靠書的關係沒有頁面 | 新增 `role`(七種)與 `year` 欄位;70 條補頁面 | 稽核可比對 role 與節點類型 |
+| 21 | Monoskop 是 wiki;個人網站與書商列表不是機構頁;`source_ref` 指向舊頁而 evidence 已換新頁 | 三類來源剔除;`source_ref` 一律對齊 evidence 最新查證頁;摘要式引句一律待查證 | 盲測 50 條,1 條不支持(2%) |
+| 22 | 部落格、PZI wiki、拍賣行文案仍在正式關係裡;機構頁照抄維基 | 530 個主機普查;稽核加弱主機警告;循環佐證不算 | 盲測 64 條,0 條不支持 |
+| 23 | 概念節點只有名字沒有提出者;頁面用語與概念名不同 | 概念必須接上提出者或討論文本;頁面不用該詞就不連該概念 | 盲測 30 條,0 條不支持 |
+
+六次盲測合計 327 條抽樣,不支持率從 3–5% 降到 0–2%。現在每條正式關係都能回答三個問題:**哪一頁寫的、原文哪一句、是哪一級的來源**;回答不了的 184 條就留在待查證,不進圖。
+
+這套規則同時解釋了 184 條待查證為什麼不是錯誤:86 條是新聞稿只「提及」作品、沒有展品清單;51 條要回原典補頁碼;36 條是本專案自己的詮釋(找不到外部來源作此連結,保留但標明);11 條是弱來源剔除後查無替代頁。
+
+---
+
+## 接下來(2026-11 起)
+
+資料擴充已暫停,結案前做三件事:(1) 以 `data/eval_questions.csv` 的 100 題跑 Agent,記錄問句、回答、出處與失敗(設計見 `docs/eval-design.md`);(2) 3–5 位使用者的小樣本評估;(3) 乾淨環境的可重現性驗證(`docs/reproducibility.md`)。
 
 ---
 
@@ -40,11 +72,11 @@
 ├── recommend.py       個人化推薦(走知識前緣,非熱門)
 ├── query.py           自然語言問句 → 圖查詢
 ├── agent.py           Agent v1(可直接 demo)
-├── metrics.py         覆蓋率/可信度指標
+├── metrics.py         重複率/涵蓋率(函式庫,供 agent.py 呼叫,無獨立入口)
 ├── extract.py         抽取管線(訂閱制、不亂猜)
 ├── captures.py        原始擷取紀錄
 ├── review_queue.py    把 status=review 的關係輸出成待審清單
-├── test_core.py       最小回歸測試(純 assert,25 項)
+├── test_core.py       最小回歸測試(純 assert,35 項;會重建 build/graph.json)
 │
 ├── data/              正典資料(唯一事實來源)
 │   ├── seed_entities.csv      節點(id, type, name_zh, name_en, label_pref)
@@ -52,17 +84,18 @@
 │   ├── raw_relations.jsonl    ★所有關係 + status + 出處
 │   ├── captures.jsonl         擷取紀錄
 │   ├── review_notes.json      人工註記
-│   └── test_prompts.json      測試題庫
+│   ├── test_prompts.json      查詢層穩定性題庫(6 題 × 6 種問法)
+│   └── eval_questions.csv     Agent 評估問題集(10 角色 × 10 需求面向,100 題,見 docs/eval-design.md)
 │
 ├── tools/             一次性/輔助工具(非核心流程)
 │   ├── make_checklist.py      產生 docs/原典查核清單.{md,xlsx}
 │   ├── audit_data.py          資料流程稽核 → docs/data-audit.md(硬性錯誤須為 0,測試會檢查)
-│   └── build_reflection.js    產生學習反思 docx(需 Node + docx;含個資,僅存本機、不進公開 repo)
+│   └── build_reflection.js    產生學習反思 docx(需 Node + docx;含個資,僅存本機、不在公開 repo 內)
 │
 ├── prompts/extract.txt        抽取用 prompt
 ├── experiments/               權重敏感度實驗
-├── docs/                      文件、查證來源、查核清單、投稿文件
-└── build/                     產出(graph.json / viewer.html,可重建)
+├── docs/                      文件、查證來源、查核清單、評估設計、可重現性驗證
+└── build/                     產出(graph.json / viewer.html;--with-review 另寫 graph_with_review.json / viewer_with_review.html;皆可重建,不納版控)
 ```
 
 ---
@@ -70,20 +103,25 @@
 ## 怎麼跑
 
 ```bash
+python3 -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt       # pydantic, networkx
 
-python graph_build.py                 # 建正式圖(2606 條)→ build/graph.json
-python graph_build.py --with-review   # 連 283 條待查證一起畫(供檢視,非定論)
-python build_viewer.py                # 產生 build/viewer.html,瀏覽器開即可
-python test_core.py                   # 跑 25 項回歸測試
-python agent.py                       # Agent demo
+python graph_build.py                 # 建正式圖(3457 條)→ build/graph.json
+python build_viewer.py                # 產生 build/viewer.html,瀏覽器開即可(繪圖程式庫 vis-network 從 cdnjs 載入,需要網路;離線時頁面會說明)
+python graph_build.py --with-review   # 另外寫出 build/graph_with_review.json:連 184 條待查證一起(供檢視,非定論;不覆寫 graph.json)
+python build_viewer.py --with-review  # 由它產生 build/viewer_with_review.html,頁首標明含待查證、虛線為待查證
+python test_core.py                   # 跑 35 項回歸測試
+python agent.py                       # Agent demo(replay 模式,零 LLM 成本)
+python query.py "讀完《明室》下一本讀什麼"   # 自然語言問句 → 圖查詢
+python recommend.py barthes           # 由已讀節點出發的知識前緣推薦;id 是 data/seed_entities.csv 第一欄的小寫 id
+python query.py --test                # 查詢層穩定性診斷報表(同一題多種問法),末行有總結,不是通過/失敗測試
 ```
 
 輔助工具(需額外套件):
 
 ```bash
-pip install openpyxl && python tools/make_checklist.py    # 更新查核清單
-npm install docx && node tools/build_reflection.js        # 重建反思 docx
+pip install openpyxl && python tools/make_checklist.py    # 更新查核清單(.md 進 repo;.xlsx 由此產生,不納版控)
+npm install docx && node tools/build_reflection.js        # 重建反思 docx(此腳本含個資,不在公開 repo 內)
 ```
 
 ---

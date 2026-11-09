@@ -1,6 +1,7 @@
 """Shared file I/O for the curated dataset (entities, sources, relations).
 
-Last edited: 2026-11-02 (second pass): parse_evidence() splits the accumulated evidence text
+Last edited: 2026-11-09: GRAPH_WITH_REVIEW_JSON; load_graph_json(with_review=) so --with-review never
+overwrites the formal graph.json. 2026-11-02 (second pass): parse_evidence() splits the accumulated evidence text
 into the fields an agent needs (latest verification URL, verbatim quote, verification date,
 number of check rounds). The stored field stays as the audit trail; the parsed fields are
 attached at build time, never written back. Earlier the same day: infer_role() (rule-based role for a belongs_to edge from the two node
@@ -27,6 +28,7 @@ ENTITIES_CSV = "data/seed_entities.csv"
 SOURCES_CSV = "data/sources.csv"
 RELATIONS_JSONL = "data/raw_relations.jsonl"
 GRAPH_JSON = "build/graph.json"
+GRAPH_WITH_REVIEW_JSON = "build/graph_with_review.json"   # formal graph plus review edges, for inspection only
 
 IN_GRAPH_STATUSES = ("auto", "approved")   # statuses that enter the formal graph
 
@@ -61,9 +63,9 @@ def write_relation_dicts(relations: list[dict], root: Path = DEFAULT_ROOT) -> No
             f.write(json.dumps(relation, ensure_ascii=False) + "\n")
 
 
-def load_graph_json(root: Path = DEFAULT_ROOT) -> dict:
-    """Read build/graph.json (networkx node-link format with 'nodes' and 'links')."""
-    return json.loads((root / GRAPH_JSON).read_text(encoding="utf-8"))
+def load_graph_json(root: Path = DEFAULT_ROOT, with_review: bool = False) -> dict:
+    """Read build/graph.json, or build/graph_with_review.json when with_review (node-link format)."""
+    return json.loads((root / (GRAPH_WITH_REVIEW_JSON if with_review else GRAPH_JSON)).read_text(encoding="utf-8"))
 
 
 def write_text_lf(path: Path, text: str) -> None:
