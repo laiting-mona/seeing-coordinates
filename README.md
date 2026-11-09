@@ -56,7 +56,7 @@ Seeing Coordinates: a source-traced recommender for the genealogy of photography
 
 ## 接下來(2026-11 起)
 
-資料擴充已暫停,結案前做三件事:(1) 以 `data/eval_questions.csv` 的 100 題跑 Agent,記錄問句、回答、出處與失敗(設計見 `docs/eval-design.md`);(2) 3–5 位使用者的小樣本評估;(3) 乾淨環境的可重現性驗證(`docs/reproducibility.md`)。
+資料擴充已暫停,結案前做三件事:(1) 以 `data/eval_questions.csv` 的 1000 題跑 Agent(400 題主評估、600 題同內容換寫法的穩健性檢驗),記錄問句、回答、出處與失敗(設計見 `docs/eval-design.md`);(2) 3–5 位使用者的小樣本評估;(3) 乾淨環境的可重現性驗證(`docs/reproducibility.md`)。
 
 ---
 
@@ -85,7 +85,7 @@ Seeing Coordinates: a source-traced recommender for the genealogy of photography
 │   ├── captures.jsonl         擷取紀錄
 │   ├── review_notes.json      人工註記
 │   ├── test_prompts.json      查詢層穩定性題庫(6 題 × 6 種問法)
-│   └── eval_questions.csv     Agent 評估問題集(10 角色 × 10 需求面向,100 題,見 docs/eval-design.md)
+│   └── eval_questions.csv     Agent 評估問題集(10 角色 × 10 需求面向 × 每格 10 種問法 = 1000 題,見 docs/eval-design.md)
 │
 ├── tools/             一次性/輔助工具(非核心流程)
 │   ├── make_checklist.py      產生 docs/原典查核清單.{md,xlsx}

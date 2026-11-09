@@ -28,3 +28,5 @@ docs/*.pdf
 docs/*.docx
 # 反思心得的產生腳本內含全文與個人資料,同樣不上傳
 tools/build_reflection.js
+# internal work log (accounts, sync flow, funding): local only
+docs/decision-log-internal.md
