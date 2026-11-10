@@ -91,7 +91,7 @@ Seeing Coordinates: a source-traced recommender for the genealogy of photography
 │   ├── make_checklist.py      產生 docs/原典查核清單.{md,xlsx}
 │   ├── audit_data.py          資料流程稽核 → docs/data-audit.md(硬性錯誤須為 0,測試會檢查)
 │   ├── run_eval_agent.py      評估問題集逐題跑 Agent N 次(每次獨立行程)→ build/eval/agent_runs.jsonl
-│   ├── eval_report.py         把 Agent 與外部平台的回答整理成 build/eval/eval_answers.xlsx(需 openpyxl)
+│   ├── eval_report.py         把 Agent 與外部平台的回答整理成 build/eval/eval_answers.xlsx(需 openpyxl);結果摘要見 docs/eval-results.md
 │   └── build_reflection.js    產生學習反思 docx(需 Node + docx;含個資,僅存本機、不在公開 repo 內)
 │
 ├── prompts/extract.txt        抽取用 prompt
