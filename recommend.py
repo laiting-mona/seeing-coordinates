@@ -1,6 +1,8 @@
 """Personalised recommendation along the knowledge frontier (no model training).
 
-Last edited: 2026-11-09: unknown ids on the command line are reported on stderr (exit 1) instead of
+Last edited: 2026-11-10: seeds are visited in sorted order and ties are ranked by node id, so the same
+question gives the same recommendations in every process (set order changes with hash randomisation).
+2026-11-09: unknown ids on the command line are reported on stderr (exit 1) instead of
 printing nothing. 2026-11-03: an inbound exhibit edge is discounted by the exhibitor's type (institution 0.5,
 event 0.8), so the museums and shows added in round 21 do not outrank a photographer's own works.
 2026-10-28: (1) membership edges are context, not readings: a
@@ -98,7 +100,7 @@ def score_candidates(graph: nx.MultiDiGraph, seeds: set[str], exclude: set[str])
         if candidate not in exclude and (candidate not in candidates or score > candidates[candidate][0]):
             candidates[candidate] = (score, seed, data, direction)
 
-    for seed in seeds:
+    for seed in sorted(seeds):   # sorted: set order varies between processes
         if seed not in graph:
             continue
         for _, target, data in graph.out_edges(seed, data=True):
@@ -139,7 +141,7 @@ def recommend(graph: nx.MultiDiGraph, read_ids, top_n: int = 5) -> list[dict]:
     read = set(read_ids)
     seeds = read | authors_of_read_works(graph, read)
     candidates = score_candidates(graph, seeds, exclude=seeds)
-    ranked = sorted(candidates.items(), key=lambda kv: -kv[1][0])[:top_n]
+    ranked = sorted(candidates.items(), key=lambda kv: (-kv[1][0], kv[0]))[:top_n]   # ties broken by id
     return [format_recommendation(graph, target, *scored) for target, scored in ranked]
 
 

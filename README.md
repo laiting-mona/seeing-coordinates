@@ -76,7 +76,7 @@ Seeing Coordinates: a source-traced recommender for the genealogy of photography
 ├── extract.py         抽取管線(訂閱制、不亂猜)
 ├── captures.py        原始擷取紀錄
 ├── review_queue.py    把 status=review 的關係輸出成待審清單
-├── test_core.py       最小回歸測試(純 assert,35 項;會重建 build/graph.json)
+├── test_core.py       最小回歸測試(純 assert,36 項;會重建 build/graph.json)
 │
 ├── data/              正典資料(唯一事實來源)
 │   ├── seed_entities.csv      節點(id, type, name_zh, name_en, label_pref)
@@ -90,6 +90,8 @@ Seeing Coordinates: a source-traced recommender for the genealogy of photography
 ├── tools/             一次性/輔助工具(非核心流程)
 │   ├── make_checklist.py      產生 docs/原典查核清單.{md,xlsx}
 │   ├── audit_data.py          資料流程稽核 → docs/data-audit.md(硬性錯誤須為 0,測試會檢查)
+│   ├── run_eval_agent.py      評估問題集逐題跑 Agent N 次(每次獨立行程)→ build/eval/agent_runs.jsonl
+│   ├── eval_report.py         把 Agent 與外部平台的回答整理成 build/eval/eval_answers.xlsx(需 openpyxl)
 │   └── build_reflection.js    產生學習反思 docx(需 Node + docx;含個資,僅存本機、不在公開 repo 內)
 │
 ├── prompts/extract.txt        抽取用 prompt
@@ -110,7 +112,7 @@ python graph_build.py                 # 建正式圖(3457 條)→ build/graph.js
 python build_viewer.py                # 產生 build/viewer.html,瀏覽器開即可(繪圖程式庫 vis-network 從 cdnjs 載入,需要網路;離線時頁面會說明)
 python graph_build.py --with-review   # 另外寫出 build/graph_with_review.json:連 184 條待查證一起(供檢視,非定論;不覆寫 graph.json)
 python build_viewer.py --with-review  # 由它產生 build/viewer_with_review.html,頁首標明含待查證、虛線為待查證
-python test_core.py                   # 跑 35 項回歸測試
+python test_core.py                   # 跑 36 項回歸測試
 python agent.py                       # Agent demo(replay 模式,零 LLM 成本)
 python query.py "讀完《明室》下一本讀什麼"   # 自然語言問句 → 圖查詢
 python recommend.py barthes           # 由已讀節點出發的知識前緣推薦;id 是 data/seed_entities.csv 第一欄的小寫 id

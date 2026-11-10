@@ -1,12 +1,16 @@
 """Minimal regression tests (plain assert, no pytest) for the core behaviour.
 
-Last edited: 2026-10-29: data audit (tools/audit_data.py) must report zero hard errors;
+Last edited: 2026-11-10: answers must not change with Python's per-process hash seed (two child
+processes with different PYTHONHASHSEED answer the same questions identically).
+2026-10-29: data audit (tools/audit_data.py) must report zero hard errors;
 entity-table integrity check (no duplicate person/institution under two
 ids). 2026-10-28: added checks that institution rosters never top a photographer's
 recommendations and that a photographer's own works are reachable (inbound edges). 2026-10-27: tests grouped into functions; added checks for
 display_label naming rule, approved-as-in-graph labelling and the faster resolver.
 Usage: python test_core.py
 """
+import os
+import subprocess
 import sys
 from pathlib import Path
 
@@ -142,6 +146,28 @@ def test_recommend_and_query() -> None:
         {"from": "a", "to": "b", "kind": "influence", "confidence": 0.5, "tier": "critic", "source": "s", "status": "approved"}))
 
 
+DETERMINISM_QUESTIONS = [
+    "我攝影系三年級,報告要比較桑塔格和巴特對攝影的看法,兩人差在哪裡?",
+    "讀完桑塔格《論攝影》下一本讀什麼",
+    "表演 攝影 辛蒂雪曼 文本",
+    "台灣報導攝影從《人間》雜誌開始,還有哪些人和文本?誰影響誰?",
+]
+
+
+def answers_with_seed(seed: str) -> str:
+    """Answer DETERMINISM_QUESTIONS in a child process whose string hashing uses `seed`."""
+    code = ("import sys, query; sys.stdout.reconfigure(encoding='utf-8'); "
+            "print('\\n=====\\n'.join(query.render(query.answer(q)[2]) for q in sys.argv[1:]))")
+    env = {**os.environ, "PYTHONHASHSEED": seed, "PYTHONIOENCODING": "utf-8"}
+    out = subprocess.run([sys.executable, "-c", code, *DETERMINISM_QUESTIONS], cwd=Path(__file__).parent,
+                         capture_output=True, text=True, encoding="utf-8", env=env, check=True)
+    return out.stdout
+
+
+def test_answers_do_not_depend_on_hash_seed() -> None:
+    check("同一問句在不同 hash 種子的行程得到相同回答", answers_with_seed("1") == answers_with_seed("12345"))
+
+
 def main() -> None:
     test_schema_rejects_bad_data()
     test_routing_threshold()
@@ -153,6 +179,7 @@ def main() -> None:
     test_data_audit()
     test_graph_build()
     test_recommend_and_query()
+    test_answers_do_not_depend_on_hash_seed()
     print(f"\n全部通過:{passed} 項 ✓")
 
 

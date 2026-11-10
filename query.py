@@ -1,6 +1,9 @@
 """Query layer: natural-language question → graph lookup → structured result → text.
 
-Last edited: 2026-11-09: --test ends with a summary line (intent agreement, unresolved count) and says
+Last edited: 2026-11-10: answers no longer depend on Python's per-process hash order: fuzzy windows are
+scanned in sorted order, and the indirect path uses an undirected simple graph built from sorted edges
+(networkx's undirected view merges neighbours through a set). Found by running the eval set 5 times.
+2026-11-09: --test ends with a summary line (intent agreement, unresolved count) and says
 it is a diagnostic report. 2026-11-02: edge records carry role and year; a belongs_to edge is read with its role verb.
 2026-10-27: wrapped state in QueryEngine; resolve() now does an exact
 substring pass first (incl. unambiguous person surnames) and falls back to
@@ -81,6 +84,14 @@ class QueryEngine:
         self.label = {n: graph.nodes[n].get("label") or self.name_zh[n] for n in graph.nodes}
         self.form_to_id = self._build_form_index()
         self.forms = list(self.form_to_id)
+        self.undirected = self._build_undirected()
+
+    def _build_undirected(self) -> nx.Graph:
+        """Undirected simple graph with nodes and edges inserted in sorted order, so BFS is reproducible."""
+        undirected = nx.Graph()
+        undirected.add_nodes_from(sorted(self.graph.nodes))
+        undirected.add_edges_from(sorted({tuple(sorted((u, v))) for u, v in self.graph.edges()}))
+        return undirected
 
     # ---------- indexing & resolution ----------
     def _build_form_index(self) -> dict[str, str]:
@@ -126,7 +137,7 @@ class QueryEngine:
             scores[node_id] = max(scores.get(node_id, 0), 1.0 if len(form) > 2 else 0.9)
         if not scores:
             windows = {q[i:i + L] for L in range(MIN_WINDOW_LEN, min(MAX_WINDOW_LEN, len(q)) + 1) for i in range(len(q) - L + 1)}
-            for window in windows:
+            for window in sorted(windows):   # sorted: set order varies between processes
                 for form in difflib.get_close_matches(window, self.forms, n=2, cutoff=FUZZY_CUTOFF):
                     ratio = round(difflib.SequenceMatcher(None, form, window).ratio(), 2)
                     node_id = self.form_to_id[form]
@@ -195,7 +206,7 @@ class QueryEngine:
         if edges:
             return {"type": "relation", "direct": True, "edges": edges}
         try:
-            path = nx.shortest_path(self.graph.to_undirected(as_view=True), a, b)
+            path = nx.shortest_path(self.undirected, a, b)
             return {"type": "relation", "direct": False, "path": [self.display(x) for x in path]}
         except nx.NetworkXException:
             return {"type": "relation", "direct": False, "path": [], "a": self.display(a), "b": self.display(b)}
