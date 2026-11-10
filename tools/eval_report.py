@@ -1,14 +1,16 @@
 """Turn recorded evaluation runs into one workbook for reading and scoring.
 
-Last edited: 2026-11-10.
+Last edited: 2026-11-10 (seconds and ui_extra columns).
 
 Usage: python tools/eval_report.py [out.xlsx]   (default build/eval/eval_answers.xlsx; needs openpyxl)
 
 Reads data/eval_questions.csv, build/eval/agent_runs.jsonl (from tools/run_eval_agent.py) and, when it
 exists, build/eval/external_runs.jsonl (one JSON object per external chat: id, platform, model,
-thinking, run, answer, recorded_at). Sheets: 我們的Agent (one row per question, the five answers side by
-side, whether they agree, intent, resolved nodes, cited URLs), 外部平台 (one row per recorded chat),
-摘要 (counts by purpose, sentence form and intent).
+thinking, run, answer, seconds, recorded_at, and optionally ui_extra: interface text kept apart from
+the answer, such as Claude's thinking-status lines or Gemini's follow-up chips). Sheets: 我們的Agent
+(one row per question, the five answers side by side, whether they agree, intent, resolved nodes,
+cited URLs), 外部平台 (one row per recorded chat), 摘要 (counts by purpose, sentence form and intent,
+and records per external configuration).
 """
 import csv
 import json
@@ -53,7 +55,8 @@ def external_rows(questions: list[dict], runs: list[dict]) -> list[list]:
     for r in sorted(runs, key=lambda r: (r["id"], r["platform"], r.get("model", ""), r.get("thinking", ""), r["run"])):
         q = by_id.get(r["id"], {})
         rows.append([r["id"], q.get("格", ""), q.get("變體", ""), q.get("問句", ""), r["platform"], r.get("model", ""),
-                     r.get("thinking", ""), r["run"], r.get("answer", ""), r.get("recorded_at", "")])
+                     r.get("thinking", ""), r["run"], r.get("answer", ""), r.get("seconds", ""), r.get("ui_extra", ""),
+                     r.get("recorded_at", "")])
     return rows
 
 
@@ -110,7 +113,7 @@ def main() -> None:
     n_runs = max((r["run"] for r in runs), default=0)
     agent_header = QUESTION_COLS + ["意圖", "解析節點", "五次一致", "網址數"] + [f"回答{i}" for i in range(1, n_runs + 1)] + ["查證網址"]
     sheets = {"我們的Agent": (agent_header, agent_rows(questions, runs)),
-              "外部平台": (["編號", "格", "變體", "問句", "平台", "模型", "思考層級", "第幾次", "回答", "記錄時間"],
+              "外部平台": (["編號", "格", "變體", "問句", "平台", "模型", "思考層級", "第幾次", "回答", "秒數", "介面附帶文字", "記錄時間"],
                        external_rows(questions, external)),
               "摘要": (["項目", "值", "數量"], summary_rows(questions, runs, external))}
     write_workbook(out, sheets)
