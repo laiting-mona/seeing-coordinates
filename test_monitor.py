@@ -73,6 +73,10 @@ def test_text_matching() -> None:
     check("中文引句可比對", monitor.quote_state("攝影小史首次提出攝影中的靈光", monitor.page_text(PAGES["/zh"])) == "found")
     linked = monitor.page_text("<p>如同中國攝影學者 <a href='#'>顧錚</a> 的評價：張曉始終保持著對於現實的溫情觀察。</p>")
     check("中文引句跨過連結標籤留下的空格仍判為 found", monitor.quote_state("如同中國攝影學者顧錚的評價：張曉始終保持著對於現實的溫情觀察。", linked) == "found")
+    korean = monitor.page_text('<p>출범한 " 한국사진작가협회 "는 창립전을 가지며</p>')
+    check("韓文引句跨過引號旁的空格仍判為 found", monitor.quote_state('출범한 "한국사진작가협회"는 창립전을 가지며', korean) == "found")
+    sjis = '<html><head><meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS"></head><body>木村と土門</body></html>'.encode("cp932")
+    check("沒有標頭編碼時讀取 meta 宣告的 Shift_JIS", monitor.sniff_charset(sjis) == "cp932" and "木村と土門" in sjis.decode(monitor.sniff_charset(sjis)))
     check("沒有引句或沒有頁面文字時為 unchecked",
           monitor.quote_state(None, text) == "unchecked" and monitor.quote_state(QUOTE, None) == "unchecked")
 

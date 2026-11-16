@@ -1,6 +1,6 @@
 """Source monitor: re-checks every verification URL the formal graph rests on.
 
-Last edited: 2026-11-16: first version (same day: tls_error state, report wording, CJK quotes matched across stripped tags). For each URL cited by a formal (auto / approved) relation it
+Last edited: 2026-11-16: first version (same day: tls_error state, report wording, CJK quotes matched across stripped tags; Hangul counted as CJK; charset read from the meta tag when the header has none). For each URL cited by a formal (auto / approved) relation it
 records whether the page still answers, where it redirects to, a hash of its text, and whether each
 relation's verbatim quote is still on the page. A second run compares with the previous snapshot and
 lists what changed (newly unreachable pages, quotes that disappeared, text that changed).
@@ -47,7 +47,8 @@ PUNCT_MAP = str.maketrans({"‘": "'", "’": "'", "“": '"', "”": '"', "–"
 # Quote states: found (verbatim after normalising), partial (most word runs present), missing, unchecked.
 PARTIAL_THRESHOLD = 0.6
 SHINGLE_WORDS = 5
-CJK = re.compile(r"[\u3040-\u30ff\u4e00-\u9fff]")
+CJK = re.compile(r"[\u3040-\u30ff\u4e00-\u9fff\uac00-\ud7af]")   # kana, CJK ideographs, Hangul
+META_CHARSET = re.compile(rb"<meta[^>]+charset=[\"']?([A-Za-z0-9_\-]+)", re.IGNORECASE)
 
 
 def normalise(text: str) -> str:
@@ -101,6 +102,13 @@ def cited_urls(relations: list[dict]) -> dict[str, list[dict]]:
     return by_url
 
 
+def sniff_charset(raw: bytes) -> str:
+    """Charset declared in the page's own meta tag (older Japanese pages often send Shift_JIS without a header)."""
+    found = META_CHARSET.search(raw[:4096])
+    name = found.group(1).decode("ascii").lower() if found else "utf-8"
+    return {"shift_jis": "cp932", "sjis": "cp932", "x-sjis": "cp932", "euc-jp": "euc_jp"}.get(name, name)
+
+
 def fetch(url: str, timeout: float) -> dict:
     """One GET. Returns http status, final URL, content type and decoded text (None when not text)."""
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "text/html,*/*;q=0.5"})
@@ -108,7 +116,7 @@ def fetch(url: str, timeout: float) -> dict:
         with urllib.request.urlopen(request, timeout=timeout) as response:
             content_type = (response.headers.get("Content-Type") or "").lower()
             raw = response.read(MAX_BYTES)
-            charset = response.headers.get_content_charset() or "utf-8"
+            charset = response.headers.get_content_charset() or sniff_charset(raw)
             is_text = any(content_type.startswith(t) for t in TEXT_TYPES)
             body = raw.decode(charset, errors="replace") if is_text else None
             return {"http": response.status, "final_url": response.geturl(), "content_type": content_type, "body": body,

@@ -1,12 +1,12 @@
 # 資料流程稽核(tools/audit_data.py 產生)
 
-實體 1917、來源 1363、關係 3761(auto 15、approved 3530、review 185、rejected 31)。
+實體 2048、來源 1492、關係 4088(auto 15、approved 3771、review 271、rejected 31)。
 
 ## 硬性錯誤:0 項
 
 無。
 
-## 警告:164 項(不阻擋建圖,列出供人工判斷)
+## 警告:177 項(不阻擋建圖,列出供人工判斷)
 
 - **formal edge without a verbatim quote in evidence**:9
   - `berger -extend-> ideology`
@@ -24,7 +24,7 @@
 - **entity with no formal edge (isolated dot in the viewer)**:2
   - `workshop_mag_w`
   - `lucie_rie`
-- **work with no person author**:7
+- **work with no person author**:20
   - `provoke_journal`
   - `lightaura_zh`
   - `october5_w`
@@ -32,6 +32,19 @@
   - `nachtwey_war_photographer_w`
   - `lucken_taki_koji_counter_photography_w`
   - `cohen_meskin_photographs_not_transparent_w`
+  - `kai_arinomama_no_image_w`
+  - `jinchaji_pictorial_w`
+  - `liangyou_journal_w`
+  - `chen_shuxia_departing_socialist_realism_w`
+  - `xu_yong_april_photo_society_w`
+  - `hkipf_hong_kong_portfolio_vol1_w`
+  - `nunaheduo_dislocation_w`
+  - `barthes_camera_lucida_ja_w`
+  - `sontag_on_photography_ja_w`
+  - `benjamin_short_history_ja_w`
+  - `berger_ways_of_seeing_ja_w`
+  - `sontag_regarding_pain_ja_w`
+  - `barthes_camera_lucida_zh_cn_w`
 - **source cited by no relation**:137
   - `another_way`
   - `photographic_message`
