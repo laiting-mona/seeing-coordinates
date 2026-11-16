@@ -1,0 +1,128 @@
+"""Regression tests for tools/source_monitor.py. No internet: pages are served from a local HTTP server.
+
+Last edited: 2026-11-16: first version.
+Usage: python test_monitor.py
+"""
+import http.server
+import sys
+import threading
+import urllib.request
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent / "tools"))
+import source_monitor as monitor  # noqa: E402
+
+passed = 0
+QUOTE = "that which withers in the age of mechanical reproduction is the aura of the work of art"
+PAGES = {
+    "/found": "<html><body><p>Benjamin wrote: &ldquo;that which withers in the age of <em>mechanical "
+              "reproduction</em>\n is the aura of the work of art&rdquo;.</p></body></html>",
+    "/partial": "<html><body><p>that which withers in the age of mechanical reproduction is, he says, "
+                "the aura of the work of art</p></body></html>",
+    "/missing": "<html><body><script>var x = 'the aura of the work of art';</script><p>About the museum.</p></body></html>",
+    "/zh": "<html><body><p>攝影小史首次提出攝影中的靈光，早於〈機械複製時代的藝術作品〉。</p></body></html>",
+}
+
+
+class Handler(http.server.BaseHTTPRequestHandler):
+    """Serves PAGES, a redirect, a PDF and two error codes."""
+
+    def do_GET(self) -> None:
+        if self.path in PAGES:
+            self.reply(200, "text/html; charset=utf-8", PAGES[self.path].encode("utf-8"))
+        elif self.path == "/moved":
+            self.send_response(301)
+            self.send_header("Location", "/found")
+            self.end_headers()
+        elif self.path == "/paper.pdf":
+            self.reply(200, "application/pdf", b"%PDF-1.4")
+        elif self.path == "/forbidden":
+            self.reply(403, "text/plain", b"no robots")
+        else:
+            self.reply(404, "text/plain", b"not found")
+
+    def reply(self, code: int, content_type: str, body: bytes) -> None:
+        self.send_response(code)
+        self.send_header("Content-Type", content_type)
+        self.send_header("Content-Length", str(len(body)))
+        self.end_headers()
+        self.wfile.write(body)
+
+    def log_message(self, *args) -> None:
+        pass
+
+
+def check(name: str, condition: bool) -> None:
+    global passed
+    assert condition, "FAIL: " + name
+    passed += 1
+    print("  ✓", name)
+
+
+def start_server() -> tuple[http.server.ThreadingHTTPServer, str]:
+    server = http.server.ThreadingHTTPServer(("127.0.0.1", 0), Handler)
+    threading.Thread(target=server.serve_forever, daemon=True).start()
+    return server, f"http://127.0.0.1:{server.server_address[1]}"
+
+
+def test_text_matching() -> None:
+    text = monitor.page_text(PAGES["/found"])
+    check("引句跨標籤、換行與彎引號仍判為 found", monitor.quote_state(QUOTE, text) == "found")
+    check("引句被插入字詞時判為 partial", monitor.quote_state(QUOTE, monitor.page_text(PAGES["/partial"])) == "partial")
+    check("script 內的文字不算頁面內容，判為 missing", monitor.quote_state(QUOTE, monitor.page_text(PAGES["/missing"])) == "missing")
+    check("中文引句可比對", monitor.quote_state("攝影小史首次提出攝影中的靈光", monitor.page_text(PAGES["/zh"])) == "found")
+    check("沒有引句或沒有頁面文字時為 unchecked",
+          monitor.quote_state(None, text) == "unchecked" and monitor.quote_state(QUOTE, None) == "unchecked")
+
+
+def test_page_states(base: str) -> None:
+    def state(path: str) -> dict:
+        return monitor.check_url(base + path, [{"relation": "a|b|discusses", "quote": QUOTE}], 5, "t")
+    check("正常頁面為 ok 且引句 found", (state("/found")["state"], state("/found")["quotes"][0]["state"]) == ("ok", "found"))
+    moved = state("/moved")
+    check("轉址記為 redirected 並保留最終網址", moved["state"] == "redirected" and moved["final_url"].endswith("/found"))
+    check("404 記為 gone", state("/nope")["state"] == "gone")
+    check("403 記為 blocked，引句不判定", (state("/forbidden")["state"], state("/forbidden")["quotes"][0]["state"]) == ("blocked", "unchecked"))
+    check("PDF 記為 not_text，引句不判定", (state("/paper.pdf")["state"], state("/paper.pdf")["quotes"][0]["state"]) == ("not_text", "unchecked"))
+    check("連不上的主機記為 unreachable", monitor.check_url("http://127.0.0.1:9/x", [], 2, "t")["state"] == "unreachable")
+    check("只差 www 與結尾斜線視為同一頁", monitor.same_page("http://www.a.org/p/", "https://a.org/p"))
+    tls = {"http": None, "body": None, "final_url": "u", "error": "URLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed"}
+    check("憑證驗證失敗另記為 tls_error", monitor.page_state(tls, "u") == "tls_error")
+
+
+def test_snapshot_diff(base: str) -> None:
+    cite = [{"relation": "a|b|discusses", "quote": QUOTE}]
+    before = {base + "/x": {"url": base + "/x", "state": "ok", "text_sha256": "old",
+                            "quotes": [{"relation": "a|b|discusses", "state": "found"}]}}
+    row = monitor.check_url(base + "/missing", cite, 5, "t")
+    row["url"] = base + "/x"
+    diff = monitor.changes(before, [row])
+    check("頁面文字變動與引句消失都列入差異", any("頁面文字有變動" in d for d in diff) and any("引句由 found 變為 missing" in d for d in diff))
+    check("引句消失列入需要人工確認", any("引句未在頁面文字中找到" in a for a in monitor.attention([row])))
+    merged = monitor.merge_snapshot({"u1": {"url": "u1", "state": "ok"}}, [{"url": "u2", "state": "gone"}])
+    check("快照合併保留本次未檢查的網址", [r["url"] for r in merged] == ["u1", "u2"])
+
+
+def test_selection_and_real_data() -> None:
+    urls = [f"https://h{i % 3}.org/{i}" for i in range(30)]
+    check("抽樣可重現", monitor.select_urls(urls, None, 5, 7) == monitor.select_urls(urls, None, 5, 7))
+    check("host 篩選", all("h1.org" in u for u in monitor.select_urls(urls, "h1.org", None, 0)))
+    by_url = monitor.cited_urls(monitor.data_io.load_relation_dicts(monitor.ROOT))
+    check("正式圖譜的網址都能取出，且每個網址至少對應一條關係", len(by_url) > 500 and all(by_url.values()))
+
+
+def main() -> None:
+    urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler({})))   # local server: bypass any system proxy
+    server, base = start_server()
+    try:
+        test_text_matching()
+        test_page_states(base)
+        test_snapshot_diff(base)
+        test_selection_and_real_data()
+    finally:
+        server.shutdown()
+    print(f"\n全部通過:{passed} 項 ✓")
+
+
+if __name__ == "__main__":
+    main()

@@ -30,3 +30,9 @@ docs/*.docx
 tools/build_reflection.js
 # internal work log (accounts, sync flow, funding): local only
 docs/decision-log-internal.md
+
+# 競賽與課程繳交資料、截圖與試用站打包檔只放本機,不上傳公開 repo
+_deck_screens/
+*競賽繳交_*/
+學習反思心得二/
+試用版網站/
