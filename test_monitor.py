@@ -71,6 +71,8 @@ def test_text_matching() -> None:
     check("引句被插入字詞時判為 partial", monitor.quote_state(QUOTE, monitor.page_text(PAGES["/partial"])) == "partial")
     check("script 內的文字不算頁面內容，判為 missing", monitor.quote_state(QUOTE, monitor.page_text(PAGES["/missing"])) == "missing")
     check("中文引句可比對", monitor.quote_state("攝影小史首次提出攝影中的靈光", monitor.page_text(PAGES["/zh"])) == "found")
+    linked = monitor.page_text("<p>如同中國攝影學者 <a href='#'>顧錚</a> 的評價：張曉始終保持著對於現實的溫情觀察。</p>")
+    check("中文引句跨過連結標籤留下的空格仍判為 found", monitor.quote_state("如同中國攝影學者顧錚的評價：張曉始終保持著對於現實的溫情觀察。", linked) == "found")
     check("沒有引句或沒有頁面文字時為 unchecked",
           monitor.quote_state(None, text) == "unchecked" and monitor.quote_state(QUOTE, None) == "unchecked")
 

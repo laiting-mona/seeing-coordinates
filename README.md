@@ -20,9 +20,9 @@ Seeing Coordinates: a source-traced recommender for the genealogy of photography
 
 | 指標 | 數 | 說明 |
 |---|---|---|
-| 節點 | 1916 | 人物 804 · 著作 716 · 館所 152 · 事件 161 · 概念 83 |
-| 關係(全) | 3741 | 每條皆附 claim / evidence / source / confidence |
-| **正式入圖** | **3525** | 自動通過 15 + 上網查證確認 3510(第 13–15 輪逐頁回查與換源後:除 9 條原典自證外皆附可讀的機構、評論或原文網址,不再有只靠聚合站名單或 wiki 頁的關係;第 21 輪起 `source_ref` 一律指向 evidence 最新查證頁) |
+| 節點 | 1917 | 人物 804 · 著作 716 · 館所 152 · 事件 162 · 概念 83 |
+| 關係(全) | 3761 | 每條皆附 claim / evidence / source / confidence |
+| **正式入圖** | **3545** | 自動通過 15 + 上網查證確認 3530(第 13–15 輪逐頁回查與換源後:除 9 條原典自證外皆附可讀的機構、評論或原文網址,不再有只靠聚合站名單或 wiki 頁的關係;第 21 輪起 `source_ref` 一律指向 evidence 最新查證頁) |
 | 待查證 | 185 | 隔離在佇列、不進正式圖:87 條是第 21–24 輪研究者只找到摘要式引句的新關係(多為新聞稿「提及」作品、沒有展品清單,第 22 輪已二查過 63 條、只救回 7 條);51 條待回原典補頁碼或找到頁面後才採用(其中 40 條已上網查兩次未果);36 條是本專案的詮釋層(找不到外部來源作此連結,依使用者決定保留於此);11 條是把 Monoskop wiki 頁、個人網站、書商列表與拍賣行文案剔出查證來源後查無替代頁的降級 |
 | 已剔除 | 31 | 查證不成立或關係類型不成立(如 1977 Pictures 展未含辛蒂·雪曼;Krauss 1977 的〈Notes on the Index〉不可能修正 1980 的《明室》;Steichen 買下少年 Shore 的照片不等於影響) |
 
@@ -34,7 +34,7 @@ Seeing Coordinates: a source-traced recommender for the genealogy of photography
 
 ## 查證方法怎麼演進(這是方法上的貢獻,比數字大更值得講)
 
-圖從第 1 輪的 298 個節點長到 1916 個,但真正改變的是「什麼算證據」。每一輪的規則都是被前一輪的錯誤逼出來的:
+圖從第 1 輪的 298 個節點長到 1917 個,但真正改變的是「什麼算證據」。每一輪的規則都是被前一輪的錯誤逼出來的:
 
 | 輪次 | 發現的問題 | 定下的規則 | 效果 |
 |---|---|---|---|
@@ -77,7 +77,7 @@ Seeing Coordinates: a source-traced recommender for the genealogy of photography
 ├── captures.py        原始擷取紀錄
 ├── review_queue.py    把 status=review 的關係輸出成待審清單
 ├── test_core.py       最小回歸測試(純 assert,36 項;會重建 build/graph.json)
-├── test_monitor.py    來源監測的回歸測試(19 項;以本機 HTTP 伺服器模擬頁面,不需網路)
+├── test_monitor.py    來源監測的回歸測試(20 項;以本機 HTTP 伺服器模擬頁面,不需網路)
 │
 ├── data/              正典資料(唯一事實來源)
 │   ├── seed_entities.csv      節點(id, type, name_zh, name_en, label_pref)
@@ -110,12 +110,12 @@ Seeing Coordinates: a source-traced recommender for the genealogy of photography
 python3 -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt       # pydantic, networkx
 
-python graph_build.py                 # 建正式圖(3525 條)→ build/graph.json
+python graph_build.py                 # 建正式圖(3545 條)→ build/graph.json
 python build_viewer.py                # 產生 build/viewer.html,瀏覽器開即可(繪圖程式庫 vis-network 從 cdnjs 載入,需要網路;離線時頁面會說明)
 python graph_build.py --with-review   # 另外寫出 build/graph_with_review.json:連 185 條待查證一起(供檢視,非定論;不覆寫 graph.json)
 python build_viewer.py --with-review  # 由它產生 build/viewer_with_review.html,頁首標明含待查證、虛線為待查證
 python test_core.py                   # 跑 36 項回歸測試
-python test_monitor.py                # 跑來源監測的 19 項測試(不需網路)
+python test_monitor.py                # 跑來源監測的 20 項測試(不需網路)
 python tools/source_monitor.py --sample 50 --seed 7   # 來源監測:抽 50 個查證網址檢查存活與引句;不加參數為全部(需網路,同一主機每秒一次請求)
 python agent.py                       # Agent demo(replay 模式,零 LLM 成本)
 python query.py "讀完《明室》下一本讀什麼"   # 自然語言問句 → 圖查詢

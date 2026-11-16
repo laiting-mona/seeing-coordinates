@@ -1,6 +1,6 @@
 """Source monitor: re-checks every verification URL the formal graph rests on.
 
-Last edited: 2026-11-16: first version (same day: tls_error state, report wording). For each URL cited by a formal (auto / approved) relation it
+Last edited: 2026-11-16: first version (same day: tls_error state, report wording, CJK quotes matched across stripped tags). For each URL cited by a formal (auto / approved) relation it
 records whether the page still answers, where it redirects to, a hash of its text, and whether each
 relation's verbatim quote is still on the page. A second run compares with the previous snapshot and
 lists what changed (newly unreachable pages, quotes that disappeared, text that changed).
@@ -47,6 +47,7 @@ PUNCT_MAP = str.maketrans({"‘": "'", "’": "'", "“": '"', "”": '"', "–"
 # Quote states: found (verbatim after normalising), partial (most word runs present), missing, unchecked.
 PARTIAL_THRESHOLD = 0.6
 SHINGLE_WORDS = 5
+CJK = re.compile(r"[\u3040-\u30ff\u4e00-\u9fff]")
 
 
 def normalise(text: str) -> str:
@@ -78,6 +79,8 @@ def quote_state(quote: str | None, text: str | None) -> str:
         return "unchecked"
     if wanted in text:
         return "found"
+    if CJK.search(wanted) and wanted.replace(" ", "") in text.replace(" ", ""):
+        return "found"            # CJK text: spaces left by stripped tags (links, emphasis) are not part of the sentence
     runs = shingles(wanted)
     haystack = text if " " in wanted and len(wanted.split(" ")) >= SHINGLE_WORDS else text.replace(" ", "")
     share = sum(1 for run in runs if run in haystack) / len(runs)
