@@ -20,7 +20,7 @@ Seeing Coordinates: a source-traced recommender for the genealogy of photography
 
 | 指標 | 數 | 說明 |
 |---|---|---|
-| 節點 | 2048 | 人物 857 · 著作 759 · 館所 176 · 事件 165 · 概念 91 |
+| 節點 | 2048 | 人物 857 · 著作 759 · 館所 152 · 創作團體 24 · 事件 165 · 概念 91 |
 | 關係(全) | 4088 | 每條皆附 claim / evidence / source / confidence |
 | **正式入圖** | **3786** | 自動通過 15 + 上網查證確認 3771(第 13–15 輪逐頁回查與換源後:除 9 條原典自證外皆附可讀的機構、評論或原文網址,不再有只靠聚合站名單或 wiki 頁的關係;第 21 輪起 `source_ref` 一律指向 evidence 最新查證頁) |
 | 待查證 | 271 | 隔離在佇列、不進正式圖:160 條是第 21–26 輪研究者只找到摘要式引句的新關係(多為新聞稿「提及」作品、沒有展品清單,第 22 輪已二查過 63 條、只救回 7 條);13 條是第 26 輪審核或盲測否決(頁面未標示作者、引句截斷、引句談的概念與節點不同);51 條待回原典補頁碼或找到頁面後才採用(其中 40 條已上網查兩次未果);36 條是本專案的詮釋層(找不到外部來源作此連結,依使用者決定保留於此);11 條是把 Monoskop wiki 頁、個人網站、書商列表與拍賣行文案剔出查證來源後查無替代頁的降級 |
@@ -71,14 +71,23 @@ Seeing Coordinates: a source-traced recommender for the genealogy of photography
 ├── graph_build.py     建圖、算中心性 → build/graph.json  ★主入口
 ├── build_viewer.py    graph.json → 單頁互動圖 build/viewer.html
 ├── recommend.py       個人化推薦(走知識前緣,非熱門)
-├── query.py           自然語言問句 → 圖查詢
+├── query.py           自然語言問句 → 圖查詢(Python 參考實作;線上服務改用 api/ 的 TypeScript 版,兩者以 1000 題逐字比對)
 ├── agent.py           Agent v1(可直接 demo)
 ├── metrics.py         重複率/涵蓋率(函式庫,供 agent.py 呼叫,無獨立入口)
 ├── extract.py         抽取管線(訂閱制、不亂猜)
 ├── captures.py        原始擷取紀錄
 ├── review_queue.py    把 status=review 的關係輸出成待審清單
-├── test_core.py       最小回歸測試(純 assert,36 項;會重建 build/graph.json)
-├── test_monitor.py    來源監測的回歸測試(22 項;以本機 HTTP 伺服器模擬頁面,不需網路)
+├── test_core.py       最小回歸測試(純 assert,37 項;會重建 build/graph.json)
+├── test_monitor.py    來源監測的回歸測試(28 項;以本機 HTTP 伺服器模擬頁面,不需網路)
+│
+├── api/               查詢層 TypeScript 版與 Cloudflare Worker(見下方「查詢 API」與 docs/deploy-cloudflare.md)
+│   ├── src/           domain、graph、text(Python difflib 移植)、query、recommend、render、io、eval、log(使用紀錄)、
+│   │                  worker.ts(網站 + /api/answer + /api/health + /log)、browser.ts(打包成網站用的 engine.js)
+│   ├── test/          單元測試 15 項(查詢 8 項,fixture 由 Python difflib 與 networkx 產生;Worker 7 項)
+│   ├── migrations/    D1 使用紀錄資料表
+│   └── wrangler.toml  Worker 設定(static assets、兩個 D1 資料庫;代碼與登入由帳號擁有者處理)
+│
+├── site/              試用版網站頁面(index.html、同意說明與使用紀錄 log.js、設定 config.js);建置後放進 api/public/
 │
 ├── data/              正典資料(唯一事實來源)
 │   ├── seed_entities.csv      節點(id, type, name_zh, name_en, label_pref)
@@ -94,6 +103,9 @@ Seeing Coordinates: a source-traced recommender for the genealogy of photography
 │   ├── audit_data.py          資料流程稽核 → docs/data-audit.md(硬性錯誤須為 0,測試會檢查)
 │   ├── source_monitor.py      來源監測:重新檢查正式關係引用的網址是否存活、引句是否仍在頁面上 → build/monitor/(只回報,不改 data/)
 │   ├── run_eval_agent.py      評估問題集逐題跑 Agent N 次(每次獨立行程)→ build/eval/agent_runs.jsonl
+│   ├── python_answers.py      用 Python query.py 答一次 1000 題,供 TypeScript 版逐字比對
+│   ├── build_cloudflare.py    組出 Worker 要提供的網站檔案 → api/public/(index、data.js、graph.json、map.html)
+│   ├── export_d1.py           依 docs/schema-v2.sql 把現行資料轉成 D1 可匯入的 SQL → build/d1/v2_data.sql
 │   ├── eval_report.py         把 Agent 與外部平台的回答整理成 build/eval/eval_answers.xlsx(需 openpyxl);結果摘要見 docs/eval-results.md
 │   └── build_reflection.js    產生學習反思 docx(需 Node + docx;含個資,僅存本機、不在公開 repo 內)
 │
@@ -115,14 +127,26 @@ python graph_build.py                 # 建正式圖(3786 條)→ build/graph.js
 python build_viewer.py                # 產生 build/viewer.html,瀏覽器開即可(繪圖程式庫 vis-network 從 cdnjs 載入,需要網路;離線時頁面會說明)
 python graph_build.py --with-review   # 另外寫出 build/graph_with_review.json:連 271 條待查證一起(供檢視,非定論;不覆寫 graph.json)
 python build_viewer.py --with-review  # 由它產生 build/viewer_with_review.html,頁首標明含待查證、虛線為待查證
-python test_core.py                   # 跑 36 項回歸測試
-python test_monitor.py                # 跑來源監測的 22 項測試(不需網路)
+python test_core.py                   # 跑 37 項回歸測試
+python test_monitor.py                # 跑來源監測的 28 項測試(不需網路)
 python tools/source_monitor.py --sample 50 --seed 7   # 來源監測:抽 50 個查證網址檢查存活與引句;不加參數為全部(需網路,同一主機每秒一次請求)
 python agent.py                       # Agent demo(replay 模式,零 LLM 成本)
 python query.py "讀完《明室》下一本讀什麼"   # 自然語言問句 → 圖查詢
 python recommend.py barthes           # 由已讀節點出發的知識前緣推薦;id 是 data/seed_entities.csv 第一欄的小寫 id
 python query.py --test                # 查詢層穩定性診斷報表(同一題多種問法),末行有總結,不是通過/失敗測試
 ```
+
+查詢 API(TypeScript,需 Node 22):
+
+```bash
+cd api && npm install && npm run build
+node dist/src/cli.js "讀完《明室》下一本讀什麼"          # 與 python query.py 相同的回答
+npm test                                              # 單元測試(15 項)
+node dist/src/eval/runQuestions.js                    # 1000 題作答 → build/eval/agent_runs_ts.jsonl(約 3 秒)
+python ../tools/python_answers.py && node dist/src/eval/parity.js ../build/eval/python_answers.jsonl   # 與 Python 版逐字比對
+```
+
+Cloudflare 部署(試用版網站、使用紀錄、D1 資料表):建置指令與七個部署步驟見 `docs/deploy-cloudflare.md`。登入與建立資源由帳號擁有者操作。
 
 輔助工具(需額外套件):
 

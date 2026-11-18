@@ -1,6 +1,8 @@
 """Data model: every relation must carry its source and a confidence score.
 
-Last edited: 2026-11-02: two optional fields on Relation. `role` says what a belongs_to edge
+Last edited: 2026-11-17: new entity type `group` for creator groups that make, show or publish work
+under a shared name (f/64, Provoke, V-10, 四月影會); associations, agencies, awards and museums stay institution.
+2026-11-02: two optional fields on Relation. `role` says what a belongs_to edge
 means (author / contributor / movement / member / award / participant / part_of; required for
 belongs_to, forbidden elsewhere), because 64% of formal edges were belongs_to and an agent
 could not tell authorship from an award. `year` is the year the relation holds (publication,
@@ -45,7 +47,7 @@ Role = Literal[
     "author",        # work → person: the work is by this person
     "contributor",   # person/work → anthology, journal, series: included or published in it
     "movement",      # person/work/group → concept: belongs to this movement or genre
-    "member",        # person → group, agency, magazine, school: member, staff, student
+    "member",        # person → group (creator group), institution (agency, magazine, school): member, staff, student
     "award",         # person/work → award: won it
     "participant",   # person/work → exhibition or event: took part
     "part_of",       # exhibition/journal/institution → institution: hosted, published or run by it
@@ -55,12 +57,12 @@ ROLE_VERB_ZH: dict[str, str] = {
     "award": "獲獎", "participant": "參與", "part_of": "隸屬於",
 }
 
-EntityType = Literal["person", "work", "concept", "event", "institution"]
+EntityType = Literal["person", "work", "concept", "event", "institution", "group"]
 Status = Literal["auto", "review", "approved", "rejected"]
 
 
 class Entity(BaseModel):
-    """A node: person, work, concept, event or institution."""
+    """A node: person, work, concept, event, institution or group (a creator group)."""
     id: str
     type: EntityType
     name_zh: str

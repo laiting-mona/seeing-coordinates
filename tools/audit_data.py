@@ -1,6 +1,6 @@
 """Data-pipeline audit: checks the curated dataset for integrity problems.
 
-Last edited: 2026-11-07: weak-host warning (wikis, blogs, booksellers, auction houses). 2026-11-03: the URL checks read the latest evidence URL through data_io.parse_evidence (the same view
+Last edited: 2026-11-17: group counts as a non-person source in the reversed belongs_to check. 2026-11-07: weak-host warning (wikis, blogs, booksellers, auction houses). 2026-11-03: the URL checks read the latest evidence URL through data_io.parse_evidence (the same view
 graph_build exposes); ("award", "part_of") tolerated. 2026-11-02 (second pass): warning for a formal edge whose evidence has no parseable verbatim
 quote (self-primary excepted). Earlier the same day: role / year rules. Hard errors: a belongs_to edge without a role, a
 role on another kind, a role that contradicts the node types (the rule in data_io.infer_role),
@@ -139,8 +139,8 @@ def hard_errors(entities, sources, relations, root: Path = ROOT) -> dict[str, li
             errors["self-loop"].append(label)
         if EM_DASH in r["claim"] + (r.get("evidence") or ""):
             errors["em-dash in claim/evidence"].append(label)
-        if k == "belongs_to" and entities[t]["type"] == "person" and entities[s]["type"] in ("event", "institution", "concept"):
-            errors["reversed belongs_to (event/institution/concept -> person)"].append(label)
+        if k == "belongs_to" and entities[t]["type"] == "person" and entities[s]["type"] in ("event", "institution", "group", "concept"):
+            errors["reversed belongs_to (event/institution/group/concept -> person)"].append(label)
         if r["source_tier"] != source["tier"]:
             errors["relation tier differs from source tier"].append(f"{label} ({r['source_tier']} vs {source['tier']})")
         if r["status"] == "auto" and not reproducible(r, source["tier"]):

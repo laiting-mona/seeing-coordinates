@@ -1,0 +1,32 @@
+# Cloudflare Worker for 觀看的坐標: trial site (static assets) + /api/answer + /api/health + /log.
+# Last edited: 2026-11-18: one Worker replaces the R2 query Worker and the separate log Worker.
+# Nothing secret lives here. `npx wrangler login` keeps the credentials on the owner's computer; the two
+# database_id values come from `npx wrangler d1 create ...` and are pasted in by the owner before the first deploy.
+name = "seeing-coordinates"
+main = "src/worker.ts"
+compatibility_date = "2026-11-01"
+
+[assets]
+directory = "./public"          # built by `npm run site`
+binding = "ASSETS"
+not_found_handling = "none"
+
+[vars]
+# Extra origins allowed to send logs (comma separated). The Worker's own address is always allowed.
+ALLOWED_ORIGINS = ""
+
+[[d1_databases]]
+binding = "DB"                  # usage log: events, rate
+database_name = "seeing-coordinates-log"
+database_id = "REPLACE_WITH_LOG_DATABASE_ID"
+migrations_dir = "migrations"
+
+[[d1_databases]]
+binding = "DATA"                # v2 data copy: entity, assertion, evidence, source, review_event
+database_name = "seeing-coordinates-data"
+database_id = "REPLACE_WITH_DATA_DATABASE_ID"
+
+[triggers]
+crons = ["17 19 * * *"]         # 03:17 Taipei time: clear yesterday's rate counters
+
+# Secret (not in this file): RATE_SALT, set with `npx wrangler secret put RATE_SALT`

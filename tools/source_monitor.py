@@ -1,6 +1,6 @@
 """Source monitor: re-checks every verification URL the formal graph rests on.
 
-Last edited: 2026-11-16: first version (same day: tls_error state, report wording, CJK quotes matched across stripped tags; Hangul counted as CJK; charset read from the meta tag when the header has none). For each URL cited by a formal (auto / approved) relation it
+Last edited: 2026-11-17: non-ASCII URL paths are percent-encoded before the request (5 pages were reported unreachable with UnicodeEncodeError); quotes stitched with ... or / count as found when every passage is on the page; gzip bodies decompressed; bot-check pages with status 200 reported as blocked. 2026-11-16: first version (same day: tls_error state, report wording, CJK quotes matched across stripped tags; Hangul counted as CJK; charset read from the meta tag when the header has none). For each URL cited by a formal (auto / approved) relation it
 records whether the page still answers, where it redirects to, a hash of its text, and whether each
 relation's verbatim quote is still on the page. A second run compares with the previous snapshot and
 lists what changed (newly unreachable pages, quotes that disappeared, text that changed).
@@ -19,6 +19,7 @@ Exit code is 0 even when problems are found; read the report.
 """
 import argparse
 import datetime
+import gzip
 import hashlib
 import html
 import json
@@ -38,6 +39,7 @@ import data_io  # noqa: E402
 STATUS_JSONL = "build/monitor/source_status.jsonl"
 REPORT_MD = "build/monitor/report.md"
 USER_AGENT = "seeing-coordinates-source-monitor/1.0 (link and quote check; one request per page)"
+CHALLENGE = re.compile(r"confirm you are a real human|Just a moment\.\.\.|Enable JavaScript and cookies to continue|cf-chl-|Attention Required! \| Cloudflare", re.I)
 MAX_BYTES = 3_000_000
 TEXT_TYPES = ("text/html", "application/xhtml", "text/plain")
 TAG = re.compile(r"<[^>]+>")
@@ -71,6 +73,23 @@ def shingles(text: str) -> list[str]:
     return [compact[i:i + 10] for i in range(0, max(1, len(compact) - 9), 5)]
 
 
+ELISION = re.compile(r"\s*(?:\.\.\.|…|\s/\s)\s*")
+BRACKET_EDIT = re.compile(r"\[[^\]]{0,40}\]")
+
+
+def all_fragments_found(quote: str, text: str) -> bool:
+    """True when a quote joined with ellipses or slashes has every substantial passage on the page.
+    Square-bracket edits ([from 1999], [T]) are dropped first; passages shorter than 3 words or 6 CJK characters are ignored."""
+    parts = [normalise(BRACKET_EDIT.sub(" ", p)) for p in ELISION.split(quote)]
+    def substantial(p: str) -> bool:
+        return len(p.replace(" ", "")) >= 6 if CJK.search(p) else len(p.split()) >= 3
+    parts = [p for p in parts if p and substantial(p)]
+    if not parts or not (ELISION.search(quote) or BRACKET_EDIT.search(quote)):
+        return False
+    flat = text.replace(" ", "")
+    return all(p in text or (CJK.search(p) and p.replace(" ", "") in flat) for p in parts)
+
+
 def quote_state(quote: str | None, text: str | None) -> str:
     """found / partial / missing for a quote against normalised page text; unchecked when either is absent."""
     if not quote or text is None:
@@ -82,6 +101,8 @@ def quote_state(quote: str | None, text: str | None) -> str:
         return "found"
     if CJK.search(wanted) and wanted.replace(" ", "") in text.replace(" ", ""):
         return "found"            # CJK text: spaces left by stripped tags (links, emphasis) are not part of the sentence
+    if all_fragments_found(quote, text):
+        return "found"            # a quote stitched from several passages with "..." or " / ", every passage on the page
     runs = shingles(wanted)
     haystack = text if " " in wanted and len(wanted.split(" ")) >= SHINGLE_WORDS else text.replace(" ", "")
     share = sum(1 for run in runs if run in haystack) / len(runs)
@@ -109,13 +130,31 @@ def sniff_charset(raw: bytes) -> str:
     return {"shift_jis": "cp932", "sjis": "cp932", "x-sjis": "cp932", "euc-jp": "euc_jp"}.get(name, name)
 
 
+def decompress(raw: bytes, encoding: str | None) -> bytes:
+    """Undo gzip transfer encoding (some servers send it even when not asked; the text was read as mojibake)."""
+    if (encoding or "").lower() == "gzip" or raw[:2] == b"\x1f\x8b":
+        try:
+            return gzip.decompress(raw)
+        except OSError:
+            return raw
+    return raw
+
+
+def request_url(url: str) -> str:
+    """Percent-encode a non-ASCII path or query (Japanese and Chinese file names) so urllib can send it."""
+    parts = urllib.parse.urlsplit(url)
+    return urllib.parse.urlunsplit(parts._replace(path=urllib.parse.quote(parts.path, safe="/%:@!$&'()*+,;=-._~"),
+                                                  query=urllib.parse.quote(parts.query, safe="=&%/:+,;@!$'()*-._~")))
+
+
 def fetch(url: str, timeout: float) -> dict:
     """One GET. Returns http status, final URL, content type and decoded text (None when not text)."""
-    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "text/html,*/*;q=0.5"})
+    request = urllib.request.Request(request_url(url), headers={"User-Agent": USER_AGENT, "Accept": "text/html,*/*;q=0.5",
+                                                               "Accept-Encoding": "gzip, identity"})
     try:
         with urllib.request.urlopen(request, timeout=timeout) as response:
             content_type = (response.headers.get("Content-Type") or "").lower()
-            raw = response.read(MAX_BYTES)
+            raw = decompress(response.read(MAX_BYTES), response.headers.get("Content-Encoding"))
             charset = response.headers.get_content_charset() or sniff_charset(raw)
             is_text = any(content_type.startswith(t) for t in TEXT_TYPES)
             body = raw.decode(charset, errors="replace") if is_text else None
@@ -148,6 +187,8 @@ def page_state(result: dict, url: str) -> str:
         return "gone"
     if result["body"] is None:
         return "not_text"         # PDF or other binary: reachable, quote not checked
+    if CHALLENGE.search(result["body"][:20000]):
+        return "blocked"          # a bot check ("confirm you are a real human") answered with status 200
     return "ok" if same_page(url, result["final_url"]) else "redirected"
 
 

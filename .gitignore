@@ -36,3 +36,11 @@ _deck_screens/
 *競賽繳交_*/
 學習反思心得二/
 試用版網站/
+
+# TypeScript 查詢層的安裝與編譯產物
+api/node_modules/
+api/dist/
+# Cloudflare 部署的產出與本機設定(由 tools/build_cloudflare.py 與 npm run site 重建)
+api/public/
+api/.wrangler/
+api/wrangler.local.toml

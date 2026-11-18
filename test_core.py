@@ -1,6 +1,7 @@
 """Minimal regression tests (plain assert, no pytest) for the core behaviour.
 
-Last edited: 2026-11-10: answers must not change with Python's per-process hash seed (two child
+Last edited: 2026-11-17: person → group infers the member role.
+2026-11-10: answers must not change with Python's per-process hash seed (two child
 processes with different PYTHONHASHSEED answer the same questions identically).
 2026-10-29: data audit (tools/audit_data.py) must report zero hard errors;
 entity-table integrity check (no duplicate person/institution under two
@@ -93,6 +94,7 @@ def test_role_and_year() -> None:
     check("非 belongs_to 帶 role 會被 schema 擋掉", ok_wrong)
     check("infer_role: 作品→人物 = author", data_io.infer_role("work", "person") == "author")
     check("infer_role: 人物→獎項 = award", data_io.infer_role("person", "institution", "木村伊兵衛寫真賞") == "award")
+    check("infer_role: 人物→創作團體 = member", data_io.infer_role("person", "group", "f/64 群") == "member")
     check("year_from_claim: 單一年份", data_io.year_from_claim("1975 年成為會員") == 1975)
     check("year_from_claim: 兩個年份不猜,改用事件 id", data_io.year_from_claim("1974–1984 (2009)", "pictures_gen_met_2009") == 2009)
 

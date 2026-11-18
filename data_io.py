@@ -1,6 +1,6 @@
 """Shared file I/O for the curated dataset (entities, sources, relations).
 
-Last edited: 2026-11-09: GRAPH_WITH_REVIEW_JSON; load_graph_json(with_review=) so --with-review never
+Last edited: 2026-11-17: infer_role reads person → group as member. 2026-11-09: GRAPH_WITH_REVIEW_JSON; load_graph_json(with_review=) so --with-review never
 overwrites the formal graph.json. 2026-11-02 (second pass): parse_evidence() splits the accumulated evidence text
 into the fields an agent needs (latest verification URL, verbatim quote, verification date,
 number of check rounds). The stored field stays as the audit trail; the parsed fields are
@@ -163,7 +163,7 @@ def infer_role(source_type: str, target_type: str, target_name: str = "") -> str
         return "contributor"
     if target_type == "event":
         return "participant" if source_type in ("person", "work") else "part_of"
-    if source_type == "person" and target_type == "institution":
+    if source_type == "person" and target_type in ("institution", "group"):
         return "member"
     if target_type == "institution":
         return "part_of"

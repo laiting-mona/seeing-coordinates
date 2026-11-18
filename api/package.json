@@ -1,0 +1,23 @@
+{
+  "name": "seeing-coordinates-api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Query layer and Cloudflare Worker of 觀看的坐標: answers from the graph only (Node and Workers), serves the trial site, keeps a consent-based usage log in D1.",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "npm run build && node --test dist/test/*.test.js",
+    "answer": "node dist/src/cli.js",
+    "eval": "node dist/src/eval/runQuestions.js",
+    "parity": "node dist/src/eval/parity.js",
+    "site": "python ../tools/build_cloudflare.py && esbuild src/browser.ts --bundle --format=iife --target=es2020 --minify --legal-comments=none --outfile=public/engine.js",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "esbuild": "0.24.0",
+    "typescript": "5.7.2",
+    "wrangler": "4.156.2"
+  }
+}

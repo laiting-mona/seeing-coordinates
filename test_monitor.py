@@ -1,6 +1,6 @@
 """Regression tests for tools/source_monitor.py. No internet: pages are served from a local HTTP server.
 
-Last edited: 2026-11-16: first version.
+Last edited: 2026-11-17: tests for percent-encoding non-ASCII URLs, elided quotes, bracket edits, gzip bodies and bot-check pages. 2026-11-16: first version.
 Usage: python test_monitor.py
 """
 import http.server
@@ -77,6 +77,17 @@ def test_text_matching() -> None:
     check("韓文引句跨過引號旁的空格仍判為 found", monitor.quote_state('출범한 "한국사진작가협회"는 창립전을 가지며', korean) == "found")
     sjis = '<html><head><meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS"></head><body>木村と土門</body></html>'.encode("cp932")
     check("沒有標頭編碼時讀取 meta 宣告的 Shift_JIS", monitor.sniff_charset(sjis) == "cp932" and "木村と土門" in sjis.decode(monitor.sniff_charset(sjis)))
+    contributors = monitor.page_text("<p>Contributors: Liz Heron, Alice Hughes, Karen Knorr, Rosalind Krauss, Dorothea Lange</p>")
+    check("以 ... 串接的引句，每段都在頁面上就算 found",
+          monitor.quote_state("Contributors: ... Alice Hughes, Karen Knorr, Rosalind Krauss", contributors) == "found")
+    check("以 ... 串接但有一段不在頁面上，不算 found",
+          monitor.quote_state("Contributors: ... Alice Hughes, Karen Knorr, Rosalind Krauss ... Susan Sontag wrote it", contributors) != "found")
+    series = monitor.page_text("<p>Other series include Mexas [1996-97], and the ongoing Organized Freedom [from 1999].</p>")
+    check("方括號是引用者的補註，比對時略過", monitor.quote_state("Other series include ... the ongoing Organized Freedom [from 1999]", series) == "found")
+    import gzip
+    check("gzip 內容先解壓再讀", monitor.decompress(gzip.compress("相片".encode()), "gzip").decode() == "相片")
+    challenge = {"http": 200, "body": "<p>Please confirm you are a real human.</p>", "final_url": "u", "error": None}
+    check("回傳 200 的機器人驗證頁記為 blocked", monitor.page_state(challenge, "u") == "blocked")
     check("沒有引句或沒有頁面文字時為 unchecked",
           monitor.quote_state(None, text) == "unchecked" and monitor.quote_state(QUOTE, None) == "unchecked")
 
@@ -92,6 +103,9 @@ def test_page_states(base: str) -> None:
     check("PDF 記為 not_text，引句不判定", (state("/paper.pdf")["state"], state("/paper.pdf")["quotes"][0]["state"]) == ("not_text", "unchecked"))
     check("連不上的主機記為 unreachable", monitor.check_url("http://127.0.0.1:9/x", [], 2, "t")["state"] == "unreachable")
     check("只差 www 與結尾斜線視為同一頁", monitor.same_page("http://www.a.org/p/", "https://a.org/p"))
+    encoded = monitor.request_url("https://topmuseum.jp/upload/2/前衛写真.pdf?q=中平")
+    check("非 ASCII 網址先編碼再送出，已編碼的部分不重複編碼", encoded.isascii() and "%E5%89%8D" in encoded
+          and monitor.request_url(encoded) == encoded)
     tls = {"http": None, "body": None, "final_url": "u", "error": "URLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed"}
     check("憑證驗證失敗另記為 tls_error", monitor.page_state(tls, "u") == "tls_error")
 

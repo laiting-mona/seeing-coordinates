@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>觀看的坐標</title>
+<!-- Trial site of 觀看的坐標 (deployed on Cloudflare by api/). Answers are computed live in the browser by the same
+     TypeScript query engine used for the 1,000-question evaluation (engine.js) over the verified graph snapshot
+     (graph.json); no language model. Usage logging (log.js) runs only after the visitor agrees.
+     Last edited: 2026-11-18: first deployable version, from the 11/18 demo artifact plus config.js and log.js. -->
+<style>
+/* Layout: chat app with a question sidebar; each answer shows the agent's four steps under it. */
+:root{
+  --bg:#EEEDEB; --panel:#E4E2DE; --side:#E6E4E0; --ink:#121212; --ink2:#4A4845; --ink3:#7A7772;
+  --line:#CFCCC6; --card:#F7F6F4; --accent:#FDE870; --accent-ink:#121212; --user:#121212; --user-ink:#F2F1EE;
+  --chip:#E9E7E3; --ok:#2F6B3F; --warn:#9A5B00; --link:#1F3A93;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0E0E0E; --panel:#151515; --side:#121212; --ink:#EEEDEB; --ink2:#BDBAB4; --ink3:#8A8781;
+  --line:#2A2A2A; --card:#181818; --accent:#FDE870; --accent-ink:#121212; --user:#EEEDEB; --user-ink:#121212;
+  --chip:#222; --ok:#7FC48E; --warn:#E3B062; --link:#9DB4FF; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#0E0E0E; --panel:#151515; --side:#121212; --ink:#EEEDEB; --ink2:#BDBAB4; --ink3:#8A8781;
+  --line:#2A2A2A; --card:#181818; --accent:#FDE870; --accent-ink:#121212; --user:#EEEDEB; --user-ink:#121212;
+  --chip:#222; --ok:#7FC48E; --warn:#E3B062; --link:#9DB4FF; color-scheme:dark }
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:"Helvetica Neue",Arial,"Noto Sans CJK TC","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;font-size:15px;line-height:1.6}
+a{color:var(--link)}
+button:focus-visible,textarea:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.app{display:grid;grid-template-columns:280px 1fr;height:100%}
+/* sidebar */
+.side{background:var(--side);border-right:1px solid var(--line);display:flex;flex-direction:column;min-height:0}
+.brand{display:flex;align-items:center;gap:10px;padding:18px 18px 10px}
+.mark{width:30px;height:30px;position:relative;flex:none}
+.mark i{position:absolute;background:var(--accent)}
+.mark i:nth-child(1){left:0;top:0;width:30px;height:9px}
+.mark i:nth-child(2){left:0;top:0;width:9px;height:30px}
+.mark i:nth-child(3){right:0;bottom:0;width:9px;height:9px;background:var(--ink)}
+.brand b{font-size:18px;letter-spacing:.02em;font-weight:900}
+.brand small{display:block;color:var(--ink3);font-size:11px;letter-spacing:.08em}
+.newchat{margin:8px 14px 6px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--ink);font:inherit;text-align:left;cursor:pointer;display:flex;gap:8px;align-items:center}
+.newchat:hover{background:var(--chip)}
+.search{margin:4px 14px 10px;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);font:inherit;width:calc(100% - 28px)}
+.sec{padding:10px 18px 4px;font-size:11px;letter-spacing:.12em;color:var(--ink3);text-transform:uppercase}
+.list{overflow:auto;flex:1;padding-bottom:12px}
+.proj{margin:2px 10px;border-radius:10px}
+.proj>button{width:100%;display:flex;gap:8px;align-items:center;padding:8px 10px;background:none;border:0;color:var(--ink);font:inherit;cursor:pointer;border-radius:10px;text-align:left}
+.proj>button:hover{background:var(--chip)}
+.proj .dot{width:9px;height:9px;background:var(--accent);flex:none;outline:1px solid var(--ink3)}
+.proj.limit .dot{background:transparent}
+.proj .kids{display:none;padding-left:16px}
+.proj.open .kids{display:block}
+.chat-item{display:block;width:100%;text-align:left;padding:7px 10px;margin:1px 0;border:0;border-radius:8px;background:none;color:var(--ink2);font:inherit;font-size:13.5px;cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chat-item:hover{background:var(--chip);color:var(--ink)}
+.chat-item.active{background:var(--ink);color:var(--bg)}
+.side-foot{border-top:1px solid var(--line);padding:12px 18px;font-size:12px;color:var(--ink3)}
+/* main */
+.main{display:flex;flex-direction:column;min-width:0;min-height:0}
+.top{display:flex;align-items:center;gap:14px;padding:12px 22px;border-bottom:1px solid var(--line);background:var(--bg)}
+.tabs{display:flex;gap:4px;background:var(--chip);padding:4px;border-radius:12px;flex:none}
+.tab{border:0;background:none;color:var(--ink2);font:inherit;font-weight:700;padding:6px 14px;border-radius:9px;cursor:pointer}
+.tab.on{background:var(--ink);color:var(--bg)}
+.title{flex:1;min-width:0;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink2)}
+.badge{font-size:12px;padding:4px 10px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-weight:700;white-space:nowrap}
+.icon-btn{border:1px solid var(--line);background:var(--card);color:var(--ink);height:36px;border-radius:10px;cursor:pointer;padding:0 12px;font:inherit;font-size:13px;font-weight:700;flex:none}
+.view{flex:1;min-height:0;display:none}
+.view.on{display:flex}
+#chatView{flex-direction:column}
+.thread{flex:1;overflow:auto;padding:28px 0 12px}
+.wrap{max-width:860px;margin:0 auto;padding:0 28px}
+.msg{margin:0 0 26px}
+.msg.user{display:flex;justify-content:flex-end}
+.bubble{background:var(--user);color:var(--user-ink);padding:12px 16px;border-radius:16px 16px 4px 16px;max-width:78%;overflow-wrap:anywhere}
+.bot .who{display:flex;align-items:center;gap:8px;font-weight:800;margin-bottom:8px}
+.bot .who .mark{transform:scale(.6);transform-origin:left center;margin-right:-10px}
+.head{font-size:16px;font-weight:700;margin:0 0 10px}
+.rel{display:grid;grid-template-columns:28px 1fr;gap:8px;padding:11px 14px;background:var(--card);border:1px solid var(--line);border-radius:12px;margin:0 0 8px}
+.rel>div{min-width:0}
+.rel .dir{font-weight:900;color:var(--ink3);text-align:center;padding-top:1px}
+.rel .claim{font-weight:600;overflow-wrap:anywhere}
+.rel .reason{color:var(--ink2);font-size:14px;margin-top:2px;overflow-wrap:anywhere}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:7px}
+.chip{font-size:12px;padding:2px 8px;border-radius:999px;background:var(--chip);color:var(--ink2);max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.chip.conf{display:inline-flex;align-items:center;gap:6px}
+.bar{width:44px;height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--ink)}
+.chip.in{color:var(--ok)} .chip.rv{color:var(--warn)}
+.chip a{color:inherit}
+.prov{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:12px 16px;margin:0 0 8px}
+.prov dt{font-size:12px;color:var(--ink3);margin-top:6px}
+.prov dd{margin:0;overflow-wrap:anywhere}
+.plain{margin:0 0 8px;white-space:pre-wrap;overflow-wrap:anywhere}
+.urls{margin-top:12px;padding:12px 14px;border-radius:12px;border:1px dashed var(--line)}
+.urls b{font-size:12px;letter-spacing:.08em;color:var(--ink3)}
+.urls ol{margin:6px 0 0;padding-left:20px;font-size:13px;word-break:break-all}
+/* processing trace */
+.trace{margin-top:12px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+.trace summary{cursor:pointer;padding:9px 14px;font-size:13px;font-weight:700;color:var(--ink2);list-style:none;display:flex;justify-content:space-between;gap:10px}
+.trace summary::-webkit-details-marker{display:none}
+.trace summary::after{content:"展開";font-weight:400;color:var(--ink3)}
+.trace[open] summary::after{content:"收合"}
+.steps{list-style:none;margin:0;padding:0 14px 12px;display:grid;gap:8px}
+.steps li{display:grid;grid-template-columns:26px 92px 1fr;gap:10px;align-items:start;font-size:13.5px}
+.steps li>span:last-child{min-width:0;overflow-wrap:anywhere}
+.steps .n{width:22px;height:22px;background:var(--accent);color:var(--accent-ink);font-weight:900;font-size:12px;display:grid;place-items:center;margin-top:1px}
+.steps .k{color:var(--ink3);font-size:12.5px;padding-top:2px}
+.node-tag{display:inline-block;padding:0 7px;margin:0 4px 3px 0;border:1px solid var(--line);border-radius:6px;background:var(--card);font-size:12.5px}
+.foot{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:12px;color:var(--ink3);margin-top:10px;font-variant-numeric:tabular-nums}
+.rerun{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:3px 10px;font:inherit;font-size:12px;cursor:pointer}
+.rerun:hover{border-color:var(--ink)}
+.same{color:var(--ok);font-weight:700}
+.composer{padding:10px 0 22px;background:linear-gradient(transparent,var(--bg) 30%)}
+.box{display:flex;gap:10px;align-items:flex-end;border:1px solid var(--line);background:var(--card);border-radius:16px;padding:10px 10px 10px 16px}
+.box textarea{flex:1;min-width:0;border:0;outline:0;resize:none;background:transparent;color:var(--ink);font:inherit;max-height:160px;min-height:24px}
+.send{border:0;background:var(--ink);color:var(--bg);width:38px;height:38px;border-radius:10px;font-size:18px;cursor:pointer;flex:none}
+.send:disabled{opacity:.35;cursor:wait}
+.hint{font-size:12px;color:var(--ink3);text-align:center;margin-top:8px}
+.empty{padding-top:7vh}
+.empty h1{font-size:44px;line-height:1.08;margin:0 0 10px;font-weight:900;letter-spacing:-.01em;text-wrap:balance}
+.empty h1 span{background:var(--accent);color:var(--accent-ink);padding:0 6px}
+.empty p{color:var(--ink2);margin:0 0 22px;max-width:62ch}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--ink2);margin:0 0 18px}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--warn)}
+.status.ready i{background:var(--ok)}
+.sugs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sug{text-align:left;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;padding:12px 14px;font:inherit;cursor:pointer}
+.sug small{display:block;color:var(--ink3);font-size:12px;margin-bottom:2px}
+.sug:hover{border-color:var(--ink)}
+.sug:disabled{opacity:.5;cursor:wait}
+#mapView iframe{border:0;width:100%;height:100%;background:#000}
+@media (max-width:820px){
+  .app{grid-template-columns:1fr}.side{display:none}.sugs{grid-template-columns:1fr}.badge{display:none}
+  .wrap{padding:0 16px}.top{padding:10px 16px;gap:10px}.empty h1{font-size:34px}
+  .steps li{grid-template-columns:26px 1fr}.steps .k{grid-column:2}.steps li>span:last-child{grid-column:2}
+}
+@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="app">
+  <aside class="side">
+    <div class="brand"><div class="mark"><i></i><i></i><i></i></div><div><b>觀看的坐標</b><small>SEEING COORDINATES</small></div></div>
+    <button class="newchat" id="newChat">＋ 新對話</button>
+    <input class="search" id="search" placeholder="搜尋評估題庫" aria-label="搜尋評估題庫">
+    <div class="list" id="list"></div>
+    <div class="side-foot">賴亭穎 · 攝影論述譜系推薦 Agent</div>
+  </aside>
+  <main class="main">
+    <div class="top">
+      <div class="tabs"><button class="tab on" data-v="chatView">對話</button><button class="tab" data-v="mapView">知識地圖</button></div>
+      <div class="title" id="title">新對話</div>
+      <span class="badge">每條關係附出處 · 同題重問逐字相同</span>
+      <button class="icon-btn" id="theme" title="切換黑底／白底">黑／白</button>
+    </div>
+    <section class="view on" id="chatView">
+      <div class="thread" id="thread"></div>
+      <div class="composer"><div class="wrap">
+        <div class="box"><textarea id="q" rows="1" placeholder="問一個攝影理論或攝影史的問題，例如：讀完《明室》下一本讀什麼？" aria-label="輸入問題"></textarea><button class="send" id="send" title="送出" disabled>↑</button></div>
+        <div class="hint">回答由瀏覽器內的查詢程式即時產生，與 1,000 題評估使用同一套程式；只查已查證的知識圖譜，不呼叫語言模型。</div>
+      </div></div>
+    </section>
+    <section class="view" id="mapView"><iframe id="mapFrame" title="知識地圖" data-src="map.html"></iframe></section>
+  </main>
+</div>
+
+<script src="config.js"></script>
+<script src="log.js"></script>
+<script src="data.js"></script>
+<script src="engine.js"></script>
+<script>
+// Page logic for the live demo. One function, one job.
+const BY_ID = Object.fromEntries(QS.map(r => [r[0], r]));
+const BY_TEXT = Object.fromEntries(QS.map(r => [r[1], r[0]]));
+const TIER = {primary: '原典', institution: '機構', critic: '評論', other: '其他', popular: '大眾'};
+const INTENT_ZH = {recommend: '推薦下一本', provenance: '查核出處', lineage: '概念脈絡', relation: '兩者關係',
+                   authority: '來源權威', path: '閱讀路線', default: '列出相關關係'};
+const PROJECTS = [
+  {name: '攝影史課程備課', ids: ['Q0221', 'Q0661', 'Q0441']},
+  {name: '研究所文獻回溯', ids: ['Q0111', 'Q0486', 'Q0881']},
+  {name: '書店選書顧問', ids: ['Q0331', 'Q0771', 'Q0292']},
+  {name: '已知限制（如實呈現）', ids: ['Q0001', 'Q0063'], limit: true},
+];
+const RECENT = ['Q0991', 'Q0551', 'Q0389', 'Q0583', 'Q0098'];
+const SUGGEST = [
+  {tag: '推薦下一本', q: '《觀看的方式》看完了，接下來讀什麼比較順？'},
+  {tag: '查核出處', q: '伯格和班雅明的關係出處在哪？'},
+  {tag: '概念脈絡', q: '刺點這個概念後來怎麼發展？'},
+  {tag: '東亞 · 兩者關係', q: '多木浩二和 Provoke 有什麼關係？'},
+];
+let current = [];
+let stats = null;
+
+function esc(s) { return String(s).replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c])); }
+function shortTitle(q) { return q.replace(/^我[^,，]{0,12}[,，]/, '').slice(0, 26); }
+function fmt(n) { return n.toLocaleString('en-US'); }
+
+async function fingerprint(text) {
+  try {
+    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
+    return [...new Uint8Array(buf)].slice(0, 6).map(b => b.toString(16).padStart(2, '0')).join('');
+  } catch (e) { return '無法計算'; }
+}
+
+function srcLink(id) {
+  const s = SRC[id]; if (!s) return esc(id);
+  const label = esc(s[0] + (s[2] ? '（' + s[2] + '）' : ''));
+  return s[4] && /^https?:/.test(s[4]) ? `<a href="${esc(s[4])}" target="_blank" rel="noopener">${label}</a>` : label;
+}
+
+function renderRelation(line) {
+  const m = line.match(/^\s*(→|←|源頭[:：]|後續[:：])?\s*(.*?)\(可信度 ([\d.]+)、(\w+)層、出處 ([A-Za-z0-9_]+)、([^)]+)\)\s*$/);
+  if (!m) return null;
+  const [, dir, claim, conf, tier, sid, status] = m;
+  const d = (dir || '•').replace(/[:：]/, '');
+  const st = /入圖/.test(status) ? 'in' : 'rv';
+  return `<div class="rel"><div class="dir">${esc(d.length > 1 ? d[0] : d)}</div><div><div class="claim">${esc(claim)}</div>
+    <div class="chips"><span class="chip conf">可信度 ${conf}<span class="bar"><i style="width:${Math.round(conf * 100)}%"></i></span></span>
+    <span class="chip">來源層級：${esc(TIER[tier] || tier)}</span><span class="chip">出處：${srcLink(sid)}</span><span class="chip ${st}">${esc(status)}</span></div></div></div>`;
+}
+
+function renderRecommendation(line) {
+  const m = line.match(/^•\s*(.+?) - (.*)（出處:([^）]*)）\s*$/);
+  if (!m) return null;
+  const [, target, reason, sid] = m;
+  return `<div class="rel"><div class="dir">→</div><div><div class="claim">${esc(target)}</div>
+    <div class="reason">${esc(reason)}</div><div class="chips"><span class="chip">出處：${srcLink(sid)}</span></div></div></div>`;
+}
+
+function renderAnswer(text) {
+  const lines = text.split('\n'); let html = `<p class="head">${esc(lines[0])}</p>`; let prov = [];
+  const flush = () => { if (prov.length) { html += '<dl class="prov">' + prov.join('') + '</dl>'; prov = []; } };
+  for (const raw of lines.slice(1)) {
+    const line = raw.trim(); if (!line) continue;
+    const pm = line.match(/^(主張|證據|出處|狀態|來源層|可信度)[:：](.*)$/);
+    if (pm) {
+      let v = esc(pm[2]).replace(/(https?:\/\/[^\s｜]+)/g, '<a href="$1" target="_blank" rel="noopener">$1</a>');
+      if (pm[1] === '出處') v = v.replace(/^([A-Za-z0-9_]+)/, (_, id) => srcLink(id));
+      prov.push(`<dt>${pm[1]}</dt><dd>${v}</dd>`); continue;
+    }
+    flush();
+    html += renderRelation(line) || renderRecommendation(line) || `<p class="plain">${esc(line)}</p>`;
+  }
+  flush(); return html;
+}
+
+function edgeCount(value) {
+  if (Array.isArray(value)) return value.reduce((n, v) => n + edgeCount(v), 0);
+  if (!value || typeof value !== 'object') return 0;
+  const self = ('kind' in value && 'from' in value) ? 1 : 0;
+  return self + Object.values(value).reduce((n, v) => n + edgeCount(v), 0);
+}
+
+function lookupStep(r) {
+  const res = r.result;
+  switch (res.type) {
+    case 'recommend': return res.resolved ? `從「${res.seed}」往外走一步，依可信度、來源層級與節點中心性排序，取前 ${res.items.length} 項` : '沒有對到起點節點，不作答';
+    case 'provenance': return !res.resolved ? '查核需要兩個節點，只對到一個以下，請說明要查哪兩者' : res.found ? `取出兩個節點之間的 ${res.edges.length} 條關係與原文出處` : '兩個節點之間沒有直接關係';
+    case 'lineage': return `找出指向「${res.concept}」的源頭 ${res.origin.length} 條，再往前找後續 ${res.followups.length} 條`;
+    case 'relation': return res.direct ? `兩者有 ${res.edges.length} 條直接關係` : res.path.length ? `沒有直接關係，找到 ${res.path.length - 1} 步的最短間接路徑` : '兩者之間沒有任何路徑';
+    case 'authority': return '列出四級來源的權重';
+    case 'path': return '回傳固定的三週入門路線';
+    case 'default': return `列出「${res.node}」的主要關係 ${edgeCount(res)} 條`;
+    default: return '沒有對到圖譜中的節點，因此不作答';
+  }
+}
+
+function traceHtml(r, sha, open) {
+  const nodes = r.labels.length ? r.labels.map(x => `<span class="node-tag">${esc(x.label)}</span>`).join('') : '沒有對到圖譜中的節點';
+  return `<details class="trace"${open ? ' open' : ''}><summary>Agent 處理過程</summary><ol class="steps">
+    <li><span class="n">1</span><span class="k">找節點</span><span>${nodes}</span></li>
+    <li><span class="n">2</span><span class="k">判斷問題類型</span><span>${esc(INTENT_ZH[r.intent] || r.intent)}（${esc(r.intent)}）</span></li>
+    <li><span class="n">3</span><span class="k">查圖譜</span><span>${esc(lookupStep(r))}</span></li>
+    <li><span class="n">4</span><span class="k">輸出</span><span>${r.urls.length} 個查證網址 · 回答指紋 ${sha} · 耗時 ${r.ms} ms · 未呼叫語言模型</span></li>
+  </ol></details>`;
+}
+
+function botMessage(c, i) {
+  const r = c.r;
+  const urls = r.urls.length ? `<div class="urls"><b>查證網址</b><ol>${r.urls.map(u => `<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(u)}</a></li>`).join('')}</ol></div>` : '';
+  const qid = BY_TEXT[c.q] ? `<span>評估題號 ${BY_TEXT[c.q]}</span>` : '';
+  return `<div class="msg bot"><div class="who"><div class="mark"><i></i><i></i><i></i></div>觀看的坐標</div>
+    ${renderAnswer(r.text)}${urls}${traceHtml(r, c.sha, i === current.length - 1)}
+    <div class="foot">${qid}<span>問題類型：${esc(INTENT_ZH[r.intent] || r.intent)}</span>
+      <button class="rerun" data-i="${i}">同一題連問 5 次</button><span id="rerun-${i}">${c.rerun || ''}</span></div></div>`;
+}
+
+function userMessage(q) { return `<div class="msg user"><div class="bubble">${esc(q)}</div></div>`; }
+
+function renderThread() {
+  const t = document.getElementById('thread');
+  if (!current.length) { t.innerHTML = emptyState(); bindSuggestions(); return; }
+  t.innerHTML = '<div class="wrap">' + current.map((c, i) => userMessage(c.q) + botMessage(c, i)).join('') + '</div>';
+  t.querySelectorAll('.rerun').forEach(b => b.onclick = () => rerun(Number(b.dataset.i)));
+  t.scrollTop = t.scrollHeight;
+}
+
+function emptyState() {
+  const st = stats ? `<div class="status ready"><i></i>知識圖譜已載入：${fmt(stats.nodes)} 個節點、${fmt(stats.links)} 條正式關係</div>`
+                   : '<div class="status"><i></i>正在載入知識圖譜…</div>';
+  return `<div class="wrap empty"><h1>每一項推薦，<br><span>皆可回溯原文。</span></h1>${st}
+    <p>查詢攝影理論、攝影史、流派、團體與師承。回答只依據已查證的關係，每條附來源層級與出處；圖譜沒有的關係，就回答沒有資料。</p>
+    <div class="sugs">${SUGGEST.map((s, i) => `<button class="sug" data-i="${i}"${stats ? '' : ' disabled'}><small>${esc(s.tag)}</small>${esc(s.q)}</button>`).join('')}</div></div>`;
+}
+
+function bindSuggestions() { document.querySelectorAll('.sug').forEach(b => b.onclick = () => startChat(SUGGEST[Number(b.dataset.i)].q)); }
+
+async function answerOf(q) {
+  const r = SC.answer(q);
+  return {q, r, sha: await fingerprint(r.text)};
+}
+
+async function ask(q) {
+  if (!q.trim() || !stats) return;
+  const c = await answerOf(q.trim());
+  current.push(c);
+  const qid = BY_TEXT[c.q] || '';
+  logEvent('ask', {question: c.q.slice(0, 500), qid, intent: c.r.intent, sha: /^[a-f0-9]{1,16}$/.test(c.sha) ? c.sha : '', exact: qid ? 1 : 0});
+  document.getElementById('title').textContent = shortTitle(current[0].q);
+  renderThread();
+}
+
+async function rerun(i) {
+  const c = current[i]; const shas = [];
+  for (let k = 0; k < 5; k++) shas.push(await fingerprint(SC.answer(c.q).text));
+  const same = shas.every(s => s === c.sha);
+  c.rerun = same ? `<span class="same">5 次回答逐字相同（指紋 ${c.sha}）</span>` : `5 次指紋：${shas.join('、')}`;
+  document.getElementById('rerun-' + i).innerHTML = c.rerun;
+}
+
+async function startChat(q, id) {
+  if (!stats) return;
+  current = [];
+  document.querySelectorAll('.chat-item').forEach(b => b.classList.toggle('active', !!id && b.dataset.id === id));
+  if (id) logEvent('open', {qid: id});
+  showView('chatView'); await ask(q);
+}
+
+function sidebar(filter) {
+  const f = (filter || '').trim();
+  const match = id => !f || BY_ID[id][1].includes(f);
+  const item = (id, extra) => `<button class="chat-item" data-id="${id}"${extra || ''}>${esc(shortTitle(BY_ID[id][1]))}</button>`;
+  let html = '<div class="sec">Projects</div>';
+  PROJECTS.forEach((p, i) => { const kids = p.ids.filter(match); if (f && !kids.length) return;
+    html += `<div class="proj ${p.limit ? 'limit ' : ''}${i === 0 || f ? 'open' : ''}"><button><span class="dot"></span>${esc(p.name)}</button><div class="kids">${kids.map(id => item(id)).join('')}</div></div>`; });
+  if (f) {
+    const hits = QS.filter(r => r[1].includes(f)).slice(0, 30).map(r => r[0]);
+    html += `<div class="sec">題庫中符合的問句（${hits.length}）</div>` + hits.map(id => item(id, ' style="margin:1px 10px;width:calc(100% - 20px)"')).join('');
+  } else {
+    html += '<div class="sec">最近的對話</div>' + RECENT.map(id => item(id, ' style="margin:1px 10px;width:calc(100% - 20px)"')).join('');
+  }
+  const list = document.getElementById('list'); list.innerHTML = html;
+  list.querySelectorAll('.proj>button').forEach(b => b.onclick = () => b.parentElement.classList.toggle('open'));
+  list.querySelectorAll('.chat-item').forEach(b => b.onclick = () => startChat(BY_ID[b.dataset.id][1], b.dataset.id));
+}
+
+function showView(v) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('on', t.dataset.v === v));
+  document.querySelectorAll('.view').forEach(s => s.classList.toggle('on', s.id === v));
+  if (v === 'mapView') { const f = document.getElementById('mapFrame'); if (!f.src) f.src = f.dataset.src; logEvent('map', {}); }
+}
+
+function applyTheme(t) { document.documentElement.setAttribute('data-theme', t); try { localStorage.setItem('sc-theme', t); } catch (e) {} }
+function initTheme() { let t = null; try { t = localStorage.getItem('sc-theme'); } catch (e) {} if (t) document.documentElement.setAttribute('data-theme', t); }
+
+function logEvent(type, data) { if (window.SCLOG) SCLOG.log(type, data); }
+
+async function loadGraph() {
+  try {
+    const graph = await (await fetch('graph.json')).json();
+    SC.boot(graph);
+    stats = {nodes: graph.nodes.length, links: graph.links.length};
+    document.getElementById('send').disabled = false;
+    if (!current.length) renderThread();
+  } catch (e) {
+    const st = document.querySelector('.status');
+    if (st) st.lastChild.textContent = '知識圖譜載入失敗，請重新整理頁面';
+  }
+}
+
+function bindControls() {
+  document.querySelectorAll('.tab').forEach(t => t.onclick = () => showView(t.dataset.v));
+  document.getElementById('theme').onclick = () => { const dark = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim().startsWith('#0'); applyTheme(dark ? 'light' : 'dark'); };
+  document.getElementById('newChat').onclick = () => { current = []; document.getElementById('title').textContent = '新對話'; document.querySelectorAll('.chat-item').forEach(b => b.classList.remove('active')); showView('chatView'); renderThread(); };
+  document.getElementById('search').oninput = e => sidebar(e.target.value);
+  const qEl = document.getElementById('q');
+  const submit = () => { const v = qEl.value; qEl.value = ''; ask(v); };
+  document.getElementById('send').onclick = submit;
+  qEl.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey && !e.isComposing) { e.preventDefault(); submit(); } });
+}
+
+initTheme(); sidebar(); renderThread(); bindControls(); loadGraph();
+</script>
+
+</body>
+</html>

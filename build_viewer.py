@@ -1,6 +1,6 @@
 """Render build/graph.json into a single-file interactive viewer (build/viewer.html).
 
-Last edited: 2026-11-09: page title and header carry the agent's formal name; --with-review reads
+Last edited: 2026-11-17: colour, legend and search hint for the new group type. 2026-11-09: page title and header carry the agent's formal name; --with-review reads
 build/graph_with_review.json and writes build/viewer_with_review.html with a header note; when
 vis-network cannot be loaded (offline) the page says so instead of staying black.
 2026-11-02: edge cards show the belongs_to role (作者是 / 收錄於 / 獲獎 ...) instead of
@@ -32,7 +32,7 @@ TEMPLATE = r"""<title>觀看的座標：攝影論述譜系推薦 Agent｜譜系�
   :root{
     --bg:#000000; --surface:#111111; --surface-2:#1a1a1a; --fg:#ffffff; --muted:#9b9b9b; --line:#2a2a2a;
     --accent:#7fd1c8;
-    --person:#7fd1c8; --work:#8ab8ea; --concept:#e6a95e; --event:#b89ee6; --institution:#8fd39a;
+    --person:#7fd1c8; --work:#8ab8ea; --concept:#e6a95e; --event:#b89ee6; --institution:#8fd39a; --group:#e68fae;
     --auto:#8fd39a; --review:#e6a95e;
     --font:"Noto Sans TC",system-ui,-apple-system,sans-serif;
     color-scheme:dark;
@@ -101,7 +101,7 @@ TEMPLATE = r"""<title>觀看的座標：攝影論述譜系推薦 Agent｜譜系�
     <h1>觀看的座標 · 譜系地圖 <small style="font-weight:400;opacity:.7">攝影論述譜系推薦 Agent</small></h1>
     <span class="stats" id="stats"></span>
     <div class="search">
-      <input id="q" type="search" placeholder="搜尋人物、著作、概念、機構…" autocomplete="off" aria-label="搜尋節點">
+      <input id="q" type="search" placeholder="搜尋人物、著作、概念、團體、機構…" autocomplete="off" aria-label="搜尋節點">
       <div class="hits" id="hits" role="listbox"></div>
     </div>
     <div class="legend" id="legend"></div>
@@ -120,7 +120,7 @@ const REVIEW_NOTE = /*__NOTE__*/;
 const KIND = /*__KIND__*/;
 const ROLE = /*__ROLE__*/;
 const css = k => getComputedStyle(document.documentElement).getPropertyValue(k).trim();
-const TYPES = {person:"人物", work:"著作", concept:"概念", event:"事件", institution:"機構"};
+const TYPES = {person:"人物", work:"著作", concept:"概念", event:"事件", institution:"機構", group:"團體"};
 const colorOf = t => css("--" + t) || css("--concept");
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 

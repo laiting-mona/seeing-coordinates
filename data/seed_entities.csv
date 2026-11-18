@@ -235,9 +235,9 @@ equivalents,concept,等價物,Equivalents,en
 family_of_man_1955,event,人類一家 展 1955,The Family of Man 1955,zh_en
 pictures_1977,event,Pictures 展 1977,Pictures 1977,en
 mirrors_windows_1978,event,鏡與窗 展 1978,Mirrors and Windows 1978,en
-f64,institution,f/64 群,Group f/64,en
-photo_league,institution,攝影聯盟,The Photo League,en
-photo_secession,institution,攝影分離派（291）,Photo-Secession / 291,en
+f64,group,f/64 群,Group f/64,en
+photo_league,group,攝影聯盟,The Photo League,en
+photo_secession,group,攝影分離派（291）,Photo-Secession / 291,en
 fsa,institution,農業安全管理局攝影部,Farm Security Administration,zh_en
 bauhaus,institution,包浩斯,Bauhaus,zh_en
 dusseldorf_academy,institution,杜塞道夫藝術學院,Kunstakademie Düsseldorf,en
@@ -248,8 +248,8 @@ fotomuseum,institution,溫特圖爾攝影博物館,Fotomuseum Winterthur,en
 paris_photo,institution,巴黎攝影博覽會,Paris Photo,en
 ncpi_tw,institution,國家攝影文化中心,National Center of Photography and Images,zh
 tfam,institution,臺北市立美術館,Taipei Fine Arts Museum,zh
-vivo_japan,institution,VIVO,VIVO,zh
-provoke_collective,institution,Provoke 同人,Provoke collective,zh
+vivo_japan,group,VIVO,VIVO,zh
+provoke_collective,group,Provoke 同人,Provoke collective,zh
 vu_agency,institution,VU 圖片社,Agence VU,en
 ontology_bazin,work,攝影影像的本體論,The Ontology of the Photographic Image,en
 techniques_observer,work,觀察者的技術,Techniques of the Observer,en
@@ -529,7 +529,7 @@ life_magazine,institution,LIFE 雜誌,LIFE magazine,zh_en
 harpers_bazaar,institution,Harper's Bazaar,Harper's Bazaar,en
 ica_philadelphia,institution,費城當代藝術館,ICA Philadelphia,en
 cincinnati_cac,institution,辛辛那提當代藝術中心,"Contemporary Arts Center, Cincinnati",en
-kamoinge,institution,卡莫因格工作坊,Kamoinge Workshop,en
+kamoinge,group,卡莫因格工作坊,Kamoinge Workshop,en
 nilsson_lennart,person,倫納特·尼爾森,Lennart Nilsson,en
 alvarez_bravo,person,曼努埃爾·阿爾瓦雷斯·布拉沃,Manuel Álvarez Bravo,en
 boubat,person,愛德華·布巴,Édouard Boubat,en
@@ -932,7 +932,7 @@ tamura_shigeru,person,Shigeru Tamura,Shigeru Tamura,en
 jumonji_bishin,person,十文字美信,Bishin Jumonji,zh
 okada_takahiko,person,岡田隆彥,Takahiko Okada,zh
 terayama_shuji,person,寺山修司,Shuji Terayama,zh
-hi_red_center,institution,Hi-Red Center,Hi-Red Center,en
+hi_red_center,group,Hi-Red Center,Hi-Red Center,en
 enokura_koji,person,榎倉康二,Koji Enokura,zh
 takamatsu_jiro,person,高松次郎,Jiro Takamatsu,zh
 kitai_kazuo,person,北井一夫,Kazuo Kitai,zh
@@ -1122,7 +1122,7 @@ yale_art,institution,耶魯大學藝術學院,Yale School of Art,en
 dephot,institution,德意志攝影服務社,Dephot (Deutscher Fotodienst),en
 aiz,work,工人畫報,Arbeiter-Illustrierte-Zeitung (AIZ),en
 lef_journal,work,左翼藝術陣線(期刊),LEF / Novyi LEF (journal),en
-devetsil,institution,九力社,Devětsil,en
+devetsil,group,九力社,Devětsil,en
 hackney_flashers,institution,哈克尼閃光(攝影集體),Hackney Flashers,en
 side_gallery,institution,Side Gallery(紐卡索),"Side Gallery, Newcastle",en
 met_photographs_dept,institution,大都會美術館攝影部,"Department of Photographs, The Metropolitan Museum of Art",en
@@ -1495,8 +1495,8 @@ fukase_kazoku_w,work,家族,Family (1991),zh
 taki_me_no_inyu_w,work,眼的隱喻:視線的現象學,Metaphors of the Eye (Chikuma ed. 2008),zh
 taki_shashinron_w,work,寫真論集成,Collected Essays on Photography (2003),zh
 fifteen_photographers_1974,event,"15人的寫真家 展(東京國立近代美術館,1974)","15 Photographers (MoMAT, 1974)",zh
-april_photo_society,institution,四月影會,April Photo Society,zh
-friday_salon,institution,星期五沙龍,Friday Salon (1975–80),zh
+april_photo_society,group,四月影會,April Photo Society,zh
+friday_salon,group,星期五沙龍,Friday Salon (1975–80),zh
 april_photo_1979,event,"「自然·社會·人」影展(四月影會,北京中山公園,1979)","Nature, Society, and Man (April Photo Society, 1979)",zh
 decade_flashback_1986,event,"十年一瞬間 攝影展(中國現代攝影沙龍,北京,1986)","Flashback: A Decade of Changes (China Modern Photo Salon, 1986)",zh
 wang_zhiping,person,王志平,Wang Zhiping,zh
@@ -1529,7 +1529,7 @@ zhang_xiao,person,張曉,Zhang Xiao,zh
 mmca,institution,韓國國立現代美術館,"National Museum of Modern and Contemporary Art, Korea (MMCA)",zh_en
 museum_hanmi,institution,韓美攝影美術館,Museum Hanmi,zh_en
 korea_photographers_association,institution,韓國寫真作家協會,Korea Photographers Association (1952),zh
-shinseonhoe,institution,新線會,Shinseonhoe (1956–1959),zh
+shinseonhoe,group,新線會,Shinseonhoe (1956–1959),zh
 living_realism,concept,生活主義寫實攝影,Everyday-life realism (Saenghwaljuui),zh_en
 limb_eungsik,person,Limb Eung-sik,Limb Eung-sik,en
 limb_job_hunting_w,work,求職,Job Hunting (1953),zh
@@ -1587,7 +1587,7 @@ sato_cool_sunset_w,work,冷冽的日落,Tsumetai Sunset (Cool Sunset) (1960),zh
 sato_cyclopean_w,work,獨眼巨人(サイクロピアン)系列,"Cyclopean Eye (series, 1960s)",zh
 tanno_circus_w,work,日本的馬戲團,Nihon no Circus (Japanese Circus) (1953),zh
 tanno_ballet_w,work,世界的芭蕾,"Sekai no Ballet (Ballet of the World) (series, n.d.)",zh
-v10_group,institution,V-10視覺藝術群,V-10 Visual Art Group (1971–1986),zh
+v10_group,group,V-10視覺藝術群,V-10 Visual Art Group (1971–1986),zh
 v10_woman_exh_1971,event,"V-10首展「女展」(臺北凌雲畫廊,1971)","Modern Photography: Woman (V-10 debut, Lingyun Gallery, Taipei, 1971)",zh
 v10_revisited_2003,event,"「又見V-10視覺藝術群」三十年大展(北美館,2003)","V-10 Revisited: Thirty Years of Group Visual-10 (TFAM, 2003)",zh
 hu_yong,person,胡永,Hu Yung,zh
@@ -1639,7 +1639,7 @@ sanjianke_tw,institution,「三劍客」(張才、鄧南光、李鳴鵰),The 'Th
 zhang_cai_shanghai_w,work,《上海寫真》,Shanghai Photographs (1942–1946),zh
 zhang_cai_indigenous_w,work,《原住民容顏》,Portraits of Indigenous Peoples (1951),zh
 deng_beipu_w,work,「北埔鄉事」,Beipu Village Scenes (from 1935),zh
-leica_club_tw,institution,萊卡俱樂部,"Leica Club (Taipei, 1946)",zh
+leica_club_tw,group,萊卡俱樂部,"Leica Club (Taipei, 1946)",zh
 free_photo_exh,institution,自由影展,Free Photo Exhibition (founded 1953),zh
 realist_photography,concept,寫實攝影,realist photography,zh_en
 serpentine,institution,蛇形藝廊,Serpentine Gallery,en
@@ -1744,7 +1744,7 @@ mplus,institution,M+(香港),"M+, Hong Kong",zh
 bae_thyssen_2006,event,"裴炳雨個展(提森-博內米薩博物館,PHotoEspaña,2006)","Bae Bien-U (Museo Thyssen-Bornemisza, PHotoEspaña, 2006)",zh
 museo_thyssen,institution,Museo Thyssen-Bornemisza,Museo Nacional Thyssen-Bornemisza,en
 kim_saji_monogatari_w,work,物語(2016),Monogatari (Story) (2016),zh
-gangneung_sauhoe,institution,Gangneung Sauhoe,"Gangneung Sauhoe (amateur photography club, 1930s)",en
+gangneung_sauhoe,group,Gangneung Sauhoe,"Gangneung Sauhoe (amateur photography club, 1930s)",en
 lee_hyungrok_shoe_vendor_w,work,The Shoe Vendor in the Street (1950s),The Shoe Vendor in the Street (1950s),en
 remodelling_photo_history_spence_w,work,Remodelling Photo History (1982),Remodelling Photo History (1982),en
 shore_icp_2007,event,"Biographical Landscape: The Photography of Stephen Shore, 1969-79 (ICP, 2007)","Biographical Landscape: The Photography of Stephen Shore, 1969-79 (ICP, 2007)",en
@@ -1892,7 +1892,7 @@ ina_nobuo,person,伊奈信男,Nobuo Ina,zh
 ina_shashin_ni_kaere_w,work,"〈回到攝影〉(写真に帰れ,1932)","Return to Photography (Shashin ni kaere, 1932)",zh
 horino_masao,person,堀野正雄,Masao Horino,zh
 watanabe_yoshio,person,渡邊義雄,Yoshio Watanabe,zh
-shinko_shashin_kenkyukai,institution,新興寫真研究會,"Shinko Shashin Kenkyukai (New Photography Research Society, 1930)",zh
+shinko_shashin_kenkyukai,group,新興寫真研究會,"Shinko Shashin Kenkyukai (New Photography Research Society, 1930)",zh
 koga_shinko_top_2018,event,"『光畫』與新興寫真:現代主義的日本(東京都寫真美術館,2018)","The Magazine and the New Photography: Koga and Japanese Modernism (TOP Museum, 2018)",zh
 iizawa_kotaro,person,飯澤耕太郎,Kotaro Iizawa,zh
 iizawa_shishashinron_w,work,《私寫真論》(2000),"Shi-shashin ron (On I-Photography, 2000)",zh
@@ -1936,20 +1936,20 @@ sun_songrong,person,孫松榮,Sun Songrong,zh
 sun_songrong_variable_eyes_w,work,〈超紀實之眼：論張照堂1970年代的另類紀錄片〉,The Variable Eyes: On Chang Chao-tang's Alternative Documentaries in the 1970s,zh
 fukuhara_shinzo,person,福原信三,Shinzo Fukuhara,zh
 fukuhara_roso,person,福原路草,Roso Fukuhara,zh
-shashin_geijutsusha,institution,冩眞藝術社,"Shashin Geijutsusha (Photographic Art Society, 1921)",zh
-nihon_shashinkai,institution,日本寫真會,Nihon Shashinkai (Japan Photographic Society),zh
+shashin_geijutsusha,group,冩眞藝術社,"Shashin Geijutsusha (Photographic Art Society, 1921)",zh
+nihon_shashinkai,group,日本寫真會,Nihon Shashinkai (Japan Photographic Society),zh
 fukuhara_shashin_no_shin_shimei_w,work,"〈寫真的新使命〉(写真の新使命,1922)","Shashin no shin-shimei (The New Mission of Photography, 1922)",zh
 toho_sha,institution,東方社,Tohosha (1941–45),zh
 front_journal_w,work,『FRONT』,"FRONT (propaganda graphic magazine, 1942–45)",zh
 chuo_kobo,institution,中央工房,Chuo Kobo (1934),zh
-zenei_shashin_kyokai,institution,前衛寫真協會,"Zen'ei Shashin Kyokai (Avant-Garde Photography Association, 1938)",zh
+zenei_shashin_kyokai,group,前衛寫真協會,"Zen'ei Shashin Kyokai (Avant-Garde Photography Association, 1938)",zh
 zenei_shashin,concept,前衛寫真,"avant-garde photography (Zen'ei shashin, Japan)",zh
 takiguchi_shuzo,person,瀧口修造,Shuzo Takiguchi,zh
 abe_nobuya,person,阿部展也,Nobuya Abe,zh
 otsuji_kiyoji,person,大辻清司,Kiyoji Otsuji,zh
-ashiya_camera_club,institution,芦屋カメラクラブ,Ashiya Camera Club (1930),zh
+ashiya_camera_club,group,芦屋カメラクラブ,Ashiya Camera Club (1930),zh
 yasui_nakaji,person,安井仲治,Nakaji Yasui,zh
-naniwa_shashin_club,institution,浪華寫真俱樂部,Naniwa Photography Club (1904),zh
+naniwa_shashin_club,group,浪華寫真俱樂部,Naniwa Photography Club (1904),zh
 kompora_shashin,concept,コンポラ寫真,"Konpora shashin (contemporary photography, Japan, late 1960s–1970s)",zh
 shigemori_koen,person,重森弘淹,Koen Shigemori,zh
 shigemori_shashin_hihyo_w,work,《寫真批評》(Shashin Hihyo),"Shashin Hihyo (Photo Criticism, journal)",zh
@@ -1960,18 +1960,18 @@ nagashima_girly_photo_w,work,《「僕ら」の「女の子寫真」から わ�
 iizawa_onnanoko_jidai_w,work,《「女の子寫真」の時代》,"The Age of ""Onna no ko shashin"" (2010)",zh
 kaneko_ryuichi,person,金子隆一,Ryuichi Kaneko,zh
 kaneko_nihon_shashinshushi_w,work,《日本寫真集史 1956-1986》,"Nihon shashinshu shi 1956-1986 (Japanese Photobooks 1956-1986, 2009)",zh
-image_shop_camp,institution,イメージショップCAMP,Image Shop CAMP,zh
+image_shop_camp,group,イメージショップCAMP,Image Shop CAMP,zh
 suzuki_kiyoshi,person,鈴木清,Kiyoshi Suzuki,zh
 ina_nobuo_award,institution,伊奈信男賞,Ina Nobuo Award,zh
 kai_arinomama_no_image_w,work,《ありのままのイメージ スナップ美學と日本寫真史》,Arinomama no imeji: Snapshot Aesthetics and Japanese Photographic History,zh
 liu_bannong,person,劉半農,Liu Bannong,zh
-guangshe,institution,北京光社,Beijing Light Society (Guangshe),zh
+guangshe,group,北京光社,Beijing Light Society (Guangshe),zh
 liu_bannong_tanying_w,work,《半農談影》,Bannong's Talks on Photography (Bannong tan ying),zh
 chen_wanli,person,陳萬里,Chen Wanli,zh
 chen_wanli_dafengji_w,work,《大風集》,Dafeng ji (Great Wind Collection),zh
-huashe,institution,中華攝影學社(華社),"China Photographic Society (Huashe, Shanghai, 1928)",zh
+huashe,group,中華攝影學社(華社),"China Photographic Society (Huashe, Shanghai, 1928)",zh
 hu_boxiang,person,胡伯翔,Hu Boxiang,zh
-heibai_yingshe,institution,黑白影社,"Black and White Photographic Society (Heibai yingshe, Shanghai)",zh
+heibai_yingshe,group,黑白影社,"Black and White Photographic Society (Heibai yingshe, Shanghai)",zh
 sha_fei,person,沙飛,Sha Fei,zh
 jinchaji_pictorial_w,work,《晉察冀畫報》,Jin-Cha-Ji Pictorial (Jin Cha Ji huabao),zh
 shi_shaohua,person,石少華,Shi Shaohua,zh

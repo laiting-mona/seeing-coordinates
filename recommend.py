@@ -1,6 +1,7 @@
 """Personalised recommendation along the knowledge frontier (no model training).
 
-Last edited: 2026-11-10: seeds are visited in sorted order and ties are ranked by node id, so the same
+Last edited: 2026-11-17: creator groups (new type `group`) keep the institution weight 0.5, so the type change
+leaves every ranking as it was. 2026-11-10: seeds are visited in sorted order and ties are ranked by node id, so the same
 question gives the same recommendations in every process (set order changes with hash randomisation).
 2026-11-09: unknown ids on the command line are reported on stderr (exit 1) instead of
 printing nothing. 2026-11-03: an inbound exhibit edge is discounted by the exhibitor's type (institution 0.5,
@@ -33,7 +34,7 @@ CENTRALITY_FLOOR = 0.5   # keeps low-centrality targets from scoring zero
 # "X belongs_to <institution>" (an award, a magazine) is accurate but is not a next
 # reading; an award with 40 winners would otherwise top every photographer's list.
 # Membership in an anthology or an exhibition is a weaker but real reading path.
-MEMBERSHIP_WEIGHT = {"institution": 0.5, "work": 0.7, "event": 0.8}   # by target type; others 1.0
+MEMBERSHIP_WEIGHT = {"institution": 0.5, "group": 0.5, "work": 0.7, "event": 0.8}   # by target type; others 1.0
 # Inbound edges that point AT the seed and lead somewhere worth reading.
 INBOUND_KINDS = ("belongs_to", "discusses", "study", "review", "interpret", "critique", "exhibit")
 INBOUND_WEIGHT = 0.9
